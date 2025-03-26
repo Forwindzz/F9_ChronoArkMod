@@ -1,0 +1,35 @@
+{
+    "S_Attack_All": {
+        "_gdeSchema": "Skill",
+        "Category": "null",
+        "Particle": "Particle/Miss/MissChain_1",
+        "Rare": false,
+        "Target": "all",
+        "NODOD": false,
+        "NotCount": false,
+        "NotChuck": false,
+        "HealSkill": false,
+        "Disposable": false,
+        "NoDrop": false,
+        "IgnoreTaunt": false,
+        "Except": false,
+        "NoBasicSkill": false,
+        "Basic": true,
+        "Track": true,
+        "Fatal": false,
+        "EnemyPreview": true,
+        "UnknownTarget": false,
+        "Name": "湮裂的燐焰晶",
+        "Description": "对所有人造成伤害 ,除了梅朗柯莉。\r\n这个伤害不会导致队友不能战斗。\n不作为固定技能使用时，赋予放逐。\r\n慌张：技能附加迅速。\r\n",
+        "User": "C_Merankori",
+        "Effect_Target": "SE_T_B_Attack_All",
+        "PlusSkillView": "",
+        "LucyPartyDraw": "",
+        "SkillExtended": [
+            "RHA_Merankori.S_Attack_All"
+        ],
+        "PlusKeyWords": [
+            "SK_Panic"
+        ]
+    }
+}

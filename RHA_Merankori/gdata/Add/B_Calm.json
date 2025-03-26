@@ -1,0 +1,15 @@
+{
+    "B_Calm": {
+        "_gdeSchema": "Buff",
+        "Hide": false,
+        "IsFieldBuff": false,
+        "Cantdisable": true,
+        "ClassName": "RHA_Merankori.B_Calm",
+        "BuffTag": "null",
+        "UseSkillDebuff": true,
+        "Caution": false,
+        "Name": "冷静",
+        "Description": "照料可能因自己受伤的队友...",
+        "Tick": "SE_Tick_B_Calm"
+    }
+}

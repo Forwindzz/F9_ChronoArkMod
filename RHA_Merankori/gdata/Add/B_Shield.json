@@ -1,0 +1,16 @@
+{
+    "B_Shield": {
+        "_gdeSchema": "Buff",
+        "ClassName": "RHA_Merankori.B_Shield",
+        "BuffTag": "null",
+        "UseSkillDebuff": false,
+        "Caution": false,
+        "MaxStack": 10,
+        "Description": "每层能抵抗1次不能战斗效果，必定不能战斗的效果也能抵抗。",
+        "Name": "燐色存护",
+        "Tick": "null",
+        "Hide": false,
+        "IsFieldBuff": false,
+        "Cantdisable": false
+    }
+}

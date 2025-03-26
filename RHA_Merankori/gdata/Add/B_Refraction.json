@@ -1,0 +1,15 @@
+{
+    "B_Refraction": {
+        "_gdeSchema": "Buff",
+        "Hide": false,
+        "IsFieldBuff": false,
+        "Cantdisable": false,
+        "ClassName": "RHA_Merankori.B_Refraction",
+        "BuffTag": "null",
+        "UseSkillDebuff": false,
+        "Caution": false,
+        "Name": "折射",
+        "Description": "将“湮裂的燐焰晶”的伤害和附加效果，折射给生命值最低的敌人。",
+        "LifeTime": 1
+    }
+}

@@ -1,0 +1,9 @@
+
+# Backup
+Backup/** 
+Backup2/** 
+Backup3/**
+Mod Projects/*/.vs/**
+Mod Projects/*/.vscode/**
+Mod Projects/*/bin/**
+Mod Projects/*/obj/**

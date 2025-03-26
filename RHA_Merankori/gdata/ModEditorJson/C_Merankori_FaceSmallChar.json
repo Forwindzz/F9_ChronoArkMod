@@ -1,0 +1,23 @@
+{
+    "myKey": "C_Merankori",
+    "myField": "FaceSmallChar",
+    "myValues": {
+        "path": "C_Merankori\\C_MerankoriFaceSmallChar.png",
+        "offsetMax": {
+            "x": 256.256439,
+            "y": 162.339233
+        },
+        "offsetMin": {
+            "x": -344.79538,
+            "y": -513.844
+        },
+        "pivot": {
+            "x": 0.5702725,
+            "y": 0.7516517
+        }
+    },
+    "MyChangeType": "FaceSmallChar",
+    "myKeys": [
+        
+    ]
+}

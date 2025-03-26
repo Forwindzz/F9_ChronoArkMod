@@ -1,0 +1,31 @@
+{
+    "S_Rectification": {
+        "_gdeSchema": "Skill",
+        "Category": "null",
+        "Particle": "Particle/impact",
+        "Rare": false,
+        "Target": "skill",
+        "NODOD": false,
+        "NotCount": false,
+        "NotChuck": false,
+        "HealSkill": false,
+        "Disposable": false,
+        "NoDrop": false,
+        "IgnoreTaunt": false,
+        "Except": false,
+        "NoBasicSkill": false,
+        "Basic": false,
+        "Track": false,
+        "Fatal": false,
+        "EnemyPreview": false,
+        "UnknownTarget": false,
+        "Name": "整流\r\n",
+        "Description": "指向梅朗柯莉“指向队友”或“其他友军”的技能时，改成“全体友军” 。\r\n指向不符合条件的卡时，将一张“湮裂的燐焰晶”放入手中。\r",
+        "UseAp": 1,
+        "User": "C_Merankori",
+        "Effect_Self": "SE_S_S_Rectification",
+        "SkillExtended": [
+            "RHA_Merankori.S_Rectification"
+        ]
+    }
+}

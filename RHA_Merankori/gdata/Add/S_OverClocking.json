@@ -1,0 +1,37 @@
+{
+    "S_OverClocking": {
+        "_gdeSchema": "Skill",
+        "Category": "null",
+        "Particle": "Particle/flare_lv1",
+        "Rare": false,
+        "Target": "otherally",
+        "NODOD": false,
+        "NotCount": true,
+        "NotChuck": false,
+        "HealSkill": false,
+        "Disposable": false,
+        "NoDrop": false,
+        "IgnoreTaunt": false,
+        "Except": false,
+        "NoBasicSkill": false,
+        "Basic": false,
+        "Track": false,
+        "Fatal": false,
+        "EnemyPreview": false,
+        "UnknownTarget": false,
+        "User": "C_Merankori",
+        "Name": "越频晶体\r\n",
+        "Description": "冷静：延长“折射”1回合",
+        "UseAp": 1,
+        "Effect_Target": "SE_T_S_OverClocking",
+        "PlusKeyWords": [
+            "SK_Calm",
+            "SK_Panic"
+        ],
+        "SkillExtended": [
+            "RHA_Merankori.S_OverClocking"
+        ],
+        "Effect_Self": "SE_S_S_OverClocking",
+        "PlusSkillView": "S_P_Shock"
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "S_P_Shock": {
+        "_gdeSchema": "Skill",
+        "Category": "null",
+        "Particle": "Particle/impact",
+        "Target": "Misc",
+        "NotCount": false,
+        "Name": "震荡冲击",
+        "Description": "预览效果",
+        "NoDrop": true,
+        "Effect_Target": "SE_T_S_P_Shock"
+    }
+}

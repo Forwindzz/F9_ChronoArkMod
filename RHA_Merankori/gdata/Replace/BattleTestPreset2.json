@@ -1,0 +1,51 @@
+{
+    "BattleTestPreset2": {
+        "_gdeSchema": "Preset",
+        "Party": [
+            "Phoenix",
+            "MissChain",
+            "Hein",
+            "C_Merankori"
+        ],
+        "PartyBasicSkill": [
+            "S_Ilya_1",
+            "S_Azar_5",
+            "S_TW_Blue_5",
+            "S_Attack_All"
+        ],
+        "PartySkills": [
+            [
+                "S_Azar_1"
+            ],
+            [
+                "S_DebugSkill"
+            ],
+            [
+                "S_DebugSkill"
+            ],
+            [
+                "S_Attack_All",
+                "S_OverClocking",
+                "S_Shield",
+                "S_Rectification",
+                "S_Care"
+            ]
+        ],
+        "PartyEquip": [
+            [
+                "Torch_FanaticBoss"
+            ],
+            [
+                "WhitePriestCloth"
+            ],
+            [
+                "Ilya_Sword_0",
+                "Ilya_Sword_1"
+            ],
+            [
+                
+            ]
+        ],
+        "AP": 9
+    }
+}

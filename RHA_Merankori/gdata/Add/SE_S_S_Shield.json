@@ -1,0 +1,11 @@
+{
+    "SE_S_S_Shield": {
+        "_gdeSchema": "SkillEffect",
+        "Buffs": [
+            "B_Backflow"
+        ],
+        "BuffPlusTagPer": [
+            0
+        ]
+    }
+}

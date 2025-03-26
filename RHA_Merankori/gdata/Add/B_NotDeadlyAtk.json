@@ -1,0 +1,15 @@
+{
+    "B_NotDeadlyAtk": {
+        "_gdeSchema": "Buff",
+        "Hide": true,
+        "IsFieldBuff": false,
+        "Cantdisable": true,
+        "ClassName": "RHA_Merankori.B_NotDeadlyAtk",
+        "BuffTag": "null",
+        "UseSkillDebuff": false,
+        "Caution": false,
+        "Name": "烈燐焰晶",
+        "Description": "燐焰晶的伤害不会致命",
+        "Tick": "null"
+    }
+}

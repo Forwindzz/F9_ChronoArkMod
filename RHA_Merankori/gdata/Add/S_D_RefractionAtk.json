@@ -1,0 +1,20 @@
+{
+    "S_D_RefractionAtk": {
+        "_gdeSchema": "Skill",
+        "Category": "null",
+        "Particle": "Particle/Miss/MissChain_1",
+        "Target": "enemy",
+        "Basic": false,
+        "Track": true,
+        "EnemyPreview": false,
+        "Name": "折射",
+        "Description": "折射来自“湮裂的燐焰晶”的伤害",
+        "NotCount": true,
+        "Disposable": true,
+        "NoDrop": true,
+        "Effect_Target": "SE_T_S_D_RefractionAtk",
+        "SkillExtended": [
+            "RHA_Merankori.S_D_RefractionAtk"
+        ]
+    }
+}

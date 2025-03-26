@@ -1,0 +1,17 @@
+{
+    "B_DeathResist": {
+        "_gdeSchema": "Buff",
+        "ClassName": "RHA_Merankori.B_DeathResist",
+        "BuffTag": "null",
+        "Description": "",
+        "Name": "无法战斗抵抗",
+        "Icon": "Image/Buff/Skill_Icon_Pack/1_7icon/1_7 (30)",
+        "MaxStack": 16,
+        "LifeTime": 3,
+        "Hide": false,
+        "IsFieldBuff": false,
+        "Cantdisable": false,
+        "UseSkillDebuff": false,
+        "Caution": false
+    }
+}

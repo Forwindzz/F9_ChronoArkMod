@@ -1,0 +1,15 @@
+{
+    "B_Backflow": {
+        "_gdeSchema": "Buff",
+        "ClassName": "RHA_Merankori.B_Backflow",
+        "BuffTag": "null",
+        "Name": "逆流的燐焰晶",
+        "Description": "“湮裂的燐焰晶”会根据队友已损失的体力值增加伤害，每1点增加1%伤害\n（已增加&a）\n回合结束时，若手中有“湮裂的燐焰晶”，移除这个效果。",
+        "MaxStack": 3,
+        "Caution": true,
+        "UseSkillDebuff": false,
+        "Tick": "SE_Tick_B_Backflow",
+        "Hide": false,
+        "Cantdisable": false
+    }
+}

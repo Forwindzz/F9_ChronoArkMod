@@ -1,0 +1,15 @@
+{
+    "SE_Backflow": {
+        "_gdeSchema": "SkillExtended",
+        "AlwaysParticle": false,
+        "IsOnesInit": false,
+        "Name": "逆流的燐焰晶",
+        "Des": "根据队友已损失的体力值增加伤害，每1点增加1%伤害。\n已增加&a",
+        "ClassName": "RHA_Merankori.SE_Backflow",
+        "IsIcon": "Image/Buff/Skill_Icon_Pack/1_7_buff (19)",
+        "Particle": "",
+        "Drop": false,
+        "EnforceString": "",
+        "NeedCharacter": ""
+    }
+}

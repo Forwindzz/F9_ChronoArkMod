@@ -1,0 +1,24 @@
+{
+    "SE_T_S_Shield": {
+        "_gdeSchema": "SkillEffect",
+        "HIT": 100,
+        "Buffs": [
+            "B_Shield",
+            "B_Shield",
+            "B_Shield"
+        ],
+        "BuffPlusTagPer": [
+            0,
+            0,
+            0
+        ],
+        "DMG_Per": 0,
+        "DMG_Base": 0,
+        "HEAL_MaxHpPer": 0,
+        "HEAL_Per": 0,
+        "HEAL_Base": 0,
+        "CRI": 0,
+        "ForceHeal": false,
+        "ChainHeal": false
+    }
+}

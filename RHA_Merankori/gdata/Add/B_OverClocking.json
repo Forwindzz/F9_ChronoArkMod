@@ -1,0 +1,14 @@
+{
+    "B_OverClocking": {
+        "_gdeSchema": "Buff",
+        "Hide": false,
+        "IsFieldBuff": false,
+        "Cantdisable": false,
+        "ClassName": "RHA_Merankori.B_OverClocking",
+        "BuffTag": "null",
+        "UseSkillDebuff": false,
+        "Caution": false,
+        "Name": "越频晶体",
+        "Description": "下一次“湮裂的燐焰晶”会附带“震荡冲击”效果"
+    }
+}

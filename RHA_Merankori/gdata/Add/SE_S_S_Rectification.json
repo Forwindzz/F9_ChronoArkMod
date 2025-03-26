@@ -1,0 +1,11 @@
+{
+    "SE_S_S_Rectification": {
+        "_gdeSchema": "SkillEffect",
+        "Buffs": [
+            "B_CalmDown"
+        ],
+        "BuffPlusTagPer": [
+            0
+        ]
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "B_FreqShift": {
+        "_gdeSchema": "Buff",
+        "Hide": false,
+        "IsFieldBuff": false,
+        "Cantdisable": false,
+        "ClassName": "RHA_Merankori.B_FreqShift",
+        "BuffTag": "null",
+        "UseSkillDebuff": false,
+        "Caution": false,
+        "Description": "受到“湮裂的燐焰晶”的攻击时，将这个攻击转化为等量的治疗，然后移除1层。",
+        "Name": "频移微调",
+        "MaxStack": 3,
+        "Tick": "null",
+        "Icon": "Image/Buff/Skill_Icon_Pack/green/green_20"
+    }
+}

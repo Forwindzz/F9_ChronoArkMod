@@ -1,0 +1,18 @@
+{
+    "B_Shock": {
+        "_gdeSchema": "Buff",
+        "ClassName": "RHA_Merankori.B_Shock",
+        "BuffTag": "CrowdControl",
+        "Description": "无法使用攻击技能，若是敌人则停止行动一回合。\n持有此效果的角色可以通过丢弃自己的技能来移除此效果。\r",
+        "Debuff": true,
+        "TagPer": 75,
+        "Hide": false,
+        "IsFieldBuff": false,
+        "Cantdisable": false,
+        "UseSkillDebuff": true,
+        "Caution": true,
+        "MaxStack": 1,
+        "Name": "震荡冲击",
+        "LifeTime": 1
+    }
+}

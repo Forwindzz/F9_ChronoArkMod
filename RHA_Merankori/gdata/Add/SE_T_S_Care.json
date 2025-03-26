@@ -1,0 +1,22 @@
+{
+    "SE_T_S_Care": {
+        "_gdeSchema": "SkillEffect",
+        "HIT": 100,
+        "DMG_Per": 0,
+        "DMG_Base": 0,
+        "HEAL_MaxHpPer": 0,
+        "HEAL_Per": 0,
+        "HEAL_Base": 0,
+        "CRI": 0,
+        "ForceHeal": false,
+        "ChainHeal": false,
+        "Buffs": [
+            "B_FreqShift",
+            "B_DeathResist"
+        ],
+        "BuffPlusTagPer": [
+            0,
+            0
+        ]
+    }
+}

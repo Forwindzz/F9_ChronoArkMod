@@ -1,0 +1,6 @@
+{
+    "SE_Tick_B_CalmDown": {
+        "_gdeSchema": "SkillEffect",
+        "HEAL_Base": 1
+    }
+}

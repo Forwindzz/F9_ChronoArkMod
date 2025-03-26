@@ -1,0 +1,7 @@
+{
+    "SK_Panic": {
+        "_gdeSchema": "SkillKeyword",
+        "Name": "慌张",
+        "Desc": "处于“慌张”状态时触发"
+    }
+}

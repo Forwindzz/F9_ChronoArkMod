@@ -1,0 +1,23 @@
+{
+    "myKey": "C_Merankori",
+    "myField": "BattleChar",
+    "myValues": {
+        "path": "C_Merankori\\C_MerankoriBattleChar.png",
+        "offsetMax": {
+            "x": 556.534851,
+            "y": 316.6575
+        },
+        "offsetMin": {
+            "x": -731.8732,
+            "y": -1132.80164
+        },
+        "pivot": {
+            "x": 0.5680446,
+            "y": 0.781534
+        }
+    },
+    "MyChangeType": "BattleChar",
+    "myKeys": [
+        
+    ]
+}

@@ -1,0 +1,73 @@
+{
+    "C_Merankori": {
+        "_gdeSchema": "Character",
+        "Role": "Role_DPS",
+        "PassiveClassName": "RHA_Merankori.P_C_Merankori",
+        "PassiveUnlockLV1": false,
+        "name": "梅朗柯莉",
+        "SelectInfo": "这是一段简介",
+        "Gender": 1,
+        "face": "C_Merankori\\C_MerankoriBattleFace.png",
+        "MAXHP": {
+            "x": 22,
+            "y": 45
+        },
+        "ATK": {
+            "x": 6,
+            "y": 20
+        },
+        "CRI": {
+            "x": -5,
+            "y": 40
+        },
+        "REG": {
+            "x": 7,
+            "y": 21
+        },
+        "DODGE": {
+            "x": 0,
+            "y": 12
+        },
+        "DEF": {
+            "x": -5,
+            "y": 4
+        },
+        "HIT": {
+            "x": 100,
+            "y": 130
+        },
+        "RES_DEBUFF": {
+            "x": 1,
+            "y": 30
+        },
+        "RES_DOT": {
+            "x": 1,
+            "y": 20
+        },
+        "HIT_CC": {
+            "x": 5,
+            "y": 20
+        },
+        "RES_CC": {
+            "x": 1,
+            "y": 30
+        },
+        "HIT_DEBUFF": {
+            "x": 4,
+            "y": 15
+        },
+        "HIT_DOT": {
+            "x": 10,
+            "y": 40
+        },
+        "PassiveName": "燐焰晶\n",
+        "FixedBasicSkill": "S_Attack_All",
+        "PassiveDes": "情绪高涨的梅朗柯莉会激化身边的红色结晶，会对周围不分敌我地产生毁灭性的伤害，甚至摧毁地形。\r\n但冷静下来的梅朗柯莉又会悉心照料因自己而受伤的队友。\r\n任何攻击都会让她变得情绪慌张，但在回合开始时，梅朗柯莉会冷静下来。\r\n\r\n固定技能始终为“湮裂的燐焰晶”\r\nlv.2获得物品“活化燐焰晶”\r\n",
+        "StatView_Atk": 3,
+        "StatView_Heal": 1,
+        "StatView_Def": 2,
+        "StatView_Sup": 3,
+        "StatView_CC": 1,
+        "StatView_Difficult": 3
+    }
+}

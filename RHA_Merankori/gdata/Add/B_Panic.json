@@ -1,0 +1,14 @@
+{
+    "B_Panic": {
+        "_gdeSchema": "Buff",
+        "Cantdisable": true,
+        "ClassName": "RHA_Merankori.B_Panic",
+        "BuffTag": "null",
+        "Tick": "SE_Tick_B_Panic",
+        "Name": "慌张",
+        "Description": "燐焰晶逐渐炽烈...",
+        "Caution": true,
+        "UseSkillDebuff": false,
+        "Hide": false
+    }
+}

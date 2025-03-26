@@ -1,0 +1,35 @@
+{
+    "S_Shield": {
+        "_gdeSchema": "Skill",
+        "Category": "null",
+        "Particle": "Particle/flare_lv1",
+        "Target": "all_ally",
+        "NotCount": true,
+        "Name": "燐晶盾",
+        "Description": "冷静：处于濒死状态的队友额外获得3层“燐色存护”",
+        "User": "C_Merankori",
+        "UseAp": 2,
+        "PlusKeyWords": [
+            "SK_Calm"
+        ],
+        "Effect_Target": "SE_T_S_Shield",
+        "Effect_Self": "SE_S_S_Shield",
+        "Rare": false,
+        "NODOD": false,
+        "NotChuck": false,
+        "HealSkill": false,
+        "Disposable": false,
+        "NoDrop": false,
+        "IgnoreTaunt": false,
+        "Except": false,
+        "NoBasicSkill": false,
+        "Basic": false,
+        "Track": false,
+        "Fatal": false,
+        "EnemyPreview": false,
+        "UnknownTarget": false,
+        "SkillExtended": [
+            "RHA_Merankori.S_Shield"
+        ]
+    }
+}

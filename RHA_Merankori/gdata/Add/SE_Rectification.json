@@ -1,0 +1,11 @@
+{
+    "SE_Rectification": {
+        "_gdeSchema": "SkillExtended",
+        "AlwaysParticle": false,
+        "IsOnesInit": false,
+        "Name": "整流",
+        "Des": "除了已指向的队友，技能也会应用给其他全体队友\r",
+        "IsIcon": "Image/Buff/Skill_Icon_Pack/2024 0412 DLC/Star",
+        "ClassName": "RHA_Merankori.SE_Rectification"
+    }
+}

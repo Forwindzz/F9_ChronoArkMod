@@ -1,0 +1,15 @@
+{
+    "B_H_FreqShift_Lucy": {
+        "_gdeSchema": "Buff",
+        "Hide": true,
+        "IsFieldBuff": false,
+        "Cantdisable": true,
+        "ClassName": "RHA_Merankori.B_H_FreqShift_Lucy",
+        "BuffTag": "null",
+        "UseSkillDebuff": false,
+        "Caution": false,
+        "Name": "频移微调-露西",
+        "Description": "引导燐焰晶\r",
+        "MaxStack": 1
+    }
+}

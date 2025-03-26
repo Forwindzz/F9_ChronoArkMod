@@ -1,0 +1,23 @@
+{
+    "myKey": "C_Merankori",
+    "myField": "FaceOriginChar",
+    "myValues": {
+        "path": "C_Merankori\\C_MerankoriFaceOriginChar.png",
+        "offsetMax": {
+            "x": 556.636,
+            "y": 326.6861
+        },
+        "offsetMin": {
+            "x": -731.7721,
+            "y": -1122.77307
+        },
+        "pivot": {
+            "x": 0.566879451,
+            "y": 0.7709075
+        }
+    },
+    "MyChangeType": "FaceOriginChar",
+    "myKeys": [
+        
+    ]
+}
