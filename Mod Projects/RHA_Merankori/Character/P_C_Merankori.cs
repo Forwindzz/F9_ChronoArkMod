@@ -48,6 +48,7 @@ namespace RHA_Merankori
             if (SkillD.IsDamage && Targets.Count>0)
             {
                 EmotionBuffSwitch.SwitchToPanic(this.BChar);
+                Debug.Log($"Add Panic! {Targets.Count}");
             }
             yield break;
         }

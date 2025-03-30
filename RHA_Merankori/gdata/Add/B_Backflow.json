@@ -10,6 +10,7 @@
         "UseSkillDebuff": false,
         "Tick": "SE_Tick_B_Backflow",
         "Hide": false,
-        "Cantdisable": false
+        "Cantdisable": false,
+        "Icon": "Image/Buff/Skill_Icon_Pack/violet/violet_25"
     }
 }

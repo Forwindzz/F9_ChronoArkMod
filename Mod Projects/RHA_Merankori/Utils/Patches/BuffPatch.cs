@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace RHA_Merankori
 {
@@ -17,31 +18,36 @@ namespace RHA_Merankori
         [HarmonyPrefix]
         static bool BattleChar_BuffAdd_Prefix(
             BattleChar __instance,
-            string key, BattleChar UseState, bool hide, 
-            int PlusTagPer, bool debuffnonuser, 
-            int RemainTime, bool StringHide)
+            ref string key, 
+            ref BattleChar UseState, 
+            ref bool hide, 
+            ref int PlusTagPer, 
+            ref bool debuffnonuser, 
+            ref int RemainTime, 
+            ref bool StringHide)
         {
-            if(key== ModItemKeys.Buff_B_Panic)
+            if(BattleSystem.instance==null)
             {
-                return CheckCancel(__instance, key);
+                return true;
             }
-            else if(key == ModItemKeys.Buff_B_Calm)
+            bool cancelBuff = false;
+            foreach (var ip in BattleSystem.instance.IReturn<IP_BeforeBuffAdd>())
             {
-                return CheckCancel(__instance, key);
+                if (ip != null)
+                {
+                    ip.BeforeBuffAdd(
+                        __instance,
+                        ref key,
+                        ref UseState,
+                        ref hide,
+                        ref PlusTagPer,
+                        ref debuffnonuser,
+                        ref RemainTime,
+                        ref StringHide,
+                        ref cancelBuff);
+                }
             }
-            return true;
-        }
-
-        private static bool CheckCancel(BattleChar __instance, string key)
-        {
-            bool cancelSwitch = false;
-            Utils.InvokeAllIP<IP_BeforeEmotionSwitch>(
-                ip => ip.BeforeEmotionSwitch(__instance, key, ref cancelSwitch));
-            if (cancelSwitch)
-            {
-                return false;
-            }
-            return true;
+            return !cancelBuff;
         }
     }
 }

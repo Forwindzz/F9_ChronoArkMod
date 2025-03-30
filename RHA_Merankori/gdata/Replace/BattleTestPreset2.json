@@ -28,7 +28,8 @@
                 "S_OverClocking",
                 "S_Shield",
                 "S_Rectification",
-                "S_Care"
+                "S_Care",
+                "S_Charge"
             ]
         ],
         "PartyEquip": [

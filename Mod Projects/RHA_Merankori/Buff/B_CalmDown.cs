@@ -19,46 +19,37 @@ namespace RHA_Merankori
     /// </summary>
     public class B_CalmDown :
         Buff,
-        IP_BuffAddAfter
-    //IP_BeforeEmotionSwitch
+        IP_BeforeBuffAdd
     {
-        /*
-        public void BeforeEmotionSwitch(BattleChar battleChar, string planToSwitchID, ref bool cancelSwitch)
+        private bool hasCanceledForAction = false;
+
+        public void BeforeBuffAdd(BattleChar battleChar, ref string key, ref BattleChar UseState, ref bool hide, ref int PlusTagPer, ref bool debuffnonuser, ref int RemainTime, ref bool StringHide, ref bool cancelbuff)
         {
-            if(planToSwitchID == IDs.ID_Buff_Panic)
+            if (key == ModItemKeys.Buff_B_Panic)
             {
-                cancelSwitch = true;
-                battleChar.BuffAdd(IDs.ID_Buff_Calm, battleChar);
-                this.StackDestroy();
-                Debug.Log($"Destory one stack calm down! {this.StackNum}");
-            }
-        }*/
-
-
-
-
-        public void BuffaddedAfter(BattleChar BuffUser, BattleChar BuffTaker, Buff addedbuff, StackBuff stackBuff)
-        {
-            if(addedbuff.BuffData.Key == ModItemKeys.Buff_B_Panic)
-            {
-                if(this.BChar.Info.KeyData==BuffTaker.Info.KeyData)
+                cancelbuff = true;
+                if(!hasCanceledForAction)
                 {
-                    BattleSystem.DelayInputAfter(Co_RecoverCalm());
+                    hasCanceledForAction=true;
+                    this.StackDestroy();
+                    BattleSystem.DelayInput(Co_ResetFlag());
+                    Debug.Log("Cancel stack!");
                 }
+                Debug.Log("Cancel panic!");
             }
+        }
+
+        private IEnumerator Co_ResetFlag()
+        {
+            hasCanceledForAction = false;
+            Debug.Log("Cancel panic flag reset!");
+            yield break;
         }
 
         public override void Init()
         {
             base.Init();
             isStackDestroy = true;
-        }
-
-        private IEnumerator Co_RecoverCalm()
-        {
-            EmotionBuffSwitch.SwitchToCalm(this.BChar);
-            this.StackDestroy();
-            yield break;
         }
     }
 }

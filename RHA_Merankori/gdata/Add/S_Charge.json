@@ -1,0 +1,35 @@
+{
+    "S_Charge": {
+        "_gdeSchema": "Skill",
+        "Category": "null",
+        "Particle": "Particle/Buff",
+        "Rare": false,
+        "Target": "self",
+        "NODOD": false,
+        "NotCount": true,
+        "NotChuck": false,
+        "HealSkill": false,
+        "Disposable": false,
+        "NoDrop": false,
+        "IgnoreTaunt": false,
+        "Except": false,
+        "NoBasicSkill": false,
+        "Basic": false,
+        "Track": false,
+        "Fatal": false,
+        "EnemyPreview": false,
+        "UnknownTarget": false,
+        "Name": "蓄能",
+        "Description": "队友每拥有2层“燐色存护”，倒计时增加1点。每行进1点倒计时，获得1层蓄能。\r\n进入慌张状态时，停止蓄能。\r",
+        "UseAp": 1,
+        "User": "C_Merankori",
+        "Counting": 1,
+        "PlusKeyWords": [
+            "SK_Panic"
+        ],
+        "SkillExtended": [
+            "RHA_Merankori.S_Charge"
+        ],
+        "Effect_Self": "SE_S_S_Charge"
+    }
+}

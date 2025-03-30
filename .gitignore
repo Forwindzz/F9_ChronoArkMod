@@ -7,3 +7,6 @@ Mod Projects/*/.vs/**
 Mod Projects/*/.vscode/**
 Mod Projects/*/bin/**
 Mod Projects/*/obj/**
+
+# Output Dll
+RHA_Merankori/Assemblies/RHA_Merankori.dll

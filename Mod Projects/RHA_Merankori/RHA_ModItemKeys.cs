@@ -21,6 +21,12 @@ namespace RHA_Merankori
 		/// </summary>
         public static string Buff_B_CalmDown = "B_CalmDown";
 		/// <summary>
+		/// 蓄能
+		/// 释放“湮裂的燐焰晶”时，每层增加其25%的伤害。
+		/// 释放后移除此效果。
+		/// </summary>
+        public static string Buff_B_Charge = "B_Charge";
+		/// <summary>
 		/// 无法战斗抵抗
 		/// </summary>
         public static string Buff_B_DeathResist = "B_DeathResist";
@@ -82,10 +88,22 @@ namespace RHA_Merankori
 		/// </summary>
         public static string SkillExtended_SE_Backflow = "SE_Backflow";
 		/// <summary>
+		/// 越频晶体
+		/// 根据蓄能效果层数，每层增加25%的伤害。
+		/// （已增加&a）
+		/// </summary>
+        public static string SkillExtended_SE_Charge = "SE_Charge";
+		/// <summary>
+		/// 越频晶体
+		/// 下一次“湮裂的燐焰晶”会附带“震荡冲击”效果。
+		/// </summary>
+        public static string SkillExtended_SE_OverClocking = "SE_OverClocking";
+		/// <summary>
 		/// 整流
 		/// 除了已指向的队友，技能也会应用给其他全体队友
 		/// </summary>
         public static string SkillExtended_SE_Rectification = "SE_Rectification";
+        public static string SkillEffect_SE_S_S_Charge = "SE_S_S_Charge";
         public static string SkillEffect_SE_S_S_OverClocking = "SE_S_S_OverClocking";
         public static string SkillEffect_SE_S_S_Rectification = "SE_S_S_Rectification";
         public static string SkillEffect_SE_S_S_Shield = "SE_S_S_Shield";
@@ -122,6 +140,12 @@ namespace RHA_Merankori
 		/// 冷静：目标持有“燐焰晶”相关的正面效果，再额外增加1层
 		/// </summary>
         public static string Skill_S_Care = "S_Care";
+		/// <summary>
+		/// 蓄能
+		/// 队友每拥有2层“燐色存护”，倒计时增加1点。每行进1点倒计时，获得1层蓄能。
+		/// 进入慌张状态时，停止蓄能。
+		/// </summary>
+        public static string Skill_S_Charge = "S_Charge";
 		/// <summary>
 		/// 折射
 		/// 折射来自“湮裂的燐焰晶”的伤害

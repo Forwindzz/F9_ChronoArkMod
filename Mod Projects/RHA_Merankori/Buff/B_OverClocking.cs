@@ -13,12 +13,13 @@ using ChronoArkMod.Template;
 using Debug = UnityEngine.Debug;
 namespace RHA_Merankori
 {
-	/// <summary>
-	/// 越频晶体
-	/// 下一次“湮裂的燐焰晶”会附带“震荡冲击”效果
-	/// </summary>
-    public class B_OverClocking:Buff
+    /// <summary>
+    /// 越频晶体
+    /// 下一次“湮裂的燐焰晶”会附带“震荡冲击”效果
+    /// </summary>
+    public class B_OverClocking : BaseImpactAllCardBuff
     {
         //具体实现在S_Attack_All
+        protected override string ApplySkillExKey => ModItemKeys.SkillExtended_SE_OverClocking;
     }
 }

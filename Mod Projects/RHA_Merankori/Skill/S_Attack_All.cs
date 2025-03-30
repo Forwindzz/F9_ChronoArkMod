@@ -13,6 +13,12 @@ using ChronoArkMod.Template;
 using Debug = UnityEngine.Debug;
 namespace RHA_Merankori
 {
+
+    public interface IP_AfterMerankoriAttackAll
+    {
+        void AfterMerankoriAttackAll(S_Attack_All skill_Extended);
+    }
+
     /// <summary>
     /// 湮裂的燐焰晶
     /// 除了梅朗柯莉自身，对所有人（包括敌人和其他友军）造成300%攻击力的伤害。
@@ -69,6 +75,7 @@ namespace RHA_Merankori
             BattleSystem.DelayInput(Co_RefractDamage(refractionOwner));
 
             //TODO： 判定震荡冲击效果
+            /*
             if (this.BChar.BuffFind(ModItemKeys.Buff_B_OverClocking))
             {
                 foreach(BattleChar battleChar in Targets)
@@ -83,6 +90,10 @@ namespace RHA_Merankori
                     Debug.Log($"Remove IDs.ID_Buff_OverClocking!");
                     BattleSystem.DelayInputAfter(Co_DestoryBuffOverClocking(this.BChar));
                 }
+            }*/
+            if (refractionOwner.Count == 0)
+            {
+                BattleSystem.DelayInputAfter(Co_AfterAttackAll());
             }
             /*
             // 给队友赋予不死效果
@@ -174,12 +185,20 @@ namespace RHA_Merankori
             Debug.Log($"Emit refract attack finished!");
             yield break;
         }
-
+        /*
         private IEnumerator Co_DestoryBuffOverClocking(BattleChar bchar)
         {
             yield return new WaitForSeconds(0.1f);
             bchar.BuffRemove(ModItemKeys.Buff_B_OverClocking);
             Debug.Log($"Removed IDs.ID_Buff_OverClocking!");
+            yield break;
+        }*/
+
+        private IEnumerator Co_AfterAttackAll()
+        {
+            yield return new WaitForSeconds(0.1f);
+            Utils.InvokeAllIP<IP_AfterMerankoriAttackAll>(
+                ip => ip.AfterMerankoriAttackAll(this));
             yield break;
         }
     }

@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace RHA_Merankori
 {
-    public class Merankori_BaseSkill : Skill_Extended, IP_BuffAddAfter
+    public class Merankori_BaseSkill : 
+        Skill_Extended, 
+        IP_BuffAdd,
+        IP_BuffAddAfter
     {
 
         public void BuffaddedAfter(BattleChar BuffUser, BattleChar BuffTaker, Buff addedbuff, StackBuff stackBuff)
@@ -44,7 +48,8 @@ namespace RHA_Merankori
             {
                 base.SkillParticleOff();
             }
-            if(isCalmNow)
+            Debug.Log($"base calm change {isCalmNow} {this.GetType().Name}");
+            if (isCalmNow)
             {
                 OnEmotionCalm();
             }
@@ -57,8 +62,8 @@ namespace RHA_Merankori
         [Flags]
         protected enum StateForVisualEffect
         {
-            Panic=1,
-            Calm=2
+            Panic=0,
+            Calm=1
         }
 
         protected StateForVisualEffect effectSetting;
@@ -81,6 +86,18 @@ namespace RHA_Merankori
         protected bool IsPanic()
         {
             return EmotionBuffSwitch.IsPanic(this.BChar);
+        }
+
+        public void Buffadded(BattleChar BuffUser, BattleChar BuffTaker, Buff addedbuff)
+        {
+            if (addedbuff.BuffData.Key == ModItemKeys.Buff_B_Panic)
+            {
+                UpdateCalmState(false);
+            }
+            else if (addedbuff.BuffData.Key == ModItemKeys.Buff_B_Calm)
+            {
+                UpdateCalmState(true);
+            }
         }
     }
 }

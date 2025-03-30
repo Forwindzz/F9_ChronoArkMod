@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -212,6 +213,48 @@ namespace RHA_Merankori
                 }
             }
             return false;
+        }
+
+        public static int CountBuffStack(this BattleChar battleChar, string buffKey)
+        {
+            if (battleChar == null || buffKey == null)
+            {
+                return 0;
+            }
+            Buff buff = battleChar.GetBuffByID(ModItemKeys.Buff_B_Shield);
+            if (buff == null)
+            {
+                return 0;
+            }
+            return buff.StackNum;
+        }
+
+        public static int CountBuffStack(IEnumerable<BattleChar> chars,string buffKey)
+        {
+            if(chars==null || buffKey==null)
+            {
+                return 0;
+            }
+            int total = 0;
+            foreach(var c in chars)
+            {
+                Buff buff = c.GetBuffByID(ModItemKeys.Buff_B_Shield);
+                if (buff == null)
+                {
+                    continue;
+                }
+                total+= buff.StackNum;
+            }
+            return total;
+        }
+
+        public static int CountAliveAllyBuffStack(string buffKey)
+        {
+            if(BattleSystem.instance==null || BattleSystem.instance.AllyTeam==null)
+            {
+                return 0;
+            }
+            return CountBuffStack(BattleSystem.instance.AllyTeam.AliveChars_Vanish, buffKey);
         }
 
         /*

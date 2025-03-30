@@ -1,0 +1,11 @@
+{
+    "SE_Charge": {
+        "_gdeSchema": "SkillExtended",
+        "AlwaysParticle": false,
+        "IsOnesInit": false,
+        "Name": "越频晶体",
+        "Des": "根据蓄能效果层数，每层增加25%的伤害。\n（已增加&a）",
+        "IsIcon": "Image/Buff/Skill_Icon_Pack/1_7icon/1_7 (3)",
+        "ClassName": "RHA_Merankori.SE_Charge"
+    }
+}
