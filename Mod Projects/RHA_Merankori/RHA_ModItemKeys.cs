@@ -200,6 +200,18 @@ namespace RHA_Merankori
 		/// 回合开始时，若没有燐色存护，获得1层燐色存护。
 		/// </summary>
         public static string Buff_B_Reflow = "B_Reflow";
+		/// <summary>
+		/// 晶体流形
+		/// 冷静：手中每个“湮裂的燐焰晶”会额外提供2层蓄力。（目前提供&a层）
+		/// </summary>
+        public static string Skill_S_Manifold = "S_Manifold";
+        public static string SkillEffect_SE_T_S_Manifold = "SE_T_S_Manifold";
+        public static string SkillEffect_SE_S_S_Manifold = "SE_S_S_Manifold";
+		/// <summary>
+		/// 导流回路
+		/// 丢弃“湮裂的燐焰晶”时，获得1点法力值。
+		/// </summary>
+        public static string Buff_B_DLoop = "B_DLoop";
 
     }
 

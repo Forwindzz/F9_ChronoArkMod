@@ -32,7 +32,8 @@
                 "S_Care",
                 "S_Charge",
                 "S_WarmFire",
-                "S_Reconstruct"
+                "S_Reconstruct",
+                "S_Manifold"
             ]
         ],
         "PartyEquip": [

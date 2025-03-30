@@ -1,0 +1,13 @@
+{
+    "SE_S_S_Manifold": {
+        "_gdeSchema": "SkillEffect",
+        "Buffs": [
+            "B_DLoop",
+            "B_Charge"
+        ],
+        "BuffPlusTagPer": [
+            0,
+            0
+        ]
+    }
+}

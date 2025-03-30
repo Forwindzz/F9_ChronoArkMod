@@ -1,0 +1,21 @@
+{
+    "S_Manifold": {
+        "_gdeSchema": "Skill",
+        "Category": "null",
+        "Particle": "Particle/flare_lv1",
+        "Target": "ally",
+        "User": "C_Merankori",
+        "Name": "晶体流形",
+        "Description": "冷静：手中每个“湮裂的燐焰晶”会额外提供2层蓄力。（目前提供&a层）",
+        "UseAp": 2,
+        "NotCount": true,
+        "PlusKeyWords": [
+            "SK_Calm"
+        ],
+        "Effect_Target": "SE_T_S_Manifold",
+        "Effect_Self": "SE_S_S_Manifold",
+        "SkillExtended": [
+            "RHA_Merankori.S_Manifold"
+        ]
+    }
+}
