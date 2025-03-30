@@ -257,46 +257,9 @@ namespace RHA_Merankori
             return CountBuffStack(BattleSystem.instance.AllyTeam.AliveChars_Vanish, buffKey);
         }
 
-        /*
-        public static void WaitFinishDelayEffectsAndExecute(Action action)
+        public static bool IsKeyID(this Buff buff, string keyID)
         {
-            CoroutineBox box = new CoroutineBox();
-            box.coroutine = Co_WaitDelayEffectFinish(action, box);
-            BattleSystem.DelayInputAfter(box.coroutine);
+            return buff.BuffData.Key == keyID;
         }
-
-        private class CoroutineBox
-        {
-            public IEnumerator coroutine;
-            public int times = 0;
-        }
-
-        private static IEnumerator Co_WaitDelayEffectFinish(Action action, CoroutineBox box)
-        {
-            if (BattleSystem.instance == null)
-            {
-                yield break;
-            }
-            yield return new WaitForSeconds(0.01f);
-            if (box.times>16)
-            {
-                Debug.Log($"Coroutine {box.coroutine} spy loop for {box.times}, decide to break the endless loop and execute");
-                action();
-                yield break;
-            }
-            List<IEnumerator> effectDelaysAfter = BattleSystem.instance.EffectDelaysAfter;
-            int count = effectDelaysAfter.Where(e => !(e is CoroutineBox)).Count();
-            if (count > 0)
-            {
-                box.coroutine = Co_WaitDelayEffectFinish(action, box);
-                box.times++;
-                BattleSystem.DelayInputAfter(box.coroutine);
-            }
-            else
-            {
-                action();
-            }
-            yield break;
-        }*/
     }
 }

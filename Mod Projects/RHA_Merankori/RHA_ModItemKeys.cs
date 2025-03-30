@@ -36,6 +36,11 @@ namespace RHA_Merankori
 		/// </summary>
         public static string Buff_B_FreqShift = "B_FreqShift";
 		/// <summary>
+		/// 焰晶生成
+		/// 每当有人脱离或进入濒死状态时，将“湮裂的燐焰晶”放入手中。
+		/// </summary>
+        public static string Buff_B_GenCrystal = "B_GenCrystal";
+		/// <summary>
 		/// 频移微调-露西
 		/// 引导燐焰晶
 		/// </summary>
@@ -72,6 +77,12 @@ namespace RHA_Merankori
 		/// </summary>
         public static string Buff_B_Shock = "B_Shock";
 		/// <summary>
+		/// 暖焰
+		/// 每当获得等体力值的治疗量，赋予1层燐色存护。
+		/// （已累计&a）
+		/// </summary>
+        public static string Buff_B_WarmFire = "B_WarmFire";
+		/// <summary>
 		/// 梅朗柯莉
 		/// Passive:
 		/// 情绪高涨的梅朗柯莉会激化身边的红色结晶，会对周围不分敌我地产生毁灭性的伤害，甚至摧毁地形。
@@ -107,6 +118,7 @@ namespace RHA_Merankori
         public static string SkillEffect_SE_S_S_OverClocking = "SE_S_S_OverClocking";
         public static string SkillEffect_SE_S_S_Rectification = "SE_S_S_Rectification";
         public static string SkillEffect_SE_S_S_Shield = "SE_S_S_Shield";
+        public static string SkillEffect_SE_S_S_WarmFire = "SE_S_S_WarmFire";
         public static string SkillEffect_SE_Tick_B_Backflow = "SE_Tick_B_Backflow";
         public static string SkillEffect_SE_Tick_B_Calm = "SE_Tick_B_Calm";
         public static string SkillEffect_SE_Tick_B_CalmDown = "SE_Tick_B_CalmDown";
@@ -117,6 +129,7 @@ namespace RHA_Merankori
         public static string SkillEffect_SE_T_S_OverClocking = "SE_T_S_OverClocking";
         public static string SkillEffect_SE_T_S_P_Shock = "SE_T_S_P_Shock";
         public static string SkillEffect_SE_T_S_Shield = "SE_T_S_Shield";
+        public static string SkillEffect_SE_T_S_WarmFire = "SE_T_S_WarmFire";
 		/// <summary>
 		/// 冷静
 		/// 梅朗柯莉处于“冷静”状态时触发
@@ -172,6 +185,10 @@ namespace RHA_Merankori
 		/// 冷静：处于濒死状态的队友额外获得3层“燐色存护”
 		/// </summary>
         public static string Skill_S_Shield = "S_Shield";
+		/// <summary>
+		/// 暖焰
+		/// </summary>
+        public static string Skill_S_WarmFire = "S_WarmFire";
 
     }
 

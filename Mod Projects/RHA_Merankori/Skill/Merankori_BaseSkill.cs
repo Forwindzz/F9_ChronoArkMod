@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GameDataEditor;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,6 +30,11 @@ namespace RHA_Merankori
         public override void TurnUpdate()
         {
             base.TurnUpdate();
+            CheckEmotionState();
+        }
+
+        private void CheckEmotionState()
+        {
             if (EmotionBuffSwitch.IsCalm(this.BChar))
             {
                 UpdateCalmState(true);
@@ -38,14 +45,33 @@ namespace RHA_Merankori
             }
         }
 
+        private bool hasChecked = false;
+
         private void UpdateCalmState(bool isCalmNow)
         {
+            if(!hasChecked && BattleSystem.instance!=null)
+            {
+                hasChecked = true;
+                BattleSystem.DelayInput(Co_CheckEmotion(isCalmNow));
+            }
+        }
+
+        private IEnumerator Co_CheckEmotion(bool isCalmNow)
+        {
+            hasChecked = false;
             if (isCalmNow && effectSetting.HasFlag(StateForVisualEffect.Calm))
             {
+                Debug.Log($"Particle on for {this.Name}");
                 base.SkillParticleOn();
             }
-            else if(effectSetting.HasFlag(StateForVisualEffect.Panic))
+            else if (effectSetting.HasFlag(StateForVisualEffect.Panic))
             {
+                Debug.Log($"Particle on for {this.Name}");
+                base.SkillParticleOn();
+            }
+            else
+            {
+                Debug.Log($"Particle off for {this.Name}");
                 base.SkillParticleOff();
             }
             Debug.Log($"base calm change {isCalmNow} {this.GetType().Name}");
@@ -57,13 +83,14 @@ namespace RHA_Merankori
             {
                 OnEmotionPanic();
             }
+            yield break;
         }
 
         [Flags]
         protected enum StateForVisualEffect
         {
-            Panic=0,
-            Calm=1
+            Panic=1,
+            Calm=2
         }
 
         protected StateForVisualEffect effectSetting;
@@ -76,6 +103,18 @@ namespace RHA_Merankori
         protected virtual void OnEmotionPanic()
         {
 
+        }
+
+        public override void HandInit()
+        {
+            base.HandInit();
+            CheckEmotionState();
+        }
+
+        public override string DescInit()
+        {
+            CheckEmotionState();
+            return base.DescInit();
         }
 
         protected bool IsCalm()
@@ -98,6 +137,19 @@ namespace RHA_Merankori
             {
                 UpdateCalmState(true);
             }
+        }
+
+        public override void Init()
+        {
+            base.Init();
+            hasChecked = false;
+            this.SkillParticleObject = new GDESkillExtendedData(GDEItemKeys.SkillExtended_Public_1_Ex).Particle_Path;
+        }
+
+        public override void SelfDestroy()
+        {
+            base.SelfDestroy();
+            hasChecked = false;
         }
     }
 }

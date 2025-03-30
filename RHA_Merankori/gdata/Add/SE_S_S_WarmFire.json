@@ -1,0 +1,11 @@
+{
+    "SE_S_S_WarmFire": {
+        "_gdeSchema": "SkillEffect",
+        "Buffs": [
+            "B_GenCrystal"
+        ],
+        "BuffPlusTagPer": [
+            0
+        ]
+    }
+}

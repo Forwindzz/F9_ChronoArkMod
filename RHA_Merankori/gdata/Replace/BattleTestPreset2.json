@@ -15,7 +15,8 @@
         ],
         "PartySkills": [
             [
-                "S_Azar_1"
+                "S_Pharos_Healer_0",
+                "S_Pharos_Healer_0"
             ],
             [
                 "S_DebugSkill"
@@ -29,7 +30,8 @@
                 "S_Shield",
                 "S_Rectification",
                 "S_Care",
-                "S_Charge"
+                "S_Charge",
+                "S_WarmFire"
             ]
         ],
         "PartyEquip": [

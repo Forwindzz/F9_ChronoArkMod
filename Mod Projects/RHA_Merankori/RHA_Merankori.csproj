@@ -3,7 +3,7 @@
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <AssemblyName>RHA_Merankori202532925059</AssemblyName>
+    <AssemblyName>RHA_Merankori2025330170149</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
@@ -429,7 +429,7 @@
     </Reference>
 <!-- Extra Reference End-->
   </ItemGroup>
-                                                                                            <!-- Compile ItemGroup Start-->
+                                                                                                                                            <!-- Compile ItemGroup Start-->
   <ItemGroup>
     <Compile Include="RHA_Merankori_ModDefinition.cs" />
     <Compile Include="RHA_Merankori_Plugin.cs" />
@@ -441,6 +441,7 @@
     <Compile Include="Buff\B_Charge.cs" />
     <Compile Include="Buff\B_DeathResist.cs" />
     <Compile Include="Buff\B_FreqShift.cs" />
+    <Compile Include="Buff\B_GenCrystal.cs" />
     <Compile Include="Buff\B_H_FreqShift_Lucy.cs" />
     <Compile Include="Buff\B_NotDeadlyAtk.cs" />
     <Compile Include="Buff\B_OverClocking.cs" />
@@ -448,6 +449,7 @@
     <Compile Include="Buff\B_Refraction.cs" />
     <Compile Include="Buff\B_Shield.cs" />
     <Compile Include="Buff\B_Shock.cs" />
+    <Compile Include="Buff\B_WarmFire.cs" />
     <Compile Include="Character\P_C_Merankori.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Skill\Merankori_BaseSkill.cs" />
@@ -458,6 +460,7 @@
     <Compile Include="Skill\S_OverClocking.cs" />
     <Compile Include="Skill\S_Rectification.cs" />
     <Compile Include="Skill\S_Shield.cs" />
+    <Compile Include="Skill\S_WarmFire.cs" />
     <Compile Include="SkillExtended\SE_Backflow.cs" />
     <Compile Include="SkillExtended\SE_Charge.cs" />
     <Compile Include="SkillExtended\SE_OverClocking.cs" />

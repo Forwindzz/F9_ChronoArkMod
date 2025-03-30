@@ -1,0 +1,22 @@
+{
+    "SE_T_S_WarmFire": {
+        "_gdeSchema": "SkillEffect",
+        "HIT": 100,
+        "DMG_Per": 0,
+        "DMG_Base": 0,
+        "HEAL_MaxHpPer": 0,
+        "HEAL_Per": 10,
+        "HEAL_Base": 0,
+        "CRI": 0,
+        "ForceHeal": false,
+        "ChainHeal": false,
+        "Buffs": [
+            "B_Shield",
+            "B_WarmFire"
+        ],
+        "BuffPlusTagPer": [
+            0,
+            0
+        ]
+    }
+}
