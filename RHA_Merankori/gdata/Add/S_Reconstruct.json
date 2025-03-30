@@ -1,0 +1,30 @@
+{
+    "S_Reconstruct": {
+        "_gdeSchema": "Skill",
+        "Category": "null",
+        "Particle": "Particle/flare_lv1",
+        "Rare": false,
+        "Target": "ally",
+        "NODOD": false,
+        "NotCount": false,
+        "NotChuck": false,
+        "HealSkill": false,
+        "Disposable": false,
+        "NoDrop": false,
+        "IgnoreTaunt": false,
+        "Except": false,
+        "NoBasicSkill": false,
+        "Basic": false,
+        "Track": false,
+        "Fatal": false,
+        "EnemyPreview": false,
+        "UnknownTarget": false,
+        "Name": "碎晶重构",
+        "User": "C_Merankori",
+        "UseAp": 2,
+        "Effect_Target": "SE_T_S_Reconstruct",
+        "SkillExtended": [
+            "RHA_Merankori.S_Reconstruct"
+        ]
+    }
+}

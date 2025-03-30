@@ -1,0 +1,13 @@
+{
+    "B_Reflow": {
+        "_gdeSchema": "Buff",
+        "ClassName": "RHA_Merankori.B_Reflow",
+        "BuffTag": "null",
+        "Name": "燐焰晶回流",
+        "Description": "溢出的燐色存护，会转化为折射。\n回合开始时，若没有燐色存护，获得1层燐色存护。",
+        "LifeTime": 4,
+        "MaxStack": 2,
+        "Icon": "Image/Buff/Skill_Icon_Pack/2_0/regained power",
+        "IsFieldBuff": true
+    }
+}

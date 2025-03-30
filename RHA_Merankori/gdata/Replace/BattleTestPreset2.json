@@ -31,7 +31,8 @@
                 "S_Rectification",
                 "S_Care",
                 "S_Charge",
-                "S_WarmFire"
+                "S_WarmFire",
+                "S_Reconstruct"
             ]
         ],
         "PartyEquip": [

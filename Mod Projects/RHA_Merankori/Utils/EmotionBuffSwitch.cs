@@ -11,7 +11,7 @@ namespace RHA_Merankori
     public interface IP_BeforeBuffAdd
     {
         void BeforeBuffAdd(
-            BattleChar battleChar,
+            BattleChar target,
             ref string key, 
             ref BattleChar UseState, 
             ref bool hide, 

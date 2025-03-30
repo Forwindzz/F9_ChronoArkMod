@@ -189,6 +189,17 @@ namespace RHA_Merankori
 		/// 暖焰
 		/// </summary>
         public static string Skill_S_WarmFire = "S_WarmFire";
+		/// <summary>
+		/// 碎晶重构
+		/// </summary>
+        public static string Skill_S_Reconstruct = "S_Reconstruct";
+        public static string SkillEffect_SE_T_S_Reconstruct = "SE_T_S_Reconstruct";
+		/// <summary>
+		/// 燐焰晶回流
+		/// 溢出的燐色存护，会转化为折射。
+		/// 回合开始时，若没有燐色存护，获得1层燐色存护。
+		/// </summary>
+        public static string Buff_B_Reflow = "B_Reflow";
 
     }
 
