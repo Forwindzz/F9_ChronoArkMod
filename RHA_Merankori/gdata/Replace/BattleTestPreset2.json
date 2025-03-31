@@ -33,7 +33,8 @@
                 "S_Charge",
                 "S_WarmFire",
                 "S_Reconstruct",
-                "S_Manifold"
+                "S_Manifold",
+                "S_ConvertCard"
             ]
         ],
         "PartyEquip": [

@@ -3,7 +3,7 @@
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <AssemblyName>RHA_Merankori2025330232203</AssemblyName>
+    <AssemblyName>RHA_Merankori20254100121</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
@@ -429,13 +429,14 @@
     </Reference>
 <!-- Extra Reference End-->
   </ItemGroup>
-                                                                                                                                                                                    <!-- Compile ItemGroup Start-->
+                                                                                                                                                                                                  <!-- Compile ItemGroup Start-->
   <ItemGroup>
     <Compile Include="RHA_Merankori_ModDefinition.cs" />
     <Compile Include="RHA_Merankori_Plugin.cs" />
     <Compile Include="RHA_ModItemKeys.cs" />
     <Compile Include="Buff\BaseImpactAllCardBuff.cs" />
     <Compile Include="Buff\B_Backflow.cs" />
+    <Compile Include="Buff\B_Backup.cs" />
     <Compile Include="Buff\B_Calm.cs" />
     <Compile Include="Buff\B_CalmDown.cs" />
     <Compile Include="Buff\B_Charge.cs" />
@@ -458,6 +459,7 @@
     <Compile Include="Skill\S_Attack_All.cs" />
     <Compile Include="Skill\S_Care.cs" />
     <Compile Include="Skill\S_Charge.cs" />
+    <Compile Include="Skill\S_ConvertCard.cs" />
     <Compile Include="Skill\S_D_RefractionAtk.cs" />
     <Compile Include="Skill\S_Manifold.cs" />
     <Compile Include="Skill\S_OverClocking.cs" />

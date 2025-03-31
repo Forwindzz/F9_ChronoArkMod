@@ -31,6 +31,11 @@ namespace RHA_Merankori
 		/// </summary>
         public static string Buff_B_DeathResist = "B_DeathResist";
 		/// <summary>
+		/// 导流回路
+		/// 丢弃“湮裂的燐焰晶”时，获得1点法力值。
+		/// </summary>
+        public static string Buff_B_DLoop = "B_DLoop";
+		/// <summary>
 		/// 频移微调
 		/// 受到“湮裂的燐焰晶”的攻击时，将这个攻击转化为等量的治疗，然后移除1层。
 		/// </summary>
@@ -60,6 +65,12 @@ namespace RHA_Merankori
 		/// 燐焰晶逐渐炽烈...
 		/// </summary>
         public static string Buff_B_Panic = "B_Panic";
+		/// <summary>
+		/// 燐焰晶回流
+		/// 溢出的燐色存护，会转化为折射。
+		/// 回合开始时，若没有燐色存护，获得1层燐色存护。
+		/// </summary>
+        public static string Buff_B_Reflow = "B_Reflow";
 		/// <summary>
 		/// 折射
 		/// 将“湮裂的燐焰晶”的伤害和附加效果，折射给生命值最低的敌人。
@@ -115,6 +126,7 @@ namespace RHA_Merankori
 		/// </summary>
         public static string SkillExtended_SE_Rectification = "SE_Rectification";
         public static string SkillEffect_SE_S_S_Charge = "SE_S_S_Charge";
+        public static string SkillEffect_SE_S_S_Manifold = "SE_S_S_Manifold";
         public static string SkillEffect_SE_S_S_OverClocking = "SE_S_S_OverClocking";
         public static string SkillEffect_SE_S_S_Rectification = "SE_S_S_Rectification";
         public static string SkillEffect_SE_S_S_Shield = "SE_S_S_Shield";
@@ -126,8 +138,10 @@ namespace RHA_Merankori
         public static string SkillEffect_SE_T_B_Attack_All = "SE_T_B_Attack_All";
         public static string SkillEffect_SE_T_S_Care = "SE_T_S_Care";
         public static string SkillEffect_SE_T_S_D_RefractionAtk = "SE_T_S_D_RefractionAtk";
+        public static string SkillEffect_SE_T_S_Manifold = "SE_T_S_Manifold";
         public static string SkillEffect_SE_T_S_OverClocking = "SE_T_S_OverClocking";
         public static string SkillEffect_SE_T_S_P_Shock = "SE_T_S_P_Shock";
+        public static string SkillEffect_SE_T_S_Reconstruct = "SE_T_S_Reconstruct";
         public static string SkillEffect_SE_T_S_Shield = "SE_T_S_Shield";
         public static string SkillEffect_SE_T_S_WarmFire = "SE_T_S_WarmFire";
 		/// <summary>
@@ -165,6 +179,11 @@ namespace RHA_Merankori
 		/// </summary>
         public static string Skill_S_D_RefractionAtk = "S_D_RefractionAtk";
 		/// <summary>
+		/// 晶体流形
+		/// 冷静：手中每个“湮裂的燐焰晶”会额外提供2层蓄力。（目前提供&a层）
+		/// </summary>
+        public static string Skill_S_Manifold = "S_Manifold";
+		/// <summary>
 		/// 越频晶体
 		/// 冷静：延长“折射”1回合
 		/// </summary>
@@ -174,6 +193,10 @@ namespace RHA_Merankori
 		/// 预览效果
 		/// </summary>
         public static string Skill_S_P_Shock = "S_P_Shock";
+		/// <summary>
+		/// 碎晶重构
+		/// </summary>
+        public static string Skill_S_Reconstruct = "S_Reconstruct";
 		/// <summary>
 		/// 整流
 		/// 指向梅朗柯莉“指向队友”或“其他友军”的技能时，改成“全体友军” 。
@@ -190,28 +213,11 @@ namespace RHA_Merankori
 		/// </summary>
         public static string Skill_S_WarmFire = "S_WarmFire";
 		/// <summary>
-		/// 碎晶重构
+		/// 焰晶转化
+		/// 选择的卡牌会被丢弃，然后将1张“湮裂的燐焰晶”放入手牌中，并额外抽1张卡。
+		/// 弃牌技能的拥有者获得1层折射。
 		/// </summary>
-        public static string Skill_S_Reconstruct = "S_Reconstruct";
-        public static string SkillEffect_SE_T_S_Reconstruct = "SE_T_S_Reconstruct";
-		/// <summary>
-		/// 燐焰晶回流
-		/// 溢出的燐色存护，会转化为折射。
-		/// 回合开始时，若没有燐色存护，获得1层燐色存护。
-		/// </summary>
-        public static string Buff_B_Reflow = "B_Reflow";
-		/// <summary>
-		/// 晶体流形
-		/// 冷静：手中每个“湮裂的燐焰晶”会额外提供2层蓄力。（目前提供&a层）
-		/// </summary>
-        public static string Skill_S_Manifold = "S_Manifold";
-        public static string SkillEffect_SE_T_S_Manifold = "SE_T_S_Manifold";
-        public static string SkillEffect_SE_S_S_Manifold = "SE_S_S_Manifold";
-		/// <summary>
-		/// 导流回路
-		/// 丢弃“湮裂的燐焰晶”时，获得1点法力值。
-		/// </summary>
-        public static string Buff_B_DLoop = "B_DLoop";
+        public static string Skill_S_ConvertCard = "S_ConvertCard";
 
     }
 

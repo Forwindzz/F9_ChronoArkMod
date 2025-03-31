@@ -1,0 +1,29 @@
+{
+    "S_ConvertCard": {
+        "_gdeSchema": "Skill",
+        "Category": "null",
+        "Particle": "Particle/impact",
+        "Rare": false,
+        "Target": "skill",
+        "NODOD": false,
+        "NotCount": true,
+        "NotChuck": false,
+        "HealSkill": false,
+        "Disposable": false,
+        "NoDrop": false,
+        "IgnoreTaunt": false,
+        "Except": false,
+        "NoBasicSkill": false,
+        "Basic": false,
+        "Track": false,
+        "Fatal": false,
+        "EnemyPreview": false,
+        "UnknownTarget": false,
+        "Description": "选择的卡牌会被丢弃，然后将1张“湮裂的燐焰晶”放入手牌中，并额外抽1张卡。\r\n弃牌技能的拥有者获得1层折射。\r",
+        "Name": "焰晶转化",
+        "User": "C_Merankori",
+        "SkillExtended": [
+            "RHA_Merankori.S_ConvertCard"
+        ]
+    }
+}
