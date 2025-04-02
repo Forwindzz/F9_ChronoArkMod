@@ -1,0 +1,30 @@
+{
+    "S_Backup": {
+        "_gdeSchema": "Skill",
+        "Category": "null",
+        "Particle": "Particle/Public/Public_2",
+        "Rare": true,
+        "Target": "self",
+        "NODOD": false,
+        "NotCount": true,
+        "NotChuck": false,
+        "HealSkill": false,
+        "Disposable": false,
+        "NoDrop": false,
+        "IgnoreTaunt": false,
+        "Except": false,
+        "NoBasicSkill": false,
+        "Basic": false,
+        "Track": false,
+        "Fatal": false,
+        "EnemyPreview": false,
+        "UnknownTarget": false,
+        "User": "C_Merankori",
+        "Name": "后备的燐焰晶",
+        "Description": "抽1张牌，\n将“湮裂的燐焰晶”放入手中，直到填满手牌。",
+        "Effect_Target": "SE_T_S_Backup",
+        "SkillExtended": [
+            "RHA_Merankori.S_Backup"
+        ]
+    }
+}

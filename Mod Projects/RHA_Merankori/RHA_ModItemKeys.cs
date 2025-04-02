@@ -174,6 +174,12 @@ namespace RHA_Merankori
 		/// </summary>
         public static string Skill_S_Charge = "S_Charge";
 		/// <summary>
+		/// 焰晶转化
+		/// 选择的卡牌会被丢弃，然后将1张“湮裂的燐焰晶”放入手牌中，并额外抽1张卡。
+		/// 弃牌技能的拥有者获得1层折射。
+		/// </summary>
+        public static string Skill_S_ConvertCard = "S_ConvertCard";
+		/// <summary>
 		/// 折射
 		/// 折射来自“湮裂的燐焰晶”的伤害
 		/// </summary>
@@ -213,11 +219,16 @@ namespace RHA_Merankori
 		/// </summary>
         public static string Skill_S_WarmFire = "S_WarmFire";
 		/// <summary>
-		/// 焰晶转化
-		/// 选择的卡牌会被丢弃，然后将1张“湮裂的燐焰晶”放入手牌中，并额外抽1张卡。
-		/// 弃牌技能的拥有者获得1层折射。
+		/// 后备的燐焰晶
+		/// 抽1张牌，
+		/// 将“湮裂的燐焰晶”放入手中，直到填满手牌。
 		/// </summary>
-        public static string Skill_S_ConvertCard = "S_ConvertCard";
+        public static string Skill_S_Backup = "S_Backup";
+        public static string SkillEffect_SE_T_S_Backup = "SE_T_S_Backup";
+		/// <summary>
+		/// 回合开始时，生成1张“湮裂的燐焰晶”并放入手牌中。
+		/// </summary>
+        public static string Buff_B_Backup = "B_Backup";
 
     }
 

@@ -151,6 +151,7 @@ namespace RHA_Merankori
                 if(IsPanic())
                 {
                     BattleSystem.instance.ActWindow.CastingWaste(currentCastingSkill);
+                    BattleSystem.instance.CastSkills.Remove(currentCastingSkill);
                 }
             }
             else

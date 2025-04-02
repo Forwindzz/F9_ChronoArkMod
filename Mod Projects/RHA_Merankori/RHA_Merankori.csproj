@@ -3,7 +3,7 @@
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <AssemblyName>RHA_Merankori20254100121</AssemblyName>
+    <AssemblyName>RHA_Merankori202542235831</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
@@ -429,7 +429,7 @@
     </Reference>
 <!-- Extra Reference End-->
   </ItemGroup>
-                                                                                                                                                                                                  <!-- Compile ItemGroup Start-->
+                    <!-- Compile ItemGroup Start-->
   <ItemGroup>
     <Compile Include="RHA_Merankori_ModDefinition.cs" />
     <Compile Include="RHA_Merankori_Plugin.cs" />
@@ -457,6 +457,7 @@
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Skill\Merankori_BaseSkill.cs" />
     <Compile Include="Skill\S_Attack_All.cs" />
+    <Compile Include="Skill\S_Backup.cs" />
     <Compile Include="Skill\S_Care.cs" />
     <Compile Include="Skill\S_Charge.cs" />
     <Compile Include="Skill\S_ConvertCard.cs" />

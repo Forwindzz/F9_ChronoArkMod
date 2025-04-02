@@ -201,5 +201,18 @@ namespace RHA_Merankori
                 ip => ip.AfterMerankoriAttackAll(this));
             yield break;
         }
+
+        public static void GenCardToHand(BattleChar BChar, int times = 1)
+        {
+            if(BChar==null || BChar.MyTeam==null)
+            {
+                return;
+            }
+            Skill skill = Skill.TempSkill(ModItemKeys.Skill_S_Attack_All, BChar, BChar.MyTeam);
+            for (int i = 0; i < times; i++)
+            {
+                BChar.MyTeam.Add(skill.CloneSkill(), true);
+            }
+        }
     }
 }

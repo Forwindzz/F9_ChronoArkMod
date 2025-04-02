@@ -38,8 +38,7 @@ namespace RHA_Merankori
                     }
                     else
                     {
-                        Skill newSkill = Skill.TempSkill(ModItemKeys.Skill_S_Attack_All, this.MySkill.Master, this.MySkill.Master.MyTeam);
-                        BChar.MyTeam.Add(newSkill.CloneSkill(false, null, null, false), true);
+                        S_Attack_All.GenCardToHand(this.BChar);
                     }
                 }
             }

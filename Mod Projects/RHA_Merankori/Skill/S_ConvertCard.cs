@@ -38,9 +38,8 @@ namespace RHA_Merankori
                 {
                     continue;
                 }
-                Skill skill = Skill.TempSkill(ModItemKeys.Skill_S_Attack_All, this.BChar, this.BChar.MyTeam);
-                this.BChar.MyTeam.Add(skill.CloneSkill(), true);
-                if(targetSkill.Master!=null)
+                S_Attack_All.GenCardToHand(this.BChar);
+                if (targetSkill.Master!=null)
                 {
                     targetSkill.Master.BuffAdd(ModItemKeys.Buff_B_Refraction, this.BChar);
                 }

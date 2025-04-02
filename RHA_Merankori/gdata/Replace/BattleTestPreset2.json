@@ -34,7 +34,8 @@
                 "S_WarmFire",
                 "S_Reconstruct",
                 "S_Manifold",
-                "S_ConvertCard"
+                "S_ConvertCard",
+                "S_Backup"
             ]
         ],
         "PartyEquip": [
