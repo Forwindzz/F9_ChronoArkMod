@@ -35,7 +35,8 @@
                 "S_Reconstruct",
                 "S_Manifold",
                 "S_ConvertCard",
-                "S_Backup"
+                "S_Backup",
+                "S_ElementHeal"
             ]
         ],
         "PartyEquip": [

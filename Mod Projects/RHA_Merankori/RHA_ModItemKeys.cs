@@ -11,6 +11,11 @@ namespace RHA_Merankori
 		/// </summary>
         public static string Buff_B_Backflow = "B_Backflow";
 		/// <summary>
+		/// 后备的燐焰晶
+		/// 回合开始时，生成1张“湮裂的燐焰晶”并放入手牌中。
+		/// </summary>
+        public static string Buff_B_Backup = "B_Backup";
+		/// <summary>
 		/// 冷静
 		/// 照料可能因自己受伤的队友...
 		/// </summary>
@@ -136,6 +141,7 @@ namespace RHA_Merankori
         public static string SkillEffect_SE_Tick_B_CalmDown = "SE_Tick_B_CalmDown";
         public static string SkillEffect_SE_Tick_B_Panic = "SE_Tick_B_Panic";
         public static string SkillEffect_SE_T_B_Attack_All = "SE_T_B_Attack_All";
+        public static string SkillEffect_SE_T_S_Backup = "SE_T_S_Backup";
         public static string SkillEffect_SE_T_S_Care = "SE_T_S_Care";
         public static string SkillEffect_SE_T_S_D_RefractionAtk = "SE_T_S_D_RefractionAtk";
         public static string SkillEffect_SE_T_S_Manifold = "SE_T_S_Manifold";
@@ -162,6 +168,12 @@ namespace RHA_Merankori
 		/// 慌张：技能附加迅速。
 		/// </summary>
         public static string Skill_S_Attack_All = "S_Attack_All";
+		/// <summary>
+		/// 后备的燐焰晶
+		/// 抽1张牌，
+		/// 将“湮裂的燐焰晶”放入手中，直到填满手牌。
+		/// </summary>
+        public static string Skill_S_Backup = "S_Backup";
 		/// <summary>
 		/// 悉心照料
 		/// 冷静：目标持有“燐焰晶”相关的正面效果，再额外增加1层
@@ -219,16 +231,14 @@ namespace RHA_Merankori
 		/// </summary>
         public static string Skill_S_WarmFire = "S_WarmFire";
 		/// <summary>
-		/// 后备的燐焰晶
-		/// 抽1张牌，
-		/// 将“湮裂的燐焰晶”放入手中，直到填满手牌。
+		/// 元素调石
+		/// 恢复全部体力极限。
+		/// 每恢复&a体力极限，赋予自身1层蓄力。
+		/// （预计获得&b层蓄力）
 		/// </summary>
-        public static string Skill_S_Backup = "S_Backup";
-        public static string SkillEffect_SE_T_S_Backup = "SE_T_S_Backup";
-		/// <summary>
-		/// 回合开始时，生成1张“湮裂的燐焰晶”并放入手牌中。
-		/// </summary>
-        public static string Buff_B_Backup = "B_Backup";
+        public static string Skill_S_ElementHeal = "S_ElementHeal";
+        public static string SkillEffect_SE_T_S_ElementHeal = "SE_T_S_ElementHeal";
+        public static string SkillEffect_SE_S_S_ElementHeal = "SE_S_S_ElementHeal";
 
     }
 
