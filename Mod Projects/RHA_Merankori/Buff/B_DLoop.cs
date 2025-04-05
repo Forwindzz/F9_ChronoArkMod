@@ -15,7 +15,7 @@ namespace RHA_Merankori
 {
     /// <summary>
     /// 导流回路
-    /// 丢弃“湮裂的燐焰晶”时，获得1点法力值。
+    /// 丢弃“湮裂的燐焰晶”时，获得1点法力值和2层蓄力。
     /// </summary>
     public class B_DLoop : Buff, IP_Discard
     {
@@ -24,6 +24,7 @@ namespace RHA_Merankori
             if(skill.ExtendedFind<S_Attack_All>()!=null)
             {
                 BattleSystem.instance.AllyTeam.AP += 1;
+                this.BChar.BuffAddWithStacks(ModItemKeys.Buff_B_Charge, this.BChar, 2);
             }
         }
     }

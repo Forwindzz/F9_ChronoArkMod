@@ -5,7 +5,7 @@
         "ClassName": "RHA_Merankori.B_DLoop",
         "BuffTag": "null",
         "Name": "导流回路",
-        "Description": "丢弃“湮裂的燐焰晶”时，获得1点法力值。",
+        "Description": "丢弃<color=#FF6767>湮裂的燐焰晶</color>时，获得1点法力值和2层“蓄力”。",
         "Icon": "Image/Buff/Skill_Icon_Pack/Silver_0",
         "LifeTime": 4
     }

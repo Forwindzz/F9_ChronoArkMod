@@ -20,8 +20,8 @@
         "EnemyPreview": false,
         "UnknownTarget": false,
         "User": "C_Merankori",
-        "Name": "越频晶体\r\n",
-        "Description": "冷静：延长“折射”1回合",
+        "Name": "越频晶石\n",
+        "Description": "<color=#BAC8FF><b>冷静</b>：延长“折射”1回合</color>",
         "UseAp": 1,
         "Effect_Target": "SE_T_S_OverClocking",
         "PlusKeyWords": [

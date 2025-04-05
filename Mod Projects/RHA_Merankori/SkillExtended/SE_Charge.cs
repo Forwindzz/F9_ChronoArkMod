@@ -15,7 +15,7 @@ namespace RHA_Merankori
 {
 	/// <summary>
 	/// 蓄能
-	/// 根据蓄能效果层数，每层增加25%的伤害。
+	/// 根据蓄能效果层数，每层增加10%的伤害。
 	/// </summary>
     public class SE_Charge:
 		Skill_Extended,
@@ -32,7 +32,7 @@ namespace RHA_Merankori
 				return;
 			}
 
-			this.PlusPerStat.Damage = this.MySkill.Master.CountBuffStack(ModItemKeys.Buff_B_Charge) * 25;
+			this.PlusPerStat.Damage = this.MySkill.Master.CountBuffStack(ModItemKeys.Buff_B_Charge) * 10;
         }
 
         public override void Init()

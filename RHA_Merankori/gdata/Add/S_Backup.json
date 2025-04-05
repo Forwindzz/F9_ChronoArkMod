@@ -21,7 +21,7 @@
         "UnknownTarget": false,
         "User": "C_Merankori",
         "Name": "后备的燐焰晶",
-        "Description": "抽1张牌，\n将“湮裂的燐焰晶”放入手中，直到填满手牌。",
+        "Description": "抽1张牌，\n将<color=#FF6767>湮裂的燐焰晶</color>放入手中，直到填满手牌。",
         "Effect_Target": "SE_T_S_Backup",
         "SkillExtended": [
             "RHA_Merankori.S_Backup"

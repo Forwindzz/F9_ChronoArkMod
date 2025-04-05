@@ -15,7 +15,7 @@ namespace RHA_Merankori
 {
 	/// <summary>
 	/// 燐晶盾
-	/// 冷静：处于濒死状态的队友额外获得3层“燐色存护”
+	/// 冷静：处于濒死状态的队友额外获得1层“燐色存护”
 	/// </summary>
     public class S_Shield: 
         Merankori_BaseSkill,
@@ -47,7 +47,7 @@ namespace RHA_Merankori
                 if (b.BuffFind(GDEItemKeys.Buff_B_Neardeath))
                 {
                     Debug.Log("find near death " + b.Info.Name);
-                    b.BuffAddWithStacks(ModItemKeys.Buff_B_Shield, this.BChar, 3);
+                    b.BuffAddWithStacks(ModItemKeys.Buff_B_Shield, this.BChar, 1);
                 }
             }
         }

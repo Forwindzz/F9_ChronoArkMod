@@ -1,9 +1,11 @@
 {
     "SE_OverClocking": {
         "_gdeSchema": "SkillExtended",
-        "Name": "越频晶体",
-        "Des": "下一次“湮裂的燐焰晶”会附带“震荡冲击”效果。",
+        "Name": "越频晶石",
+        "Des": "下一次<color=#FF6767>湮裂的燐焰晶</color>会附带“震荡冲击”效果。",
         "ClassName": "RHA_Merankori.SE_OverClocking",
-        "IsIcon": "Image/Buff/Skill_Icon_Pack/emerald/emerald_02"
+        "IsIcon": "Image/Buff/Skill_Icon_Pack/emerald/emerald_02",
+        "AlwaysParticle": false,
+        "IsOnesInit": false
     }
 }

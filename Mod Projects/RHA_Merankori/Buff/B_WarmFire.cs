@@ -60,7 +60,8 @@ namespace RHA_Merankori
 
         public override string DescInit()
         {
-            return base.DescInit().Replace("&a", totalHeal.ToString());
+            return base.DescInit().Replace("&a", totalHeal.ToString())
+                .Replace("&b", this.BChar.GetStat.maxhp.ToString());
         }
     }
 }

@@ -6,11 +6,12 @@
         "UseSkillDebuff": false,
         "Caution": false,
         "MaxStack": 10,
-        "Description": "每层能抵抗1次不能战斗效果，必定不能战斗的效果也能抵抗。",
+        "Description": "每层能抵抗1次无法战斗效果，必定无法战斗的效果也能抵抗。",
         "Name": "燐色存护",
         "Tick": "null",
         "Hide": false,
         "IsFieldBuff": false,
-        "Cantdisable": false
+        "Cantdisable": false,
+        "Icon": "Image/Buff/Skill_Icon_Pack/blue/blue_35"
     }
 }

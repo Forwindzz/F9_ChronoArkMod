@@ -8,7 +8,7 @@
         "BuffTag": "null",
         "UseSkillDebuff": false,
         "Caution": false,
-        "Description": "回合开始时，生成1张“湮裂的燐焰晶”并放入手牌中。",
+        "Description": "回合开始时，生成1张<color=#FF6767>湮裂的燐焰晶</color>并放入手牌中。",
         "LifeTime": 4,
         "Icon": "Image/Buff/Skill_Icon_Pack/1_5icon/1_5 (1)",
         "Tick": "null",

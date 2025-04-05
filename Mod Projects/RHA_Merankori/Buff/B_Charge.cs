@@ -15,7 +15,7 @@ namespace RHA_Merankori
 {
     /// <summary>
     /// 蓄能
-    /// 释放“湮裂的燐焰晶”时，每层增加其25%的伤害。
+    /// 释放“湮裂的燐焰晶”时，每层增加其10%的伤害。
     /// 释放后移除此效果。
     /// </summary>
     public class B_Charge : BaseImpactAllCardBuff
@@ -26,7 +26,7 @@ namespace RHA_Merankori
         {
             base.BuffStat();
             this.PlusStat.DeadImmune = 2 * StackNum;
-            this.PlusStat.AggroPer = 300;
+            this.PlusStat.AggroPer = 33 * StackNum;
         }
     }
 }

@@ -27,12 +27,24 @@ namespace RHA_Merankori
             {
                 if(skill!=null)
                 {
-                    bool isMerankoriSkill = skill.Master.Info.KeyData == IDs.ID_Character_Merankori;
+                    bool isMerankoriSkill = skill.Master.Info.KeyData == ModItemKeys.Character_C_Merankori;
+                    if(!isMerankoriSkill)
+                    {
+                        S_Attack_All.GenCardToHand(this.BChar);
+                        continue;
+                    }
+
                     bool isAllyTarget =
                         skill.MySkill.Target.Key == GDEItemKeys.s_targettype_ally ||
-                        skill.MySkill.Target.Key == GDEItemKeys.s_targettype_otherally; 
+                        skill.MySkill.Target.Key == GDEItemKeys.s_targettype_otherally;
+                    if(!isAllyTarget)
+                    {
+                        S_Attack_All.GenCardToHand(this.BChar);
+                        continue;
+                    }
 
-                    if(isMerankoriSkill&&isAllyTarget)
+                    bool isMerankoriSpecificSkill = IDs.List_MerankoriSkills.Contains(skill.MySkill.KeyID);
+                    if (isMerankoriSpecificSkill) 
                     {
                         skill.EnsureExtendSkill(ModItemKeys.SkillExtended_SE_Rectification);
                     }

@@ -9,7 +9,7 @@
         "UseSkillDebuff": false,
         "Caution": false,
         "Name": "折射",
-        "Description": "将“湮裂的燐焰晶”的伤害和附加效果，折射给生命值最低的敌人。",
+        "Description": "将<color=#FF6767>湮裂的燐焰晶</color>的伤害和附加效果，折射给生命值最低的敌人。",
         "LifeTime": 1,
         "Icon": "Image/Buff/Skill_Icon_Pack/1_82/12"
     }

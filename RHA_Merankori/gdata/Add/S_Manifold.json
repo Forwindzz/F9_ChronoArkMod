@@ -6,7 +6,7 @@
         "Target": "ally",
         "User": "C_Merankori",
         "Name": "晶体流形",
-        "Description": "冷静：手中每个“湮裂的燐焰晶”会额外提供2层蓄力。（目前提供&a层）",
+        "Description": "<color=#BAC8FF><b>冷静</b>：手中每个<color=#FF6767>湮裂的燐焰晶</color>会额外提供2层“蓄力”</color>\n<color=#5061A4>（预计提供&a层）</color>",
         "UseAp": 2,
         "NotCount": true,
         "PlusKeyWords": [

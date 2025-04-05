@@ -3,8 +3,8 @@
         "_gdeSchema": "EnemyQueue",
         "Enemys": [
             "S1_Maid",
-            "S1_Table",
-            "S1_Armor"
+            "S1_Armor",
+            "S1_Table"
         ]
     }
 }

@@ -6,7 +6,7 @@
         "Target": "all_ally",
         "NotCount": true,
         "Name": "燐晶盾",
-        "Description": "冷静：处于濒死状态的队友额外获得3层“燐色存护”",
+        "Description": "<color=#BAC8FF><b>冷静</b>：处于濒死状态的队友额外获得1层“燐色存护”</color>",
         "User": "C_Merankori",
         "UseAp": 2,
         "PlusKeyWords": [

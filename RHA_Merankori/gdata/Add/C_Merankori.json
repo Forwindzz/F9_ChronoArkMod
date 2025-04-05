@@ -5,7 +5,7 @@
         "PassiveClassName": "RHA_Merankori.P_C_Merankori",
         "PassiveUnlockLV1": false,
         "name": "梅朗柯莉",
-        "SelectInfo": "这是一段简介",
+        "SelectInfo": "来自梅弗特哈涅，性格内向，喜欢空想的少女。5个兄弟姐妹中最小的一个，经常帮哥哥做家务。情绪高涨之后，周围的结晶体就会变形，因为会伤害到周围的人，不太接近家族外面的人。\r\n然而，在一次晶石校调的过程中，梅朗柯莉的意识坠入了一个与电之国截然不同的世界。阿扎尔说解锁钟塔便能返回繁华的电之国，然而方舟调查团并没有人愿意和她组队...\r\n「……」\r",
         "Gender": 1,
         "face": "C_Merankori\\C_MerankoriBattleFace.png",
         "MAXHP": {
@@ -62,12 +62,13 @@
         },
         "PassiveName": "燐焰晶\n",
         "FixedBasicSkill": "S_Attack_All",
-        "PassiveDes": "情绪高涨的梅朗柯莉会激化身边的红色结晶，会对周围不分敌我地产生毁灭性的伤害，甚至摧毁地形。\r\n但冷静下来的梅朗柯莉又会悉心照料因自己而受伤的队友。\r\n任何攻击都会让她变得情绪慌张，但在回合开始时，梅朗柯莉会冷静下来。\r\n\r\n固定技能始终为“湮裂的燐焰晶”\r\nlv.2获得物品“活化燐焰晶”\r\n",
+        "PassiveDes": "任何攻击都会让梅朗柯莉变得情绪<color=#FFC5BA><b>慌张</b></color>，但在回合开始时，梅朗柯莉会<color=#BAC8FF><b>冷静</b></color>下来。\r\n\r\n固定技能始终为<color=#FF6767>湮裂的燐焰晶</color>，会攻击除自己以外的所有人，并且使周围地形化为灰烬。\n\nlv.2获得物品“活化燐焰晶”\r\n",
         "StatView_Atk": 3,
         "StatView_Heal": 1,
         "StatView_Def": 2,
         "StatView_Sup": 3,
         "StatView_CC": 1,
-        "StatView_Difficult": 3
+        "StatView_Difficult": 3,
+        "FirstSkill": "S_Shield"
     }
 }
