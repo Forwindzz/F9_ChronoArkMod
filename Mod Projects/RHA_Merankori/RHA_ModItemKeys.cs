@@ -239,6 +239,12 @@ namespace RHA_Merankori
         public static string Skill_S_ElementHeal = "S_ElementHeal";
         public static string SkillEffect_SE_T_S_ElementHeal = "SE_T_S_ElementHeal";
         public static string SkillEffect_SE_S_S_ElementHeal = "SE_S_S_ElementHeal";
+		/// <summary>
+		/// 抽取2个技能。
+		/// 若指向的队友拥有至少4个正面效果，额外抽取1张牌。
+		/// </summary>
+        public static string Skill_S_Retreat = "S_Retreat";
+        public static string SkillEffect_SE_T_S_Retreat = "SE_T_S_Retreat";
 
     }
 
