@@ -27,6 +27,10 @@ namespace RHA_Merankori
         //燐焰晶的伤害不会致命
         public bool DeadResist()
         {
+            if (this.BChar.Recovery < 1)
+            {
+                this.BChar.Recovery = 1;
+            }
             return true;
         }
 
@@ -36,5 +40,6 @@ namespace RHA_Merankori
             this.SetDestroyBuffTrue(true);
             yield break;
         }
+
     }
 }

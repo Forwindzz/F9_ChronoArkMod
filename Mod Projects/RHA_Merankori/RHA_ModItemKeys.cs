@@ -87,7 +87,7 @@ namespace RHA_Merankori
         public static string Buff_B_Refraction = "B_Refraction";
 		/// <summary>
 		/// 燐色存护
-		/// 每层能抵抗1次无法战斗效果，必定无法战斗的效果也能抵抗。
+		/// 每层能抵抗1次不能战斗效果。
 		/// </summary>
         public static string Buff_B_Shield = "B_Shield";
 		/// <summary>
@@ -106,10 +106,16 @@ namespace RHA_Merankori
 		/// 梅朗柯莉
 		/// Passive:
 		/// 任何攻击都会让梅朗柯莉变得情绪<color=#FFC5BA><b>慌张</b></color>，但在回合开始时，梅朗柯莉会<color=#BAC8FF><b>冷静</b></color>下来。
-		/// 固定技能始终为<color=#FF6767>湮裂的燐焰晶</color>，会攻击除自己以外的所有人。
-		/// lv.2获得物品“活化燐焰晶”
+		/// 固定技能始终为<color=#FF6767>湮裂的燐焰晶</color>，会攻击除自己以外的所有人，并且使周围地形化为灰烬。
+		/// 获得物品“燐焰晶”
 		/// </summary>
         public static string Character_C_Merankori = "C_Merankori";
+		/// <summary>
+		/// 燐焰晶
+		/// 右击可以让梅朗柯莉摧毁周边的墙体，可能发现小型物资，在篝火处会充能3次。
+		/// <color=#5061A4>  --- 赤红的晶石上透射着淡淡的回路，似乎很危险的样子...</color>
+		/// </summary>
+        public static string Item_Consume_I_RHA = "I_RHA";
 		/// <summary>
 		/// 逆流的燐焰晶
 		/// 根据所有队友已损失的体力值增加伤害，每1点增加1%伤害。

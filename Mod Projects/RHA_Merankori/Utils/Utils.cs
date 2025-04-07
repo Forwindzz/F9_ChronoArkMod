@@ -262,5 +262,22 @@ namespace RHA_Merankori
             return buff.BuffData.Key == keyID;
         }
 
+        public static void Shuffle<T>(this List<T> list)
+        {
+            if (list == null || list.Count <= 1)
+            {
+                return;
+            }
+            int n = list.Count;
+            while (n > 1)
+            {
+                int k = UnityEngine.Random.Range(0,n);
+                n--;
+                T temp = list[n];
+                list[n] = list[k];
+                list[k] = temp;
+            }
+        }
+
     }
 }

@@ -20,26 +20,18 @@ namespace RHA_Merankori
         Buff,
         IP_DeadResist
     {
-        private bool isRemoved = false;
         public bool DeadResist()
         {
             if(this.BChar.BuffFind(ModItemKeys.Buff_B_NotDeadlyAtk))
             {
                 return true;
             }
-            if(!isRemoved)
+            this.SelfStackDestroy();
+            if(this.BChar.Recovery<1)
             {
-                isRemoved = true;
-                BattleSystem.DelayInputAfter(ResetFlag());
+                this.BChar.Recovery = 1;
             }
             return true;
-        }
-
-        private IEnumerator ResetFlag()
-        {
-            this.SelfStackDestroy();
-            isRemoved = false;
-            yield break;
         }
     }
 }

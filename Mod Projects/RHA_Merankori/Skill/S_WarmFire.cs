@@ -20,7 +20,7 @@ namespace RHA_Merankori
         public override void Init()
         {
             base.Init();
-            this.effectSetting = StateForVisualEffect.Calm;
+            //this.effectSetting = StateForVisualEffect.Calm;
         }
         /*
         public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)

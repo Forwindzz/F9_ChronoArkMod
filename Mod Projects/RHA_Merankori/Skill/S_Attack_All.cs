@@ -33,7 +33,7 @@ namespace RHA_Merankori
         {
             base.SkillUseSingle(SkillD, Targets);
             // 除了梅朗柯莉自身
-            Utils.RemoveTarget(IDs.ID_Character_Merankori, Targets);
+            Utils.RemoveTarget(ModItemKeys.Character_C_Merankori, Targets);
             Debug.Log("----------\nMerankori Attack All!");
 
             // 效果：反射，将伤害转移给敌方，只有队友可以转移，敌人也可以转移的话，会死循环！

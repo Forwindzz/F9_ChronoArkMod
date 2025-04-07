@@ -62,13 +62,15 @@
         },
         "PassiveName": "燐焰晶\n",
         "FixedBasicSkill": "S_Attack_All",
-        "PassiveDes": "任何攻击都会让梅朗柯莉变得情绪<color=#FFC5BA><b>慌张</b></color>，但在回合开始时，梅朗柯莉会<color=#BAC8FF><b>冷静</b></color>下来。\r\n\r\n固定技能始终为<color=#FF6767>湮裂的燐焰晶</color>，会攻击除自己以外的所有人，并且使周围地形化为灰烬。\n\nlv.2获得物品“活化燐焰晶”\r\n",
+        "PassiveDes": "任何攻击都会让梅朗柯莉变得情绪<color=#FFC5BA><b>慌张</b></color>，但在回合开始时，梅朗柯莉会<color=#BAC8FF><b>冷静</b></color>下来。\r\n\r\n固定技能始终为<color=#FF6767>湮裂的燐焰晶</color>，会攻击除自己以外的所有人，并且使周围地形化为灰烬。\n\n获得物品“燐焰晶”\r\n",
         "StatView_Atk": 3,
         "StatView_Heal": 1,
         "StatView_Def": 2,
         "StatView_Sup": 3,
         "StatView_CC": 1,
         "StatView_Difficult": 3,
-        "FirstSkill": "S_Shield"
+        "FirstSkill": "S_Shield",
+        "CollectionSprite_Cover": "C_Merankori\\C_MerankoriCollectionSprite_Cover.png",
+        "CollectionSprite_SkillFace": "C_Merankori\\C_MerankoriCollectionSprite_SkillFace.png"
     }
 }
