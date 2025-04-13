@@ -1,0 +1,26 @@
+# ========== Unity Generated Files ==========
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+
+# ========== Auto-generated VS/Rider files ==========
+.vscode/
+.idea/
+*.csproj
+*.sln
+.vs/
+
+# ========== OS/System Files ==========
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ========== Rider and JetBrains ==========
+*.iml
+*.ipr
+*.iws
+.idea/
+

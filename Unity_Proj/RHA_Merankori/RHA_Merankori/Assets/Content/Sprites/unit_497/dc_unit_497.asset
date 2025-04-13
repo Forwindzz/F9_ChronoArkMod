@@ -1,0 +1,646 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 194737b46e04ff84a936435d5601662f, type: 3}
+  m_Name: dc_unit_497
+  m_EditorClassIdentifier:
+  Version: 65537
+  TableCellMap:
+  - Name: unit_497
+    SizeOriginal: {x: 1024, y: 1024}
+    TableCell:
+    - Name: body
+      Rectangle:
+        serializedVersion: 2
+        x: 429
+        y: 120
+        width: 180
+        height: 200
+      Pivot: {x: 100, y: 61}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: expression
+      Rectangle:
+        serializedVersion: 2
+        x: 380
+        y: 451
+        width: 90
+        height: 90
+      Pivot: {x: 45, y: 45}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: expression_d
+      Rectangle:
+        serializedVersion: 2
+        x: 380
+        y: 544
+        width: 90
+        height: 88
+      Pivot: {x: 45, y: 44}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: hair
+      Rectangle:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 250
+        height: 250
+      Pivot: {x: 125, y: 125}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: head
+      Rectangle:
+        serializedVersion: 2
+        x: 380
+        y: 320
+        width: 123
+        height: 131
+      Pivot: {x: 58, y: 125}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: s_1
+      Rectangle:
+        serializedVersion: 2
+        x: 72
+        y: 320
+        width: 56
+        height: 56
+      Pivot: {x: 41, y: 16}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: s_2
+      Rectangle:
+        serializedVersion: 2
+        x: 56
+        y: 384
+        width: 56
+        height: 72
+      Pivot: {x: 40, y: 10}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: s_3
+      Rectangle:
+        serializedVersion: 2
+        x: 0
+        y: 328
+        width: 64
+        height: 40
+      Pivot: {x: 50, y: 10}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: s_4
+      Rectangle:
+        serializedVersion: 2
+        x: 0
+        y: 368
+        width: 56
+        height: 72
+      Pivot: {x: 51, y: 7.9999995}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: s_5
+      Rectangle:
+        serializedVersion: 2
+        x: 136
+        y: 328
+        width: 56
+        height: 64
+      Pivot: {x: 14, y: 10}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: s_6
+      Rectangle:
+        serializedVersion: 2
+        x: 152
+        y: 392
+        width: 32
+        height: 64
+      Pivot: {x: 8, y: 10}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: s_7
+      Rectangle:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 64
+        height: 48
+      Pivot: {x: 15, y: 17}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: s_8
+      Rectangle:
+        serializedVersion: 2
+        x: 200
+        y: 368
+        width: 56
+        height: 64
+      Pivot: {x: 10, y: 10}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: s_9
+      Rectangle:
+        serializedVersion: 2
+        x: 256
+        y: 472
+        width: 64
+        height: 80
+      Pivot: {x: 52, y: 9.000001}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: s_10
+      Rectangle:
+        serializedVersion: 2
+        x: 320
+        y: 464
+        width: 56
+        height: 88
+      Pivot: {x: 13, y: 18.000002}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: s_11
+      Rectangle:
+        serializedVersion: 2
+        x: 184
+        y: 472
+        width: 48
+        height: 40
+      Pivot: {x: 32, y: 11}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: s_12
+      Rectangle:
+        serializedVersion: 2
+        x: 168
+        y: 528
+        width: 48
+        height: 40
+      Pivot: {x: 31, y: 13}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: s_13
+      Rectangle:
+        serializedVersion: 2
+        x: 104
+        y: 536
+        width: 40
+        height: 32
+      Pivot: {x: 10, y: 8}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: s_14
+      Rectangle:
+        serializedVersion: 2
+        x: 112
+        y: 576
+        width: 40
+        height: 40
+      Pivot: {x: 10, y: 7.0000005}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: w_4
+      Rectangle:
+        serializedVersion: 2
+        x: 104
+        y: 488
+        width: 32
+        height: 32
+      Pivot: {x: 14, y: 16}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: o_1
+      Rectangle:
+        serializedVersion: 2
+        x: 168
+        y: 568
+        width: 80
+        height: 40
+      Pivot: {x: 40, y: 20}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: o_2
+      Rectangle:
+        serializedVersion: 2
+        x: 672
+        y: 440
+        width: 32
+        height: 32
+      Pivot: {x: 22, y: 3}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: ww
+      Rectangle:
+        serializedVersion: 2
+        x: 848
+        y: 448
+        width: 56
+        height: 72
+      Pivot: {x: 27, y: 36}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: o_3
+      Rectangle:
+        serializedVersion: 2
+        x: 296
+        y: 560
+        width: 80
+        height: 56
+      Pivot: {x: 78, y: 19}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: o_4
+      Rectangle:
+        serializedVersion: 2
+        x: 256
+        y: 576
+        width: 32
+        height: 24
+      Pivot: {x: 10, y: 8}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: w_1
+      Rectangle:
+        serializedVersion: 2
+        x: 0
+        y: 488
+        width: 96
+        height: 64
+      Pivot: {x: 73, y: 30}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: w_2
+      Rectangle:
+        serializedVersion: 2
+        x: 553
+        y: 472
+        width: 55
+        height: 48
+      Pivot: {x: 39, y: 36}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: w_3
+      Rectangle:
+        serializedVersion: 2
+        x: 608
+        y: 472
+        width: 44
+        height: 48
+      Pivot: {x: 9.000001, y: 37}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: h_1
+      Rectangle:
+        serializedVersion: 2
+        x: 704
+        y: 320
+        width: 88
+        height: 123
+      Pivot: {x: 51, y: 24}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: h_2
+      Rectangle:
+        serializedVersion: 2
+        x: 824
+        y: 320
+        width: 80
+        height: 128
+      Pivot: {x: 32, y: 22}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: h_3
+      Rectangle:
+        serializedVersion: 2
+        x: 704
+        y: 444
+        width: 32
+        height: 34
+      Pivot: {x: 15, y: 9}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: h_4
+      Rectangle:
+        serializedVersion: 2
+        x: 704
+        y: 480
+        width: 40
+        height: 40
+      Pivot: {x: 14, y: 5}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: h_5
+      Rectangle:
+        serializedVersion: 2
+        x: 800
+        y: 328
+        width: 24
+        height: 32
+      Pivot: {x: 10, y: 11}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: h_6
+      Rectangle:
+        serializedVersion: 2
+        x: 792
+        y: 368
+        width: 32
+        height: 48
+      Pivot: {x: 18, y: 7.9999995}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: b
+      Rectangle:
+        serializedVersion: 2
+        x: 792
+        y: 416
+        width: 32
+        height: 40
+      Pivot: {x: 15, y: 3.9999998}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: l_arm
+      Rectangle:
+        serializedVersion: 2
+        x: 610
+        y: 144
+        width: 130
+        height: 145
+      Pivot: {x: 50, y: 55}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: l_hand
+      Rectangle:
+        serializedVersion: 2
+        x: 740
+        y: 145
+        width: 130
+        height: 145
+      Pivot: {x: 38, y: 34}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: l_leg
+      Rectangle:
+        serializedVersion: 2
+        x: 520
+        y: 0
+        width: 90
+        height: 120
+      Pivot: {x: 46, y: 27}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: l_thigh
+      Rectangle:
+        serializedVersion: 2
+        x: 430
+        y: 0
+        width: 90
+        height: 120
+      Pivot: {x: 40, y: 21.000002}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: m_1
+      Rectangle:
+        serializedVersion: 2
+        x: 30
+        y: 710
+        width: 120
+        height: 100
+      Pivot: {x: 60, y: 50}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: m_2
+      Rectangle:
+        serializedVersion: 2
+        x: 500
+        y: 760
+        width: 270
+        height: 264
+      Pivot: {x: 139, y: 140}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: m_3
+      Rectangle:
+        serializedVersion: 2
+        x: 770
+        y: 760
+        width: 254
+        height: 264
+      Pivot: {x: 127, y: 132}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: r_arm
+      Rectangle:
+        serializedVersion: 2
+        x: 610
+        y: 0
+        width: 130
+        height: 145
+      Pivot: {x: 79, y: 47}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: ee
+      Rectangle:
+        serializedVersion: 2
+        x: 888
+        y: 160
+        width: 112
+        height: 104
+      Pivot: {x: 56, y: 52}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: r_hand
+      Rectangle:
+        serializedVersion: 2
+        x: 740
+        y: 0
+        width: 130
+        height: 145
+      Pivot: {x: 90, y: 26.000002}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: hh_1
+      Rectangle:
+        serializedVersion: 2
+        x: 640
+        y: 384
+        width: 64
+        height: 56
+      Pivot: {x: 31, y: 19}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: hh_2
+      Rectangle:
+        serializedVersion: 2
+        x: 256
+        y: 328
+        width: 120
+        height: 136
+      Pivot: {x: 114, y: 2.000002}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: hh_3
+      Rectangle:
+        serializedVersion: 2
+        x: 656
+        y: 320
+        width: 56
+        height: 64
+      Pivot: {x: 25, y: 26}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: hh_4
+      Rectangle:
+        serializedVersion: 2
+        x: 504
+        y: 320
+        width: 128
+        height: 144
+      Pivot: {x: 6, y: 7.9999995}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: r_leg
+      Rectangle:
+        serializedVersion: 2
+        x: 340
+        y: 0
+        width: 90
+        height: 120
+      Pivot: {x: 44, y: 29.000002}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: r_thigh
+      Rectangle:
+        serializedVersion: 2
+        x: 250
+        y: 0
+        width: 90
+        height: 120
+      Pivot: {x: 52, y: 21.000002}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: ring_1
+      Rectangle:
+        serializedVersion: 2
+        x: 0
+        y: 830
+        width: 190
+        height: 194
+      Pivot: {x: 95, y: 97}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: ring_2
+      Rectangle:
+        serializedVersion: 2
+        x: 190
+        y: 840
+        width: 180
+        height: 184
+      Pivot: {x: 90, y: 92}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: ring_3
+      Rectangle:
+        serializedVersion: 2
+        x: 380
+        y: 880
+        width: 120
+        height: 120
+      Pivot: {x: 62, y: 55}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: expression_v
+      Rectangle:
+        serializedVersion: 2
+        x: 8
+        y: 560
+        width: 80
+        height: 56
+      Pivot: {x: 40, y: 28}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: shadow
+      Rectangle:
+        serializedVersion: 2
+        x: 265
+        y: 133
+        width: 152
+        height: 154
+      Pivot: {x: 76, y: 77}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
+    - Name: s
+      Rectangle:
+        serializedVersion: 2
+        x: 896
+        y: 32
+        width: 112
+        height: 64
+      Pivot: {x: 59, y: 16}
+      Mesh:
+        TableCoordinate: []
+        TableIndexVertex: []
