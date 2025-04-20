@@ -13,13 +13,21 @@ using ChronoArkMod.Template;
 using Debug = UnityEngine.Debug;
 namespace RHA_Merankori
 {
+
+    public interface IMerankoriCanExtraStackBuff
+    {
+
+    }
+
     /// <summary>
     /// 悉心照料
     /// 冷静：目标持有“燐焰晶”相关的正面效果，再额外增加1层
     /// </summary>
     public class S_Care : Merankori_BaseSkill
     {
-        
+
+        public override bool CanApplyCalm => true;
+        public override bool CanApplyPanic => false;
 
         public override void Init()
         {
@@ -32,12 +40,12 @@ namespace RHA_Merankori
             base.SkillUseSingle(SkillD, Targets);
             foreach (BattleChar BattleChar in Targets)
             {
-                foreach(string checkBuffID in IDs.List_CanAddStackBuffsID)
+                var buffs = BattleChar.GetBuffs(BattleChar.GETBUFFTYPE.BUFF,false)
+                    .Where<Buff>(b=>b is IMerankoriCanExtraStackBuff);
+
+                foreach(var buff in buffs)
                 {
-                    if(BattleChar.BuffFind(checkBuffID))
-                    {
-                        BattleChar.BuffAdd(checkBuffID, this.BChar);
-                    }
+                    BattleChar.BuffAdd(buff.BuffData.Key, this.BChar);
                 }
             }
         }

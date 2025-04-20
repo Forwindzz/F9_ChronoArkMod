@@ -6,7 +6,7 @@
         "UseSkillDebuff": false,
         "Caution": false,
         "MaxStack": 10,
-        "Description": "每层能抵抗1次不能战斗效果。",
+        "Description": "每层能抵抗1次不能战斗效果。\n濒死状态时，受到的治疗量+10%。",
         "Name": "燐色存护",
         "Tick": "null",
         "Hide": false,

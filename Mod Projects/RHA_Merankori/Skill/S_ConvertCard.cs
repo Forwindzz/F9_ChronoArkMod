@@ -18,7 +18,8 @@ namespace RHA_Merankori
     /// 选择的卡牌会被丢弃，然后将1张“湮裂的燐焰晶”放入手牌中，并额外抽1张卡。
     /// 弃牌技能的拥有者获得1层折射。
     /// </summary>
-    public class S_ConvertCard : Skill_Extended
+    public class S_ConvertCard : Skill_Extended,
+        ICanMerankoriRectification
     {
         public override bool SkillTargetSelectExcept(Skill ExceptSkill)
         {

@@ -17,7 +17,8 @@ namespace RHA_Merankori
     /// 恢复全部体力极限。
     /// 每恢复200%攻击力体力极限，会赋予1层蓄力。
     /// </summary>
-    public class S_ElementHeal : Skill_Extended
+    public class S_ElementHeal : Skill_Extended,
+        ICanMerankoriRectification
     {
         public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
         {

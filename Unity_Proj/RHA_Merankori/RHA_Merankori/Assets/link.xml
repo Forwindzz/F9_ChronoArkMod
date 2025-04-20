@@ -1,0 +1,445 @@
+<linker>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="BlendAnimatorSpriteStudio" preserve="all">
+      <type fullname="BlendAnimatorSpriteStudio+PoseInfo" preserve="all" />
+      <type fullname="BlendAnimatorSpriteStudio+Pose" preserve="all" />
+      <type fullname="BlendAnimatorSpriteStudio+&lt;WaitForInitialization&gt;d__22" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="FlipAnimControl" preserve="all">
+      <type fullname="FlipAnimControl+&lt;FlipYAnimation&gt;d__12" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="SS6AnimControl" preserve="all">
+      <type fullname="SS6AnimControl+PlayConfig" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6" preserve="all">
+      <type fullname="Library_SpriteStudio6+Control" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data" preserve="all" />
+      <type fullname="Library_SpriteStudio6+KindOperationBlend" preserve="all" />
+      <type fullname="Library_SpriteStudio6+KindOperationBlendEffect" preserve="all" />
+      <type fullname="Library_SpriteStudio6+KindBoundBlend" preserve="all" />
+      <type fullname="Library_SpriteStudio6+KindVertex" preserve="all" />
+      <type fullname="Library_SpriteStudio6+KindStylePlay" preserve="all" />
+      <type fullname="Library_SpriteStudio6+KindIgnoreAttribute" preserve="all" />
+      <type fullname="Library_SpriteStudio6+KindMasking" preserve="all" />
+      <type fullname="Library_SpriteStudio6+CallBack" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Script" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Draw" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Utility" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Script_SpriteStudio6_Root" preserve="all">
+      <type fullname="Script_SpriteStudio6_Root+Cell" preserve="all" />
+      <type fullname="Script_SpriteStudio6_Root+Material" preserve="all" />
+      <type fullname="Script_SpriteStudio6_Root+Parts" preserve="all" />
+      <type fullname="Script_SpriteStudio6_Root+Defaults" preserve="all" />
+      <type fullname="Script_SpriteStudio6_Root+FlagBitStatus" preserve="all" />
+      <type fullname="Script_SpriteStudio6_Root+InformationPlay" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Script_SpriteStudio6_RootEffect" preserve="all">
+      <type fullname="Script_SpriteStudio6_RootEffect+Cell" preserve="all" />
+      <type fullname="Script_SpriteStudio6_RootEffect+Material" preserve="all" />
+      <type fullname="Script_SpriteStudio6_RootEffect+Constants" preserve="all" />
+      <type fullname="Script_SpriteStudio6_RootEffect+Defaults" preserve="all" />
+      <type fullname="Script_SpriteStudio6_RootEffect+FlagBitStatus" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Script_SpriteStudio6_DataAnimation" preserve="all">
+      <type fullname="Script_SpriteStudio6_DataAnimation+KindVersion" preserve="all" />
+      <type fullname="Script_SpriteStudio6_DataAnimation+DataSetup" preserve="all" />
+      <type fullname="Script_SpriteStudio6_DataAnimation+FunctionSignatureBootUpFunction" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Script_SpriteStudio6_DataCellMap" preserve="all">
+      <type fullname="Script_SpriteStudio6_DataCellMap+KindVersion" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Script_SpriteStudio6_DataEffect" preserve="all">
+      <type fullname="Script_SpriteStudio6_DataEffect+KindVersion" preserve="all" />
+      <type fullname="Script_SpriteStudio6_DataEffect+FlagBit" preserve="all" />
+      <type fullname="Script_SpriteStudio6_DataEffect+FunctionSignatureBootUpFunction" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="&lt;PrivateImplementationDetails&gt;" preserve="all">
+      <type fullname="&lt;PrivateImplementationDetails&gt;+__StaticArrayInitTypeSize=16" preserve="all" />
+      <type fullname="&lt;PrivateImplementationDetails&gt;+__StaticArrayInitTypeSize=24" preserve="all" />
+      <type fullname="&lt;PrivateImplementationDetails&gt;+__StaticArrayInitTypeSize=32" preserve="all" />
+      <type fullname="&lt;PrivateImplementationDetails&gt;+__StaticArrayInitTypeSize=48" preserve="all" />
+      <type fullname="&lt;PrivateImplementationDetails&gt;+__StaticArrayInitTypeSize=128" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Control" preserve="all">
+      <type fullname="Library_SpriteStudio6+Control+Animation" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Control+Effect" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Control+AdditionalColor" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Data" preserve="all">
+      <type fullname="Library_SpriteStudio6+Data+Animation" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Effect" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+CellMap" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Texture" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Parts" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Shader" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/CallBack" preserve="all">
+      <type fullname="Library_SpriteStudio6+CallBack+FunctionPlayEnd" preserve="all" />
+      <type fullname="Library_SpriteStudio6+CallBack+FunctionPlayEndEffect" preserve="all" />
+      <type fullname="Library_SpriteStudio6+CallBack+FunctionUserData" preserve="all" />
+      <type fullname="Library_SpriteStudio6+CallBack+FunctionCallBackCollider" preserve="all" />
+      <type fullname="Library_SpriteStudio6+CallBack+FunctionCallBackCollision" preserve="all" />
+      <type fullname="Library_SpriteStudio6+CallBack+FunctionTimeElapse" preserve="all" />
+      <type fullname="Library_SpriteStudio6+CallBack+FunctionTimeElapseEffect" preserve="all" />
+      <type fullname="Library_SpriteStudio6+CallBack+FunctionControlEndTrackPlay" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Draw" preserve="all">
+      <type fullname="Library_SpriteStudio6+Draw+Cluster" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Draw+Model" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Utility" preserve="all">
+      <type fullname="Library_SpriteStudio6+Utility+Asset" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Utility+Interpolation" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Utility+Material" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Utility+Cell" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Utility+Math" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Utility+Random" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Control/Animation" preserve="all">
+      <type fullname="Library_SpriteStudio6+Control+Animation+Parts" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Control+Animation+Track" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Control/Effect" preserve="all">
+      <type fullname="Library_SpriteStudio6+Control+Effect+FlagBitStatus" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Control+Effect+Emitter" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Control+Effect+Particle" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Control/AdditionalColor" preserve="all">
+      <type fullname="Library_SpriteStudio6+Control+AdditionalColor+FlagBitStatus" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Data/Animation" preserve="all">
+      <type fullname="Library_SpriteStudio6+Data+Animation+Attribute" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+Parts" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+Label" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Data/Effect" preserve="all">
+      <type fullname="Library_SpriteStudio6+Data+Effect+Emitter" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Data/CellMap" preserve="all">
+      <type fullname="Library_SpriteStudio6+Data+CellMap+Cell" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Data/Texture" preserve="all">
+      <type fullname="Library_SpriteStudio6+Data+Texture+KindWrap" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Texture+KindFilter" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Data/Parts" preserve="all">
+      <type fullname="Library_SpriteStudio6+Data+Parts+Animation" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Parts+Effect" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Draw/Cluster" preserve="all">
+      <type fullname="Library_SpriteStudio6+Draw+Cluster+Chain" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Utility/Interpolation" preserve="all">
+      <type fullname="Library_SpriteStudio6+Utility+Interpolation+KindFormula" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Utility/Random" preserve="all">
+      <type fullname="Library_SpriteStudio6+Utility+Random+Generator" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Utility+Random+MersenneTwister" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Utility+Random+XorShift32" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Control/Animation/Parts" preserve="all">
+      <type fullname="Library_SpriteStudio6+Control+Animation+Parts+FlagBitStatus" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Control+Animation+Parts+BufferAttribute`1" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Control+Animation+Parts+BufferTRS" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Control+Animation+Parts+BufferParameterSprite" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Control/Animation/Track" preserve="all">
+      <type fullname="Library_SpriteStudio6+Control+Animation+Track+FlagBitStatus" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Control/Effect/Emitter" preserve="all">
+      <type fullname="Library_SpriteStudio6+Control+Effect+Emitter+FlagBitStatus" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Control/Effect/Particle" preserve="all">
+      <type fullname="Library_SpriteStudio6+Control+Effect+Particle+Activity" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Data/Animation/Attribute" preserve="all">
+      <type fullname="Library_SpriteStudio6+Data+Animation+Attribute+Status" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+Attribute+Cell" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+Attribute+VertexCorrection" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+Attribute+PartsColor" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+Attribute+UserData" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+Attribute+Instance" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+Attribute+Effect" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+Attribute+Importer" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Data/Animation/PackAttribute" preserve="all">
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+CPE_Flyweight" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+CPE_Interpolate" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+StandardCPE" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+StandardUncompressed" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+Container`2" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+InterfaceContainerInt" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+InterfaceContainerFloat" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+InterfaceContainerVector2" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+InterfaceContainerVector3" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+InterfaceContainerStatus" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+InterfaceContainerCell" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+InterfaceContainerPartsColor" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+InterfaceContainerVertexCorrection" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+InterfaceContainerUserData" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+InterfaceContainerInstance" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+InterfaceContainerEffect" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+InterfaceContainer`3" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+CodeValueContainer" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+ArgumentContainer" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+CapacityContainer" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+KindTypePack" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+ContainerInt" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+ContainerFloat" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+ContainerVector2" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+ContainerVector3" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+ContainerStatus" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+ContainerCell" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+ContainerPartsColor" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+ContainerVertexCorrection" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+ContainerUserData" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+ContainerInstance" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+ContainerEffect" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Data/Animation/Parts" preserve="all">
+      <type fullname="Library_SpriteStudio6+Data+Animation+Parts+FlagBitStatus" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Data/Animation/Label" preserve="all">
+      <type fullname="Library_SpriteStudio6+Data+Animation+Label+KindLabelReserved" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Data/Effect/Emitter" preserve="all">
+      <type fullname="Library_SpriteStudio6+Data+Effect+Emitter+Constant" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Effect+Emitter+FlagBit" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Effect+Emitter+PatternEmit" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Effect+Emitter+RangeFloat" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Effect+Emitter+RangeVector2" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Effect+Emitter+RangeColor" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Data/CellMap/Cell" preserve="all">
+      <type fullname="Library_SpriteStudio6+Data+CellMap+Cell+DataMesh" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Data/Parts/Animation" preserve="all">
+      <type fullname="Library_SpriteStudio6+Data+Parts+Animation+KindFeature" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Parts+Animation+KindCollision" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Parts+Animation+ColorLabel" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Parts+Animation+BindMesh" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Parts+Animation+Catalog" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Data/Parts/Effect" preserve="all">
+      <type fullname="Library_SpriteStudio6+Data+Parts+Effect+KindFeature" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Utility/Random/MersenneTwister" preserve="all">
+      <type fullname="Library_SpriteStudio6+Utility+Random+MersenneTwister+Constants" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Control/Animation/Parts/BufferParameterSprite" preserve="all">
+      <type fullname="Library_SpriteStudio6+Control+Animation+Parts+BufferParameterSprite+FlagBitStatus" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Control/Effect/Particle/Activity" preserve="all">
+      <type fullname="Library_SpriteStudio6+Control+Effect+Particle+Activity+FlagBitStatus" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Data/Animation/Attribute/Status" preserve="all">
+      <type fullname="Library_SpriteStudio6+Data+Animation+Attribute+Status+FlagBit" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+Attribute+Status+ShiftFlagBit" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Data/Animation/Attribute/UserData" preserve="all">
+      <type fullname="Library_SpriteStudio6+Data+Animation+Attribute+UserData+FlagBit" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Data/Animation/Attribute/Instance" preserve="all">
+      <type fullname="Library_SpriteStudio6+Data+Animation+Attribute+Instance+FlagBit" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Data/Animation/Attribute/Effect" preserve="all">
+      <type fullname="Library_SpriteStudio6+Data+Animation+Attribute+Effect+FlagBit" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Data/Animation/Attribute/Importer" preserve="all">
+      <type fullname="Library_SpriteStudio6+Data+Animation+Attribute+Importer+AttributeBool" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+Attribute+Importer+AttributeInt" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+Attribute+Importer+AttributeFloat" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+Attribute+Importer+AttributeVector2" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+Attribute+Importer+AttributeVector3" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+Attribute+Importer+AttributeUserData" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+Attribute+Importer+AttributeCell" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+Attribute+Importer+AttributePartsColor" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+Attribute+Importer+AttributeVertexCorrection" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+Attribute+Importer+AttributeInstance" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+Attribute+Importer+AttributeEffect" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+Attribute+Importer+Attribute`1" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+Attribute+Importer+Inheritance" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Data/Animation/PackAttribute/CPE_Flyweight" preserve="all">
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+CPE_Flyweight+FlagBit" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+CPE_Flyweight+FlagBitAppendVector" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+CPE_Flyweight+FlagBitAppendPartsColor1" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+CPE_Flyweight+FlagBitAppendPartsColor2" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+CPE_Flyweight+IndexTableCodeValue" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+CPE_Flyweight+Constants" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+CPE_Flyweight+Dictionary" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+CPE_Flyweight+InterfaceFunctionInt" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+CPE_Flyweight+InterfaceFunctionFloat" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+CPE_Flyweight+InterfaceFunctionVector2" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+CPE_Flyweight+InterfaceFunctionVector3" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+CPE_Flyweight+InterfaceFunctionPartsColor" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+CPE_Flyweight+InterfaceFunctionVertexCorrection" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Data/Animation/PackAttribute/CPE_Interpolate" preserve="all">
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+CPE_Interpolate+FlagBit" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+CPE_Interpolate+FlagBitShift" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+CPE_Interpolate+KindFormula" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+CPE_Interpolate+KindElementVector" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+CPE_Interpolate+InterfaceFunctionInt" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+CPE_Interpolate+InterfaceFunctionFloat" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+CPE_Interpolate+InterfaceFunctionVector2" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+CPE_Interpolate+InterfaceFunctionVector3" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+CPE_Interpolate+InterfaceFunctionPartsColor" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+CPE_Interpolate+InterfaceFunctionVertexCorrection" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Data/Animation/PackAttribute/StandardCPE" preserve="all">
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+StandardCPE+FlagBit" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+StandardCPE+InterfaceFunctionInt" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+StandardCPE+InterfaceFunctionFloat" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+StandardCPE+InterfaceFunctionVector2" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+StandardCPE+InterfaceFunctionVector3" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+StandardCPE+InterfaceFunctionStatus" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+StandardCPE+InterfaceFunctionCell" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+StandardCPE+InterfaceFunctionPartsColor" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+StandardCPE+InterfaceFunctionVertexCorrection" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+StandardCPE+InterfaceFunctionUserData" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+StandardCPE+InterfaceFunctionInstance" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+StandardCPE+InterfaceFunctionEffect" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Data/Animation/PackAttribute/StandardUncompressed" preserve="all">
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+StandardUncompressed+InterfaceFunctionInt" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+StandardUncompressed+InterfaceFunctionFloat" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+StandardUncompressed+InterfaceFunctionVector2" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+StandardUncompressed+InterfaceFunctionVector3" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+StandardUncompressed+InterfaceFunctionStatus" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+StandardUncompressed+InterfaceFunctionCell" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+StandardUncompressed+InterfaceFunctionPartsColor" preserve="all" />
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+StandardUncompressed+InterfaceFunctionVertexCorrection" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Data/Animation/PackAttribute/CapacityContainer" preserve="all">
+      <type fullname="Library_SpriteStudio6+Data+Animation+PackAttribute+CapacityContainer+FlagBit" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Data/CellMap/Cell/DataMesh" preserve="all">
+      <type fullname="Library_SpriteStudio6+Data+CellMap+Cell+DataMesh+Constants" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Data/Parts/Animation/ColorLabel" preserve="all">
+      <type fullname="Library_SpriteStudio6+Data+Parts+Animation+ColorLabel+KindForm" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Data/Parts/Animation/BindMesh" preserve="all">
+      <type fullname="Library_SpriteStudio6+Data+Parts+Animation+BindMesh+Vertex" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Data/Animation/Attribute/Importer/Attribute`1" preserve="all">
+      <type fullname="Library_SpriteStudio6+Data+Animation+Attribute+Importer+Attribute`1+KeyData" preserve="all" />
+    </type>
+  </assembly>
+  <assembly fullname="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Library_SpriteStudio6/Data/Parts/Animation/BindMesh/Vertex" preserve="all">
+      <type fullname="Library_SpriteStudio6+Data+Parts+Animation+BindMesh+Vertex+Bone" preserve="all" />
+    </type>
+  </assembly>
+</linker>

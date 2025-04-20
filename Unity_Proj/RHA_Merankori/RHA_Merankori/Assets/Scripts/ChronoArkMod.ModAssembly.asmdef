@@ -1,0 +1,17 @@
+{
+    "name": "ChronoArkMod.RHA_Merankori.ModAssembly",
+    "references": [],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "Assembly-CSharp.dll",
+        "Newtonsoft.Json.dll",
+        "Unity.ResourceManager.dll",
+        "Unity.Addressables.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": []
+}

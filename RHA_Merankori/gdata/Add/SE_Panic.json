@@ -1,0 +1,9 @@
+{
+    "SE_Panic": {
+        "_gdeSchema": "SkillExtended",
+        "Name": "慌张",
+        "Des": "可以触发慌张效果",
+        "ClassName": "RHA_Merankori.SE_Panic",
+        "IsIcon": "Icons/icon_panic.png"
+    }
+}

@@ -13,12 +13,18 @@ using ChronoArkMod.Template;
 using Debug = UnityEngine.Debug;
 namespace RHA_Merankori
 {
+    public interface ICanMerankoriRectification
+    {
+
+    }
+
     /// <summary>
     /// 整流
     /// 指向梅朗柯莉“指向队友”或“其他友军”的技能时，改成“全体友军” 。
     /// 指向不符合条件的卡时，将一张“湮裂的燐焰晶”放入手中。
     /// </summary>
-    public class S_Rectification : Skill_Extended
+    public class S_Rectification : Skill_Extended,
+        ICanMerankoriRectification
     {
         public override void SkillTargetSingle(List<Skill> Targets)
         {
@@ -43,7 +49,7 @@ namespace RHA_Merankori
                         continue;
                     }
 
-                    bool isMerankoriSpecificSkill = IDs.List_MerankoriSkills.Contains(skill.MySkill.KeyID);
+                    bool isMerankoriSpecificSkill = skill.AllExtendeds.Any(x => x is ICanMerankoriRectification);
                     if (isMerankoriSpecificSkill) 
                     {
                         skill.EnsureExtendSkill(ModItemKeys.SkillExtended_SE_Rectification);

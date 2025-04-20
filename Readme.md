@@ -1,0 +1,34 @@
+
+ChronoArk
+RHA_Merankori mod
+
+**Work in progress!**
+
+# Build
+
+Require
+- Unity 2018.4.32f1
+- Visual Studio
+
+Build:
+- You may need to change ChronoArk path in `Mod Projects\RHA_Merankori\RHA_Merankori.csproj`
+- Open Unity project in `Unity_Proj\RHA_Merankori\RHA_Merankori`
+    - On top, select menu:
+    - Build → `Build Specific Asmdef without UNITY_EDITOR macro`
+    - ChronoArk → `Build AssetBundles`
+- Open the game chronoArk
+    - Script-> Save & Hot-update Scripts
+
+# Resource
+
+resource are unpacked from happy element 
+メルクストーリア - 癒術士と心の旋律 -
+[game link](https://mercstoria.happyelements.co.jp/)
+
+Some resources are drawn by myself.
+
+
+# Other
+
+Commercial use is prohibited.
+The mod is only for the game ChronoArk.

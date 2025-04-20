@@ -6,5 +6,6 @@
     "Author": "f⑨",
     "Version": "0.1.0",
     "Description": "添加了梅露可物语中的角色\n「茫哀的燐焰晶」梅朗柯莉\n制作中ing...",
-    "Cover": "RHA_MerankoriCover.png"
+    "Cover": "RHA_MerankoriCover.png",
+    "DefaultAssetBundlePath": "rha_merankoriunityassetbundle"
 }

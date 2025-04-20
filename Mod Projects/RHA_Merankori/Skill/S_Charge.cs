@@ -20,12 +20,12 @@ namespace RHA_Merankori
     /// </summary>
     public class S_Charge : 
         Merankori_BaseSkill,
-        IP_SkillCastingStart,
-        IP_SkillCastingQuit
+        IP_SkillCastingStart
     {
         // 方式：SkillCasting -> SkillUseSingle
         //                   -> SkillCastingQuit / SelfDestory
-
+        public override bool CanApplyCalm => false;
+        public override bool CanApplyPanic => true;
 
         private CastingSkill currentCastingSkill = null;
         private int initCountingDown = 0;

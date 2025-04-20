@@ -17,8 +17,17 @@ namespace RHA_Merankori
     /// 冷静
     /// 照料可能因自己受伤的队友...
     /// </summary>
-    public class B_Calm:Buff
+    public class B_Calm : 
+        BaseImpactCardBuff
     {
+        protected override string ApplySkillExKey => ModItemKeys.SkillExtended_SE_Calm;
 
+        protected override bool CanApplyToSkill(Skill skill)
+        {
+            return skill.AllExtendeds.Any(
+                x => x is IMerankoriStateInfo info 
+                && info.CanApplyCalm
+                && x.BChar==this.BChar);
+        }
     }
 }

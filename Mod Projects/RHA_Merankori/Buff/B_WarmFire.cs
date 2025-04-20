@@ -19,7 +19,8 @@ namespace RHA_Merankori
     /// </summary>
     public class B_WarmFire : 
         Buff,
-        IP_Healed
+        IP_Healed,
+        IMerankoriCanExtraStackBuff
     {
 
         private int totalHeal = 0;

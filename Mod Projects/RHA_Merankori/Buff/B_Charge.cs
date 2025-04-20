@@ -18,7 +18,8 @@ namespace RHA_Merankori
     /// 释放“湮裂的燐焰晶”时，每层增加其10%的伤害。
     /// 释放后移除此效果。
     /// </summary>
-    public class B_Charge : BaseImpactAllCardBuff
+    public class B_Charge : BaseMAtkAllCardBuff,
+        IMerankoriCanExtraStackBuff
     {
         protected override string ApplySkillExKey => ModItemKeys.SkillExtended_SE_Charge;
 

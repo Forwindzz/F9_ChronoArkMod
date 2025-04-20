@@ -17,7 +17,8 @@ namespace RHA_Merankori
 	/// 折射
 	/// 折射来自“湮裂的燐焰晶”的伤害
 	/// </summary>
-    public class S_D_RefractionAtk:S_Attack_All
+    public class S_D_RefractionAtk:S_Attack_All,
+        ICanMerankoriRectification
     {
 		//注意，这里复用了原卡的效果，原卡会有判定该技能是否为反射释放
     }

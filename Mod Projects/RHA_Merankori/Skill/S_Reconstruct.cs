@@ -16,7 +16,8 @@ namespace RHA_Merankori
 	/// <summary>
 	/// 碎晶重构
 	/// </summary>
-    public class S_Reconstruct:Skill_Extended
+    public class S_Reconstruct:Skill_Extended,
+        ICanMerankoriRectification
     {
 
     }

@@ -17,7 +17,8 @@ namespace RHA_Merankori
     /// 频移微调
     /// 受到“湮裂的燐焰晶”的攻击时，将伤害转化为等量的治疗，然后移除1层。
     /// </summary>
-    public class B_FreqShift : Buff
+    public class B_FreqShift : Buff,
+        IMerankoriCanExtraStackBuff
     {
         // 实现由B_H_FreqShift_Lucy实现，因为IP_ChangeDamageState只会调用技能释放者的buff列表
         public override void BuffOneAwake()

@@ -88,6 +88,7 @@ namespace RHA_Merankori
 		/// <summary>
 		/// 燐色存护
 		/// 每层能抵抗1次不能战斗效果。
+		/// 濒死状态时，受到的治疗量+10%。
 		/// </summary>
         public static string Buff_B_Shield = "B_Shield";
 		/// <summary>
@@ -123,6 +124,11 @@ namespace RHA_Merankori
 		/// </summary>
         public static string SkillExtended_SE_Backflow = "SE_Backflow";
 		/// <summary>
+		/// 冷静
+		/// 可以触发冷静效果
+		/// </summary>
+        public static string SkillExtended_SE_Calm = "SE_Calm";
+		/// <summary>
 		/// 越频晶体
 		/// 根据蓄能效果层数，每层增加25%的伤害。
 		/// <color=#5061A4>（预期增加&a）</color>
@@ -133,6 +139,11 @@ namespace RHA_Merankori
 		/// 下一次<color=#FF6767>湮裂的燐焰晶</color>会附带“震荡冲击”效果。
 		/// </summary>
         public static string SkillExtended_SE_OverClocking = "SE_OverClocking";
+		/// <summary>
+		/// 慌张
+		/// 可以触发慌张效果
+		/// </summary>
+        public static string SkillExtended_SE_Panic = "SE_Panic";
 		/// <summary>
 		/// 整流
 		/// 除了已指向的队友，技能也会应用给其他全体队友
@@ -154,6 +165,7 @@ namespace RHA_Merankori
         public static string SkillEffect_SE_T_S_Care = "SE_T_S_Care";
         public static string SkillEffect_SE_T_S_D_RefractionAtk = "SE_T_S_D_RefractionAtk";
         public static string SkillEffect_SE_T_S_ElementHeal = "SE_T_S_ElementHeal";
+        public static string SkillEffect_SE_T_S_ItemRHA = "SE_T_S_ItemRHA";
         public static string SkillEffect_SE_T_S_Manifold = "SE_T_S_Manifold";
         public static string SkillEffect_SE_T_S_OverClocking = "SE_T_S_OverClocking";
         public static string SkillEffect_SE_T_S_P_Shock = "SE_T_S_P_Shock";
@@ -213,6 +225,11 @@ namespace RHA_Merankori
 		/// </summary>
         public static string Skill_S_ElementHeal = "S_ElementHeal";
 		/// <summary>
+		/// 晶石生成
+		/// 抽1张牌，获得燐焰晶物品1个，可以用于摧毁地图上的墙体。
+		/// </summary>
+        public static string Skill_S_ItemRHA = "S_ItemRHA";
+		/// <summary>
 		/// 晶体流形
 		/// <color=#BAC8FF><b>冷静</b>：手中每个<color=#FF6767>湮裂的燐焰晶</color>会额外提供2层“蓄力”</color>
 		/// <color=#5061A4>（预计提供&a层）</color>
@@ -245,7 +262,7 @@ namespace RHA_Merankori
 		/// </summary>
         public static string Skill_S_Retreat = "S_Retreat";
 		/// <summary>
-		/// 燐晶盾
+		/// 燐晶电场
 		/// <color=#BAC8FF><b>冷静</b>：处于濒死状态的队友额外获得1层“燐色存护”</color>
 		/// </summary>
         public static string Skill_S_Shield = "S_Shield";

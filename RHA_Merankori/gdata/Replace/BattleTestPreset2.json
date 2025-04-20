@@ -37,7 +37,8 @@
                 "S_ConvertCard",
                 "S_Backup",
                 "S_ElementHeal",
-                "S_Retreat"
+                "S_Retreat",
+                "S_ItemRHA"
             ]
         ],
         "PartyEquip": [

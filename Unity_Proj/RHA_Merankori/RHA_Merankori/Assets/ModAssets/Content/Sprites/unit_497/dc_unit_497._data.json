@@ -1,0 +1,1039 @@
+{
+    "TableCellMap": [
+        {
+            "Name": "unit_497",
+            "SizeOriginal": {
+                "x": 1024.0,
+                "y": 1024.0
+            },
+            "TableCell": [
+                {
+                    "Name": "body",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 429.0,
+                        "y": 120.0,
+                        "width": 180.0,
+                        "height": 200.0
+                    },
+                    "Pivot": {
+                        "x": 100.0,
+                        "y": 61.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "expression",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 380.0,
+                        "y": 451.0,
+                        "width": 90.0,
+                        "height": 90.0
+                    },
+                    "Pivot": {
+                        "x": 45.0,
+                        "y": 45.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "expression_d",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 380.0,
+                        "y": 544.0,
+                        "width": 90.0,
+                        "height": 88.0
+                    },
+                    "Pivot": {
+                        "x": 45.0,
+                        "y": 44.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "hair",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 0.0,
+                        "y": 0.0,
+                        "width": 250.0,
+                        "height": 250.0
+                    },
+                    "Pivot": {
+                        "x": 125.0,
+                        "y": 125.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "head",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 380.0,
+                        "y": 320.0,
+                        "width": 123.0,
+                        "height": 131.0
+                    },
+                    "Pivot": {
+                        "x": 58.0,
+                        "y": 125.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "s_1",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 72.0,
+                        "y": 320.0,
+                        "width": 56.0,
+                        "height": 56.0
+                    },
+                    "Pivot": {
+                        "x": 41.0,
+                        "y": 16.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "s_2",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 56.0,
+                        "y": 384.0,
+                        "width": 56.0,
+                        "height": 72.0
+                    },
+                    "Pivot": {
+                        "x": 40.0,
+                        "y": 10.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "s_3",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 0.0,
+                        "y": 328.0,
+                        "width": 64.0,
+                        "height": 40.0
+                    },
+                    "Pivot": {
+                        "x": 50.0,
+                        "y": 10.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "s_4",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 0.0,
+                        "y": 368.0,
+                        "width": 56.0,
+                        "height": 72.0
+                    },
+                    "Pivot": {
+                        "x": 51.0,
+                        "y": 7.999999523162842
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "s_5",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 136.0,
+                        "y": 328.0,
+                        "width": 56.0,
+                        "height": 64.0
+                    },
+                    "Pivot": {
+                        "x": 14.0,
+                        "y": 10.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "s_6",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 152.0,
+                        "y": 392.0,
+                        "width": 32.0,
+                        "height": 64.0
+                    },
+                    "Pivot": {
+                        "x": 8.0,
+                        "y": 10.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "s_7",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 192.0,
+                        "y": 320.0,
+                        "width": 64.0,
+                        "height": 48.0
+                    },
+                    "Pivot": {
+                        "x": 15.0,
+                        "y": 17.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "s_8",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 200.0,
+                        "y": 368.0,
+                        "width": 56.0,
+                        "height": 64.0
+                    },
+                    "Pivot": {
+                        "x": 10.0,
+                        "y": 10.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "s_9",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 256.0,
+                        "y": 472.0,
+                        "width": 64.0,
+                        "height": 80.0
+                    },
+                    "Pivot": {
+                        "x": 52.0,
+                        "y": 9.000000953674317
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "s_10",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 320.0,
+                        "y": 464.0,
+                        "width": 56.0,
+                        "height": 88.0
+                    },
+                    "Pivot": {
+                        "x": 13.0,
+                        "y": 18.000001907348634
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "s_11",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 184.0,
+                        "y": 472.0,
+                        "width": 48.0,
+                        "height": 40.0
+                    },
+                    "Pivot": {
+                        "x": 32.0,
+                        "y": 11.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "s_12",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 168.0,
+                        "y": 528.0,
+                        "width": 48.0,
+                        "height": 40.0
+                    },
+                    "Pivot": {
+                        "x": 31.0,
+                        "y": 13.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "s_13",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 104.0,
+                        "y": 536.0,
+                        "width": 40.0,
+                        "height": 32.0
+                    },
+                    "Pivot": {
+                        "x": 10.0,
+                        "y": 8.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "s_14",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 112.0,
+                        "y": 576.0,
+                        "width": 40.0,
+                        "height": 40.0
+                    },
+                    "Pivot": {
+                        "x": 10.0,
+                        "y": 7.000000476837158
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "w_4",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 104.0,
+                        "y": 488.0,
+                        "width": 32.0,
+                        "height": 32.0
+                    },
+                    "Pivot": {
+                        "x": 14.0,
+                        "y": 16.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "o_1",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 168.0,
+                        "y": 568.0,
+                        "width": 80.0,
+                        "height": 40.0
+                    },
+                    "Pivot": {
+                        "x": 40.0,
+                        "y": 20.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "o_2",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 672.0,
+                        "y": 440.0,
+                        "width": 32.0,
+                        "height": 32.0
+                    },
+                    "Pivot": {
+                        "x": 22.0,
+                        "y": 3.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "ww",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 848.0,
+                        "y": 448.0,
+                        "width": 56.0,
+                        "height": 72.0
+                    },
+                    "Pivot": {
+                        "x": 27.0,
+                        "y": 36.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "o_3",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 296.0,
+                        "y": 560.0,
+                        "width": 80.0,
+                        "height": 56.0
+                    },
+                    "Pivot": {
+                        "x": 78.0,
+                        "y": 19.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "o_4",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 256.0,
+                        "y": 576.0,
+                        "width": 32.0,
+                        "height": 24.0
+                    },
+                    "Pivot": {
+                        "x": 10.0,
+                        "y": 8.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "w_1",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 0.0,
+                        "y": 488.0,
+                        "width": 96.0,
+                        "height": 64.0
+                    },
+                    "Pivot": {
+                        "x": 73.0,
+                        "y": 30.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "w_2",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 553.0,
+                        "y": 472.0,
+                        "width": 55.0,
+                        "height": 48.0
+                    },
+                    "Pivot": {
+                        "x": 39.0,
+                        "y": 36.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "w_3",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 608.0,
+                        "y": 472.0,
+                        "width": 44.0,
+                        "height": 48.0
+                    },
+                    "Pivot": {
+                        "x": 9.000000953674317,
+                        "y": 37.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "h_1",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 704.0,
+                        "y": 320.0,
+                        "width": 88.0,
+                        "height": 123.0
+                    },
+                    "Pivot": {
+                        "x": 51.0,
+                        "y": 24.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "h_2",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 824.0,
+                        "y": 320.0,
+                        "width": 80.0,
+                        "height": 128.0
+                    },
+                    "Pivot": {
+                        "x": 32.0,
+                        "y": 22.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "h_3",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 704.0,
+                        "y": 444.0,
+                        "width": 32.0,
+                        "height": 34.0
+                    },
+                    "Pivot": {
+                        "x": 15.0,
+                        "y": 9.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "h_4",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 704.0,
+                        "y": 480.0,
+                        "width": 40.0,
+                        "height": 40.0
+                    },
+                    "Pivot": {
+                        "x": 14.0,
+                        "y": 5.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "h_5",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 800.0,
+                        "y": 328.0,
+                        "width": 24.0,
+                        "height": 32.0
+                    },
+                    "Pivot": {
+                        "x": 10.0,
+                        "y": 11.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "h_6",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 792.0,
+                        "y": 368.0,
+                        "width": 32.0,
+                        "height": 48.0
+                    },
+                    "Pivot": {
+                        "x": 18.0,
+                        "y": 7.999999523162842
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "b",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 792.0,
+                        "y": 416.0,
+                        "width": 32.0,
+                        "height": 40.0
+                    },
+                    "Pivot": {
+                        "x": 15.0,
+                        "y": 3.999999761581421
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "l_arm",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 610.0,
+                        "y": 144.0,
+                        "width": 130.0,
+                        "height": 145.0
+                    },
+                    "Pivot": {
+                        "x": 50.0,
+                        "y": 55.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "l_hand",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 740.0,
+                        "y": 145.0,
+                        "width": 130.0,
+                        "height": 145.0
+                    },
+                    "Pivot": {
+                        "x": 38.0,
+                        "y": 34.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "l_leg",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 520.0,
+                        "y": 0.0,
+                        "width": 90.0,
+                        "height": 120.0
+                    },
+                    "Pivot": {
+                        "x": 46.0,
+                        "y": 27.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "l_thigh",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 430.0,
+                        "y": 0.0,
+                        "width": 90.0,
+                        "height": 120.0
+                    },
+                    "Pivot": {
+                        "x": 40.0,
+                        "y": 21.000001907348634
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "m_1",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 30.0,
+                        "y": 710.0,
+                        "width": 120.0,
+                        "height": 100.0
+                    },
+                    "Pivot": {
+                        "x": 60.0,
+                        "y": 50.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "m_2",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 500.0,
+                        "y": 760.0,
+                        "width": 270.0,
+                        "height": 264.0
+                    },
+                    "Pivot": {
+                        "x": 139.0,
+                        "y": 140.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "m_3",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 770.0,
+                        "y": 760.0,
+                        "width": 254.0,
+                        "height": 264.0
+                    },
+                    "Pivot": {
+                        "x": 127.0,
+                        "y": 132.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "r_arm",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 610.0,
+                        "y": 0.0,
+                        "width": 130.0,
+                        "height": 145.0
+                    },
+                    "Pivot": {
+                        "x": 79.0,
+                        "y": 47.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "ee",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 888.0,
+                        "y": 160.0,
+                        "width": 112.0,
+                        "height": 104.0
+                    },
+                    "Pivot": {
+                        "x": 56.0,
+                        "y": 52.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "r_hand",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 740.0,
+                        "y": 0.0,
+                        "width": 130.0,
+                        "height": 145.0
+                    },
+                    "Pivot": {
+                        "x": 90.0,
+                        "y": 26.000001907348634
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "hh_1",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 640.0,
+                        "y": 384.0,
+                        "width": 64.0,
+                        "height": 56.0
+                    },
+                    "Pivot": {
+                        "x": 31.0,
+                        "y": 19.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "hh_2",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 256.0,
+                        "y": 328.0,
+                        "width": 120.0,
+                        "height": 136.0
+                    },
+                    "Pivot": {
+                        "x": 114.0,
+                        "y": 2.000001907348633
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "hh_3",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 656.0,
+                        "y": 320.0,
+                        "width": 56.0,
+                        "height": 64.0
+                    },
+                    "Pivot": {
+                        "x": 25.0,
+                        "y": 26.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "hh_4",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 504.0,
+                        "y": 320.0,
+                        "width": 128.0,
+                        "height": 144.0
+                    },
+                    "Pivot": {
+                        "x": 6.0,
+                        "y": 7.999999523162842
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "r_leg",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 340.0,
+                        "y": 0.0,
+                        "width": 90.0,
+                        "height": 120.0
+                    },
+                    "Pivot": {
+                        "x": 44.0,
+                        "y": 29.000001907348634
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "r_thigh",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 250.0,
+                        "y": 0.0,
+                        "width": 90.0,
+                        "height": 120.0
+                    },
+                    "Pivot": {
+                        "x": 52.0,
+                        "y": 21.000001907348634
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "ring_1",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 0.0,
+                        "y": 830.0,
+                        "width": 190.0,
+                        "height": 194.0
+                    },
+                    "Pivot": {
+                        "x": 95.0,
+                        "y": 97.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "ring_2",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 190.0,
+                        "y": 840.0,
+                        "width": 180.0,
+                        "height": 184.0
+                    },
+                    "Pivot": {
+                        "x": 90.0,
+                        "y": 92.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "ring_3",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 380.0,
+                        "y": 880.0,
+                        "width": 120.0,
+                        "height": 120.0
+                    },
+                    "Pivot": {
+                        "x": 62.0,
+                        "y": 55.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "expression_v",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 8.0,
+                        "y": 560.0,
+                        "width": 80.0,
+                        "height": 56.0
+                    },
+                    "Pivot": {
+                        "x": 40.0,
+                        "y": 28.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "shadow",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 265.0,
+                        "y": 133.0,
+                        "width": 152.0,
+                        "height": 154.0
+                    },
+                    "Pivot": {
+                        "x": 76.0,
+                        "y": 77.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                },
+                {
+                    "Name": "s",
+                    "Rectangle": {
+                        "serializedVersion": "2",
+                        "x": 896.0,
+                        "y": 32.0,
+                        "width": 112.0,
+                        "height": 64.0
+                    },
+                    "Pivot": {
+                        "x": 59.0,
+                        "y": 16.0
+                    },
+                    "Mesh": {
+                        "TableCoordinate": [],
+                        "TableIndexVertex": []
+                    }
+                }
+            ]
+        }
+    ]
+}

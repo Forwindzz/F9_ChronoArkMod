@@ -10,6 +10,6 @@
         "Caution": true,
         "UseSkillDebuff": false,
         "Hide": false,
-        "Icon": "Image/Buff/Skill_Icon_Pack/1_2Newicons/ShadowPriest_7"
+        "Icon": "Icons/icon_panic.png"
     }
 }

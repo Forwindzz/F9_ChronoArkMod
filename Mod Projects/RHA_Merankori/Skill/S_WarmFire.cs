@@ -17,6 +17,8 @@ namespace RHA_Merankori
     /// </summary>
     public class S_WarmFire : Merankori_BaseSkill
     {
+        public override bool CanApplyCalm => false;
+        public override bool CanApplyPanic => false;
         public override void Init()
         {
             base.Init();

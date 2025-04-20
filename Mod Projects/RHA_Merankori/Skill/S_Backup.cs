@@ -18,7 +18,8 @@ namespace RHA_Merankori
     /// 抽1张牌，
     /// 将“湮裂的燐焰晶”放入手中，直到填满手牌。
     /// </summary>
-    public class S_Backup : Skill_Extended
+    public class S_Backup : Skill_Extended,
+        ICanMerankoriRectification
     {
         public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
         {

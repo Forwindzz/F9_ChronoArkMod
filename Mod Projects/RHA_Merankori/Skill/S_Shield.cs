@@ -22,6 +22,9 @@ namespace RHA_Merankori
         IP_HPChange1,
         IP_HPZero
     {
+        public override bool CanApplyCalm => true;
+        public override bool CanApplyPanic => false;
+
         public void HPChange1(BattleChar Char, bool Healed, int PreHPNum, int NewHPNum)
         {
             CheckParticleEffect();

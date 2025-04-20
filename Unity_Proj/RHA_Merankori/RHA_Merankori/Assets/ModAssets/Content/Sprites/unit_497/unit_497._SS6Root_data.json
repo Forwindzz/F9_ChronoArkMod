@@ -1,0 +1,19 @@
+{
+  "LimitTrack": 0,
+  "TableInformationPlay": [
+    {
+      "DataAnimation": null,
+      "FlagSetInitial": true,
+      "FlagStopInitial": false,
+      "NameAnimation": "a",
+      "FlagPingPong": false,
+      "LabelStart": "",
+      "FrameOffsetStart": 0,
+      "LabelEnd": "",
+      "FrameOffsetEnd": 0,
+      "Frame": 0,
+      "TimesPlay": 0,
+      "RateTime": 1.0
+    }
+  ]
+}

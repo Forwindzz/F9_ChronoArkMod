@@ -19,7 +19,7 @@ namespace RHA_Merankori
     /// “湮裂的燐焰晶”会根据队友已损失的体力值增加，每1点增加1%伤害。
     /// 回合结束时，若手中有“湮裂的燐焰晶”，移除这个效果。
     /// </summary>
-    public class B_Backflow : BaseImpactAllCardBuff
+    public class B_Backflow : BaseMAtkAllCardBuff, IMerankoriCanExtraStackBuff
     {
         protected override string ApplySkillExKey => ModItemKeys.SkillExtended_SE_Backflow;
 

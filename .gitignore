@@ -10,3 +10,10 @@ Mod Projects/*/obj/**
 
 # Output Dll
 RHA_Merankori/Assemblies/RHA_Merankori.dll
+RHA_Merankori/Assemblies/ChronoArkMod.RHA_Merankori.ModAssembly.dll
+
+# Output asset bundles
+RHA_Merankori/Assets/Assets
+RHA_Merankori/Assets/Assets.manifest
+RHA_Merankori/Assets/rha_merankoriunityassetbundle
+RHA_Merankori/Assets/rha_merankoriunityassetbundle.manifest

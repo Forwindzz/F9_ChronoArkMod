@@ -24,3 +24,6 @@ desktop.ini
 *.iws
 .idea/
 
+# Asset Bundles
+[Aa]ssetBundles
+Assets/Editor/ABConfig/

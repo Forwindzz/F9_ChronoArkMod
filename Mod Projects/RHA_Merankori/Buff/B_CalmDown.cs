@@ -19,7 +19,8 @@ namespace RHA_Merankori
     /// </summary>
     public class B_CalmDown :
         Buff,
-        IP_BeforeBuffAdd
+        IP_BeforeBuffAdd, 
+        IMerankoriCanExtraStackBuff
     {
         private bool hasCanceledForAction = false;
 

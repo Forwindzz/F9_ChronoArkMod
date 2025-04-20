@@ -1,0 +1,22 @@
+{
+    "name": "RHAEditor",
+    "references": [
+        "ChronoArkMod.RHA_Merankori.ModAssembly",
+        "ChronoArkMod.UnityEditor",
+        "ChronoArkMod.GameRelated.UnityEditor"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "Newtonsoft.Json.dll",
+        "Assembly-CSharp.dll",
+        "Assembly-CSharp-firstpass.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": []
+}

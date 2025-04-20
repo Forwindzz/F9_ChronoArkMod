@@ -22,6 +22,9 @@ namespace RHA_Merankori
         IP_Draw,
         IP_Discard
     {
+        public override bool CanApplyCalm => true;
+        public override bool CanApplyPanic => false;
+
         public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
         {
             base.SkillUseSingle(SkillD, Targets);

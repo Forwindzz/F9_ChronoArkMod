@@ -9,10 +9,19 @@ using UnityEngine;
 
 namespace RHA_Merankori
 {
-    public class Merankori_BaseSkill : 
+
+    public interface IMerankoriStateInfo
+    {
+        bool CanApplyCalm { get; }
+        bool CanApplyPanic { get; }
+    }
+
+    public abstract class Merankori_BaseSkill : 
         Skill_Extended, 
         IP_BuffAdd,
-        IP_BuffAddAfter
+        IP_BuffAddAfter,
+        IMerankoriStateInfo,
+        ICanMerankoriRectification
     {
 
         public void BuffaddedAfter(BattleChar BuffUser, BattleChar BuffTaker, Buff addedbuff, StackBuff stackBuff)
@@ -94,6 +103,9 @@ namespace RHA_Merankori
         }
 
         protected StateForVisualEffect effectSetting;
+
+        public abstract bool CanApplyCalm { get; }
+        public abstract bool CanApplyPanic { get; }
 
         protected virtual void OnEmotionCalm()
         {

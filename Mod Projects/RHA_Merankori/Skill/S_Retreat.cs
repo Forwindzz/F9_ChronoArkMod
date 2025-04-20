@@ -17,7 +17,8 @@ namespace RHA_Merankori
     /// 抽取2个技能。
     /// 若指向的队友拥有至少5个正面效果，额外抽取1张牌。
     /// </summary>
-    public class S_Retreat : Skill_Extended
+    public class S_Retreat : Skill_Extended,
+        ICanMerankoriRectification
     {
         public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
         {

@@ -1,0 +1,20 @@
+{
+    "SE_T_S_ItemRHA": {
+        "_gdeSchema": "SkillEffect",
+        "HIT": 100,
+        "DMG_Per": 0,
+        "DMG_Base": 0,
+        "HEAL_MaxHpPer": 0,
+        "HEAL_Per": 10,
+        "HEAL_Base": 0,
+        "CRI": 0,
+        "ForceHeal": true,
+        "ChainHeal": false,
+        "Buffs": [
+            "B_Shield"
+        ],
+        "BuffPlusTagPer": [
+            0
+        ]
+    }
+}

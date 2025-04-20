@@ -17,8 +17,16 @@ namespace RHA_Merankori
 	/// 慌张
 	/// 燐焰晶逐渐炽烈...
 	/// </summary>
-    public class B_Panic:Buff
+    public class B_Panic:BaseImpactCardBuff
     {
+        protected override string ApplySkillExKey => ModItemKeys.SkillExtended_SE_Panic;
 
+        protected override bool CanApplyToSkill(Skill skill)
+        {
+            return skill.AllExtendeds.Any(
+                x => x is IMerankoriStateInfo info 
+                && info.CanApplyPanic
+                && x.BChar == this.BChar);
+        }
     }
 }

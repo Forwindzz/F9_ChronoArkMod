@@ -21,7 +21,8 @@ namespace RHA_Merankori
     public class B_Reflow :
         Buff,
         IP_BeforeBuffAdd,
-        IP_PlayerTurn
+        IP_PlayerTurn,
+        IMerankoriCanExtraStackBuff
     {
         public void BeforeBuffAdd(BattleChar target, ref string key, ref BattleChar UseState, ref bool hide, ref int PlusTagPer, ref bool debuffnonuser, ref int RemainTime, ref bool StringHide, ref bool cancelbuff)
         {

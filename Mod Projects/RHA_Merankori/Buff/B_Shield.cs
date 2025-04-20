@@ -18,8 +18,25 @@ namespace RHA_Merankori
     /// </summary>
     public class B_Shield :
         Buff,
-        IP_DeadResist
+        IP_DeadResist,
+        IP_BattleEnd,
+        IP_BattleEndField,
+        IP_TurnEnd,
+        IP_PlayerTurn,
+        IP_BuffAddAfter,
+        IP_BuffRemove,
+        IMerankoriCanExtraStackBuff
     {
+        public void BattleEnd()
+        {
+            Check();
+        }
+
+        public void BattleEndField()
+        {
+            Check();
+        }
+
         public bool DeadResist()
         {
             if(this.BChar.BuffFind(ModItemKeys.Buff_B_NotDeadlyAtk))
@@ -27,11 +44,44 @@ namespace RHA_Merankori
                 return true;
             }
             this.SelfStackDestroy();
-            if(this.BChar.Recovery<1)
+            return true;
+        }
+
+        public void Turn()
+        {
+            Check();
+        }
+
+        public void TurnEnd()
+        {
+            Check();
+        }
+
+        private void Check()
+        {
+            if (this.BChar.Recovery < 1)
             {
                 this.BChar.Recovery = 1;
             }
-            return true;
+        }
+
+        public override void BuffStat()
+        {
+            base.BuffStat();
+            if(this.BChar.BuffFind(GDEItemKeys.Buff_B_Neardeath))
+            {
+                this.PlusStat.HEALTaken = this.StackNum * 10;
+            }
+        }
+
+        public void BuffaddedAfter(BattleChar BuffUser, BattleChar BuffTaker, Buff addedbuff, StackBuff stackBuff)
+        {
+            BuffStat();
+        }
+
+        public void BuffRemove(BattleChar buffMaster, Buff buff)
+        {
+            BuffStat();
         }
     }
 }

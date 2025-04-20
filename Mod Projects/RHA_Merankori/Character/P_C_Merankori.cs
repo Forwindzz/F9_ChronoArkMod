@@ -26,7 +26,9 @@ namespace RHA_Merankori
         Passive_Char,
         IP_ParticleOut_After_Global,
         IP_LevelUp,
-        IP_CampFire
+        IP_CampFire,
+        IP_BattleEnd,
+        IP_BattleEndOutBattle
     {
 
         //TODO: 情绪高涨的梅朗柯莉会激化身边的红色结晶，会对周围不分敌我地产生毁灭性的伤害，甚至摧毁地形。
@@ -68,6 +70,22 @@ namespace RHA_Merankori
         public void Camp()
         {
             InventoryManager.Reward(ItemBase.GetItem(ModItemKeys.Item_Consume_I_RHA, 3));
+        }
+
+        private IEnumerator BlowUpTiles()
+        {
+            yield return new WaitForFixedUpdate();
+            MapChange.BlowUpTiles(StageSystem.instance.PlayerPos, 1);
+            yield break;
+        }
+        public void BattleEnd()
+        {
+            //FieldSystem.DelayInput(BlowUpTiles());
+        }
+
+        public void BattleEndOutBattle()
+        {
+            FieldSystem.DelayInput(BlowUpTiles());
         }
     }
 }

@@ -23,6 +23,9 @@ namespace RHA_Merankori
     public class S_OverClocking : 
         Merankori_BaseSkill
     {
+        public override bool CanApplyCalm => true;
+        public override bool CanApplyPanic => false;
+
         public override void Init()
         {
             base.Init();

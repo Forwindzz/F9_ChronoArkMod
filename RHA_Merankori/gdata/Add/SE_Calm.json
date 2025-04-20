@@ -1,0 +1,11 @@
+{
+    "SE_Calm": {
+        "_gdeSchema": "SkillExtended",
+        "AlwaysParticle": false,
+        "IsOnesInit": false,
+        "Name": "冷静",
+        "Des": "可以触发冷静效果",
+        "IsIcon": "Icons/icon_calm.png",
+        "ClassName": "RHA_Merankori.SE_Calm"
+    }
+}

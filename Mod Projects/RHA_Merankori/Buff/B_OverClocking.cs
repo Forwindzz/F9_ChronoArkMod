@@ -17,7 +17,7 @@ namespace RHA_Merankori
     /// 越频晶体
     /// 下一次“湮裂的燐焰晶”会附带“震荡冲击”效果
     /// </summary>
-    public class B_OverClocking : BaseImpactAllCardBuff
+    public class B_OverClocking : BaseMAtkAllCardBuff
     {
         //具体实现在S_Attack_All
         protected override string ApplySkillExKey => ModItemKeys.SkillExtended_SE_OverClocking;

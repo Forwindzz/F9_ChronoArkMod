@@ -3,7 +3,7 @@
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <AssemblyName>RHA_Merankori20254744401</AssemblyName>
+    <AssemblyName>RHA_Merankori2025420124912</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
@@ -26,6 +26,10 @@
     </Reference>
     <Reference Include="Beardy.BeardsGridLayoutGroup.Runtime">
       <Private>False</Private>
+    </Reference>
+    <Reference Include="ChronoArkMod.RHA_Merankori.ModAssembly, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\RHA_Merankori\Assemblies\ChronoArkMod.RHA_Merankori.ModAssembly.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
       <Private>False</Private>
@@ -424,17 +428,15 @@
     <Reference Include="MonoMod.Utils">
       <HintPath>..\..\RHA_Merankori\Assemblies\MonoMod.Utils.dll</HintPath>
     </Reference>
-    <Reference Include="RinHomuraAkira_Merankori">
-      <HintPath>..\..\RHA_Merankori\Assemblies\RinHomuraAkira_Merankori.dll</HintPath>
-    </Reference>
 <!-- Extra Reference End-->
   </ItemGroup>
-                                                                                                                                                                                                                                          <!-- Compile ItemGroup Start-->
+                                                                                                                                      <!-- Compile ItemGroup Start-->
   <ItemGroup>
     <Compile Include="RHA_Merankori_ModDefinition.cs" />
     <Compile Include="RHA_Merankori_Plugin.cs" />
     <Compile Include="RHA_ModItemKeys.cs" />
-    <Compile Include="Buff\BaseImpactAllCardBuff.cs" />
+    <Compile Include="Buff\BaseImpactCardBuff.cs" />
+    <Compile Include="Buff\BaseMAtkAllCardBuff.cs" />
     <Compile Include="Buff\B_Backflow.cs" />
     <Compile Include="Buff\B_Backup.cs" />
     <Compile Include="Buff\B_Calm.cs" />
@@ -464,6 +466,7 @@
     <Compile Include="Skill\S_ConvertCard.cs" />
     <Compile Include="Skill\S_D_RefractionAtk.cs" />
     <Compile Include="Skill\S_ElementHeal.cs" />
+    <Compile Include="Skill\S_ItemRHA.cs" />
     <Compile Include="Skill\S_Manifold.cs" />
     <Compile Include="Skill\S_OverClocking.cs" />
     <Compile Include="Skill\S_Reconstruct.cs" />
@@ -472,11 +475,14 @@
     <Compile Include="Skill\S_Shield.cs" />
     <Compile Include="Skill\S_WarmFire.cs" />
     <Compile Include="SkillExtended\SE_Backflow.cs" />
+    <Compile Include="SkillExtended\SE_Calm.cs" />
     <Compile Include="SkillExtended\SE_Charge.cs" />
     <Compile Include="SkillExtended\SE_OverClocking.cs" />
+    <Compile Include="SkillExtended\SE_Panic.cs" />
     <Compile Include="SkillExtended\SE_Rectification.cs" />
     <Compile Include="Utils\EmotionBuffSwitch.cs" />
     <Compile Include="Utils\IDs.cs" />
+    <Compile Include="Utils\LucyReplaceBehavior.cs" />
     <Compile Include="Utils\MapChange.cs" />
     <Compile Include="Utils\ParticleSystemUtility.cs" />
     <Compile Include="Utils\Utils.cs" />
@@ -486,6 +492,7 @@
     <Compile Include="Utils\Debug\RigidbodyOverlay.cs" />
     <Compile Include="Utils\Debug\ZDepthVisualizer.cs" />
     <Compile Include="Utils\Patches\BuffPatch.cs" />
+    <Compile Include="Utils\Patches\PlayerControllerPatch.cs" />
   </ItemGroup>
   <!-- Compile ItemGroup End-->
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

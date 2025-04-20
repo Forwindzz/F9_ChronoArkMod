@@ -29,6 +29,9 @@ namespace RHA_Merankori
     public class S_Attack_All : 
         Merankori_BaseSkill
     {
+        public override bool CanApplyCalm => false;
+        public override bool CanApplyPanic => true;
+
         public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
         {
             base.SkillUseSingle(SkillD, Targets);

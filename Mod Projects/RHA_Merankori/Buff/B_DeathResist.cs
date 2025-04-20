@@ -17,7 +17,8 @@ namespace RHA_Merankori
     /// 不能战斗抵抗
     /// 增加不能战斗抵抗
     /// </summary>
-    public class B_DeathResist : Buff
+    public class B_DeathResist : Buff,
+        IMerankoriCanExtraStackBuff
     {
         public override void BuffStat()
         {
