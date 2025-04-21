@@ -1,6 +1,8 @@
 {
     "SE_Tick_B_CalmDown": {
         "_gdeSchema": "SkillEffect",
-        "HEAL_Base": 1
+        "HEAL_Base": 1,
+        "HEAL_Per": 0,
+        "HEAL_MaxHpPer": 10
     }
 }

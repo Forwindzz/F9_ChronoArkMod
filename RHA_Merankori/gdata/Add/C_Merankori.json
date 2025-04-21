@@ -62,15 +62,59 @@
         },
         "PassiveName": "燐焰晶\n",
         "FixedBasicSkill": "S_Attack_All",
-        "PassiveDes": "任何攻击都会让梅朗柯莉变得情绪<color=#FFC5BA><b>慌张</b></color>，但在回合开始时，梅朗柯莉会<color=#BAC8FF><b>冷静</b></color>下来。\r\n\r\n固定技能始终为<color=#FF6767>湮裂的燐焰晶</color>，会攻击除自己以外的所有人，并且使周围地形化为灰烬。\n\n获得物品“燐焰晶”\r\n",
+        "PassiveDes": "任何攻击都会让梅朗柯莉变得情绪<color=#FFC5BA><b>慌张</b></color>，但在回合开始时，梅朗柯莉会<color=#BAC8FF><b>冷静</b></color>下来。\r\n\r\n固定技能始终为<color=#FF6767>湮裂的燐焰晶</color>，会攻击除自己以外的所有人，并且使周围地形化为灰烬。\n\n升级获得物品“燐焰晶”2个，营地也会获得1个，可以摧毁地形并概率发现箱子。\r\n",
         "StatView_Atk": 3,
         "StatView_Heal": 1,
         "StatView_Def": 2,
-        "StatView_Sup": 3,
+        "StatView_Sup": 1,
         "StatView_CC": 1,
         "StatView_Difficult": 3,
         "FirstSkill": "S_Shield",
         "CollectionSprite_Cover": "C_Merankori\\C_MerankoriCollectionSprite_Cover.png",
-        "CollectionSprite_SkillFace": "C_Merankori\\C_MerankoriCollectionSprite_SkillFace.png"
+        "CollectionSprite_SkillFace": "C_Merankori\\C_MerankoriCollectionSprite_SkillFace.png",
+        "Text_Battle_Idle": [
+            "...",
+            "（困惑ing）"
+        ],
+        "Text_Battle_ND": [
+            "等...等一下！",
+            "回...回路要断了！"
+        ],
+        "Text_Battle_AllyND": [
+            "抱...抱歉",
+            "唉？...唉！"
+        ],
+        "Text_Battle_Start": [
+            "要打吗...",
+            "...我...我还没准备好"
+        ],
+        "Text_Battle_Healed": [
+            "...谢谢"
+        ],
+        "Text_Field_Idle": [
+            "...",
+            "（调节晶石回路）",
+            "（四处张望）"
+        ],
+        "Text_Field_GetItem": [
+            "...!",
+            "想要调节的机械回路...",
+            "这里有能治好元素依存症的...没有唉..."
+        ],
+        "Text_Field_Potion_P": [
+            "这里的药水似乎也能缓解依存症...",
+            "（燐焰晶的颜色透亮了起来）"
+        ],
+        "Text_PharosLeader": [
+            "为...为什么无法使...唔！",
+            "发生了什么...?",
+            ""
+        ],
+        "Text_Witch": [
+            "...",
+            "等...等等！"
+        ],
+        "Text_MasterTarget": "（困惑的眼神）",
+        "PassiveIcon": "C_Merankori\\C_MerankoriPassiveIcon.png"
     }
 }

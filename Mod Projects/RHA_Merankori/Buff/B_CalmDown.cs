@@ -34,16 +34,16 @@ namespace RHA_Merankori
                     hasCanceledForAction=true;
                     this.StackDestroy();
                     BattleSystem.DelayInput(Co_ResetFlag());
-                    Debug.Log("Cancel stack!");
+                    //Debug.Log("Cancel stack!");
                 }
-                Debug.Log("Cancel panic!");
+                //Debug.Log("Cancel panic!");
             }
         }
 
         private IEnumerator Co_ResetFlag()
         {
             hasCanceledForAction = false;
-            Debug.Log("Cancel panic flag reset!");
+            //Debug.Log("Cancel panic flag reset!");
             yield break;
         }
 

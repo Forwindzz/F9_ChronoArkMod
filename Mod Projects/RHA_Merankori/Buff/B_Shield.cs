@@ -11,10 +11,18 @@ using ChronoArkMod;
 using ChronoArkMod.Plugin;
 using ChronoArkMod.Template;
 using Debug = UnityEngine.Debug;
+using static Library_SpriteStudio6.Data.Animation.Attribute;
 namespace RHA_Merankori
 {
     /// <summary>
-    /// ÿ���ֿܵ�1�β���ս��Ч�����ض�����ս����Ч��Ҳ�ֿܵ���
+    /// 燐色存护
+    /// 不死，濒死时治疗量+10%
+    /// 
+    /// 关于实现方式：
+    /// Patch BattleChar.Dead
+    /// - Prefix: 设置canJudgeReduceStack为true，表示此时的判定可以削减层数
+    /// - Postfix：设置canJudgeReduceStack为false，表示此时判定结束
+    /// 也就是只有在这个方法内可以缩减层数，在其他地方调用的IP_DeadResist则不会执行
     /// </summary>
     public class B_Shield :
         Buff,
@@ -25,8 +33,16 @@ namespace RHA_Merankori
         IP_PlayerTurn,
         IP_BuffAddAfter,
         IP_BuffRemove,
+        IP_ParticleOut_After_Global,
+        IP_ParticleOut_Before,
+        IP_DamageTake,
+        IP_HealChange,
+        IP_ParticleOut_After,
         IMerankoriCanExtraStackBuff
     {
+
+        private bool canJudgeReduceStack = false;
+
         public void BattleEnd()
         {
             Check();
@@ -37,14 +53,97 @@ namespace RHA_Merankori
             Check();
         }
 
+        //因为DeadResist会在单次攻击内被多次调用，所以代码逻辑移动到了BuffPatch类里的BattleChar.Dead的Patch
+
+        private bool isJudging = false;
+        
         public bool DeadResist()
         {
-            if(this.BChar.BuffFind(ModItemKeys.Buff_B_NotDeadlyAtk))
+            if(canJudgeReduceStack)
             {
-                return true;
+                //如果别的地方也在通过遍历检查这个是否为true，那我们暂时返回false
+                if(isJudging)
+                {
+                    Debug.Log(">>>> Detect Judge Loop! return false!");
+                    return false;
+                }
+                isJudging = true;
+                //先判断其他的DeadResist，如果有通过的，则跳过此次减层判定
+                try
+                {
+                    foreach (IP_DeadResist ip_DeadResist in this.BChar.IReturn<IP_DeadResist>(null))
+                    {
+                        if (ip_DeadResist != null &&
+                            !(ip_DeadResist is B_Shield) &&
+                            ip_DeadResist.DeadResist())
+                        {
+                            canJudgeReduceStack = false;
+                            isJudging = false;
+                            Debug.Log($">>>> DeadResist {this.BChar.Info.KeyData}: other IP_DeadResist <{ip_DeadResist.GetType().FullName}> return true, skip judging.");
+                            return true;
+                        }
+                    }
+                }
+                catch 
+                { 
+                }
+                isJudging = false;
+
+                Debug.Log($">>>> DeadResist {this.BChar.Info.KeyData}: reduce B_Shield!");
+                canJudgeReduceStack = false;
+                this.SelfStackDestroy();
             }
-            this.SelfStackDestroy();
+            else
+            {
+                Debug.Log($">>>> DeadResist {this.BChar.Info.KeyData}: just check");
+            }
             return true;
+        }
+
+        public static bool Judge(BattleChar __instance)
+        {
+            /*
+            if(__instance.BuffFind(ModItemKeys.Buff_B_NotDeadlyAtk) || 
+                __instance.BuffFind(GDEItemKeys.Buff_B_Momori_P_NoDead))
+            {
+                return false;
+            }
+            */
+            Buff shieldBuff = __instance.GetBuffByID(ModItemKeys.Buff_B_Shield);
+            if (shieldBuff != null && shieldBuff.StackNum > 0)
+            {
+                if(shieldBuff is B_Shield bShield)
+                {
+                    bShield.canJudgeReduceStack = true;
+                    Debug.Log(">> Set B_Shield canJudgeReduceStack True!");
+                    return true;
+                }
+                else
+                {
+                    Debug.LogWarning($">> Try to convert {shieldBuff.GetType().FullName} to B_Shield failed!");
+                }
+            }
+            Debug.Log(">> Cannot find B_Shield, Skip!");
+            return true;
+        }
+
+        public static void JudgeEnd(BattleChar __instance)
+        {
+            Buff shieldBuff = __instance.GetBuffByID(ModItemKeys.Buff_B_Shield);
+            if (shieldBuff != null && shieldBuff.StackNum > 0)
+            {
+                if (shieldBuff is B_Shield bShield)
+                {
+                    bShield.canJudgeReduceStack = false;
+                    Debug.Log(">> Set B_Shield canJudgeReduceStack False!");
+                    return;
+                }
+                else
+                {
+                    Debug.LogWarning($">> Try to convert {shieldBuff.GetType().FullName} to B_Shield failed!");
+                }
+            }
+            Debug.Log(">> Cannot find B_Shield, Skip!");
         }
 
         public void Turn()
@@ -72,6 +171,10 @@ namespace RHA_Merankori
             {
                 this.PlusStat.HEALTaken = this.StackNum * 10;
             }
+            else
+            {
+                this.PlusStat.HEALTaken = 0;
+            }
         }
 
         public void BuffaddedAfter(BattleChar BuffUser, BattleChar BuffTaker, Buff addedbuff, StackBuff stackBuff)
@@ -82,6 +185,40 @@ namespace RHA_Merankori
         public void BuffRemove(BattleChar buffMaster, Buff buff)
         {
             BuffStat();
+        }
+
+        public IEnumerator ParticleOut_After_Global(Skill SkillD, List<BattleChar> Targets)
+        {
+            Check();
+            yield break;
+        }
+
+        public void ParticleOut_Before(Skill SkillD, List<BattleChar> Targets)
+        {
+            Check();
+        }
+
+        public void DamageTake(BattleChar User, int Dmg, bool Cri, ref bool resist, bool NODEF = false, bool NOEFFECT = false, BattleChar Target = null)
+        {
+            Check();
+        }
+
+        public void HealChange(BattleChar Healer, BattleChar HealedChar, ref int HealNum, bool Cri, ref bool Force)
+        {
+            Check();
+        }
+
+        public IEnumerator ParticleOut_After(Skill SkillD, List<BattleChar> Targets)
+        {
+            Check();
+            yield break;
+        }
+
+        
+        public override void FixedUpdate()
+        {
+            base.FixedUpdate();
+            Check(); //暴力解决各种边边角角的奇怪的死亡判定
         }
     }
 }

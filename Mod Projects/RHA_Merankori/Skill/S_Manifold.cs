@@ -15,13 +15,15 @@ namespace RHA_Merankori
 {
     /// <summary>
     /// 晶体流形
-    /// 冷静：手中每个“湮裂的燐焰晶”会额外提供2层蓄力
+    /// 冷静：手中每个“湮裂的燐焰晶”会额外提供3层蓄力
     /// </summary>
     public class S_Manifold : 
         Merankori_BaseSkill,
         IP_Draw,
         IP_Discard
     {
+        private const int STACK_COUNT = 3;
+
         public override bool CanApplyCalm => true;
         public override bool CanApplyPanic => false;
 
@@ -33,7 +35,7 @@ namespace RHA_Merankori
             {
                 if(skill.ExtendedFind<S_Attack_All>()!= null)
                 {
-                    this.BChar.BuffAddWithStacks(ModItemKeys.Buff_B_Charge, this.BChar, 2);
+                    this.BChar.BuffAddWithStacks(ModItemKeys.Buff_B_Charge, this.BChar, STACK_COUNT);
                 }
             }
         }
@@ -65,7 +67,7 @@ namespace RHA_Merankori
             {
                 if (skill.ExtendedFind<S_Attack_All>() != null)
                 {
-                    total += 2;
+                    total += STACK_COUNT;
                 }
             }
             return total;

@@ -27,19 +27,24 @@ namespace RHA_Merankori
         //燐焰晶的伤害不会致命
         public bool DeadResist()
         {
-            if (this.BChar.Recovery < 1)
-            {
-                this.BChar.Recovery = 1;
-            }
+            Check();
             return true;
         }
 
         public IEnumerator ParticleOut_After_Global(Skill SkillD, List<BattleChar> Targets)
         {
             //动作完成后立刻解除此效果
+            Check();
             this.SetDestroyBuffTrue(true);
             yield break;
         }
 
+        private void Check()
+        {
+            if (this.BChar.Recovery < 1)
+            {
+                this.BChar.Recovery = 1;
+            }
+        }
     }
 }

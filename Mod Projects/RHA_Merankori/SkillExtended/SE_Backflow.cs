@@ -49,7 +49,7 @@ namespace RHA_Merankori
 
         private void UpdateData()
         {
-            this.PlusPerStat.Damage = Utils.GetAliveAlliesTotalLoseHP();
+            this.PlusPerStat.Damage = Utils.GetAliveAlliesTotalLoseHP()/2;
         }
 
     }

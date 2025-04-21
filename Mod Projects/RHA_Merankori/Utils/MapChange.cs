@@ -18,7 +18,7 @@ namespace RHA_Merankori
     /// </summary>
     public static class MapChange
     {
-        private const float BASE_ITEM_CHANCE = 0.25f;
+        private const float BASE_ITEM_CHANCE = 0.3f;
 
         /// <summary>
         /// 
@@ -57,24 +57,43 @@ namespace RHA_Merankori
         /// <returns></returns>
         public static bool BlowUpTiles(Vector3 tilePos,int range)
         {
+            if(
+                StageSystem.instance==null ||
+                StageSystem.instance.Map==null ||
+                StageSystem.instance.Map.MapObject == null
+                )
+            {
+                Debug.Log($"BlowUpTile: Null StageSystem.instance or .Map, Skip");
+                return false;
+            }
             Vector3 cubePlayerPos = MapTile.VecToCube(tilePos);
             List<Vector2> candidatesHexPos = MapTile.MapRange(cubePlayerPos, range, StageSystem.instance.Map.Size);
             Debug.Log($"Get {candidatesHexPos.Count} pos, start to modify map");
 
             if (candidatesHexPos.Count == 0)
             {
+                Debug.Log($"BlowUpTile: No suitable map tile found, skip");
                 return false;
             }
 
             bool result = false;
-            //对附近1格范围内的HexTile进行检查
-            foreach (Vector2 cHexPos in candidatesHexPos)
+            try
             {
-                MapTile mapTile = StageSystem.instance.Map.MapObject[(int)cHexPos.x, (int)cHexPos.y];
-                result |= BlowUpTile(mapTile);
+                //对附近1格范围内的HexTile进行检查
+                foreach (Vector2 cHexPos in candidatesHexPos)
+                {
+                    MapTile mapTile = StageSystem.instance.Map.MapObject[(int)cHexPos.x, (int)cHexPos.y];
+                    result |= BlowUpTile(mapTile);
+                }
+                Transform tileTransform = StageSystem.instance.Map.MapObject[(int)tilePos.x, (int)tilePos.y].TileObject.transform;
+                MasterAudio.PlaySound("SE_FireEffect", 1f, null, 0f, null, null, false, false);
             }
-            Transform tileTransform = StageSystem.instance.Map.MapObject[(int)tilePos.x, (int)tilePos.y].TileObject.transform;
-            MasterAudio.PlaySound("SE_FireEffect", 1f, null, 0f, null, null, false, false);
+            catch (Exception e)
+            {
+                Debug.LogError("BlowUpTile: encounter error!");
+                Debug.LogError(e.Message);
+                Debug.LogError(e.StackTrace);
+            }
             return result;
         }
 
@@ -85,12 +104,21 @@ namespace RHA_Merankori
         /// <returns></returns>
         public static bool BlowUpTile(MapTile cMapTile)
         {
-            Vector2 cHexPos = cMapTile.Pos;
-            if (cMapTile == null)
+            if (
+                StageSystem.instance == null ||
+                StageSystem.instance.Map == null ||
+                StageSystem.instance.Map.MapObject == null
+                )
             {
-                Debug.Log($"Null tile @{cHexPos}, Skip");
+                Debug.Log($"BlowUpTile: Null StageSystem.instance or .Map, Skip");
                 return false;
             }
+            if (cMapTile == null)
+            {
+                Debug.Log($"BlowUpTile: Null tile, Skip");
+                return false;
+            }
+            Vector2 cHexPos = cMapTile.Pos;
 
             // 一点点变色，不好看，还是删了，自己做个特效更好康一些
             /*
@@ -198,6 +226,16 @@ namespace RHA_Merankori
         /// <param name="cMapTile"></param>
         public static void CreateMiniMapHexTile(MapTile cMapTile)
         {
+            if(FieldSystem.instance==null ||
+                FieldSystem.instance.MiniMap ==null ||
+                FieldSystem.instance.MiniMap.TeleportMap ==null ||
+                FieldSystem.instance.MiniMap.MapImages==null ||
+                FieldSystem.instance.MiniMap.TeleportMap.MapImages==null
+                )
+            {
+                Debug.Log("CreateMiniMapHexTile: null minimap!");
+                return;
+            }
             CreateHexTileForMini(cMapTile);
             CreateHexTileForTeleport(cMapTile);
         }
@@ -552,7 +590,7 @@ namespace RHA_Merankori
 
             // decide basic reward
             float rollPoint = RandomManager.RandomFloat(BattleRandom.UseItem, 0.0f, 1.0f);
-            float reduceRewardRollPoint = RandomManager.RandomFloat(BattleRandom.UseItem, 0.1f, 1.0f);
+            float reduceRewardRollPoint = RandomManager.RandomFloat(BattleRandom.UseItem, 0.1f, 0.45f);
 
             newEvent = new TileTypes.Event();
 

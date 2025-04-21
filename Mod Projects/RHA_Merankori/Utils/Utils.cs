@@ -183,7 +183,7 @@ namespace RHA_Merankori
                 }
             }
             Skill_Extended skill_Extended = skill.ExtendedAdd_Battle(new T());
-            Debug.Log($"Add extend {typeof(T).Name} to skill {skill.MySkill.KeyID}");
+            //Debug.Log($"Add extend {typeof(T).Name} to skill {skill.MySkill.KeyID}");
         }
 
         public static void EnsureExtendSkill(this Skill skill, string keyID)
@@ -196,7 +196,7 @@ namespace RHA_Merankori
                 }
             }
             Skill_Extended skill_Extended = skill.ExtendedAdd(keyID);
-            Debug.Log($"Add extend {keyID} to skill {skill.MySkill.KeyID}");
+            //Debug.Log($"Add extend {keyID} to skill {skill.MySkill.KeyID}");
         }
 
         public static bool IsAnyAllyDying()
@@ -255,6 +255,25 @@ namespace RHA_Merankori
                 return 0;
             }
             return CountBuffStack(BattleSystem.instance.AllyTeam.AliveChars_Vanish, buffKey);
+        }
+
+        public static int CountAliveAllyBuffTypes()
+        {
+            if (BattleSystem.instance == null || BattleSystem.instance.AllyTeam == null)
+            {
+                return 0;
+            }
+            List<BattleChar> aliveChars = BattleSystem.instance.AllyTeam.AliveChars_Vanish;
+            HashSet<string> buffTypes = new HashSet<string>();
+            foreach (BattleChar c in aliveChars)
+            {
+                List<Buff> buffs = c.GetBuffs(BattleChar.GETBUFFTYPE.BUFF, false);
+                foreach (Buff buff in buffs)
+                {
+                    buffTypes.Add(buff.BuffData.Key);
+                }
+            }
+            return buffTypes.Count;
         }
 
         public static bool IsKeyID(this Buff buff, string keyID)

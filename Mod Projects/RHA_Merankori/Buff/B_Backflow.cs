@@ -16,10 +16,9 @@ namespace RHA_Merankori
 {
     /// <summary>
     /// 逆流的燐焰晶
-    /// “湮裂的燐焰晶”会根据队友已损失的体力值增加，每1点增加1%伤害。
-    /// 回合结束时，若手中有“湮裂的燐焰晶”，移除这个效果。
+    /// “湮裂的燐焰晶”会根据队友已损失的体力值增加，每2点增加1%伤害。
     /// </summary>
-    public class B_Backflow : BaseMAtkAllCardBuff, IMerankoriCanExtraStackBuff
+    public class B_Backflow : BaseMAtkAllCardBuff
     {
         protected override string ApplySkillExKey => ModItemKeys.SkillExtended_SE_Backflow;
 
@@ -33,6 +32,7 @@ namespace RHA_Merankori
         {
             base.Init();
         }
+        /*
 
         public override void TurnUpdate()
         {
@@ -45,6 +45,6 @@ namespace RHA_Merankori
                     this.SelfDestroy();
                 }
             }
-        }
+        }*/
     }
 }

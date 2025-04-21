@@ -16,6 +16,7 @@ namespace RHA_Merankori
         bool CanApplyPanic { get; }
     }
 
+    //基础类，能够检测calm和panic并做出动画效果反应，不过有时候可能不起作用（卡牌的主人不是梅朗柯莉的时候，或者某些时点并没有将卡牌加入回调）
     public abstract class Merankori_BaseSkill : 
         Skill_Extended, 
         IP_BuffAdd,
@@ -70,20 +71,20 @@ namespace RHA_Merankori
             hasChecked = false;
             if (isCalmNow && effectSetting.HasFlag(StateForVisualEffect.Calm))
             {
-                Debug.Log($"Particle on for {this.Name}");
+                //Debug.Log($"Particle on for {this.Name}");
                 base.SkillParticleOn();
             }
             else if (effectSetting.HasFlag(StateForVisualEffect.Panic))
             {
-                Debug.Log($"Particle on for {this.Name}");
+                //Debug.Log($"Particle on for {this.Name}");
                 base.SkillParticleOn();
             }
             else
             {
-                Debug.Log($"Particle off for {this.Name}");
+                //Debug.Log($"Particle off for {this.Name}");
                 base.SkillParticleOff();
             }
-            Debug.Log($"base calm change {isCalmNow} {this.GetType().Name}");
+            //Debug.Log($"base calm change {isCalmNow} {this.GetType().Name}");
             if (isCalmNow)
             {
                 OnEmotionCalm();

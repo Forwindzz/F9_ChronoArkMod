@@ -20,7 +20,7 @@
         "EnemyPreview": false,
         "UnknownTarget": false,
         "Name": "蓄能",
-        "Description": "队友每拥有2层“燐色存护”，倒计时增加1点。每行进1点倒计时，获得1层“蓄能”。\r\n进入慌张状态时，停止蓄能。\r",
+        "Description": "队友每拥有1种正面buff，倒计时增加1点。每行进1点倒计时，获得1层蓄能。\r\n进入慌张状态时，停止蓄能。\n在冷静状态完成蓄能时，将1张<color=#FF6767>湮裂的燐焰晶</color>放入手中。",
         "UseAp": 1,
         "User": "C_Merankori",
         "Counting": 1,

@@ -50,8 +50,9 @@ namespace RHA_Merankori
             //任何攻击都会让她变得情绪慌张
             if (SkillD.IsDamage && Targets.Count>0)
             {
+                //这个会被调用多次，哪怕只有1次行动
                 EmotionBuffSwitch.SwitchToPanic(this.BChar);
-                Debug.Log($"Add Panic! {Targets.Count}");
+                //Debug.Log($"Add Panic! {Targets.Count}");
             }
             yield break;
         }
@@ -69,7 +70,7 @@ namespace RHA_Merankori
 
         public void Camp()
         {
-            InventoryManager.Reward(ItemBase.GetItem(ModItemKeys.Item_Consume_I_RHA, 3));
+            InventoryManager.Reward(ItemBase.GetItem(ModItemKeys.Item_Consume_I_RHA, 1));
         }
 
         private IEnumerator BlowUpTiles()

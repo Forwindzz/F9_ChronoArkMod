@@ -15,8 +15,9 @@ namespace RHA_Merankori
 {
     /// <summary>
     /// 蓄能
-    /// 队友每拥有2层“燐色存护”，倒计时增加1点。每行进1点倒计时，获得1层蓄能。
+    /// 队友每拥有1种正面buff，倒计时增加1点。每行进1点倒计时，获得1层蓄能。
     /// 进入慌张状态时，停止蓄能。
+    /// 在冷静状态完成蓄能时，将1张<color=#FF6767>湮裂的燐焰晶</color>放入手中。
     /// </summary>
     public class S_Charge : 
         Merankori_BaseSkill,
@@ -40,20 +41,26 @@ namespace RHA_Merankori
 
         private void ResetTempInfo()
         {
-            Debug.Log("Charge: reset temp!");
+            //Debug.Log("Charge: reset temp!");
             currentCastingSkill = null;
             initCountingDown = 0;
         }
 
         private void RecordTempInfo(CastingSkill newCastingSkill)
         {
-            Debug.Log("Charge: record temp!");
+            //Debug.Log("Charge: record temp!");
             if (currentCastingSkill!=null)
             {
                 Debug.Log("S_Charge casting not reset yet! But require to set new record");
             }
             currentCastingSkill = newCastingSkill;
             initCountingDown = currentCastingSkill.CastSpeed;
+        }
+
+        public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
+        {
+            base.SkillUseSingle(SkillD, Targets);
+            S_Attack_All.GenCardToHand(this.BChar);
         }
 
         private void UpdateTempInfo()
@@ -64,10 +71,12 @@ namespace RHA_Merankori
             }
             int currentCastingCount = Mathf.Max(0, currentCastingSkill.CastSpeed);
             int deltaCount = initCountingDown - currentCastingCount;
+            /*
             if (deltaCount!=0)
             {
                 Debug.Log($"Charge: update temp! {deltaCount}");
             }
+            */
             
             if (deltaCount==0)
             {
@@ -75,7 +84,7 @@ namespace RHA_Merankori
             }
             else if(deltaCount<0)
             {
-                Debug.Log("S_Charge count is negative, counting is increase???");
+                //Debug.Log("S_Charge count is negative, counting is increase???");
                 initCountingDown = currentCastingCount;
                 return;
             }
@@ -118,7 +127,7 @@ namespace RHA_Merankori
         {
             if(IsCalm())
             {
-                this.Counting = 2 + Utils.CountAliveAllyBuffStack(ModItemKeys.Buff_B_Shield) / 2;
+                this.Counting = 3 + Utils.CountAliveAllyBuffTypes();//Utils.CountAliveAllyBuffStack(ModItemKeys.Buff_B_Shield) / 2;
             }
             else
             {
@@ -170,6 +179,7 @@ namespace RHA_Merankori
             if(IsCalm())
             {
                 FinishTempInfo();
+                S_Attack_All.GenCardToHand(this.BChar);
             }
             else
             {

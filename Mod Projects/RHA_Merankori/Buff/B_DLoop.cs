@@ -15,17 +15,13 @@ namespace RHA_Merankori
 {
     /// <summary>
     /// 导流回路
-    /// 丢弃“湮裂的燐焰晶”时，获得1点法力值和2层蓄力。
+    /// 释放<color=#FF6767>湮裂的燐焰晶</color>时，获得1点法力值。
     /// </summary>
-    public class B_DLoop : Buff, IP_Discard
+    public class B_DLoop : Buff, IP_AfterMerankoriAttackAll
     {
-        public void Discard(bool Click, Skill skill, bool HandFullWaste)
+        public void AfterMerankoriAttackAll(S_Attack_All skill_Extended)
         {
-            if(skill.ExtendedFind<S_Attack_All>()!=null)
-            {
-                BattleSystem.instance.AllyTeam.AP += 1;
-                this.BChar.BuffAddWithStacks(ModItemKeys.Buff_B_Charge, this.BChar, 2);
-            }
+            this.BChar.MyTeam.AP += 1;
         }
     }
 }

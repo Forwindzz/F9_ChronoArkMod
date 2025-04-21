@@ -6,7 +6,7 @@
         "Rare": false,
         "Target": "ally",
         "NODOD": false,
-        "NotCount": false,
+        "NotCount": true,
         "NotChuck": false,
         "HealSkill": false,
         "Disposable": false,

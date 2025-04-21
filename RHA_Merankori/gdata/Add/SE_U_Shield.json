@@ -1,0 +1,11 @@
+{
+    "SE_U_Shield": {
+        "_gdeSchema": "SkillExtended",
+        "Des": "获得1层燐色存护",
+        "Name": "赋予燐色存护",
+        "Drop": true,
+        "EnforceString": "1费及以上的技能",
+        "NeedCharacter": "C_Merankori",
+        "ClassName": "RHA_Merankori.SE_U_Shield"
+    }
+}

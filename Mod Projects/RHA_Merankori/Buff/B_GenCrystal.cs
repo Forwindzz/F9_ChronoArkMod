@@ -15,13 +15,14 @@ namespace RHA_Merankori
 {
 	/// <summary>
 	/// 焰晶生成
-	/// 每当有人脱离或进入濒死状态时，将“湮裂的燐焰晶”放入手中。
+	/// 每当有人进入濒死状态时，将“湮裂的燐焰晶”放入手中。
 	/// </summary>
     public class B_GenCrystal: 
         Buff,
-        IP_NearDeath,
-        IP_BuffRemove
+        IP_NearDeath//,
+        //IP_BuffRemove
     {
+        /*
         public void BuffRemove(BattleChar buffMaster, Buff buff)
         {
             if (buffMaster.Info.Ally && buff.IsKeyID(GDEItemKeys.Buff_B_Neardeath))
@@ -29,6 +30,7 @@ namespace RHA_Merankori
                 GenCard();
             }
         }
+        */
 
         public void NearDeath(BattleAlly Ally)
         {

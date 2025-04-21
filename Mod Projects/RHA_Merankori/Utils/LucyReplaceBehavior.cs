@@ -105,26 +105,52 @@ namespace RHA_Merankori
             UpdateAnimation();
         }
 
+
+        //如果跑步时间很短，那就继续播放跑步动画，避免因为在站立和停止之间动画导致反复抽搐 （鼠标靠近人物时会发生这种情况）
+        private float TOLERATE_RUN_TIME = 0.25f;
+        private float totalRunAnimTime = 0.0f;
+        private bool isRunningLastTime = false;
+
+        //如果比较复杂的话，考虑包装成状态机模型
         public void UpdateAnimation()
         {
             if (merankoriCharGO.activeSelf && isInited)
             {
                 PlayerController playerController = FieldSystem.instance.Playercontrol;
-                mkRender.sortingOrder = lucyMeshRender.sortingOrder; //绘制顺序，保证遮挡关系正确 
-                if (playerController.RunToggle || playerController.Movevec.sqrMagnitude > 0.02f)
+                mkRender.sortingOrder = lucyMeshRender.sortingOrder; //绘制顺序，保证遮挡关系正确
+                if (playerController.RunToggle || playerController.Movevec.sqrMagnitude > 1e-8f)
                 {
+                    //速度通常是240或者320
+                    float playSpeedExtra = playerController.Movevec.magnitude * 0.001f;
+                    if (!isRunningLastTime) //如果上一次是站立，那么重新计时
+                    {
+                         //重新计算速度，实际速度会比这低...
+                        totalRunAnimTime = 0;
+                    }
+                    playSpeedExtra = Mathf.Min(0.6f, playSpeedExtra);
                     if (playerController.Jumpval.JumpSpeed != 0)
                     {
-                        ss6AnimControl.SwitchToAnimation(2, 0, true, 1.18f); //>.< run
+                        ss6AnimControl.SwitchToAnimation(2, 0, true, 1.0f + playSpeedExtra * 0.75f); //>.< run
                     }
                     else
                     {
-                        ss6AnimControl.SwitchToAnimation(3, 0, true, 1.25f); //run
+                        ss6AnimControl.SwitchToAnimation(3, 0, true, 1.0f + playSpeedExtra); //run
                     }
+                    totalRunAnimTime += Time.deltaTime;
+                    isRunningLastTime = true;
                 }
                 else
                 {
-                    ss6AnimControl.SwitchToAnimation(4); // idle
+                    if(totalRunAnimTime>=TOLERATE_RUN_TIME)
+                    {
+                        ss6AnimControl.SwitchToAnimation(4); // idle
+                        totalRunAnimTime = 0.0f;
+                    }
+                    else
+                    {
+                        totalRunAnimTime += Time.deltaTime;
+                    }
+                    isRunningLastTime = false;
                 }
                 // 0 for attack
                 // 1 for damaged
@@ -172,7 +198,7 @@ namespace RHA_Merankori
             character.layer = lucyMeshRender.gameObject.layer;
             merankoriCharGO.tag = lucyMeshRender.tag;
 
-            character.gameObject.AddComponent<ObjectAngle>();
+            //character.gameObject.AddComponent<ObjectAngle>();
 
             Debug.Log($"InitMerankoriCharacter done");
             isInited = true;

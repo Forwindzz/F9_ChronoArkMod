@@ -4,7 +4,7 @@
         "AlwaysParticle": false,
         "IsOnesInit": false,
         "Name": "逆流的燐焰晶",
-        "Des": "根据所有队友已损失的体力值增加伤害，每1点增加1%伤害。\n<color=#5061A4>（预期增加&a）</color>",
+        "Des": "根据所有队友已损失的体力值增加伤害，每2点增加1%伤害。\n<color=#5061A4>（预期增加&a）</color>",
         "ClassName": "RHA_Merankori.SE_Backflow",
         "IsIcon": "Image/Buff/Skill_Icon_Pack/1_7_buff (19)",
         "Particle": "",

@@ -14,19 +14,19 @@ namespace RHA_Merankori
     static class BuffPatch
     {
 
-        [HarmonyPatch(typeof(BattleChar),nameof(BattleChar.BuffAdd))]
+        [HarmonyPatch(typeof(BattleChar), nameof(BattleChar.BuffAdd))]
         [HarmonyPrefix]
         static bool BattleChar_BuffAdd_Prefix(
             BattleChar __instance,
-            ref string key, 
-            ref BattleChar UseState, 
-            ref bool hide, 
-            ref int PlusTagPer, 
-            ref bool debuffnonuser, 
-            ref int RemainTime, 
+            ref string key,
+            ref BattleChar UseState,
+            ref bool hide,
+            ref int PlusTagPer,
+            ref bool debuffnonuser,
+            ref int RemainTime,
             ref bool StringHide)
         {
-            if(BattleSystem.instance==null)
+            if (BattleSystem.instance == null)
             {
                 return true;
             }
@@ -49,5 +49,55 @@ namespace RHA_Merankori
             }
             return !cancelBuff;
         }
+
+        [HarmonyPatch(typeof(BattleChar), nameof(BattleChar.Dead))]
+        [HarmonyPrefix]
+        static bool BattleChar_Dead_Prefix(
+            BattleChar __instance,
+            bool notdeadeffect,
+            bool NoTimeSlow)
+        {
+            Debug.Log($"Judge BattleChar.Dead {__instance.Info.KeyData}");
+            bool result = B_Shield.Judge(__instance);
+            return result;
+        }
+
+        [HarmonyPatch(typeof(BattleAlly), nameof(BattleAlly.Dead))]
+        [HarmonyPrefix]
+        static bool BattleAlly_Dead_Prefix(
+            BattleAlly __instance,
+            bool notdeadeffect,
+            bool NoTimeSlow)
+        {
+            Debug.Log($"Judge BattleChar.Dead {__instance.Info.KeyData}");
+            bool result = B_Shield.Judge(__instance);
+            return B_Shield.Judge(__instance);
+        }
+
+        //-------------------
+
+        [HarmonyPatch(typeof(BattleAlly), nameof(BattleAlly.Dead))]
+        [HarmonyPostfix]
+        static void BattleAlly_Dead_Postfix(
+            BattleAlly __instance,
+            bool notdeadeffect,
+            bool NoTimeSlow)
+        {
+            Debug.Log($"JudgeEnd BattleAlly.Dead {__instance.Info.KeyData}");
+            B_Shield.JudgeEnd(__instance);
+        }
+
+        [HarmonyPatch(typeof(BattleChar), nameof(BattleAlly.Dead))]
+        [HarmonyPostfix]
+        static void BattleChar_Dead_Postfix(
+            BattleAlly __instance,
+            bool notdeadeffect,
+            bool NoTimeSlow)
+        {
+            Debug.Log($"JudgeEnd BattleAlly.Dead {__instance.Info.KeyData}");
+            B_Shield.JudgeEnd(__instance);
+        }
+
+
     }
 }

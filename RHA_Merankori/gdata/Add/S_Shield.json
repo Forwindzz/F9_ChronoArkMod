@@ -4,7 +4,7 @@
         "Category": "null",
         "Particle": "Particle/flare_lv1",
         "Target": "all_ally",
-        "NotCount": true,
+        "NotCount": false,
         "Name": "燐晶电场",
         "Description": "<color=#BAC8FF><b>冷静</b>：处于濒死状态的队友额外获得1层“燐色存护”</color>",
         "User": "C_Merankori",

@@ -46,10 +46,8 @@ namespace RHA_Merankori
             base.SkillUseSingle(SkillD, Targets);
             foreach (BattleChar b in Targets)
             {
-                Debug.Log("check near death " + b.Info.Name);
                 if (b.BuffFind(GDEItemKeys.Buff_B_Neardeath))
                 {
-                    Debug.Log("find near death " + b.Info.Name);
                     b.BuffAddWithStacks(ModItemKeys.Buff_B_Shield, this.BChar, 1);
                 }
             }

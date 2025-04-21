@@ -5,9 +5,8 @@ namespace RHA_Merankori
     {
 		/// <summary>
 		/// 逆流的燐焰晶
-		/// <color=#FF6767>湮裂的燐焰晶</color>会根据队友已损失的体力值增加伤害，每1点增加1%伤害。
+		/// <color=#FF6767>湮裂的燐焰晶</color>会根据队友已损失的体力值增加伤害，每2点增加1%伤害。
 		/// <color=#5061A4>（预期增加&a）</color>
-		/// 回合结束时，若手中有<color=#FF6767>湮裂的燐焰晶</color>，移除这个效果。
 		/// </summary>
         public static string Buff_B_Backflow = "B_Backflow";
 		/// <summary>
@@ -39,7 +38,7 @@ namespace RHA_Merankori
         public static string Buff_B_DeathResist = "B_DeathResist";
 		/// <summary>
 		/// 导流回路
-		/// 丢弃<color=#FF6767>湮裂的燐焰晶</color>时，获得1点法力值和2层“蓄力”。
+		/// 释放<color=#FF6767>湮裂的燐焰晶</color>时，获得1点法力值。
 		/// </summary>
         public static string Buff_B_DLoop = "B_DLoop";
 		/// <summary>
@@ -49,7 +48,7 @@ namespace RHA_Merankori
         public static string Buff_B_FreqShift = "B_FreqShift";
 		/// <summary>
 		/// 焰晶生成
-		/// 每当队友脱离或进入濒死状态时，将<color=#FF6767>湮裂的燐焰晶</color>放入手中。
+		/// 每当队友进入濒死状态时，将<color=#FF6767>湮裂的燐焰晶</color>放入手中。
 		/// </summary>
         public static string Buff_B_GenCrystal = "B_GenCrystal";
 		/// <summary>
@@ -108,18 +107,18 @@ namespace RHA_Merankori
 		/// Passive:
 		/// 任何攻击都会让梅朗柯莉变得情绪<color=#FFC5BA><b>慌张</b></color>，但在回合开始时，梅朗柯莉会<color=#BAC8FF><b>冷静</b></color>下来。
 		/// 固定技能始终为<color=#FF6767>湮裂的燐焰晶</color>，会攻击除自己以外的所有人，并且使周围地形化为灰烬。
-		/// 获得物品“燐焰晶”
+		/// 升级获得物品“燐焰晶”2个，营地也会获得1个，可以摧毁地形并概率发现箱子。
 		/// </summary>
         public static string Character_C_Merankori = "C_Merankori";
 		/// <summary>
 		/// 燐焰晶
-		/// 右击可以让梅朗柯莉摧毁周边的墙体，可能发现小型物资，在篝火处会充能3次。
+		/// 右击可以让梅朗柯莉摧毁周边的墙体，可能发现小型物资。
 		/// <color=#5061A4>  --- 赤红的晶石上透射着淡淡的回路，似乎很危险的样子...</color>
 		/// </summary>
         public static string Item_Consume_I_RHA = "I_RHA";
 		/// <summary>
 		/// 逆流的燐焰晶
-		/// 根据所有队友已损失的体力值增加伤害，每1点增加1%伤害。
+		/// 根据所有队友已损失的体力值增加伤害，每2点增加1%伤害。
 		/// <color=#5061A4>（预期增加&a）</color>
 		/// </summary>
         public static string SkillExtended_SE_Backflow = "SE_Backflow";
@@ -130,7 +129,7 @@ namespace RHA_Merankori
         public static string SkillExtended_SE_Calm = "SE_Calm";
 		/// <summary>
 		/// 越频晶体
-		/// 根据蓄能效果层数，每层增加25%的伤害。
+		/// 根据蓄能效果层数，每层增加10%的伤害。
 		/// <color=#5061A4>（预期增加&a）</color>
 		/// </summary>
         public static string SkillExtended_SE_Charge = "SE_Charge";
@@ -174,6 +173,18 @@ namespace RHA_Merankori
         public static string SkillEffect_SE_T_S_Shield = "SE_T_S_Shield";
         public static string SkillEffect_SE_T_S_WarmFire = "SE_T_S_WarmFire";
 		/// <summary>
+		/// 赋予折射
+		/// 获得1回合折射
+		/// 过载，指向单体队友的技能
+		/// </summary>
+        public static string SkillExtended_SE_U_Refraction = "SE_U_Refraction";
+		/// <summary>
+		/// 赋予燐色存护
+		/// 获得1层燐色存护
+		/// 1费及以上的技能
+		/// </summary>
+        public static string SkillExtended_SE_U_Shield = "SE_U_Shield";
+		/// <summary>
 		/// 冷静
 		/// 梅朗柯莉处于“<color=#BAC8FF><b>冷静</b></color>”状态时触发。
 		/// </summary>
@@ -185,7 +196,8 @@ namespace RHA_Merankori
         public static string SkillKeyword_SK_Panic = "SK_Panic";
 		/// <summary>
 		/// <color=#FF6767>湮裂的燐焰晶</color>
-		/// 对所有人造成伤害 ,除了梅朗柯莉。此伤害不会导致队友不能战斗。
+		/// 对所有人造成伤害 ,除了梅朗柯莉。此伤害不会导致队友无法战斗。
+		/// 在手中时，附加放逐。
 		/// <color=#FFC5BA><b>慌张</b>：技能附加迅速</color>
 		/// </summary>
         public static string Skill_S_Attack_All = "S_Attack_All";
@@ -202,8 +214,9 @@ namespace RHA_Merankori
         public static string Skill_S_Care = "S_Care";
 		/// <summary>
 		/// 蓄能
-		/// 队友每拥有2层“燐色存护”，倒计时增加1点。每行进1点倒计时，获得1层“蓄能”。
+		/// 队友每拥有1种正面buff，倒计时增加1点。每行进1点倒计时，获得1层蓄能。
 		/// 进入慌张状态时，停止蓄能。
+		/// 在冷静状态完成蓄能时，将1张<color=#FF6767>湮裂的燐焰晶</color>放入手中。
 		/// </summary>
         public static string Skill_S_Charge = "S_Charge";
 		/// <summary>
@@ -231,7 +244,7 @@ namespace RHA_Merankori
         public static string Skill_S_ItemRHA = "S_ItemRHA";
 		/// <summary>
 		/// 晶体流形
-		/// <color=#BAC8FF><b>冷静</b>：手中每个<color=#FF6767>湮裂的燐焰晶</color>会额外提供2层“蓄力”</color>
+		/// <color=#BAC8FF><b>冷静</b>：手中每个<color=#FF6767>湮裂的燐焰晶</color>会额外提供3层“蓄力”</color>
 		/// <color=#5061A4>（预计提供&a层）</color>
 		/// </summary>
         public static string Skill_S_Manifold = "S_Manifold";
