@@ -29,20 +29,29 @@ public class WalkToTarget : MonoBehaviour
         }
     }
 
+    private bool attack = false;
+
     private void FixedUpdate()
     {
         Vector3 delta = followPoint.position - this.transform.position;
         float sqrDistance = delta.sqrMagnitude;
         if (sqrDistance > stopRangeSqr)
         {
-            animControl.SwitchToAnimation(Anim_Run, 0, true, Mathf.Sqrt(Mathf.Abs(runSpeed) / 0.05f));
+            animControl.SwitchToAnimation(Anim_Run);
+            float speed = Mathf.Sqrt(Mathf.Abs(runSpeed) / 0.05f);
+            animControl.SetPlaySpeed(speed);
             float distance = Mathf.Sqrt(sqrDistance);
             float runDistance = Mathf.Min(runSpeed, distance);
             this.transform.position += runDistance * delta.normalized;
+            attack = false;
         }
         else
         {
-            animControl.SwitchToAnimation(Anim_Spare, 0, true, 1.0f);
+            if(!attack)
+            {
+                animControl.SwitchToAnimation(Anim_Spare, 2, true, 1.0f, (a, b) => { animControl.SwitchToAnimation(0); attack = true; return true; });
+            }
+           
         }
 
         if (delta.x >= 0)

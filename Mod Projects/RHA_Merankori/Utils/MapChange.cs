@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 
 namespace RHA_Merankori
 {
@@ -44,6 +45,20 @@ namespace RHA_Merankori
             }
             //必须在Fog层才能正确渲染，order至少得这个数字，参考GhostEffect
             ParticleSystemUtility.SetParticleSystemSorting(effectObject, "Fog", -1860);
+
+
+            GameObject dustGO = ResUtils.LoadModPrefab("Assets/ModAssets/Content/Prefabs/blast_dust.prefab");
+            dustGO.transform.localScale = Vector3.one * ((range + 1) * 1.4f);
+            dustGO.transform.position = worldPos + new Vector3(0, 0, -0.1f);
+            dustGO.transform.localEulerAngles = new Vector3(0, 0, 0);// = worldPos + new Vector3(0, 0, 0.5f);
+            SpriteRenderer spriteRender = dustGO.GetComponent<SpriteRenderer>();
+            ParticleSystemUtility.SetParticleSystemSorting(dustGO, "Floor", 13860);
+            int sortingLayerID = SortingLayer.NameToID("Floor");
+            if (spriteRender!=null)
+            {
+                spriteRender.sortingLayerID = sortingLayerID;
+                spriteRender.sortingOrder = 13850;
+            }
         }
 
         /// <summary>
@@ -93,6 +108,13 @@ namespace RHA_Merankori
                 Debug.LogError("BlowUpTile: encounter error!");
                 Debug.LogError(e.Message);
                 Debug.LogError(e.StackTrace);
+            }
+            if(result)
+            {
+                if(LucyReplaceBehavior.Instance!=null)
+                {
+                    LucyReplaceBehavior.Instance.PlayOnceAnimation(LucyReplaceBehavior.ANIM_DAMAGE, false);
+                }
             }
             return result;
         }

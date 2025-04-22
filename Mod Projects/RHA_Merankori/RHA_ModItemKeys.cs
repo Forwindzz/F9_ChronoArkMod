@@ -105,9 +105,9 @@ namespace RHA_Merankori
 		/// <summary>
 		/// 梅朗柯莉
 		/// Passive:
-		/// 任何攻击都会让梅朗柯莉变得情绪<color=#FFC5BA><b>慌张</b></color>，但在回合开始时，梅朗柯莉会<color=#BAC8FF><b>冷静</b></color>下来。
-		/// 固定技能始终为<color=#FF6767>湮裂的燐焰晶</color>，会攻击除自己以外的所有人，并且使周围地形化为灰烬。
-		/// 升级获得物品“燐焰晶”2个，营地也会获得1个，可以摧毁地形并概率发现箱子。
+		/// 任何攻击会让梅朗柯莉变得<color=#FFC5BA><b>慌张</b></color>，但在回合开始时，梅朗柯莉会<color=#BAC8FF><b>冷静</b></color>下来。
+		/// 固定技能始终为<color=#FF6767>湮裂的燐焰晶</color>，会攻击除自己以外的所有人，并会摧毁周边障碍。
+		/// 升级获得物品“燐焰晶”2个，进入营地会获得1个，可以摧毁地形并概率发现箱子。
 		/// </summary>
         public static string Character_C_Merankori = "C_Merankori";
 		/// <summary>

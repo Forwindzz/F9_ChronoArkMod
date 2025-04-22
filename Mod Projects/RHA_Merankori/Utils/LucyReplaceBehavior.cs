@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Networking;
+using System.Collections;
 
 namespace RHA_Merankori
 {
@@ -58,11 +59,20 @@ namespace RHA_Merankori
             LucyReplaceBehavior lucyReplaceBehavior = lucyMeshRender.gameObject.AddComponent<LucyReplaceBehavior>();
             lucyReplaceBehavior.enabled = true;
             lucyReplaceBehavior.InitMerankoriCharacter(lucyMeshRender);
+            if(LucyReplaceBehavior.instance!=null)
+            {
+                Destroy(LucyReplaceBehavior.instance);
+            }
+            LucyReplaceBehavior.instance = lucyReplaceBehavior;
         }
+
+        private static LucyReplaceBehavior instance = null;
+        public static LucyReplaceBehavior Instance => instance;
 
         private void OnDestory()
         {
-            if(merankoriCharGO!=null)
+            LucyReplaceBehavior.instance = null;
+            if (merankoriCharGO!=null)
             {
                 Destroy(merankoriCharGO);
             }
@@ -90,6 +100,7 @@ namespace RHA_Merankori
                 {
                     merankoriCharGO.SetActive(true);
                     lucyMeshRender.enabled = false;
+                    FieldSystem.DelayInput(PlayOnceAnimationCo(LucyReplaceBehavior.ANIM_DAMAGE, false));
                     Debug.Log($"Show MerankoriCharacter");
                 }
             }
@@ -105,6 +116,33 @@ namespace RHA_Merankori
             UpdateAnimation();
         }
 
+        public const int ANIM_ATTACK = 0;
+        public const int ANIM_DAMAGE = 1;
+        public const int ANIM_ESCAPE = 2;
+        public const int ANIM_RUN = 3;
+        public const int ANIM_SPARE = 4;
+        public const int ANIM_FADE = 5;
+
+        private bool isPlayingOnce = false;
+
+        public IEnumerator PlayOnceAnimationCo(int animationIndex, bool enableTransition = true)
+        {
+            PlayOnceAnimationCo(animationIndex, enableTransition);
+            yield break;
+        }
+
+        public void PlayOnceAnimation(int animationIndex, bool enableTransition=true)
+        {
+            Debug.Log($"Play once {animationIndex} {enableTransition}");
+            isPlayingOnce = true;
+            ss6AnimControl.SwitchToAnimation(
+                animationIndex,
+                1,
+                enableTransition,
+                1,
+                (a, b) => { isPlayingOnce = false; return true; }
+                );
+        }
 
         //如果跑步时间很短，那就继续播放跑步动画，避免因为在站立和停止之间动画导致反复抽搐 （鼠标靠近人物时会发生这种情况）
         private float TOLERATE_RUN_TIME = 0.25f;
@@ -118,10 +156,14 @@ namespace RHA_Merankori
             {
                 PlayerController playerController = FieldSystem.instance.Playercontrol;
                 mkRender.sortingOrder = lucyMeshRender.sortingOrder; //绘制顺序，保证遮挡关系正确
+                if(isPlayingOnce)
+                {
+                    return;
+                }
                 if (playerController.RunToggle || playerController.Movevec.sqrMagnitude > 1e-8f)
                 {
                     //速度通常是240或者320
-                    float playSpeedExtra = playerController.Movevec.magnitude * 0.001f;
+                    float playSpeedExtra = playerController.Movevec.magnitude * 0.00075f;
                     if (!isRunningLastTime) //如果上一次是站立，那么重新计时
                     {
                          //重新计算速度，实际速度会比这低...
@@ -130,11 +172,13 @@ namespace RHA_Merankori
                     playSpeedExtra = Mathf.Min(0.6f, playSpeedExtra);
                     if (playerController.Jumpval.JumpSpeed != 0)
                     {
-                        ss6AnimControl.SwitchToAnimation(2, 0, true, 1.0f + playSpeedExtra * 0.75f); //>.< run
+                        ss6AnimControl.SwitchToAnimation(ANIM_ESCAPE); //>.< run
+                        ss6AnimControl.SetPlaySpeed(1.0f + playSpeedExtra * 0.75f);
                     }
                     else
                     {
-                        ss6AnimControl.SwitchToAnimation(3, 0, true, 1.0f + playSpeedExtra); //run
+                        ss6AnimControl.SwitchToAnimation(ANIM_RUN); //run
+                        ss6AnimControl.SetPlaySpeed(1.0f + playSpeedExtra);
                     }
                     totalRunAnimTime += Time.deltaTime;
                     isRunningLastTime = true;
@@ -143,7 +187,8 @@ namespace RHA_Merankori
                 {
                     if(totalRunAnimTime>=TOLERATE_RUN_TIME)
                     {
-                        ss6AnimControl.SwitchToAnimation(4); // idle
+                        ss6AnimControl.SwitchToAnimation(ANIM_SPARE); // idle
+                        ss6AnimControl.SetPlaySpeed(1.0f);
                         totalRunAnimTime = 0.0f;
                     }
                     else
@@ -163,10 +208,7 @@ namespace RHA_Merankori
             Debug.Log("Try init merankori character sprite");
             lucyMeshRender = currentLucyRender;
 
-            ModInfo info = ModManager.getModInfo(IDs.ID_Mod);
-            string path = info.assetInfo.ObjectFromAsset<GameObject>("rha_merankoriunityassetbundle", "Assets/ModAssets/Content/Prefabs/Character_Merankori.prefab");
-            Debug.Log($"Try to load asset from {path}");
-            GameObject character = AddressableLoadManager.Instantiate(path, AddressableLoadManager.ManageType.None);
+            GameObject character = ResUtils.LoadModPrefab("Assets/ModAssets/Content/Prefabs/Character_Merankori.prefab");
             if (character == null)
             {
                 merankoriCharGO = null;

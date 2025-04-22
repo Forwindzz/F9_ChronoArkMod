@@ -114,7 +114,7 @@ public class SS6AnimControl : MonoBehaviour
         }
 
         nextConfig = new PlayConfig(INVALID, 0, true, 1.0f, null);
-        currentAnimation = INVALID;
+        curConfig.playAnimationIndex = INVALID;
         isTransitioning = false;
 
         startInited = true;
@@ -124,11 +124,12 @@ public class SS6AnimControl : MonoBehaviour
     [SerializeField]
     private int trackNum = 0;
 
-    private int currentAnimation = INVALID;
+    //private int currentAnimation = INVALID;
 
     // transition state
     private bool isTransitioning = false;
     private PlayConfig nextConfig = new PlayConfig(INVALID, 0, true, 1.0f, null);
+    private PlayConfig curConfig = new PlayConfig(INVALID, 0, true, 1.0f, null);
     // cache behavior
     private FunctionPlayEnd finishBehavior = null;
 
@@ -209,7 +210,7 @@ public class SS6AnimControl : MonoBehaviour
     {
         // For a formal animation cotroller, FSM is better, but we just want to keep it simple...
         if (
-            currentAnimation == newAnimationIndex ||
+            curConfig.playAnimationIndex == newAnimationIndex ||
             IsTransitioning && nextConfig.playAnimationIndex == newAnimationIndex ||
             !IsValidAnimationIndex(newAnimationIndex)
             )
@@ -218,15 +219,15 @@ public class SS6AnimControl : MonoBehaviour
         }
 
         // first time, from initial state -> newAnimationIndex, or no transition
-        if (currentAnimation == INVALID || !enableTransition)
+        if (curConfig.playAnimationIndex == INVALID || !enableTransition)
         {
-            return DirectPlay(newAnimationIndex, playTimes, playSpeed);
+            return DirectPlay(newAnimationIndex, playTimes, playSpeed, finishBehavior);
         }
         else
         {
             //Debug.Log($"Transition Play {currentAnimation} -> {newAnimationIndex}");
             // not first time, transition from one animation to the other
-            currentAnimation = blendHelper.AnimationIndex;
+            curConfig.playAnimationIndex = blendHelper.AnimationIndex;
             isTransitioning = true;
             nextConfig.playAnimationIndex = newAnimationIndex;
             nextConfig.enableTransition = enableTransition;
@@ -239,19 +240,29 @@ public class SS6AnimControl : MonoBehaviour
         return true;
     }
 
+    public void SetPlaySpeed(float newPlaySpeed)
+    {
+        if(curConfig.playAnimationIndex==INVALID)
+        {
+            return;
+        }
+        root.RateTimeSet(trackNum, newPlaySpeed);
+    }
+
     private bool DirectPlay(
         int newAnimationIndex,
         int playTimes = PlayConfig.PLAY_LOOP,
-        float playSpeed = 1.0f)
+        float playSpeed = 1.0f,
+        FunctionPlayEnd newFinishBehavior = null)
     {
         //Debug.Log($"Play {newAnimationIndex}");
-        currentAnimation = newAnimationIndex;
+        curConfig.playAnimationIndex = newAnimationIndex;
         nextConfig.playAnimationIndex = INVALID;
         isTransitioning = false;
         int frameSpeed = (int)(root.DataAnimation.TableAnimation[newAnimationIndex].FramePerSecond * playSpeed);
         bool result = root.AnimationPlay(
-            trackNum, 
-            currentAnimation, 
+            trackNum,
+            curConfig.playAnimationIndex, 
             playTimes,
             int.MinValue, 
             float.NaN,
@@ -264,6 +275,11 @@ public class SS6AnimControl : MonoBehaviour
             );
         if (result)
         {
+            if(finishBehavior!=null)
+            {
+                root.FunctionPlayEnd -= finishBehavior;
+            }
+            finishBehavior = newFinishBehavior;
             if (finishBehavior != null && playTimes > 0)
             {
                 root.FunctionPlayEnd += OnFinishAnimTrigger;
@@ -278,6 +294,10 @@ public class SS6AnimControl : MonoBehaviour
 
     private bool OnFinishAnimTrigger(Script_SpriteStudio6_Root scriptRoot, GameObject objectControl)
     {
+        if(finishBehavior==null)
+        {
+            return true;
+        }
         bool result = finishBehavior(scriptRoot, objectControl);
         root.FunctionPlayEnd -= finishBehavior; //remove the listener
         finishBehavior = null;
@@ -289,7 +309,7 @@ public class SS6AnimControl : MonoBehaviour
         //Debug.Log($"Play End!");
         if (isTransitioning)
         {
-            DirectPlay(nextConfig.playAnimationIndex, nextConfig.playtimes, nextConfig.playSpeed);
+            DirectPlay(nextConfig.playAnimationIndex, nextConfig.playtimes, nextConfig.playSpeed, nextConfig.finishBehavior);
         }
         return true;
     }
