@@ -3,17 +3,9 @@
         "_gdeSchema": "SkillEffect",
         "Buffs": [
             "B_DLoop",
-            "B_Charge",
-            "B_Charge",
-            "B_Charge",
-            "B_Charge",
             "B_Charge"
         ],
         "BuffPlusTagPer": [
-            0,
-            0,
-            0,
-            0,
             0,
             0
         ]

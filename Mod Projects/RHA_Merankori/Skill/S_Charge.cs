@@ -16,7 +16,7 @@ namespace RHA_Merankori
     /// <summary>
     /// 蓄能
     /// 队友每拥有1种正面buff，倒计时增加1点。每行进1点倒计时，获得1层蓄能。
-    /// 进入慌张状态时，停止蓄能。
+    /// 进入慌张状态时，停止蓄能。剩余的倒计时转化为一半的蓄力层数。
     /// 在冷静状态完成蓄能时，将1张<color=#FF6767>湮裂的燐焰晶</color>放入手中。
     /// </summary>
     public class S_Charge : 
@@ -96,6 +96,22 @@ namespace RHA_Merankori
             }
         }
 
+        private void PanicTempInfo()
+        {
+            if (currentCastingSkill == null)
+            {
+                return;
+            }
+            int currentCastingCount = Mathf.Max(0, currentCastingSkill.CastSpeed);
+            int giveCount = currentCastingCount / 2;
+            if(giveCount==0)
+            {
+                return;
+            }
+            this.BChar.BuffAddWithStacks(ModItemKeys.Buff_B_Charge, this.BChar, giveCount);
+            initCountingDown = currentCastingCount;
+        }
+
         private void FinishTempInfo()
         {
             if (currentCastingSkill == null)
@@ -125,15 +141,7 @@ namespace RHA_Merankori
 
         private void UpdateInitCounting()
         {
-            if(IsCalm())
-            {
-                this.Counting = 3 + Utils.CountAliveAllyBuffTypes();//Utils.CountAliveAllyBuffStack(ModItemKeys.Buff_B_Shield) / 2;
-            }
-            else
-            {
-                this.Counting = 0;
-            }
-            
+            this.Counting = 1 + Utils.CountAliveAllyBuffTypes();
         }
 
 
@@ -159,6 +167,7 @@ namespace RHA_Merankori
                 UpdateTempInfo();
                 if(IsPanic())
                 {
+                    PanicTempInfo();
                     BattleSystem.instance.ActWindow.CastingWaste(currentCastingSkill);
                     BattleSystem.instance.CastSkills.Remove(currentCastingSkill);
                 }

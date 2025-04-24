@@ -4,8 +4,13 @@
         "ClassName": "RHA_Merankori.B_GenCrystal",
         "BuffTag": "null",
         "Name": "焰晶生成",
-        "Description": "每当队友进入濒死状态时，将<color=#FF6767>湮裂的燐焰晶</color>放入手中。",
+        "Description": "每当队友脱离濒死状态时，将<color=#FF6767>湮裂的燐焰晶</color>放入手中。",
         "LifeTime": 3,
-        "Icon": "Image/Buff/Skill_Icon_Pack/1_7icon/Selena"
+        "Icon": "Image/Buff/Skill_Icon_Pack/1_7icon/Selena",
+        "Hide": false,
+        "IsFieldBuff": false,
+        "Cantdisable": false,
+        "UseSkillDebuff": false,
+        "Caution": false
     }
 }

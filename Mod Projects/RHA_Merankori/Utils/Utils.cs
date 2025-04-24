@@ -221,7 +221,7 @@ namespace RHA_Merankori
             {
                 return 0;
             }
-            Buff buff = battleChar.GetBuffByID(ModItemKeys.Buff_B_Shield);
+            Buff buff = battleChar.GetBuffByID(buffKey);
             if (buff == null)
             {
                 return 0;
@@ -238,7 +238,7 @@ namespace RHA_Merankori
             int total = 0;
             foreach(var c in chars)
             {
-                Buff buff = c.GetBuffByID(ModItemKeys.Buff_B_Shield);
+                Buff buff = c.GetBuffByID(buffKey);
                 if (buff == null)
                 {
                     continue;

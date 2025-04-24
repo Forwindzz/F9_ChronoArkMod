@@ -19,7 +19,7 @@
         "Fatal": false,
         "EnemyPreview": false,
         "UnknownTarget": false,
-        "UseAp": 1,
+        "UseAp": 2,
         "Description": "",
         "User": "C_Merankori",
         "Effect_Target": "SE_T_S_WarmFire",

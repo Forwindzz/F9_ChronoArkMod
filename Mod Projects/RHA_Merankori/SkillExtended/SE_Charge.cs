@@ -19,7 +19,8 @@ namespace RHA_Merankori
 	/// </summary>
     public class SE_Charge:
 		Skill_Extended,
-		IP_BuffAddAfter
+		IP_BuffAddAfter,
+        IP_BuffRemove
     {
 		private void UpdateData()
 		{
@@ -54,6 +55,11 @@ namespace RHA_Merankori
         }
 
         public void BuffaddedAfter(BattleChar BuffUser, BattleChar BuffTaker, Buff addedbuff, StackBuff stackBuff)
+        {
+            UpdateData();
+        }
+
+        public void BuffRemove(BattleChar buffMaster, Buff buff)
         {
             UpdateData();
         }

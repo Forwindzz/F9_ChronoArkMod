@@ -15,35 +15,28 @@ namespace RHA_Merankori
 {
 	/// <summary>
 	/// 焰晶生成
-	/// 每当有人进入濒死状态时，将“湮裂的燐焰晶”放入手中。
+	/// 每当有人脱离濒死状态时，将“湮裂的燐焰晶”放入手中。
 	/// </summary>
     public class B_GenCrystal: 
         Buff,
-        IP_NearDeath//,
-        //IP_BuffRemove
+        //IP_NearDeath,
+        IP_BuffRemove
     {
-        /*
+        
         public void BuffRemove(BattleChar buffMaster, Buff buff)
         {
             if (buffMaster.Info.Ally && buff.IsKeyID(GDEItemKeys.Buff_B_Neardeath))
             {
-                GenCard();
+                S_Attack_All.GenCardToHand(this.BChar);
             }
+        }
+
+        /*
+        public void NearDeath(BattleAlly Ally)
+        {
+            S_Attack_All.GenCardToHand(this.BChar);
         }
         */
 
-        public void NearDeath(BattleAlly Ally)
-        {
-            GenCard();
-        }
-
-        private void GenCard(int times = 1)
-        {
-            Skill skill = Skill.TempSkill(ModItemKeys.Skill_S_Attack_All, this.BChar, this.BChar.MyTeam);
-            for (int i = 0; i < times; i++)
-            {
-                this.BChar.MyTeam.Add(skill.CloneSkill(), true);
-            }
-        }
     }
 }

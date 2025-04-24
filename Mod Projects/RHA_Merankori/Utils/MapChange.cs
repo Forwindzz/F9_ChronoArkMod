@@ -26,13 +26,13 @@ namespace RHA_Merankori
         /// </summary>
         /// <param name="worldPos">世界坐标，比如玩家transform所在的坐标</param>
         /// <param name="range">多少格子，会等比例放大效果</param>
-        public static void BlowUpParticleEffect(Vector3 worldPos,int range)
+        public static void BlowUpParticleEffect(Vector3 worldPos, int range)
         {
             GameObject effectObject = AddressableLoadManager.Instantiate("Particle/Miss/MissChain_1", AddressableLoadManager.ManageType.None);
             effectObject.SetActive(true);
             //我们只想要特效，关掉无关的组件
             effectObject.GetComponent<SkillParticle>().enabled = false;
-            effectObject.transform.localScale = new Vector3(1.0f,0.3f,1.0f) * ((range+1)*0.07f);
+            effectObject.transform.localScale = new Vector3(1.0f, 0.3f, 1.0f) * ((range + 1) * 0.07f);
             Vector3 up = -Camera.main.transform.forward;
             //稍微向上一点，这样看起来有点透视
             effectObject.transform.up = (up + new Vector3(0, 0, 2.0f)).normalized;
@@ -54,7 +54,7 @@ namespace RHA_Merankori
             SpriteRenderer spriteRender = dustGO.GetComponent<SpriteRenderer>();
             ParticleSystemUtility.SetParticleSystemSorting(dustGO, "Floor", 13860);
             int sortingLayerID = SortingLayer.NameToID("Floor");
-            if (spriteRender!=null)
+            if (spriteRender != null)
             {
                 spriteRender.sortingLayerID = sortingLayerID;
                 spriteRender.sortingOrder = 13850;
@@ -70,11 +70,11 @@ namespace RHA_Merankori
         /// <param name="tilePos">HexTile的坐标，也是数组下标</param>
         /// <param name="range">范围格子数</param>
         /// <returns></returns>
-        public static bool BlowUpTiles(Vector3 tilePos,int range)
+        public static bool BlowUpTiles(Vector3 tilePos, int range)
         {
-            if(
-                StageSystem.instance==null ||
-                StageSystem.instance.Map==null ||
+            if (
+                StageSystem.instance == null ||
+                StageSystem.instance.Map == null ||
                 StageSystem.instance.Map.MapObject == null
                 )
             {
@@ -109,9 +109,9 @@ namespace RHA_Merankori
                 Debug.LogError(e.Message);
                 Debug.LogError(e.StackTrace);
             }
-            if(result)
+            if (result)
             {
-                if(LucyReplaceBehavior.Instance!=null)
+                if (LucyReplaceBehavior.Instance != null)
                 {
                     LucyReplaceBehavior.Instance.PlayOnceAnimation(LucyReplaceBehavior.ANIM_DAMAGE, false);
                 }
@@ -248,11 +248,11 @@ namespace RHA_Merankori
         /// <param name="cMapTile"></param>
         public static void CreateMiniMapHexTile(MapTile cMapTile)
         {
-            if(FieldSystem.instance==null ||
-                FieldSystem.instance.MiniMap ==null ||
-                FieldSystem.instance.MiniMap.TeleportMap ==null ||
-                FieldSystem.instance.MiniMap.MapImages==null ||
-                FieldSystem.instance.MiniMap.TeleportMap.MapImages==null
+            if (FieldSystem.instance == null ||
+                FieldSystem.instance.MiniMap == null ||
+                FieldSystem.instance.MiniMap.TeleportMap == null ||
+                FieldSystem.instance.MiniMap.MapImages == null ||
+                FieldSystem.instance.MiniMap.TeleportMap.MapImages == null
                 )
             {
                 Debug.Log("CreateMiniMapHexTile: null minimap!");
@@ -553,14 +553,14 @@ namespace RHA_Merankori
                     )
                 {
                     //边界的花花草草稍微变黑一点，表示摧毁不动
-                    if(mapTile_Iso.DecoObject!=null)
+                    if (mapTile_Iso.DecoObject != null)
                     {
                         SpriteRenderer sr = mapTile_Iso.DecoObject.GetComponent<SpriteRenderer>();
-                        if(sr == null)
+                        if (sr == null)
                         {
                             sr = mapTile_Iso.TileObject.GetComponent<SpriteRenderer>();
                         }
-                        if(sr!=null)
+                        if (sr != null)
                         {
                             sr.color = DarkenColor(sr.color, new Vector3(1.01f, 0.80f, 0.86f));
                         }
@@ -604,6 +604,12 @@ namespace RHA_Merankori
             yield break;
         }
 
+        private static bool RandIs_Jar(float rp) => rp <= 0.1f;
+        private static bool RandIs_BrokenCart(float rp) => rp <= 0.4f && rp > 0.1f;
+        private static bool RandIs_GoldBag(float rp) => rp <= 0.45f && rp > 0.4f;
+        private static bool RandIs_Skulls(float rp) => rp <= 0.5f && rp > 0.45f;
+        private static bool RandIs_Chest(float rp) => rp > 0.5f;
+
         public static void GenerateRandomChestReward(
             MapTile cMapTile,
             out TileTypes.Event newEvent,
@@ -612,7 +618,13 @@ namespace RHA_Merankori
 
             // decide basic reward
             float rollPoint = RandomManager.RandomFloat(BattleRandom.UseItem, 0.0f, 1.0f);
-            float reduceRewardRollPoint = RandomManager.RandomFloat(BattleRandom.UseItem, 0.1f, 0.45f);
+            float reduceRewardRollPoint = RandomManager.RandomFloat(BattleRandom.UseItem, 0.1f, 0.3f);
+            reduceRewardRollPoint *= reduceRewardRollPoint;
+            if (rollPoint<0.05f)
+            {
+                reduceRewardRollPoint = Mathf.Clamp01((0.05f - rollPoint) * 8.0f);
+            }
+            //衰减为1%~9%，同时有5%的概率衰减为0~40%
 
             newEvent = new TileTypes.Event();
 
@@ -624,27 +636,29 @@ namespace RHA_Merankori
                 rewardObjectKey = GDEItemKeys.GameobjectDatas_Object_HiddenChest;
             }
             else*/
-            if (rollPoint <= 0.1f)
+            if (RandIs_Jar(rollPoint))
             {
                 List<ItemBase> overrideReward = new List<ItemBase>();
                 rewardObjectKey = GDEItemKeys.FieldObject_O_S_F_Jar;
                 overrideReward.AddRange(InventoryManager.RewardKey(GDEItemKeys.Reward_R_Jar, false));
+                overrideReward.AddRange(GenerateAdditionalReward(rollPoint));
                 ReduceReward(overrideReward, reduceRewardRollPoint);
                 newEvent.PlusReward = overrideReward; //这个变量可以覆盖奖励列表，方便我们操纵奖励
             }
-            else if (rollPoint <= 0.4f)
+            else if (RandIs_BrokenCart(rollPoint))
             {
                 List<ItemBase> overrideReward = new List<ItemBase>();
                 rewardObjectKey = GDEItemKeys.FieldObject_O_S_F_Wagon;
                 overrideReward.AddRange(InventoryManager.RewardKey(GDEItemKeys.Reward_R_BrokenCart, false));
+                overrideReward.AddRange(GenerateAdditionalReward(rollPoint));
                 ReduceReward(overrideReward, reduceRewardRollPoint);
                 newEvent.PlusReward = overrideReward;
             }
-            else if (rollPoint <= 0.45f)
+            else if (RandIs_GoldBag(rollPoint))
             {
                 rewardObjectKey = GDEItemKeys.FieldObject_O_S_F_GoldBag;
             }
-            else if (rollPoint <= 0.5f)
+            else if (RandIs_Skulls(rollPoint))
             {
                 rewardObjectKey = GDEItemKeys.FieldObject_O_S_F_Skulls;
             }
@@ -653,6 +667,7 @@ namespace RHA_Merankori
                 List<ItemBase> overrideReward = new List<ItemBase>();
                 rewardObjectKey = GDEItemKeys.FieldObject_F1_Chest;
                 overrideReward.AddRange(InventoryManager.RewardKey(GDEItemKeys.Reward_Object_S, false));
+                overrideReward.AddRange(GenerateAdditionalReward(rollPoint));
                 ReduceReward(overrideReward, reduceRewardRollPoint);
                 newEvent.PlusReward = overrideReward;
             }
@@ -660,5 +675,154 @@ namespace RHA_Merankori
             Debug.Log($"Gen Reward @{cMapTile.Info.Pos}: roll {rollPoint}={rewardObjectKey} & {reduceRewardRollPoint} => OverrideRwardCount {newEvent.PlusReward?.Count}");
 
         }
+
+
+        // 额外奖励池子，根据rollPoint决定
+        private static List<ItemBase> GenerateAdditionalReward(float rollPoint)
+        {
+            int randomInt = (int)(rollPoint * 10000.0f) % 100; //0~99
+            List<ItemBase> result = new List<ItemBase>();
+            //--------------------------------------
+
+            for (int i = 0; i < 2; i++)
+            {
+                // 金币
+                int goldStack = (randomInt % 10 * i + 50) * 5;
+                // 1% 概率只有1枚金币，或者10倍金币
+                if (randomInt == 1)
+                {
+                    goldStack = 1;
+                }
+                else if (randomInt == 2)
+                {
+                    goldStack *= 70;
+                }
+                // 部分事件会有2倍的数值
+                if (RandIs_BrokenCart(rollPoint))
+                {
+                    goldStack *= 2;
+                }
+                result.Add(ItemBase.GetItem(GDEItemKeys.Item_Misc_Gold, goldStack));
+
+
+                // 面包
+                int breadStack = 1;
+                if (randomInt == 3)
+                {
+                    breadStack = 50;
+                }
+                else if (randomInt < 30)
+                {
+                    breadStack = 2;
+                }
+                result.Add(ItemBase.GetItem(GDEItemKeys.Item_Consume_Bread, breadStack));
+
+                //卷轴
+                if (randomInt == 4)
+                {
+                    result.Add(ItemBase.GetItem(GDEItemKeys.Item_Scroll_Scroll_Item, 50));
+                }
+                else if (randomInt == 5)
+                {
+                    result.Add(ItemBase.GetItem(GDEItemKeys.Item_Scroll_Scroll_Teleport, 50));
+                }
+                else if (randomInt == 6)
+                {
+                    result.Add(ItemBase.GetItem(GDEItemKeys.Item_Scroll_Scroll_Teleport, 200));
+                }
+                else if (randomInt == 7)
+                {
+                    result.Add(ItemBase.GetItem(GDEItemKeys.Item_Scroll_Scroll_Mapping, 15));
+                }
+                else if (randomInt < 20)
+                {
+                    result.Add(ItemBase.GetItem(GDEItemKeys.Item_Scroll_Scroll_Item, 2));
+                }
+                else if (randomInt < 30)
+                {
+                    result.Add(ItemBase.GetItem(GDEItemKeys.Item_Scroll_Scroll_Uncurse, 2));
+                }
+                else if (randomInt < 40)
+                {
+                    result.Add(ItemBase.GetItem(GDEItemKeys.Item_Scroll_Scroll_Vitality));
+                }
+                else if (randomInt < 50)
+                {
+                    result.Add(ItemBase.GetItem(GDEItemKeys.Item_Scroll_Scroll_Quick, 3));
+                }
+                else if (randomInt < 55)
+                {
+                    result.Add(ItemBase.GetItem(GDEItemKeys.Item_Scroll_Scroll_Purification, 1));
+                }
+                else if (randomInt < 60)
+                {
+                    result.Add(ItemBase.GetItem(GDEItemKeys.Item_Scroll_Scroll_Transfer, 1));
+                }
+                else if (randomInt < 90)
+                {
+                    result.Add(ItemBase.GetItem(GDEItemKeys.Item_Scroll_Scroll_Enchant, 4));
+                }
+
+
+                //废铁
+                if (randomInt > 80)
+                {
+                    result.Add(ItemBase.GetItem(GDEItemKeys.Item_Misc_Scrap_1));
+                }
+                else
+                {
+                    result.Add(ItemBase.GetItem(GDEItemKeys.Item_Misc_Scrap_0));
+                }
+
+            }
+
+            //灵魂石
+            if (randomInt % 20 == 0)
+            {
+                result.Add(ItemBase.GetItem(GDEItemKeys.Item_Misc_Soul,2));
+            }
+
+            //稀有物品
+            if (RandIs_Jar(rollPoint))
+            {
+                switch (randomInt)
+                {
+                    case 50:
+                        result.Add(ItemBase.GetItem(GDEItemKeys.Item_Misc_TimeMoney));
+                        break;
+                    case 49:
+                        result.Add(ItemBase.GetItem(GDEItemKeys.Item_Misc_RWEnterItem));
+                        break;
+                    case 48:
+                        result.Add(ItemBase.GetItem(GDEItemKeys.Item_Misc_Soul,10));
+                        break;
+                    case 47:
+                        result.Add(ItemBase.GetItem(GDEItemKeys.Item_Consume_ArtifactPouch));
+                        break;
+                    case 46:
+                        result.Add(ItemBase.GetItem(GDEItemKeys.Item_Consume_EquipPouch));
+                        break;
+                    case 45:
+                        result.Add(ItemBase.GetItem(GDEItemKeys.Item_Consume_GoldenApple));
+                        break;
+                    case 44:
+                        result.Add(ItemBase.GetItem(GDEItemKeys.Item_Consume_GoldenBread));
+                        break;
+                    case 1:
+                        result.Add(ItemBase.GetItem(GDEItemKeys.Item_Consume_SkillBookCharacter_Rare));
+                        break;
+                    case 42:
+                        result.Add(ItemBase.GetItem(GDEItemKeys.Item_Consume_SkillBookInfinity));
+                        break;
+                    case 41:
+                        result.Add(ItemBase.GetItem(GDEItemKeys.Item_Consume_SkillBookLucy));
+                        break;
+                }
+            }
+            Debug.Log($"Extra pool rand={randomInt}, gen {result.Count} candidates");
+            return result;
+        }
+
+
     }
 }

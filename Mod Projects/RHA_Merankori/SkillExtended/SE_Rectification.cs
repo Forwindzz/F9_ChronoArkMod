@@ -24,7 +24,10 @@ namespace RHA_Merankori
     {
         public IEnumerator ParticleOut_After(Skill SkillD, List<BattleChar> Targets)
         {
-            this.SelfDestroy();
+            if(SkillD == this.MySkill)
+            {
+                this.SelfDestroy();
+            }
             yield break;
         }
 

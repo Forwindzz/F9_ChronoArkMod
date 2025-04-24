@@ -29,7 +29,7 @@ namespace RHA_Merankori
 		/// <summary>
 		/// 蓄能
 		/// 释放<color=#FF6767>湮裂的燐焰晶</color>时，每层增加其10%的伤害。
-		/// 释放后移除此效果。
+		/// 释放后移除一半的层数。
 		/// </summary>
         public static string Buff_B_Charge = "B_Charge";
 		/// <summary>
@@ -48,7 +48,7 @@ namespace RHA_Merankori
         public static string Buff_B_FreqShift = "B_FreqShift";
 		/// <summary>
 		/// 焰晶生成
-		/// 每当队友进入濒死状态时，将<color=#FF6767>湮裂的燐焰晶</color>放入手中。
+		/// 每当队友脱离濒死状态时，将<color=#FF6767>湮裂的燐焰晶</color>放入手中。
 		/// </summary>
         public static string Buff_B_GenCrystal = "B_GenCrystal";
 		/// <summary>
@@ -128,7 +128,7 @@ namespace RHA_Merankori
 		/// </summary>
         public static string SkillExtended_SE_Calm = "SE_Calm";
 		/// <summary>
-		/// 越频晶体
+		/// 蓄能
 		/// 根据蓄能效果层数，每层增加10%的伤害。
 		/// <color=#5061A4>（预期增加&a）</color>
 		/// </summary>
@@ -215,14 +215,14 @@ namespace RHA_Merankori
 		/// <summary>
 		/// 蓄能
 		/// 队友每拥有1种正面buff，倒计时增加1点。每行进1点倒计时，获得1层蓄能。
-		/// 进入慌张状态时，停止蓄能。
+		/// 进入慌张状态时，停止蓄能。剩余的倒计时转化为一半的蓄力层数。
 		/// 在冷静状态完成蓄能时，将1张<color=#FF6767>湮裂的燐焰晶</color>放入手中。
 		/// </summary>
         public static string Skill_S_Charge = "S_Charge";
 		/// <summary>
 		/// 焰晶转化
-		/// 选择的卡牌会被丢弃，然后将1张<color=#FF6767>湮裂的燐焰晶</color>放入手牌中，并额外抽1张卡。
-		/// 弃牌技能的拥有者获得1层折射。
+		/// 选择的技能会被丢弃，然后将1张<color=#FF6767>湮裂的燐焰晶</color>放入手牌中，并额外抽1个技能。
+		/// 丢弃技能的拥有者获得1层折射。
 		/// </summary>
         public static string Skill_S_ConvertCard = "S_ConvertCard";
 		/// <summary>

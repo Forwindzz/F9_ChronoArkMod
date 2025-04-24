@@ -19,7 +19,7 @@
         "Fatal": false,
         "EnemyPreview": false,
         "UnknownTarget": false,
-        "Description": "选择的卡牌会被丢弃，然后将1张<color=#FF6767>湮裂的燐焰晶</color>放入手牌中，并额外抽1张卡。\r\n弃牌技能的拥有者获得1层折射。\r",
+        "Description": "选择的技能会被丢弃，然后将1张<color=#FF6767>湮裂的燐焰晶</color>放入手牌中，并额外抽1个技能。\r\n丢弃技能的拥有者获得1层折射。\r",
         "Name": "焰晶转化",
         "User": "C_Merankori",
         "SkillExtended": [

@@ -7,7 +7,10 @@
         "Name": "导流回路",
         "Description": "释放<color=#FF6767>湮裂的燐焰晶</color>时，获得1点法力值。",
         "Icon": "Image/Buff/Skill_Icon_Pack/Silver_0",
-        "LifeTime": 2,
-        "Caution": false
+        "LifeTime": 1,
+        "Caution": false,
+        "Hide": false,
+        "Cantdisable": false,
+        "UseSkillDebuff": false
     }
 }

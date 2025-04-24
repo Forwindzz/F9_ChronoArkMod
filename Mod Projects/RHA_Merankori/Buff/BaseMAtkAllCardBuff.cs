@@ -25,8 +25,13 @@ namespace RHA_Merankori
             }
             if(skill_Extended.MySkill.Master==this.BChar)
             {
-                this.SelfStackDestroy();
+                OnTriggerMerankoriBuffAttackAll(skill_Extended);
             }
+        }
+
+        protected virtual void OnTriggerMerankoriBuffAttackAll(S_Attack_All skill_Extended)
+        {
+            this.SelfStackDestroy();
         }
 
         protected override bool CanApplyToSkill(Skill skill)
