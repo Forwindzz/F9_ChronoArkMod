@@ -24,7 +24,65 @@ namespace RHA_Merankori
         private bool isInited = false;
 
         public bool IsDisplayingSprite { get => merankoriCharGO.activeSelf; set => SetDisplayCustomSprite(value); }
+
+
+
+        public static MeshRenderer FindLucyMeshRender()
+        {
+            MeshRenderer lucyMeshRender = null;
+            if (FieldSystem.instance == null ||
+                FieldSystem.instance.Playercontrol == null)
+            {
+                return null;
+            }
+            PlayerController playerController = FieldSystem.instance.Playercontrol;
+            MeshRenderer[] meshRenderers = playerController.GetComponentsInChildren<MeshRenderer>();
+            if (meshRenderers == null)
+            {
+                return null;
+            }
+            foreach (var meshRenderer in meshRenderers)
+            {
+                if (meshRenderer.gameObject.name == "Spine" && meshRenderer.gameObject.tag == "PlayerC")
+                {
+                    lucyMeshRender = meshRenderer;
+                    Debug.Log($"Find Lucy Mesh Render: {meshRenderer.gameObject}");
+                    break;
+                }
+            }
+            return lucyMeshRender;
+        }
+
+        // check if we need to load 
+        public static void CheckUpdate()
+        {
+            if (LucyReplaceBehavior.CheckIfShowSprite())
+            {
+                if(LucyReplaceBehavior.instance==null)
+                {
+                    MeshRenderer meshRenderer = FindLucyMeshRender();
+                    if (meshRenderer != null)
+                    {
+                        LucyReplaceBehavior.CreateMonoBehavior(meshRenderer);
+                    }
+                }
+                else
+                {
+                    LucyReplaceBehavior.instance.SetDisplayCustomSprite(true);
+                }
+                
+            }
+            else
+            {
+                if(LucyReplaceBehavior.instance!=null)
+                {
+                    LucyReplaceBehavior.instance.SetDisplayCustomSprite(false);
+                }
+
+            }
+        }
     
+        //条件是小队里有梅朗柯莉
         public static bool CheckIfShowSprite()
         {
             if (PlayData.TSavedata != null)
@@ -68,6 +126,9 @@ namespace RHA_Merankori
 
         private static LucyReplaceBehavior instance = null;
         public static LucyReplaceBehavior Instance => instance;
+
+        // instance part
+
 
         private void OnDestory()
         {
@@ -236,7 +297,7 @@ namespace RHA_Merankori
             character.transform.parent = lucyMeshRender.transform;
             character.transform.localPosition = new Vector3(0, 1.2f, 0);
             character.transform.rotation = Quaternion.identity;
-            character.transform.localScale = Vector3.one * 0.007f;
+            character.transform.localScale = Vector3.one * 0.00634f;
             character.layer = lucyMeshRender.gameObject.layer;
             merankoriCharGO.tag = lucyMeshRender.tag;
 

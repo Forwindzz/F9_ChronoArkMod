@@ -45,6 +45,7 @@ namespace RHA_Merankori
             }
             //必须在Fog层才能正确渲染，order至少得这个数字，参考GhostEffect
             ParticleSystemUtility.SetParticleSystemSorting(effectObject, "Fog", -1860);
+            AutoSelfDestoryComponent.AutoDestoryGameObject(effectObject, 15.0f);
 
 
             GameObject dustGO = ResUtils.LoadModPrefab("Assets/ModAssets/Content/Prefabs/blast_dust.prefab");
@@ -59,6 +60,7 @@ namespace RHA_Merankori
                 spriteRender.sortingLayerID = sortingLayerID;
                 spriteRender.sortingOrder = 13850;
             }
+            FieldSystemPatch.AddFieldGameObject(dustGO);
         }
 
         /// <summary>
@@ -235,6 +237,25 @@ namespace RHA_Merankori
                 {
                     reward.RemoveAt(i);
                     i--;
+                }
+            }
+            //合并金币奖励
+            ItemBase goldItem = null;
+            for (int i = 0; i < reward.Count; i++)
+            {
+                ItemBase item = reward[i];
+                if(item.itemkey == GDEItemKeys.Item_Misc_Gold)
+                {
+                    if(goldItem!=null)
+                    {
+                        goldItem.StackCount += item.StackCount;
+                        reward.RemoveAt(i);
+                        i--;
+                    }
+                    else
+                    {
+                        goldItem = item;
+                    }
                 }
             }
         }
@@ -618,7 +639,7 @@ namespace RHA_Merankori
 
             // decide basic reward
             float rollPoint = RandomManager.RandomFloat(BattleRandom.UseItem, 0.0f, 1.0f);
-            float reduceRewardRollPoint = RandomManager.RandomFloat(BattleRandom.UseItem, 0.1f, 0.3f);
+            float reduceRewardRollPoint = RandomManager.RandomFloat(BattleRandom.UseItem, 0.1f, 0.36f);
             reduceRewardRollPoint *= reduceRewardRollPoint;
             if (rollPoint<0.05f)
             {
@@ -687,7 +708,7 @@ namespace RHA_Merankori
             for (int i = 0; i < 2; i++)
             {
                 // 金币
-                int goldStack = (randomInt % 10 * i + 50) * 5;
+                int goldStack = (randomInt % 13 * i + 50) * (randomInt % 5 + 2);
                 // 1% 概率只有1枚金币，或者10倍金币
                 if (randomInt == 1)
                 {
@@ -779,7 +800,7 @@ namespace RHA_Merankori
             //灵魂石
             if (randomInt % 20 == 0)
             {
-                result.Add(ItemBase.GetItem(GDEItemKeys.Item_Misc_Soul,2));
+                result.Add(ItemBase.GetItem(GDEItemKeys.Item_Misc_Soul,1));
             }
 
             //稀有物品

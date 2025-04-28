@@ -15,8 +15,9 @@ namespace RHA_Merankori
 {
     /// <summary>
     /// 蓄能
-    /// 队友每拥有1种正面buff，倒计时增加1点。每行进1点倒计时，获得1层蓄能。
-    /// 进入慌张状态时，停止蓄能。剩余的倒计时转化为一半的蓄力层数。
+    /// 队友每拥有3种正面buff，倒计时增加1点。
+    /// 每行进1点倒计时，获得2层蓄能。
+    /// 慌张状态时，停止蓄能，剩余的倒计时转化为等数值的蓄力层数。
     /// 在冷静状态完成蓄能时，将1张<color=#FF6767>湮裂的燐焰晶</color>放入手中。
     /// </summary>
     public class S_Charge : 
@@ -91,7 +92,7 @@ namespace RHA_Merankori
             else
             {
                 initCountingDown = currentCastingCount;
-                this.BChar.BuffAddWithStacks(ModItemKeys.Buff_B_Charge, this.BChar, deltaCount);
+                this.BChar.BuffAddWithStacks(ModItemKeys.Buff_B_Charge, this.BChar, deltaCount * 2);
                 return;
             }
         }
@@ -103,7 +104,7 @@ namespace RHA_Merankori
                 return;
             }
             int currentCastingCount = Mathf.Max(0, currentCastingSkill.CastSpeed);
-            int giveCount = currentCastingCount / 2;
+            int giveCount = currentCastingCount;
             if(giveCount==0)
             {
                 return;
@@ -133,7 +134,7 @@ namespace RHA_Merankori
             }
             else
             {
-                this.BChar.BuffAddWithStacks(ModItemKeys.Buff_B_Charge, this.BChar, deltaCount);
+                this.BChar.BuffAddWithStacks(ModItemKeys.Buff_B_Charge, this.BChar, deltaCount * 2);
                 ResetTempInfo();
                 return;
             }
@@ -141,7 +142,7 @@ namespace RHA_Merankori
 
         private void UpdateInitCounting()
         {
-            this.Counting = 1 + Utils.CountAliveAllyBuffTypes();
+            this.Counting = 1 + Utils.CountAliveAllyBuffTypes() / 3;
         }
 
 

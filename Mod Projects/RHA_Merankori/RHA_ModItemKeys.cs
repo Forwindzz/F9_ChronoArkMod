@@ -77,6 +77,7 @@ namespace RHA_Merankori
 		/// 燐焰晶回流
 		/// 溢出的“燐色存护”，会转化为“折射”。
 		/// 回合开始时，若没有“燐色存护”，获得1层“燐色存护”。
+		/// 战斗结束时，恢复20%的最大体力值。
 		/// </summary>
         public static string Buff_B_Reflow = "B_Reflow";
 		/// <summary>
@@ -87,7 +88,7 @@ namespace RHA_Merankori
 		/// <summary>
 		/// 燐色存护
 		/// 每层能抵抗1次不能战斗效果。
-		/// 濒死状态时，受到的治疗量+10%。
+		/// 濒死状态时，根据无法战斗抵抗百分比，增加受到的治疗量百分比。
 		/// </summary>
         public static string Buff_B_Shield = "B_Shield";
 		/// <summary>
@@ -214,15 +215,16 @@ namespace RHA_Merankori
         public static string Skill_S_Care = "S_Care";
 		/// <summary>
 		/// 蓄能
-		/// 队友每拥有1种正面buff，倒计时增加1点。每行进1点倒计时，获得1层蓄能。
-		/// 进入慌张状态时，停止蓄能。剩余的倒计时转化为一半的蓄力层数。
+		/// 队友每拥有3种正面buff，倒计时增加1点。
+		/// 每行进1点倒计时，获得2层蓄能。
+		/// 慌张状态时，停止蓄能，剩余的倒计时转化为等数值的蓄力层数。
 		/// 在冷静状态完成蓄能时，将1张<color=#FF6767>湮裂的燐焰晶</color>放入手中。
 		/// </summary>
         public static string Skill_S_Charge = "S_Charge";
 		/// <summary>
 		/// 焰晶转化
-		/// 选择的技能会被丢弃，然后将1张<color=#FF6767>湮裂的燐焰晶</color>放入手牌中，并额外抽1个技能。
-		/// 丢弃技能的拥有者获得1层折射。
+		/// 选择的技能会被丢弃，并额外抽1个技能，丢弃技能的拥有者获得1回合的折射。
+		/// 如果有队友无法战斗抵抗达到15%，则生成1张<color=#FF6767>湮裂的燐焰晶</color>到手中。
 		/// </summary>
         public static string Skill_S_ConvertCard = "S_ConvertCard";
 		/// <summary>

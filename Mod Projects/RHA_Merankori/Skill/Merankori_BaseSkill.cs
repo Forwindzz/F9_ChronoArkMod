@@ -156,7 +156,6 @@ namespace RHA_Merankori
         {
             base.Init();
             hasChecked = false;
-            //this.SkillParticleObject = new GDESkillExtendedData(GDEItemKeys.SkillExtended_Public_1_Ex).Particle_Path;
             this.SkillParticleObject = new GDESkillExtendedData(GDEItemKeys.SkillExtended_MissChain_Ex_P).Particle_Path;
         }
 

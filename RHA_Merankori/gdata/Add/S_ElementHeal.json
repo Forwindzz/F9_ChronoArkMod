@@ -21,7 +21,7 @@
         "UnknownTarget": false,
         "User": "C_Merankori",
         "Description": "恢复全部体力极限。\n每恢复&a体力极限，赋予自身1层“蓄力”。\n<color=#5061A4>（预计提供&b层）</color>",
-        "UseAp": 3,
+        "UseAp": 2,
         "Effect_Target": "SE_T_S_ElementHeal",
         "Effect_Self": "SE_S_S_ElementHeal",
         "Name": "元素调石",

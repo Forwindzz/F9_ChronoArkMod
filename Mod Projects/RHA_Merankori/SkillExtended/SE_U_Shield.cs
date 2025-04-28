@@ -11,6 +11,7 @@ using ChronoArkMod;
 using ChronoArkMod.Plugin;
 using ChronoArkMod.Template;
 using Debug = UnityEngine.Debug;
+using Spine;
 namespace RHA_Merankori
 {
     /// <summary>
@@ -30,7 +31,10 @@ namespace RHA_Merankori
 
         public override bool CanSkillEnforce(Skill MainSkill)
         {
-            return MainSkill.AP > 0;
+            return MainSkill.AP > 0 &&
+                 MainSkill.MySkill.Target.Key == GDEItemKeys.s_targettype_ally ||
+                 MainSkill.MySkill.Target.Key == GDEItemKeys.s_targettype_all_ally ||
+                 MainSkill.MySkill.Target.Key == GDEItemKeys.s_targettype_otherally;
         }
     }
 }

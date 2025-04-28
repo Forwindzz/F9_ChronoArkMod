@@ -12,9 +12,11 @@
         "ChainHeal": false,
         "Buffs": [
             "B_FreqShift",
+            "B_DeathResist",
             "B_DeathResist"
         ],
         "BuffPlusTagPer": [
+            0,
             0,
             0
         ]

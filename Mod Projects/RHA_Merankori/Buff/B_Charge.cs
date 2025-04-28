@@ -26,7 +26,7 @@ namespace RHA_Merankori
         public override void BuffStat()
         {
             base.BuffStat();
-            this.PlusStat.DeadImmune = 2 * StackNum;
+            this.PlusStat.DeadImmune = 5 * StackNum;
             this.PlusStat.AggroPer = 33 * StackNum;
         }
 

@@ -40,7 +40,7 @@ namespace RHA_Merankori
         public override void BuffStat()
         {
             base.BuffStat();
-            this.PlusStat.DeadImmune = 5 * base.StackNum;
+            this.PlusStat.DeadImmune = 10 * base.StackNum;
         }
 
         public void Healed(BattleChar Healer, BattleChar HealedChar, int HealNum, bool Cri, int OverHeal)

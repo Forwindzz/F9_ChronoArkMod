@@ -4,10 +4,14 @@
         "ClassName": "RHA_Merankori.B_Reflow",
         "BuffTag": "null",
         "Name": "燐焰晶回流",
-        "Description": "溢出的“燐色存护”，会转化为“折射”。\n回合开始时，若没有“燐色存护”，获得1层“燐色存护”。",
+        "Description": "溢出的“燐色存护”，会转化为“折射”。\n回合开始时，若没有“燐色存护”，获得1层“燐色存护”。\n战斗结束时，恢复20%的最大体力值。",
         "LifeTime": 5,
         "MaxStack": 2,
         "Icon": "Image/Buff/Skill_Icon_Pack/2_0/regained power",
-        "IsFieldBuff": true
+        "IsFieldBuff": true,
+        "Hide": false,
+        "Cantdisable": false,
+        "UseSkillDebuff": false,
+        "Caution": false
     }
 }

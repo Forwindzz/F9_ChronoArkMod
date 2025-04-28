@@ -16,7 +16,8 @@ namespace RHA_Merankori
 {
     /// <summary>
     /// 燐色存护
-    /// 不死，濒死时治疗量+10%
+    /// 每层能抵抗1次不能战斗效果。
+    /// 濒死状态时，根据无法战斗抗性百分比，增加受到的治疗量百分比。
     /// 
     /// 关于实现方式：
     /// Patch BattleChar.Dead
@@ -45,12 +46,12 @@ namespace RHA_Merankori
 
         public void BattleEnd()
         {
-            Check();
+            CheckRecover();
         }
 
         public void BattleEndField()
         {
-            Check();
+            CheckRecover();
         }
 
         //因为DeadResist会在单次攻击内被多次调用，所以代码逻辑移动到了BuffPatch类里的BattleChar.Dead的Patch
@@ -148,15 +149,17 @@ namespace RHA_Merankori
 
         public void Turn()
         {
-            Check();
+            CheckRecover();
+            BuffStat();
         }
 
         public void TurnEnd()
         {
-            Check();
+            CheckRecover();
+            BuffStat();
         }
 
-        private void Check()
+        private void CheckRecover()
         {
             if (this.BChar.Recovery < 1)
             {
@@ -169,7 +172,7 @@ namespace RHA_Merankori
             base.BuffStat();
             if(this.BChar.BuffFind(GDEItemKeys.Buff_B_Neardeath))
             {
-                this.PlusStat.HEALTaken = this.StackNum * 10;
+                this.PlusStat.HEALTaken = this.BChar.GetStat.DeadImmune;
             }
             else
             {
@@ -189,28 +192,29 @@ namespace RHA_Merankori
 
         public IEnumerator ParticleOut_After_Global(Skill SkillD, List<BattleChar> Targets)
         {
-            Check();
+            CheckRecover();
+            BuffStat();
             yield break;
         }
 
         public void ParticleOut_Before(Skill SkillD, List<BattleChar> Targets)
         {
-            Check();
+            CheckRecover();
         }
 
         public void DamageTake(BattleChar User, int Dmg, bool Cri, ref bool resist, bool NODEF = false, bool NOEFFECT = false, BattleChar Target = null)
         {
-            Check();
+            CheckRecover();
         }
 
         public void HealChange(BattleChar Healer, BattleChar HealedChar, ref int HealNum, bool Cri, ref bool Force)
         {
-            Check();
+            CheckRecover();
         }
 
         public IEnumerator ParticleOut_After(Skill SkillD, List<BattleChar> Targets)
         {
-            Check();
+            CheckRecover();
             yield break;
         }
 
@@ -218,7 +222,7 @@ namespace RHA_Merankori
         public override void FixedUpdate()
         {
             base.FixedUpdate();
-            Check(); //暴力解决各种边边角角的奇怪的死亡判定
+            CheckRecover(); //暴力解决各种边边角角的奇怪的死亡判定
         }
     }
 }

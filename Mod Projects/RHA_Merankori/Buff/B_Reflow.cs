@@ -17,13 +17,30 @@ namespace RHA_Merankori
     /// 燐焰晶回流
     /// 溢出的燐色存护，会转化为折射。
     /// 回合开始时，若没有燐色存护，获得1层燐色存护。
+    /// 战斗结束时，恢复20%的最大体力值。
     /// </summary>
     public class B_Reflow :
         Buff,
         IP_BeforeBuffAdd,
         IP_PlayerTurn,
-        IMerankoriCanExtraStackBuff
+        IMerankoriCanExtraStackBuff,
+        IP_BattleEnd
     {
+        public void BattleEnd()
+        {
+            List<BattleChar> aliveChars_Vanish = BattleSystem.instance.AllyTeam.AliveChars_Vanish;
+            foreach(var c in aliveChars_Vanish)
+            {
+                int maxhp = c.GetStat.maxhp;
+                int recover = maxhp /5;
+                if(c.Recovery<0)
+                {
+                    this.BChar.Recovery = 1;
+                }
+                c.Heal(this.BChar, recover, false, true);
+            }
+        }
+
         public void BeforeBuffAdd(BattleChar target, ref string key, ref BattleChar UseState, ref bool hide, ref int PlusTagPer, ref bool debuffnonuser, ref int RemainTime, ref bool StringHide, ref bool cancelbuff)
         {
             if(target==this.BChar && key == ModItemKeys.Buff_B_Shield)

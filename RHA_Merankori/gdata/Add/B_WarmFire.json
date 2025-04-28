@@ -10,7 +10,7 @@
         "Caution": false,
         "Name": "暖焰",
         "Description": "每当获得等体力值的治疗量，赋予1层燐色存护。\n<color=#5061A4>（已累计 &a / &b）</color>",
-        "LifeTime": 5,
+        "LifeTime": 3,
         "MaxStack": 2,
         "Icon": "Image/Buff/Skill_Icon_Pack/1_51/TW_Red_Buff"
     }

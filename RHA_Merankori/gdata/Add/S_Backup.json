@@ -25,6 +25,7 @@
         "Effect_Target": "SE_T_S_Backup",
         "SkillExtended": [
             "RHA_Merankori.S_Backup"
-        ]
+        ],
+        "UseAp": 1
     }
 }
