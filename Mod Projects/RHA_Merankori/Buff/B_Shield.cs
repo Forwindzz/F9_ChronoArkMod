@@ -224,5 +224,13 @@ namespace RHA_Merankori
             base.FixedUpdate();
             CheckRecover(); //暴力解决各种边边角角的奇怪的死亡判定
         }
+
+
+        public override string DescInit()
+        {
+            return base.DescInit()
+                .Replace("&a", this.BChar.GetStat.DeadImmune.ToString());
+
+        }
     }
 }

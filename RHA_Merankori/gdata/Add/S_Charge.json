@@ -20,10 +20,10 @@
         "EnemyPreview": false,
         "UnknownTarget": false,
         "Name": "蓄能",
-        "Description": "队友每拥有3种正面buff，倒计时增加1点。\r\n每行进1点倒计时，获得2层蓄能。\n慌张状态时，停止蓄能，剩余的倒计时转化为等数值的蓄力层数。\n在冷静状态完成蓄能时，将1张<color=#FF6767>湮裂的燐焰晶</color>放入手中。",
-        "UseAp": 1,
+        "Description": "每行进1点倒计时，获得3层蓄能\n慌张时，停止蓄能。\n冷静时完成蓄能，将2张<color=#FF6767>湮裂的燐焰晶</color>放入手中\n<color=#FFC5BA>慌张：冷静下来，若完成蓄能，再抽取1个技能</color>",
+        "UseAp": 0,
         "User": "C_Merankori",
-        "Counting": 1,
+        "Counting": 4,
         "PlusKeyWords": [
             "SK_Panic"
         ],

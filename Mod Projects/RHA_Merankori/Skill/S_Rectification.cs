@@ -11,6 +11,7 @@ using ChronoArkMod;
 using ChronoArkMod.Plugin;
 using ChronoArkMod.Template;
 using Debug = UnityEngine.Debug;
+using Spine;
 namespace RHA_Merankori
 {
     public interface ICanMerankoriRectification
@@ -20,12 +21,22 @@ namespace RHA_Merankori
 
     /// <summary>
     /// 整流
-    /// 指向梅朗柯莉“指向队友”或“其他友军”的技能时，改成“全体友军” 。
-    /// 指向不符合条件的卡时，将一张“湮裂的燐焰晶”放入手中。
+    /// 可以将梅朗柯莉指向单体队友的专属技能更改为对“全体友军”释放。
+    /// 并将1张“湮裂的燐焰晶”放入手中。
+    /// 冷静：抽1张卡
     /// </summary>
-    public class S_Rectification : Skill_Extended,
+    public class S_Rectification : Merankori_BaseSkill,
         ICanMerankoriRectification
     {
+        public override bool CanApplyCalm => true;
+        public override bool CanApplyPanic => false;
+
+        public override void Init()
+        {
+            base.Init();
+            this.effectSetting = StateForVisualEffect.Calm;
+        }
+
         public override void SkillTargetSingle(List<Skill> Targets)
         {
             base.SkillTargetSingle(Targets);
@@ -33,10 +44,12 @@ namespace RHA_Merankori
             {
                 if(skill!=null)
                 {
+                    skill.EnsureExtendSkill(ModItemKeys.SkillExtended_SE_Rectification);
+                    /*
                     bool isMerankoriSkill = skill.Master.Info.KeyData == ModItemKeys.Character_C_Merankori;
                     if(!isMerankoriSkill)
                     {
-                        S_Attack_All.GenCardToHand(this.BChar);
+                        //S_Attack_All.GenCardToHand(this.BChar);
                         continue;
                     }
 
@@ -45,7 +58,7 @@ namespace RHA_Merankori
                         skill.MySkill.Target.Key == GDEItemKeys.s_targettype_otherally;
                     if(!isAllyTarget)
                     {
-                        S_Attack_All.GenCardToHand(this.BChar);
+                        //S_Attack_All.GenCardToHand(this.BChar);
                         continue;
                     }
 
@@ -56,10 +69,42 @@ namespace RHA_Merankori
                     }
                     else
                     {
-                        S_Attack_All.GenCardToHand(this.BChar);
-                    }
+                        //S_Attack_All.GenCardToHand(this.BChar);
+                    }*/
                 }
             }
+            S_Attack_All.GenCardToHand(this.BChar);
+            if(this.IsCalm())
+            {
+                this.BChar.MyTeam.Draw();
+            }
+        }
+
+        public override bool SkillTargetSelectExcept(Skill skill)
+        {
+            if (skill != null)
+            {
+                bool isMerankoriSkill = skill.Master.Info.KeyData == ModItemKeys.Character_C_Merankori;
+                if (!isMerankoriSkill)
+                {
+                    return true;
+                }
+
+                bool isAllyTarget =
+                    skill.MySkill.Target.Key == GDEItemKeys.s_targettype_ally ||
+                    skill.MySkill.Target.Key == GDEItemKeys.s_targettype_otherally;
+                if (!isAllyTarget)
+                {
+                    return true;
+                }
+
+                bool isMerankoriSpecificSkill = skill.AllExtendeds.Any(x => x is ICanMerankoriRectification);
+                if (!isMerankoriSpecificSkill)
+                {
+                    return true;
+                }
+            }
+            return base.SkillTargetSelectExcept(skill);
         }
     }
 }

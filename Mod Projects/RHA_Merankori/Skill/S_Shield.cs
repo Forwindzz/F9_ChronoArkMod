@@ -13,10 +13,13 @@ using ChronoArkMod.Template;
 using Debug = UnityEngine.Debug;
 namespace RHA_Merankori
 {
-	/// <summary>
-	/// 燐晶盾
-	/// 冷静：处于濒死状态的队友额外获得1层“燐色存护”
-	/// </summary>
+    /// <summary>
+    /// 燐晶电场 S_Shield
+    /// 2费，过载，全体队友
+    /// 赋予3层“燐色存护”
+    /// 下1次“湮裂的燐焰晶”会根据队友已损失的体力值增加，每2点增加1%伤害。
+    /// 冷静：处于濒死状态的队友额外获得2层“燐色存护”。
+    /// </summary>
     public class S_Shield: 
         Merankori_BaseSkill,
         IP_HPChange1,
@@ -48,7 +51,7 @@ namespace RHA_Merankori
             {
                 if (b.BuffFind(GDEItemKeys.Buff_B_Neardeath))
                 {
-                    b.BuffAddWithStacks(ModItemKeys.Buff_B_Shield, this.BChar, 1);
+                    b.BuffAddWithStacks(ModItemKeys.Buff_B_Shield, this.BChar, 2);
                 }
             }
         }

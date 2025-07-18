@@ -15,42 +15,13 @@ namespace RHA_Merankori
 {
     /// <summary>
     /// 焰晶转化
-    /// 选择的技能会被丢弃，并额外抽1个技能，丢弃技能的拥有者获得1层折射。
-    /// 如果有队友无法战斗抗性达到60%，则生成1张<color=#FF6767>湮裂的燐焰晶</color>到手中。
+    /// 丢弃选择的技能，抽取1个技能。
+    /// 将1张<color=#FF6767>湮裂的燐焰晶</color>放入手中。
+    /// 丢弃技能的拥有者获得1层折射和1层频移微调
     /// </summary>
     public class S_ConvertCard : Skill_Extended,
-        ICanMerankoriRectification,
-        IP_BuffAddAfter,
-        IP_BuffRemove,
-        IP_TurnEnd
+        ICanMerankoriRectification
     {
-        public void BuffaddedAfter(BattleChar BuffUser, BattleChar BuffTaker, Buff addedbuff, StackBuff stackBuff)
-        {
-            CheckParticle();
-        }
-
-        public void BuffRemove(BattleChar buffMaster, Buff buff)
-        {
-            CheckParticle();
-        }
-
-        public void TurnEnd()
-        {
-            CheckParticle();
-        }
-
-        private void CheckParticle()
-        {
-            if(CanGenCard())
-            {
-                this.SkillParticleOn();
-            }
-            else
-            {
-                this.SkillParticleOff();
-            }
-        }
-
         public override void Init()
         {
             base.Init();
@@ -79,28 +50,12 @@ namespace RHA_Merankori
                 {
                     BattleChar master = targetSkill.Master;
                     master.BuffAdd(ModItemKeys.Buff_B_Refraction, this.BChar);
+                    master.BuffAdd(ModItemKeys.Buff_B_FreqShift, this.BChar);
                 }
                 targetSkill.Delete(false);
                 this.BChar.MyTeam.Draw(1);
-
-                if(CanGenCard())
-                {
-                    S_Attack_All.GenCardToHand(this.BChar, 1);
-                }
+                S_Attack_All.GenCardToHand(this.BChar, 1);
             }
-        }
-
-        private bool CanGenCard()
-        {
-            var allies = this.BChar.MyTeam.AliveChars_Vanish;
-            foreach (var ally in allies)
-            {
-                if (ally.GetStat.DeadImmune >= 15)
-                {
-                    return true;
-                }
-            }
-            return false;
         }
     }
 }

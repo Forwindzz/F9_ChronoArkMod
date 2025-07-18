@@ -75,9 +75,8 @@ namespace RHA_Merankori
         public static string Buff_B_Panic = "B_Panic";
 		/// <summary>
 		/// 燐焰晶回流
-		/// 溢出的“燐色存护”，会转化为“折射”。
-		/// 回合开始时，若没有“燐色存护”，获得1层“燐色存护”。
-		/// 战斗结束时，恢复20%的最大体力值。
+		/// 回合开始时，赋予1层燐色存护。
+		/// 溢出的燐色存护会转化为折射。
 		/// </summary>
         public static string Buff_B_Reflow = "B_Reflow";
 		/// <summary>
@@ -87,8 +86,8 @@ namespace RHA_Merankori
         public static string Buff_B_Refraction = "B_Refraction";
 		/// <summary>
 		/// 燐色存护
-		/// 每层能抵抗1次不能战斗效果。
-		/// 濒死状态时，根据无法战斗抵抗百分比，增加受到的治疗量百分比。
+		/// 每层能抵抗1次无法战斗效果。
+		/// 濒死状态时，无法战斗抗性会增加受到的治疗量<color=#5061A4>（&a%）</color>。
 		/// </summary>
         public static string Buff_B_Shield = "B_Shield";
 		/// <summary>
@@ -99,8 +98,8 @@ namespace RHA_Merankori
         public static string Buff_B_Shock = "B_Shock";
 		/// <summary>
 		/// 暖焰
-		/// 每当获得等体力值的治疗量，赋予1层燐色存护。
-		/// <color=#5061A4>（已累计 &a / &b）</color>
+		/// 每当受到<color=#5061A4>&a</color>点以上的治疗量时，赋予1层燐色存护。
+		/// 无法战斗抗性<color=#5061A4>（&b%）</color>会减少此治疗量阈值（已减少<color=#5061A4>&c</color>）。
 		/// </summary>
         public static string Buff_B_WarmFire = "B_WarmFire";
 		/// <summary>
@@ -215,16 +214,17 @@ namespace RHA_Merankori
         public static string Skill_S_Care = "S_Care";
 		/// <summary>
 		/// 蓄能
-		/// 队友每拥有3种正面buff，倒计时增加1点。
-		/// 每行进1点倒计时，获得2层蓄能。
-		/// 慌张状态时，停止蓄能，剩余的倒计时转化为等数值的蓄力层数。
-		/// 在冷静状态完成蓄能时，将1张<color=#FF6767>湮裂的燐焰晶</color>放入手中。
+		/// 每行进1点倒计时，获得3层蓄能
+		/// 慌张时，停止蓄能。
+		/// 冷静时完成蓄能，将2张<color=#FF6767>湮裂的燐焰晶</color>放入手中
+		/// <color=#FFC5BA>慌张：冷静下来，若完成蓄能，再抽取1个技能</color>
 		/// </summary>
         public static string Skill_S_Charge = "S_Charge";
 		/// <summary>
 		/// 焰晶转化
-		/// 选择的技能会被丢弃，并额外抽1个技能，丢弃技能的拥有者获得1回合的折射。
-		/// 如果有队友无法战斗抵抗达到15%，则生成1张<color=#FF6767>湮裂的燐焰晶</color>到手中。
+		/// 丢弃选择的技能，抽取1个技能。
+		/// 将1张<color=#FF6767>湮裂的燐焰晶</color>放入手中。
+		/// 丢弃技能的拥有者获得1层折射和1层频移微调。
 		/// </summary>
         public static string Skill_S_ConvertCard = "S_ConvertCard";
 		/// <summary>
@@ -266,8 +266,9 @@ namespace RHA_Merankori
         public static string Skill_S_Reconstruct = "S_Reconstruct";
 		/// <summary>
 		/// 回路整流
-		/// 指向梅朗柯莉“指向队友”或“其他友军”的专属技能时，改成“全体友军” 。
-		/// 指向不符合条件的卡时，将1张<color=#FF6767>湮裂的燐焰晶</color>放入手中。
+		/// 可以将梅朗柯莉指向单体队友的专属技能更改为对“全体友军”释放。
+		/// 将1张<color=#FF6767>湮裂的燐焰晶</color>放入手中。
+		/// <color=#BAC8FF>冷静：抽取1个技能</color>
 		/// </summary>
         public static string Skill_S_Rectification = "S_Rectification";
 		/// <summary>
@@ -278,7 +279,7 @@ namespace RHA_Merankori
         public static string Skill_S_Retreat = "S_Retreat";
 		/// <summary>
 		/// 燐晶电场
-		/// <color=#BAC8FF><b>冷静</b>：处于濒死状态的队友额外获得1层“燐色存护”</color>
+		/// <color=#BAC8FF><b>冷静</b>：处于濒死状态的队友额外获得2层“燐色存护”</color>
 		/// </summary>
         public static string Skill_S_Shield = "S_Shield";
 		/// <summary>

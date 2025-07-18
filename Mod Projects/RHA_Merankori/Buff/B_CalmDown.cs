@@ -34,16 +34,27 @@ namespace RHA_Merankori
                     hasCanceledForAction=true;
                     this.StackDestroy();
                     BattleSystem.DelayInput(Co_ResetFlag());
-                    //Debug.Log("Cancel stack!");
+                    Debug.Log("Cancel stack!");
                 }
-                //Debug.Log("Cancel panic!");
+                Debug.Log("Cancel panic!");
+            }
+        }
+
+        public override void BuffOneAwake()
+        {
+            base.BuffOneAwake();
+            if (EmotionBuffSwitch.IsPanic(this.BChar))
+            {
+                EmotionBuffSwitch.SwitchToCalm(this.BChar);
+                this.SelfStackDestroy();
             }
         }
 
         private IEnumerator Co_ResetFlag()
         {
             hasCanceledForAction = false;
-            //Debug.Log("Cancel panic flag reset!");
+            Debug.Log("Cancel panic flag reset!");
+            EmotionBuffSwitch.SwitchToCalm(this.BChar);
             yield break;
         }
 

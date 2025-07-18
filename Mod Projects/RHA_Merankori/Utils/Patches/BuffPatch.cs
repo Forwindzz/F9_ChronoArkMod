@@ -35,6 +35,7 @@ namespace RHA_Merankori
             {
                 if (ip != null)
                 {
+                    //Debug.Log("Check buff cancel");
                     ip.BeforeBuffAdd(
                         __instance,
                         ref key,
