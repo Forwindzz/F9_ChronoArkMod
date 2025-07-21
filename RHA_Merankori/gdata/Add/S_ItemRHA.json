@@ -19,13 +19,16 @@
         "Fatal": false,
         "EnemyPreview": false,
         "UnknownTarget": false,
-        "Description": "抽1张牌，获得燐焰晶物品1个，可以用于摧毁地图上的墙体。",
+        "Description": "抽取1个技能。\n获得燐焰晶物品1个，可以用于摧毁地图上的墙体，发现宝藏。",
         "User": "C_Merankori",
         "SkillExtended": [
             "RHA_Merankori.S_ItemRHA"
         ],
         "Effect_Self": "null",
         "Effect_Target": "SE_T_S_ItemRHA",
-        "Name": "晶石生成"
+        "Name": "晶石生成",
+        "Image_0": "S_ItemRHA\\S_ItemRHA_Image_0.png",
+        "Image_1": "S_ItemRHA\\S_ItemRHA_Image_1.png",
+        "Image_2": "S_ItemRHA\\S_ItemRHA_Image_2.png"
     }
 }

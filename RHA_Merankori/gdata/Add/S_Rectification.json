@@ -26,6 +26,10 @@
         "Effect_Self": "SE_S_S_Rectification",
         "SkillExtended": [
             "RHA_Merankori.S_Rectification"
-        ]
+        ],
+        "Image_0": "S_Rectification\\S_Rectification_Image_0.png",
+        "Image_1": "S_Rectification\\S_Rectification_Image_1.png",
+        "Image_2": "S_Rectification\\S_Rectification_Image_2.png",
+        "PlusSkillView": "S_Attack_All"
     }
 }

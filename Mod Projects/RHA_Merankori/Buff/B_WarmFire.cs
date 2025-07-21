@@ -27,6 +27,11 @@ namespace RHA_Merankori
         //private int totalHeal = 0;
         private const int BASE_HEAL_THRESHOLD = 20;
 
+        private float GetBaseThreshold()
+        {
+            return this.StackNum ==0? BASE_HEAL_THRESHOLD: BASE_HEAL_THRESHOLD / this.StackNum;
+        }
+
         public override void BuffOneAwake()
         {
             base.BuffOneAwake();
@@ -75,7 +80,7 @@ namespace RHA_Merankori
                 (int)(Mathf.Max(
                     0, 
                     (100-this.BChar.GetStat.DeadImmune)) 
-                * BASE_HEAL_THRESHOLD*0.01f));
+                * GetBaseThreshold() * 0.01f));
         }
 
         public override string DescInit()
@@ -84,7 +89,7 @@ namespace RHA_Merankori
             return base.DescInit()
                 .Replace("&a", threshold.ToString())
                 .Replace("&b", this.BChar.GetStat.DeadImmune.ToString())
-                .Replace("&c", (BASE_HEAL_THRESHOLD - threshold).ToString());
+                .Replace("&c", (GetBaseThreshold() - threshold).ToString());
 
         }
     }

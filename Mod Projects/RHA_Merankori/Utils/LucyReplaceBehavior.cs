@@ -139,9 +139,27 @@ namespace RHA_Merankori
             }
         }
 
+        private Vector3 lastLucyRot;
+        private Vector3 lastCameraRot;
+
         public void Update()
         {
             UpdateAnimation();
+            if(ss6AnimControl!=null && lucyMeshRender!=null)
+            {
+                //ss6AnimControl.SpriteRoot.transform.rotation = lucyMeshRender.transform.rotation;
+                //ss6AnimControl.SpriteRoot.transform.rotation = Camera.main.transform.rotation;
+                //debug code
+                Vector3 lucyRot = lucyMeshRender.transform.rotation.eulerAngles;
+                Vector3 camRot = Camera.main.transform.rotation.eulerAngles;
+                if(lucyRot!=lastLucyRot || camRot!=lastCameraRot)
+                {
+                    lastLucyRot= lucyRot;
+                    lastCameraRot = camRot;
+                    Debug.Log($"MerankoriRot:Lucy={lucyRot}, Camera={camRot}");
+                }
+                
+            }
         }
 
         public void SetDisplayCustomSprite(bool flag)
@@ -295,7 +313,7 @@ namespace RHA_Merankori
             }
 
             character.transform.parent = lucyMeshRender.transform;
-            character.transform.localPosition = new Vector3(0, 1.2f, 0);
+            character.transform.localPosition = new Vector3(0, 1.2f, 0); // 这个offset可能会导致camera旋转时人物被看扁，因此我们需要在update中同步渲染SpriteSutdio gameobject的rotation
             character.transform.rotation = Quaternion.identity;
             character.transform.localScale = Vector3.one * 0.00634f;
             character.layer = lucyMeshRender.gameObject.layer;

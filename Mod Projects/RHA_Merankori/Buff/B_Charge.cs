@@ -16,7 +16,6 @@ namespace RHA_Merankori
     /// <summary>
     /// 蓄能
     /// 释放“湮裂的燐焰晶”时，每层增加其10%的伤害。
-    /// 释放后移除一半层数
     /// </summary>
     public class B_Charge : BaseMAtkAllCardBuff,
         IMerankoriCanExtraStackBuff
@@ -32,11 +31,14 @@ namespace RHA_Merankori
 
         protected override void OnTriggerMerankoriBuffAttackAll(S_Attack_All skill_Extended)
         {
+            this.SelfDestroy();
+            /*
             int removeCount = this.StackNum / 2 + 1;
             for(int i=0;i<removeCount;i++)
             {
                 this.SelfStackDestroy();
             }
+            */
         }
     }
 }

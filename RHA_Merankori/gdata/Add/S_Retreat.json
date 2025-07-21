@@ -7,11 +7,15 @@
         "Target": "ally",
         "User": "LucyDraw",
         "LucyPartyDraw": "C_Merankori",
-        "Description": "抽取2个技能。\n若指向的队友拥有至少5个正面效果，额外抽取1张牌。",
+        "Description": "抽取2个技能。\n若指向的队友拥有至少5个正面效果，额外抽取1个技能。",
         "Effect_Target": "SE_T_S_Retreat",
         "SkillExtended": [
             "RHA_Merankori.S_Retreat"
         ],
-        "Name": "后撤！"
+        "Name": "后撤！",
+        "NotCount": false,
+        "Image_0": "S_Retreat\\S_Retreat_Image_0.png",
+        "Image_1": "S_Retreat\\S_Retreat_Image_1.png",
+        "Image_2": "S_Retreat\\S_Retreat_Image_2.png"
     }
 }

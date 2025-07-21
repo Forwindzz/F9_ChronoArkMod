@@ -1,0 +1,118 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace RHA_Merankori
+{
+    public class MerankoriShieldUI : MonoBehaviour
+    {
+        // 原游戏中的Ally 这个prefab里包含了UIComponent的详细信息，也就是人物的battle UI
+
+        private static GameObject shieldUITemplate = null;
+
+        private static void CheckInitRes()
+        {
+            if(shieldUITemplate==null)
+            {
+                shieldUITemplate = ResUtils.LoadModPrefab("Assets/ModAssets/Content/Prefabs/RHA_Shield_Bar_UI.prefab");
+                if(shieldUITemplate==null)
+                {
+                    Debug.LogError("Failed to load shieldUITemplate!");
+                }
+            }
+        }
+
+        //这个会通过patch在ui初始化的时候自动调用。
+        public static void CreateUIForAlly(UIComponent uiComp)
+        {
+            Debug.Log("Try to create shield UI for " + uiComp?.name);
+            CheckInitRes();
+            if(shieldUITemplate==null)
+            {
+                return;
+            }
+            if (uiComp == null)
+            {
+                Debug.LogWarning($"Try to use null ally UI!");
+                return;
+            }
+            MerankoriShieldUI shieldUI = uiComp.GetComponent<MerankoriShieldUI>();
+            if(shieldUI==null)
+            {
+                shieldUI = uiComp.gameObject.AddComponent<MerankoriShieldUI>();
+                shieldUI.shieldUIObj = Instantiate(shieldUITemplate, uiComp.transform);
+                shieldUI.shieldUI = shieldUI.shieldUIObj.GetComponentInChildren<ShieldBarControl>();
+                if (shieldUI.shieldUI==null)
+                {
+                    Debug.LogError("Failed to get shield UI component!");
+                }
+            }
+            if (shieldUI != null)
+            {
+                shieldUI.allyUI = uiComp;
+                Debug.Log("Succeed in creating shield UI");
+                return;
+            }
+
+        }
+
+        public static void OnUIUpdate(BattleChar bChar)
+        {
+            MerankoriShieldUI shieldUI = bChar?.UI?.GetComponent<MerankoriShieldUI>();
+            if(shieldUI==null)
+            {
+                //Debug.LogError($"Cannot find shield ui: {bChar?.name}");
+                return;
+            }
+            shieldUI.bchar = bChar;
+            shieldUI.UpdateUI();
+        }
+
+
+        private BattleChar bchar = null;
+        private UIComponent allyUI = null;
+        private ShieldBarControl shieldUI = null;
+        private GameObject shieldUIObj = null;
+        private bool firstInit = true;
+        
+        private bool IsValid()
+        {
+            return allyUI != null && shieldUI != null && bchar!=null;
+        }
+
+        private void UpdateUI()
+        {
+            if(!IsValid())
+            {
+                return;
+            }
+            if (allyUI.HP == null) 
+            {
+                return;
+            }
+            if(firstInit)
+            {
+                shieldUIObj.transform.SetParent(allyUI.HP.transform);
+                shieldUIObj.transform.localPosition = new Vector3(-165, -3.35f, 0.0f);
+                shieldUIObj.transform.localScale = Vector3.one * 0.6f;
+                firstInit = false;
+                Debug.Log("init shield UI > " + bchar.name);
+            }
+            int count = bchar.CountBuffStack(ModItemKeys.Buff_B_Shield);
+            //Debug.Log($"Set shield icons {bchar.name} > {count}");
+            shieldUI.SetCount(count);
+            if(bchar.IsNearDeath())
+            {
+                shieldUI.SetAlphaMult(1.0f);
+            }
+            else
+            {
+                shieldUI.SetAlphaMult(0.25f);
+            }
+        }
+    }
+}

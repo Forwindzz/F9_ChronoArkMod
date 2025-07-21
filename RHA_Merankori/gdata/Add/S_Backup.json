@@ -21,11 +21,15 @@
         "UnknownTarget": false,
         "User": "C_Merankori",
         "Name": "后备的燐焰晶",
-        "Description": "抽1张牌，\n将<color=#FF6767>湮裂的燐焰晶</color>放入手中，直到填满手牌。",
+        "Description": "抽取1个技能，\n将<color=#FF6767>湮裂的燐焰晶</color>放入手中，直到填满手牌。",
         "Effect_Target": "SE_T_S_Backup",
         "SkillExtended": [
             "RHA_Merankori.S_Backup"
         ],
-        "UseAp": 1
+        "UseAp": 2,
+        "Image_0": "S_Backup\\S_Backup_Image_0.png",
+        "Image_1": "S_Backup\\S_Backup_Image_1.png",
+        "Image_2": "S_Backup\\S_Backup_Image_2.png",
+        "PlusSkillView": "S_Attack_All"
     }
 }

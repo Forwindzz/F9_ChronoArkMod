@@ -34,7 +34,7 @@ namespace RHA_Merankori
         private int initCountingDown = 0;
         private bool isPanicStart = false;
 
-        private const int PER_TIME_STACK = 3;
+        private const int PER_TIME_STACK = 2;
 
         private bool IsInitedTempInfo => currentCastingSkill != null;
 
@@ -67,7 +67,10 @@ namespace RHA_Merankori
         public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
         {
             base.SkillUseSingle(SkillD, Targets);
-            FinishCastingReward();
+            if(this.IsCalm())
+            {
+                FinishCastingReward();
+            }
         }
 
         private void UpdateTempInfo()

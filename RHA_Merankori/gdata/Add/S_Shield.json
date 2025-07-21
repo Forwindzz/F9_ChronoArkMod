@@ -30,6 +30,9 @@
         "UnknownTarget": false,
         "SkillExtended": [
             "RHA_Merankori.S_Shield"
-        ]
+        ],
+        "Image_0": "S_Shield\\S_Shield_Image_0.png",
+        "Image_1": "S_Shield\\S_Shield_Image_1.png",
+        "Image_2": "S_Shield\\S_Shield_Image_2.png"
     }
 }

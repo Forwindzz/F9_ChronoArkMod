@@ -1,0 +1,16 @@
+{
+    "SE_T_S_D_BuffInfo": {
+        "_gdeSchema": "SkillEffect",
+        "HIT": 100,
+        "Buffs": [
+            "B_Refraction",
+            "B_Shield",
+            "B_FreqShift"
+        ],
+        "BuffPlusTagPer": [
+            0,
+            0,
+            0
+        ]
+    }
+}

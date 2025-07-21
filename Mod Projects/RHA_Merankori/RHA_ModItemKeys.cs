@@ -29,7 +29,6 @@ namespace RHA_Merankori
 		/// <summary>
 		/// 蓄能
 		/// 释放<color=#FF6767>湮裂的燐焰晶</color>时，每层增加其10%的伤害。
-		/// 释放后移除一半的层数。
 		/// </summary>
         public static string Buff_B_Charge = "B_Charge";
 		/// <summary>
@@ -75,7 +74,7 @@ namespace RHA_Merankori
         public static string Buff_B_Panic = "B_Panic";
 		/// <summary>
 		/// 燐焰晶回流
-		/// 回合开始时，赋予1层燐色存护。
+		/// 回合开始时，每层会赋予1层燐色存护。
 		/// 溢出的燐色存护会转化为折射。
 		/// </summary>
         public static string Buff_B_Reflow = "B_Reflow";
@@ -99,15 +98,15 @@ namespace RHA_Merankori
 		/// <summary>
 		/// 暖焰
 		/// 每当受到<color=#5061A4>&a</color>点以上的治疗量时，赋予1层燐色存护。
-		/// 无法战斗抗性<color=#5061A4>（&b%）</color>会减少此治疗量阈值（已减少<color=#5061A4>&c</color>）。
+		/// 无法战斗抗性<color=#5061A4>（&b%）</color>会减少此治疗量阈值（已减少<color=#5061A4>&c</color>）。叠加2层暖眼会减少一半的阈值。
 		/// </summary>
         public static string Buff_B_WarmFire = "B_WarmFire";
 		/// <summary>
 		/// 梅朗柯莉
 		/// Passive:
-		/// 任何攻击会让梅朗柯莉变得<color=#FFC5BA><b>慌张</b></color>，但在回合开始时，梅朗柯莉会<color=#BAC8FF><b>冷静</b></color>下来。
-		/// 固定技能始终为<color=#FF6767>湮裂的燐焰晶</color>，会攻击除自己以外的所有人，并会摧毁周边障碍。
-		/// 升级获得物品“燐焰晶”2个，进入营地会获得1个，可以摧毁地形并概率发现箱子。
+		/// 任何攻击会让梅朗柯莉<color=#FFC5BA><b>慌张</b></color>。但在回合开始时，梅朗柯莉会<color=#BAC8FF><b>冷静</b></color>下来。
+		/// 固定技能始终为<color=#FF6767>湮裂的燐焰晶</color>，会攻击除自己以外所有人，战斗会摧毁周边障碍。
+		/// 升级获得物品“燐焰晶”2个，进入营地会获得1个，可以摧毁地形并概率发现遗失的物品。
 		/// </summary>
         public static string Character_C_Merankori = "C_Merankori";
 		/// <summary>
@@ -149,6 +148,7 @@ namespace RHA_Merankori
 		/// </summary>
         public static string SkillExtended_SE_Rectification = "SE_Rectification";
         public static string SkillEffect_SE_S_S_Charge = "SE_S_S_Charge";
+        public static string SkillEffect_SE_S_S_D_BuffInfo = "SE_S_S_D_BuffInfo";
         public static string SkillEffect_SE_S_S_ElementHeal = "SE_S_S_ElementHeal";
         public static string SkillEffect_SE_S_S_Manifold = "SE_S_S_Manifold";
         public static string SkillEffect_SE_S_S_OverClocking = "SE_S_S_OverClocking";
@@ -162,6 +162,7 @@ namespace RHA_Merankori
         public static string SkillEffect_SE_T_B_Attack_All = "SE_T_B_Attack_All";
         public static string SkillEffect_SE_T_S_Backup = "SE_T_S_Backup";
         public static string SkillEffect_SE_T_S_Care = "SE_T_S_Care";
+        public static string SkillEffect_SE_T_S_D_BuffInfo = "SE_T_S_D_BuffInfo";
         public static string SkillEffect_SE_T_S_D_RefractionAtk = "SE_T_S_D_RefractionAtk";
         public static string SkillEffect_SE_T_S_ElementHeal = "SE_T_S_ElementHeal";
         public static string SkillEffect_SE_T_S_ItemRHA = "SE_T_S_ItemRHA";
@@ -196,25 +197,25 @@ namespace RHA_Merankori
         public static string SkillKeyword_SK_Panic = "SK_Panic";
 		/// <summary>
 		/// <color=#FF6767>湮裂的燐焰晶</color>
-		/// 对所有人造成伤害 ,除了梅朗柯莉。此伤害不会导致队友无法战斗。
+		/// 对所有人造成伤害，除了梅朗柯莉自身。此伤害不会导致队友无法战斗。
 		/// 在手中时，附加放逐。
 		/// <color=#FFC5BA><b>慌张</b>：技能附加迅速</color>
 		/// </summary>
         public static string Skill_S_Attack_All = "S_Attack_All";
 		/// <summary>
 		/// 后备的燐焰晶
-		/// 抽1张牌，
+		/// 抽取1个技能，
 		/// 将<color=#FF6767>湮裂的燐焰晶</color>放入手中，直到填满手牌。
 		/// </summary>
         public static string Skill_S_Backup = "S_Backup";
 		/// <summary>
 		/// 悉心照料
-		/// <color=#BAC8FF><b>冷静</b>：目标持有“燐焰晶”相关的正面效果，会额外增加1层</color>
+		/// <color=#BAC8FF><b>冷静</b>：目标若持有梅朗柯莉专属技能相关的正面效果，此效果则会额外增加1层</color>
 		/// </summary>
         public static string Skill_S_Care = "S_Care";
 		/// <summary>
 		/// 蓄能
-		/// 每行进1点倒计时，获得3层蓄能
+		/// 在按下回合结束前，每行进1点倒计时，获得2层蓄能。
 		/// 慌张时，停止蓄能。
 		/// 冷静时完成蓄能，将2张<color=#FF6767>湮裂的燐焰晶</color>放入手中
 		/// <color=#FFC5BA>慌张：冷静下来，若完成蓄能，再抽取1个技能</color>
@@ -228,6 +229,11 @@ namespace RHA_Merankori
 		/// </summary>
         public static string Skill_S_ConvertCard = "S_ConvertCard";
 		/// <summary>
+		/// 常见效果
+		/// 仅供常见效果预览，按下shift可以查看技能<color=#FF6767>湮裂的燐焰晶</color>
+		/// </summary>
+        public static string Skill_S_D_BuffInfo = "S_D_BuffInfo";
+		/// <summary>
 		/// 折射
 		/// 折射来自“湮裂的燐焰晶”的伤害
 		/// </summary>
@@ -235,18 +241,19 @@ namespace RHA_Merankori
 		/// <summary>
 		/// 元素调石
 		/// 恢复全部体力极限。
-		/// 每恢复&a体力极限，赋予自身1层“蓄力”。
+		/// 每恢复&a体力极限，赋予自身1层“蓄能”。
 		/// <color=#5061A4>（预计提供&b层）</color>
 		/// </summary>
         public static string Skill_S_ElementHeal = "S_ElementHeal";
 		/// <summary>
 		/// 晶石生成
-		/// 抽1张牌，获得燐焰晶物品1个，可以用于摧毁地图上的墙体。
+		/// 抽取1个技能。
+		/// 获得燐焰晶物品1个，可以用于摧毁地图上的墙体，发现宝藏。
 		/// </summary>
         public static string Skill_S_ItemRHA = "S_ItemRHA";
 		/// <summary>
 		/// 晶体流形
-		/// <color=#BAC8FF><b>冷静</b>：手中每个<color=#FF6767>湮裂的燐焰晶</color>会额外提供3层“蓄力”</color>
+		/// <color=#BAC8FF><b>冷静</b>：手中每个<color=#FF6767>湮裂的燐焰晶</color>会额外提供3层“蓄能”</color>
 		/// <color=#5061A4>（预计提供&a层）</color>
 		/// </summary>
         public static string Skill_S_Manifold = "S_Manifold";
@@ -274,7 +281,7 @@ namespace RHA_Merankori
 		/// <summary>
 		/// 后撤！
 		/// 抽取2个技能。
-		/// 若指向的队友拥有至少5个正面效果，额外抽取1张牌。
+		/// 若指向的队友拥有至少5个正面效果，额外抽取1个技能。
 		/// </summary>
         public static string Skill_S_Retreat = "S_Retreat";
 		/// <summary>

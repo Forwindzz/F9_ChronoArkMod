@@ -13,6 +13,7 @@
         "Caution": true,
         "MaxStack": 1,
         "Name": "震荡冲击",
-        "LifeTime": 1
+        "LifeTime": 1,
+        "Icon": "Image/Buff/Skill_Icon_Pack/1_5icon/1_5 (13)"
     }
 }

@@ -1,0 +1,14 @@
+{
+    "S_D_BuffInfo": {
+        "_gdeSchema": "Skill",
+        "Category": "null",
+        "Particle": "Particle/impact",
+        "Target": "Misc",
+        "NotCount": false,
+        "Name": "常见效果",
+        "Description": "仅供常见效果预览，按下shift可以查看技能<color=#FF6767>湮裂的燐焰晶</color>",
+        "Effect_Target": "SE_T_S_D_BuffInfo",
+        "PlusSkillView": "S_Attack_All",
+        "Effect_Self": "SE_S_S_D_BuffInfo"
+    }
+}

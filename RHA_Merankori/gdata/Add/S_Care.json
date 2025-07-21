@@ -6,7 +6,7 @@
         "Rare": false,
         "Target": "otherally",
         "NODOD": false,
-        "NotCount": false,
+        "NotCount": true,
         "NotChuck": false,
         "HealSkill": false,
         "Disposable": false,
@@ -21,7 +21,7 @@
         "UnknownTarget": false,
         "UseAp": 1,
         "Name": "悉心照料",
-        "Description": "<color=#BAC8FF><b>冷静</b>：目标持有“燐焰晶”相关的正面效果，会额外增加1层</color>",
+        "Description": "<color=#BAC8FF><b>冷静</b>：目标若持有梅朗柯莉专属技能相关的正面效果，此效果则会额外增加1层</color>",
         "User": "C_Merankori",
         "PlusKeyWords": [
             "SK_Calm"
@@ -29,6 +29,9 @@
         "Effect_Target": "SE_T_S_Care",
         "SkillExtended": [
             "RHA_Merankori.S_Care"
-        ]
+        ],
+        "Image_0": "S_Care\\S_Care_Image_0.png",
+        "Image_1": "S_Care\\S_Care_Image_1.png",
+        "Image_2": "S_Care\\S_Care_Image_2.png"
     }
 }

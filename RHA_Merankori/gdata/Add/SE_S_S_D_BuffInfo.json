@@ -1,0 +1,11 @@
+{
+    "SE_S_S_D_BuffInfo": {
+        "_gdeSchema": "SkillEffect",
+        "Buffs": [
+            "B_Charge"
+        ],
+        "BuffPlusTagPer": [
+            0
+        ]
+    }
+}

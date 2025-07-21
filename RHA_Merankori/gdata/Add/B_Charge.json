@@ -9,9 +9,9 @@
         "UseSkillDebuff": false,
         "Caution": true,
         "Name": "蓄能",
-        "Description": "释放<color=#FF6767>湮裂的燐焰晶</color>时，每层增加其10%的伤害。\r\n释放后移除一半的层数。",
+        "Description": "释放<color=#FF6767>湮裂的燐焰晶</color>时，每层增加其10%的伤害。\r",
         "Tick": "null",
-        "MaxStack": 30,
-        "Icon": "Image/Buff/Skill_Icon_Pack/Silver_2"
+        "MaxStack": 15,
+        "Icon": "B_Charge\\B_Charge_Icon.png"
     }
 }

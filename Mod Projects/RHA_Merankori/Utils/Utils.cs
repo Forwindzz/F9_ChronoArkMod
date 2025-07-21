@@ -215,6 +215,11 @@ namespace RHA_Merankori
             return false;
         }
 
+        public static bool IsNearDeath(this BattleChar bchar)
+        {
+            return bchar.BuffFind(GDEItemKeys.Buff_B_Neardeath);
+        }
+
         public static int CountBuffStack(this BattleChar battleChar, string buffKey)
         {
             if (battleChar == null || buffKey == null)

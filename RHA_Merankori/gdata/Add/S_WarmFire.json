@@ -27,6 +27,9 @@
             "RHA_Merankori.S_WarmFire"
         ],
         "Effect_Self": "SE_S_S_WarmFire",
-        "Name": "暖焰"
+        "Name": "暖焰",
+        "Image_0": "S_WarmFire\\S_WarmFire_Image_0.png",
+        "Image_1": "S_WarmFire\\S_WarmFire_Image_1.png",
+        "Image_2": "S_WarmFire\\S_WarmFire_Image_2.png"
     }
 }

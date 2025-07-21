@@ -6,9 +6,9 @@
         "Target": "ally",
         "User": "C_Merankori",
         "Name": "晶体流形",
-        "Description": "<color=#BAC8FF><b>冷静</b>：手中每个<color=#FF6767>湮裂的燐焰晶</color>会额外提供3层“蓄力”</color>\n<color=#5061A4>（预计提供&a层）</color>",
+        "Description": "<color=#BAC8FF><b>冷静</b>：手中每个<color=#FF6767>湮裂的燐焰晶</color>会额外提供3层“蓄能”</color>\n<color=#5061A4>（预计提供&a层）</color>",
         "UseAp": 2,
-        "NotCount": false,
+        "NotCount": true,
         "PlusKeyWords": [
             "SK_Calm"
         ],
@@ -30,6 +30,11 @@
         "Track": false,
         "Fatal": false,
         "EnemyPreview": false,
-        "UnknownTarget": false
+        "UnknownTarget": false,
+        "Image_0": "S_Manifold\\S_Manifold_Image_0.png",
+        "Image_1": "S_Manifold\\S_Manifold_Image_1.png",
+        "Image_2": "S_Manifold\\S_Manifold_Image_2.png",
+        "AutoDelete": 0,
+        "PlusSkillView": "S_Attack_All"
     }
 }

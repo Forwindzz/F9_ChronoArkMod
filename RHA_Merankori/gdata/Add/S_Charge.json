@@ -20,7 +20,7 @@
         "EnemyPreview": false,
         "UnknownTarget": false,
         "Name": "蓄能",
-        "Description": "每行进1点倒计时，获得3层蓄能\n慌张时，停止蓄能。\n冷静时完成蓄能，将2张<color=#FF6767>湮裂的燐焰晶</color>放入手中\n<color=#FFC5BA>慌张：冷静下来，若完成蓄能，再抽取1个技能</color>",
+        "Description": "在按下回合结束前，每行进1点倒计时，获得2层蓄能。\n慌张时，停止蓄能。\n冷静时完成蓄能，将2张<color=#FF6767>湮裂的燐焰晶</color>放入手中\n<color=#FFC5BA>慌张：冷静下来，若完成蓄能，再抽取1个技能</color>",
         "UseAp": 0,
         "User": "C_Merankori",
         "Counting": 4,
@@ -30,6 +30,10 @@
         "SkillExtended": [
             "RHA_Merankori.S_Charge"
         ],
-        "Effect_Self": "SE_S_S_Charge"
+        "Effect_Self": "SE_S_S_Charge",
+        "Image_0": "S_Charge\\S_Charge_Image_0.png",
+        "Image_1": "S_Charge\\S_Charge_Image_1.png",
+        "Image_2": "S_Charge\\S_Charge_Image_2.png",
+        "PlusSkillView": "S_Attack_All"
     }
 }
