@@ -9,7 +9,7 @@
         "UseSkillDebuff": false,
         "Caution": false,
         "Name": "暖焰",
-        "Description": "每当受到<color=#5061A4>&a</color>点以上的治疗量时，赋予1层燐色存护。\n无法战斗抗性<color=#5061A4>（&b%）</color>会减少此治疗量阈值（已减少<color=#5061A4>&c</color>）。叠加2层暖眼会减少一半的阈值。",
+        "Description": "每当受到<color=#5061A4>&a</color>点及以上的治疗量时，赋予1层燐色存护。\n叠加2层暖焰会减少一半治疗量的阈值。",
         "LifeTime": 4,
         "MaxStack": 2,
         "Icon": "Image/Buff/Skill_Icon_Pack/1_51/TW_Red_Buff"

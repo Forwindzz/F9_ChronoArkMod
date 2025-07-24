@@ -80,16 +80,16 @@ namespace RHA_Merankori
                 StageSystem.instance.Map.MapObject == null
                 )
             {
-                Debug.Log($"BlowUpTile: Null StageSystem.instance or .Map, Skip");
+                //Debug.Log($"BlowUpTile: Null StageSystem.instance or .Map, Skip");
                 return false;
             }
             Vector3 cubePlayerPos = MapTile.VecToCube(tilePos);
             List<Vector2> candidatesHexPos = MapTile.MapRange(cubePlayerPos, range, StageSystem.instance.Map.Size);
-            Debug.Log($"Get {candidatesHexPos.Count} pos, start to modify map");
+            //Debug.Log($"Get {candidatesHexPos.Count} pos, start to modify map");
 
             if (candidatesHexPos.Count == 0)
             {
-                Debug.Log($"BlowUpTile: No suitable map tile found, skip");
+                //Debug.Log($"BlowUpTile: No suitable map tile found, skip");
                 return false;
             }
 
@@ -134,12 +134,12 @@ namespace RHA_Merankori
                 StageSystem.instance.Map.MapObject == null
                 )
             {
-                Debug.Log($"BlowUpTile: Null StageSystem.instance or .Map, Skip");
+                //Debug.Log($"BlowUpTile: Null StageSystem.instance or .Map, Skip");
                 return false;
             }
             if (cMapTile == null)
             {
-                Debug.Log($"BlowUpTile: Null tile, Skip");
+                //Debug.Log($"BlowUpTile: Null tile, Skip");
                 return false;
             }
             Vector2 cHexPos = cMapTile.Pos;
@@ -159,6 +159,20 @@ namespace RHA_Merankori
             if (!(cMapTile.Info.Type is TileTypes.Block || cMapTile.Info.Type is TileTypes.Border))
             {
                 Debug.Log($"{cMapTile.Info.Type.GetType().Name} tile @{cHexPos}, Skip");
+                //如果是隐藏，那么变黑一点
+                //TODO:需要确认摧毁墙壁后才执行这个
+                if (cMapTile.Info.Type is TileTypes.HiddenWall)
+                {
+                    List<SpriteRenderer> sprites = cMapTile.HexTileComponent.Sprites;
+                    foreach (var sr in sprites)
+                    {
+                        if (sr != null)
+                        {
+                            sr.color = DarkenColor(sr.color, new Vector3(0.8f, 0.78f, 0.78f));
+                        }
+                    }
+                }
+                
                 return false;
             }
             //Debug.Log($"Block tile @{cHexPos} {cMapTile.Info.Type.GetType().Name}, continue:");
@@ -231,7 +245,7 @@ namespace RHA_Merankori
                 {
                     break;
                 }
-                Debug.Log($"Reduce Reward <{item.itemkey}> {item.StackCount} -> {ensureStack}");
+                //Debug.Log($"Reduce Reward <{item.itemkey}> {item.StackCount} -> {ensureStack}");
                 item.StackCount = ensureStack;
                 if (ensureStack == 0)
                 {
@@ -301,7 +315,7 @@ namespace RHA_Merankori
             {
                 // Debug.Log("Mini map is null!");
                 miniHex = mapImages[tx, ty] = cHexTile.GetComponent<MiniHex>();
-                Debug.Log($"new Mini map {miniHex}");
+                //Debug.Log($"new Mini map {miniHex}");
                 if (miniHex == null)
                 {
                     GameObject miniHexTileGameObject = GameObject.Instantiate<GameObject>(
@@ -353,7 +367,7 @@ namespace RHA_Merankori
             if (miniHex == null)
             {
                 miniHex = mapImages[tx, ty] = cHexTile.GetComponent<MiniHex>();
-                Debug.Log($"new Mini map {miniHex}");
+                //Debug.Log($"new Mini map {miniHex}");
                 if (miniHex == null)
                 {
                     GameObject miniHexTileGameObject = GameObject.Instantiate<GameObject>(
@@ -445,7 +459,7 @@ namespace RHA_Merankori
                 gameObjectPath,
                 AddressableLoadManager.ManageType.Stage,
                 cHexTile.transform);
-            Debug.Log($"Create new object {newTileObject?.name}");
+            //Debug.Log($"Create new object {newTileObject?.name}");
             if (newTileObject == null)
             {
                 Debug.LogError("ReplaceTileWithEvent: Create object failed! Skip!");
@@ -532,7 +546,7 @@ namespace RHA_Merankori
             //这个PosEnter碰撞箱始终为Trigger
             if (cMapTile.PosEnter == null)
             {
-                Debug.Log("cMapTile.PosEnter is null!");
+                //Debug.Log("cMapTile.PosEnter is null!");
                 if (cHexTile.PosEnter != null)
                 {
                     cMapTile.PosEnter = cHexTile.PosEnter;
@@ -541,12 +555,12 @@ namespace RHA_Merankori
                 {
                     cMapTile.PosEnter = cMapTile.TileObject.AddComponent<PolygonCollider2D>();
                     cMapTile.PosEnter.isTrigger = true;
-                    Debug.Log("cMapTile.PosEnter create collider trigger");
+                    //Debug.Log("cMapTile.PosEnter create collider trigger");
                 }
             }
             if (cHexTile.PosEnter == null)
             {
-                Debug.Log("cHexTile.PosEnter is null!");
+                //Debug.Log("cHexTile.PosEnter is null!");
                 if (cMapTile.PosEnter != null)
                 {
                     cHexTile.PosEnter = cMapTile.PosEnter;

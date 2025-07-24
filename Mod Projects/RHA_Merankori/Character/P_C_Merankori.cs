@@ -31,8 +31,6 @@ namespace RHA_Merankori
         IP_BattleEndOutBattle
     {
 
-        //TODO: 情绪高涨的梅朗柯莉会激化身边的红色结晶，会对周围不分敌我地产生毁灭性的伤害，甚至摧毁地形。
-
         public override void TurnUpdate()
         {
             base.TurnUpdate();
@@ -76,7 +74,9 @@ namespace RHA_Merankori
         private IEnumerator BlowUpTiles()
         {
             yield return new WaitForFixedUpdate();
-            MapChange.BlowUpTiles(StageSystem.instance.PlayerPos, 1);
+            BlowUpAttr.BlowUpAttributes blowUpAttributes = BlowUpAttr.GetBlowUpAttr();
+            int range = blowUpAttributes.range;
+            MapChange.BlowUpTiles(StageSystem.instance.PlayerPos, range);
             yield break;
         }
         public void BattleEnd()

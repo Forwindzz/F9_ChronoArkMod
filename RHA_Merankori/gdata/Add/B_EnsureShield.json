@@ -1,0 +1,15 @@
+{
+    "B_EnsureShield": {
+        "_gdeSchema": "Buff",
+        "Hide": false,
+        "IsFieldBuff": false,
+        "Cantdisable": true,
+        "ClassName": "RHA_Merankori.B_EnsureShield",
+        "BuffTag": "null",
+        "UseSkillDebuff": false,
+        "Caution": false,
+        "Name": "火之存护",
+        "Description": "若回合开始时没有燐色存护，则施加1层燐色存护。",
+        "Icon": "B_EnsureShield\\B_EnsureShield_Icon.png"
+    }
+}

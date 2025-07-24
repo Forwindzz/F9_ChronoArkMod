@@ -139,24 +139,28 @@ namespace RHA_Merankori
             }
         }
 
-        private Vector3 lastLucyRot;
-        private Vector3 lastCameraRot;
+
+        private float DegreeDelta(float a, float b)
+        {
+            return Mathf.Min(Mathf.Abs(a - b), Mathf.Abs(a - b - 360.0f), Mathf.Abs(a - b + 360.0f));
+        }
+
+        // lucy Rotation和camera的rotation在相差多少度的时候，强制同步两者的rotation
+        public static float ForceCalibrateDegreeThres = 9;
 
         public void Update()
         {
             UpdateAnimation();
             if(ss6AnimControl!=null && lucyMeshRender!=null)
             {
-                //ss6AnimControl.SpriteRoot.transform.rotation = lucyMeshRender.transform.rotation;
-                //ss6AnimControl.SpriteRoot.transform.rotation = Camera.main.transform.rotation;
-                //debug code
                 Vector3 lucyRot = lucyMeshRender.transform.rotation.eulerAngles;
                 Vector3 camRot = Camera.main.transform.rotation.eulerAngles;
-                if(lucyRot!=lastLucyRot || camRot!=lastCameraRot)
+                float delta = DegreeDelta(lucyRot.x, camRot.x);
+                if(delta>=ForceCalibrateDegreeThres)
                 {
-                    lastLucyRot= lucyRot;
-                    lastCameraRot = camRot;
-                    Debug.Log($"MerankoriRot:Lucy={lucyRot}, Camera={camRot}");
+                    lucyMeshRender.transform.rotation = Camera.main.transform.rotation;
+                    ss6AnimControl.SpriteRoot.transform.rotation = Camera.main.transform.rotation;
+                    Debug.Log($"Force Rot player: delta={delta} | Lucy={lucyRot}, Camera={camRot}");
                 }
                 
             }

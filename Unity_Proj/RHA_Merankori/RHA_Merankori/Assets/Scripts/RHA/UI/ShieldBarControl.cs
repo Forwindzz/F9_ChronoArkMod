@@ -59,7 +59,7 @@ public class ShieldBarControl : MonoBehaviour
         showingImage.Remove(control);
     }
 
-    public void SetCount(int count)
+    public void SetCount(int count, string text="")
     {
         count = Mathf.Max(count, 0);
         if(count==currentCount)
@@ -99,25 +99,25 @@ public class ShieldBarControl : MonoBehaviour
         }
         currentCount = count;
 
+        float delayTime = isReducing ? settings.baseDestoryDelay : settings.baseShowDelay;
         lastTime = Time.time;
 
-        float delayTime = isReducing ? settings.baseDestoryDelay : settings.baseShowDelay;
-
-        StartCoroutine(UpdateText(delayTime));
+        StartCoroutine(UpdateText(text, delayTime));
     }
 
-    private IEnumerator UpdateText(float delayTime)
+
+    private IEnumerator UpdateText(string textContent, float delayTime)
     {
         yield return new WaitForSeconds(delayTime);
 
         if (currentCount == 0)
         {
-            textAnim.text.text = string.Empty;
+            textAnim.text.text = textContent;
             textAnim.targetAlpha = 0;
         }
         else
         {
-            textAnim.text.text = currentCount.ToString();
+            textAnim.text.text = textContent;
             textAnim.targetAlpha = Mathf.Clamp01(0.2f * currentCount) * alphaMult;
         }
         textAnim.targetPos = GetNextImagePos() + settings.baseTextOffset;
@@ -142,11 +142,6 @@ public class ShieldBarControl : MonoBehaviour
         }
         textAnim.targetAlpha = alpha;
         textAnim.StartAnimation();
-        /*
-        foreach (var image in destoryingImage)
-        {
-            image.SetTargetAlpha(alpha);
-        }*/
     }
 
     // test:
@@ -159,9 +154,9 @@ public class ShieldBarControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SetCount(tempCount);
+        SetCount(tempCount, tempCount.ToString()+"/20");
         SetAlphaMult(alphaValueMult);
     }
-    */
     
+    */
 }

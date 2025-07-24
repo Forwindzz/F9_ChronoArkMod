@@ -29,7 +29,7 @@ namespace RHA_Merankori
         //这个会通过patch在ui初始化的时候自动调用。
         public static void CreateUIForAlly(UIComponent uiComp)
         {
-            Debug.Log("Try to create shield UI for " + uiComp?.name);
+            //Debug.Log("Try to create shield UI for " + uiComp?.name);
             CheckInitRes();
             if(shieldUITemplate==null)
             {
@@ -54,7 +54,7 @@ namespace RHA_Merankori
             if (shieldUI != null)
             {
                 shieldUI.allyUI = uiComp;
-                Debug.Log("Succeed in creating shield UI");
+                //Debug.Log("Succeed in creating shield UI");
                 return;
             }
 
@@ -97,22 +97,44 @@ namespace RHA_Merankori
             if(firstInit)
             {
                 shieldUIObj.transform.SetParent(allyUI.HP.transform);
-                shieldUIObj.transform.localPosition = new Vector3(-165, -3.35f, 0.0f);
+                shieldUIObj.transform.localPosition = new Vector3(-165, 0.0f, 0.0f);
                 shieldUIObj.transform.localScale = Vector3.one * 0.6f;
                 firstInit = false;
-                Debug.Log("init shield UI > " + bchar.name);
+                //Debug.Log("init shield UI > " + bchar.name);
             }
-            int count = bchar.CountBuffStack(ModItemKeys.Buff_B_Shield);
-            //Debug.Log($"Set shield icons {bchar.name} > {count}");
-            shieldUI.SetCount(count);
-            if(bchar.IsNearDeath())
+            Buff shieldBuff = bchar.GetBuffByID(ModItemKeys.Buff_B_Shield);
+            if(shieldBuff==null)
             {
-                shieldUI.SetAlphaMult(1.0f);
+                shieldUI.SetCount(0);
+                shieldUI.SetAlphaMult(0.25f);
             }
             else
             {
-                shieldUI.SetAlphaMult(0.25f);
+                int currentCount = shieldBuff.StackNum;
+                int maxCount = shieldBuff.BuffData.MaxStack;
+                shieldUI.SetCount(currentCount, $"{currentCount}/{maxCount}");
+                if(maxCount<=currentCount)
+                {
+                    Color orgColor = shieldUI.textAnim.text.color;
+                    shieldUI.textAnim.text.color = new Color(1.0f, 0.7461056f, 0.4470588f, orgColor.a);
+                }
+                else
+                {
+                    Color orgColor = shieldUI.textAnim.text.color;
+                    shieldUI.textAnim.text.color = new Color(0.4481132f, 0.7127607f, 1.0f, orgColor.a);
+                }
+                if (bchar.IsNearDeath())
+                {
+                    shieldUI.SetAlphaMult(1.0f);
+                }
+                else
+                {
+                    shieldUI.SetAlphaMult(0.25f);
+                }
             }
+            int count = bchar.CountBuffStack(ModItemKeys.Buff_B_Shield);
+            //Debug.Log($"Set shield icons {bchar.name} > {count}");
+            
         }
     }
 }

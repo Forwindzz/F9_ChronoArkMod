@@ -19,7 +19,7 @@
         "Fatal": false,
         "EnemyPreview": false,
         "UnknownTarget": false,
-        "Description": "抽取1个技能。\n获得燐焰晶物品1个，可以用于摧毁地图上的墙体，发现宝藏。",
+        "Description": "抽取1个技能。\n获得燐晶核1个，可以用于摧毁地图上的墙体，发现埋藏的物品。",
         "User": "C_Merankori",
         "SkillExtended": [
             "RHA_Merankori.S_ItemRHA"

@@ -3,7 +3,7 @@
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <AssemblyName>RHA_Merankori2025721220213</AssemblyName>
+    <AssemblyName>RHA_Merankori202572424547</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
@@ -430,7 +430,7 @@
     </Reference>
 <!-- Extra Reference End-->
   </ItemGroup>
-                                                                                                                                                                                                                                                                                                                                                                              <!-- Compile ItemGroup Start-->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <!-- Compile ItemGroup Start-->
   <ItemGroup>
     <Compile Include="RHA_Merankori_ModDefinition.cs" />
     <Compile Include="RHA_Merankori_Plugin.cs" />
@@ -442,8 +442,10 @@
     <Compile Include="Buff\B_Calm.cs" />
     <Compile Include="Buff\B_CalmDown.cs" />
     <Compile Include="Buff\B_Charge.cs" />
+    <Compile Include="Buff\B_DeadImmuneNoLimit.cs" />
     <Compile Include="Buff\B_DeathResist.cs" />
     <Compile Include="Buff\B_DLoop.cs" />
+    <Compile Include="Buff\B_EnsureShield.cs" />
     <Compile Include="Buff\B_FreqShift.cs" />
     <Compile Include="Buff\B_GenCrystal.cs" />
     <Compile Include="Buff\B_H_FreqShift_Lucy.cs" />
@@ -457,6 +459,8 @@
     <Compile Include="Buff\B_WarmFire.cs" />
     <Compile Include="Character\P_C_Merankori.cs" />
     <Compile Include="Item_Consume\I_RHA.cs" />
+    <Compile Include="Item_Equip\E_AdjustCrystal.cs" />
+    <Compile Include="Item_Equip\E_FireProtect.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Skill\Merankori_BaseSkill.cs" />
     <Compile Include="Skill\S_Attack_All.cs" />
@@ -484,6 +488,7 @@
     <Compile Include="SkillExtended\SE_U_Shield.cs" />
     <Compile Include="UI\MerankoriShieldUI.cs" />
     <Compile Include="Utils\AutoSelfDestoryComponent.cs" />
+    <Compile Include="Utils\BlowupAttr.cs" />
     <Compile Include="Utils\EmotionBuffSwitch.cs" />
     <Compile Include="Utils\IDs.cs" />
     <Compile Include="Utils\LucyReplaceBehavior.cs" />
@@ -498,6 +503,7 @@
     <Compile Include="Utils\Debug\ZDepthVisualizer.cs" />
     <Compile Include="Utils\Patches\BuffPatch.cs" />
     <Compile Include="Utils\Patches\FieldSystemPatch.cs" />
+    <Compile Include="Utils\Patches\StatPatch.cs" />
     <Compile Include="Utils\Patches\UIPatch.cs" />
   </ItemGroup>
   <!-- Compile ItemGroup End-->

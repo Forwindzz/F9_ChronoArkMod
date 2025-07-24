@@ -1,7 +1,7 @@
 {
     "SE_U_Refraction": {
         "_gdeSchema": "SkillExtended",
-        "Des": "获得1回合折射",
+        "Des": "赋予1回合折射",
         "Name": "赋予折射",
         "Drop": true,
         "EnforceString": "过载，指向单体队友的技能",

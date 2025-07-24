@@ -1,0 +1,10 @@
+{
+    "E_AdjustCrystal": {
+        "_gdeSchema": "Item_Equip",
+        "Itemclass": "Unique",
+        "name": "精密调石台",
+        "Description": "解除队伍无法战斗抵抗的上限，\n使用燐晶核时，摧毁地图的半径增加1格。\n\n<color=#5061A4>—— 晶石调起来更顺了，比起依赖症，更加粗放的使用不是更好吗？梅朗柯莉酱你怎么不说话了...唔！...</color>",
+        "Equip_Script": "RHA_Merankori.E_AdjustCrystal",
+        "image": "Item\\E_AdjustCrystal_image.png"
+    }
+}

@@ -32,8 +32,11 @@ namespace RHA_Merankori
             {
                 return false;
             }
-            int range = 1;
-            if(MapChange.BlowUpTiles(StageSystem.instance.PlayerPos, range))
+
+            BlowUpAttr.BlowUpAttributes blowUpAttributes = BlowUpAttr.GetBlowUpAttr();
+            int range = blowUpAttributes.range;
+            //Debug.Log("Final range=" + range);
+            if (MapChange.BlowUpTiles(StageSystem.instance.PlayerPos, range))
             {
                 MapChange.BlowUpParticleEffect(FieldSystem.instance.Playercontrol.transform.position, range);
                 return true;
@@ -41,5 +44,24 @@ namespace RHA_Merankori
             return false;
         }
 
+        /*
+        public override void Effect(Character CharInfo)
+        {
+            base.Effect(CharInfo);
+            if (StageSystem.instance == null)
+            {
+                return;
+            }
+            if (FieldSystem.instance == null || FieldSystem.instance.MiniMap == null || !FieldSystem.instance.MiniMap.isActiveAndEnabled)
+            {
+                return;
+            }
+            int range = 6;
+            if (MapChange.BlowUpTiles(StageSystem.instance.PlayerPos, range))
+            {
+                MapChange.BlowUpParticleEffect(FieldSystem.instance.Playercontrol.transform.position, range);
+                return;
+            }
+        }*/
     }
 }

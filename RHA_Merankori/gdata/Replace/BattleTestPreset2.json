@@ -54,9 +54,13 @@
                 "Ilya_Sword_1"
             ],
             [
-                
+                "E_AdjustCrystal",
+                "E_FireProtect"
             ]
         ],
-        "AP": 9
+        "AP": 9,
+        "Passive": [
+            "LastFlame"
+        ]
     }
 }

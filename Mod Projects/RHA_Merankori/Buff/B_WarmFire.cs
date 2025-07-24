@@ -16,7 +16,6 @@ namespace RHA_Merankori
     /// <summary>
     /// 暖焰
     /// 每当一次性接受&a点以上的治疗量时，赋予1层燐色存护。
-    /// 根据无法战斗抗性（&b%）百分比，减少治疗量阈值（已减少&c）。
     /// </summary>
     public class B_WarmFire : 
         Buff,
@@ -25,9 +24,9 @@ namespace RHA_Merankori
     {
 
         //private int totalHeal = 0;
-        private const int BASE_HEAL_THRESHOLD = 20;
+        private const int BASE_HEAL_THRESHOLD = 15;
 
-        private float GetBaseThreshold()
+        private int GetBaseThreshold()
         {
             return this.StackNum ==0? BASE_HEAL_THRESHOLD: BASE_HEAL_THRESHOLD / this.StackNum;
         }
@@ -74,13 +73,10 @@ namespace RHA_Merankori
 
         public int GetThreshold()
         {
-            return 
+            return
                 Mathf.Max(
                 1,
-                (int)(Mathf.Max(
-                    0, 
-                    (100-this.BChar.GetStat.DeadImmune)) 
-                * GetBaseThreshold() * 0.01f));
+                GetBaseThreshold());
         }
 
         public override string DescInit()

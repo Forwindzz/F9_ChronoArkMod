@@ -12,12 +12,14 @@ using ChronoArkMod.Plugin;
 using ChronoArkMod.Template;
 using Debug = UnityEngine.Debug;
 using static Library_SpriteStudio6.Data.Animation.Attribute;
+using HarmonyLib;
 namespace RHA_Merankori
 {
     /// <summary>
     /// 燐色存护
     /// 每层能抵抗1次不能战斗效果。
-    /// 濒死状态时，根据无法战斗抗性百分比，增加受到的治疗量百分比。
+    /// 濒死状态时，无法战斗抗性（&a%）会增加受到的治疗量。
+    /// 每20%全队的无法战斗抗性<color=#5061A4>（&b%）</color>增加1层上限。
     /// 
     /// 关于实现方式：
     /// Patch BattleChar.Dead
@@ -167,6 +169,7 @@ namespace RHA_Merankori
             }
         }
 
+        
         public override void BuffStat()
         {
             base.BuffStat();
@@ -217,20 +220,31 @@ namespace RHA_Merankori
             CheckRecover();
             yield break;
         }
-
         
         public override void FixedUpdate()
         {
             base.FixedUpdate();
             CheckRecover(); //暴力解决各种边边角角的奇怪的死亡判定
+            this.BuffData.MaxStack = GetAllDeathImmune() / 20 + 4;
         }
 
 
         public override string DescInit()
         {
             return base.DescInit()
-                .Replace("&a", this.BChar.GetStat.DeadImmune.ToString());
+                .Replace("&a", this.BChar.GetStat.DeadImmune.ToString())
+                .Replace("&b", GetAllDeathImmune().ToString());
 
+        }
+
+        public int GetAllDeathImmune()
+        {
+            int total = 0;
+            foreach(var b in this.BChar.MyTeam.AliveChars_Vanish)
+            {
+                total += b.GetStat.DeadImmune;
+            }
+            return total;
         }
     }
 }

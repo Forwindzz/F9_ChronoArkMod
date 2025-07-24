@@ -28,9 +28,14 @@ namespace RHA_Merankori
         public static string Buff_B_CalmDown = "B_CalmDown";
 		/// <summary>
 		/// 蓄能
-		/// 释放<color=#FF6767>湮裂的燐焰晶</color>时，每层增加其10%的伤害。
+		/// 释放<color=#FF6767>湮裂的燐焰晶</color>时，每层增加其10%的伤害，然后移除此效果。
 		/// </summary>
         public static string Buff_B_Charge = "B_Charge";
+		/// <summary>
+		/// 解除无法战斗抵抗上限
+		/// 目前的无法战斗抵抗：&a%
+		/// </summary>
+        public static string Buff_B_DeadImmuneNoLimit = "B_DeadImmuneNoLimit";
 		/// <summary>
 		/// 无法战斗抵抗
 		/// </summary>
@@ -75,7 +80,7 @@ namespace RHA_Merankori
 		/// <summary>
 		/// 燐焰晶回流
 		/// 回合开始时，每层会赋予1层燐色存护。
-		/// 溢出的燐色存护会转化为折射。
+		/// 溢出的燐色存护会转化为5%无法战斗抵抗增益。
 		/// </summary>
         public static string Buff_B_Reflow = "B_Reflow";
 		/// <summary>
@@ -86,7 +91,8 @@ namespace RHA_Merankori
 		/// <summary>
 		/// 燐色存护
 		/// 每层能抵抗1次无法战斗效果。
-		/// 濒死状态时，无法战斗抗性会增加受到的治疗量<color=#5061A4>（&a%）</color>。
+		/// 无法战斗抵抗<color=#5061A4>（&a%）</color>会增加濒死时受到的治疗量。
+		/// 每20%全队的无法战斗抗性<color=#5061A4>（&b%）</color>增加1层燐色存护层数上限。
 		/// </summary>
         public static string Buff_B_Shield = "B_Shield";
 		/// <summary>
@@ -97,8 +103,8 @@ namespace RHA_Merankori
         public static string Buff_B_Shock = "B_Shock";
 		/// <summary>
 		/// 暖焰
-		/// 每当受到<color=#5061A4>&a</color>点以上的治疗量时，赋予1层燐色存护。
-		/// 无法战斗抗性<color=#5061A4>（&b%）</color>会减少此治疗量阈值（已减少<color=#5061A4>&c</color>）。叠加2层暖眼会减少一半的阈值。
+		/// 每当受到<color=#5061A4>&a</color>点及以上的治疗量时，赋予1层燐色存护。
+		/// 叠加2层暖焰会减少一半治疗量的阈值。
 		/// </summary>
         public static string Buff_B_WarmFire = "B_WarmFire";
 		/// <summary>
@@ -106,13 +112,20 @@ namespace RHA_Merankori
 		/// Passive:
 		/// 任何攻击会让梅朗柯莉<color=#FFC5BA><b>慌张</b></color>。但在回合开始时，梅朗柯莉会<color=#BAC8FF><b>冷静</b></color>下来。
 		/// 固定技能始终为<color=#FF6767>湮裂的燐焰晶</color>，会攻击除自己以外所有人，战斗会摧毁周边障碍。
-		/// 升级获得物品“燐焰晶”2个，进入营地会获得1个，可以摧毁地形并概率发现遗失的物品。
+		/// 升级获得物品“燐晶核”2个，进入营地会获得1个，可以摧毁地形并概率发现遗失的物品。
 		/// </summary>
         public static string Character_C_Merankori = "C_Merankori";
 		/// <summary>
-		/// 燐焰晶
+		/// 精密调石台
+		/// 解除队伍无法战斗抵抗的上限，
+		/// 使用燐晶核时，摧毁地图的半径增加1格。
+		/// <color=#5061A4>—— 晶石调起来更顺了，比起依赖症，更加粗放的使用不是更好吗？梅朗柯莉酱你怎么不说话了...唔！...</color>
+		/// </summary>
+        public static string Item_Equip_E_AdjustCrystal = "E_AdjustCrystal";
+		/// <summary>
+		/// 燐晶核
 		/// 右击可以让梅朗柯莉摧毁周边的墙体，可能发现小型物资。
-		/// <color=#5061A4>  --- 赤红的晶石上透射着淡淡的回路，似乎很危险的样子...</color>
+		/// <color=#5061A4>  --- 赤红的晶石上透射着淡淡的回路，有些不稳定...</color>
 		/// </summary>
         public static string Item_Consume_I_RHA = "I_RHA";
 		/// <summary>
@@ -175,13 +188,13 @@ namespace RHA_Merankori
         public static string SkillEffect_SE_T_S_WarmFire = "SE_T_S_WarmFire";
 		/// <summary>
 		/// 赋予折射
-		/// 获得1回合折射
+		/// 赋予1回合折射
 		/// 过载，指向单体队友的技能
 		/// </summary>
         public static string SkillExtended_SE_U_Refraction = "SE_U_Refraction";
 		/// <summary>
 		/// 赋予燐色存护
-		/// 获得1层燐色存护
+		/// 赋予1层燐色存护
 		/// 1费及以上的技能
 		/// </summary>
         public static string SkillExtended_SE_U_Shield = "SE_U_Shield";
@@ -248,7 +261,7 @@ namespace RHA_Merankori
 		/// <summary>
 		/// 晶石生成
 		/// 抽取1个技能。
-		/// 获得燐焰晶物品1个，可以用于摧毁地图上的墙体，发现宝藏。
+		/// 获得燐晶核1个，可以用于摧毁地图上的墙体，发现埋藏的物品。
 		/// </summary>
         public static string Skill_S_ItemRHA = "S_ItemRHA";
 		/// <summary>
@@ -293,6 +306,17 @@ namespace RHA_Merankori
 		/// 暖焰
 		/// </summary>
         public static string Skill_S_WarmFire = "S_WarmFire";
+		/// <summary>
+		/// 火之守护
+		/// 回合开始时，若没有燐色存护增益，则赋予1层燐色存护（抵抗无法战斗1次）。
+		/// <color=#5061A4>——这是从可爱的草刺猬上掉落的，没有1只草刺猬牺牲，刚刚那只是遭受了主的....？...梅朗柯莉酱，愈术是什么，这里应该只有主的圣术。</color>
+		/// </summary>
+        public static string Item_Equip_E_FireProtect = "E_FireProtect";
+		/// <summary>
+		/// 火之存护
+		/// 若回合开始时没有燐色存护，则施加1层燐色存护。
+		/// </summary>
+        public static string Buff_B_EnsureShield = "B_EnsureShield";
 
     }
 

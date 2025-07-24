@@ -4,11 +4,11 @@
         "Category": "null",
         "Particle": "Particle/flare_lv1",
         "Target": "all_ally",
-        "NotCount": false,
+        "NotCount": true,
         "Name": "燐晶电场",
         "Description": "<color=#BAC8FF><b>冷静</b>：处于濒死状态的队友额外获得2层“燐色存护”</color>",
         "User": "C_Merankori",
-        "UseAp": 2,
+        "UseAp": 3,
         "PlusKeyWords": [
             "SK_Calm"
         ],
