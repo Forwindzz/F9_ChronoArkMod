@@ -46,6 +46,11 @@ namespace RHA_Merankori
 		/// </summary>
         public static string Buff_B_DLoop = "B_DLoop";
 		/// <summary>
+		/// 火之存护
+		/// 若回合开始时没有燐色存护，则施加1层燐色存护。
+		/// </summary>
+        public static string Buff_B_EnsureShield = "B_EnsureShield";
+		/// <summary>
 		/// 频移微调
 		/// 受到<color=#FF6767>湮裂的燐焰晶</color>的攻击时，将受到的伤害转化为等量的治疗，然后移除1层。
 		/// </summary>
@@ -122,6 +127,12 @@ namespace RHA_Merankori
 		/// <color=#5061A4>—— 晶石调起来更顺了，比起依赖症，更加粗放的使用不是更好吗？梅朗柯莉酱你怎么不说话了...唔！...</color>
 		/// </summary>
         public static string Item_Equip_E_AdjustCrystal = "E_AdjustCrystal";
+		/// <summary>
+		/// 火之守护
+		/// 回合开始时，若没有燐色存护增益，则赋予1层燐色存护（抵抗无法战斗1次）。
+		/// <color=#5061A4>——这是从可爱的草刺猬上掉落的，没有1只草刺猬牺牲，刚刚那只是遭受了主的....？...梅朗柯莉酱，愈术是什么，这里应该只有主的圣术。</color>
+		/// </summary>
+        public static string Item_Equip_E_FireProtect = "E_FireProtect";
 		/// <summary>
 		/// 燐晶核
 		/// 右击可以让梅朗柯莉摧毁周边的墙体，可能发现小型物资。
@@ -306,17 +317,6 @@ namespace RHA_Merankori
 		/// 暖焰
 		/// </summary>
         public static string Skill_S_WarmFire = "S_WarmFire";
-		/// <summary>
-		/// 火之守护
-		/// 回合开始时，若没有燐色存护增益，则赋予1层燐色存护（抵抗无法战斗1次）。
-		/// <color=#5061A4>——这是从可爱的草刺猬上掉落的，没有1只草刺猬牺牲，刚刚那只是遭受了主的....？...梅朗柯莉酱，愈术是什么，这里应该只有主的圣术。</color>
-		/// </summary>
-        public static string Item_Equip_E_FireProtect = "E_FireProtect";
-		/// <summary>
-		/// 火之存护
-		/// 若回合开始时没有燐色存护，则施加1层燐色存护。
-		/// </summary>
-        public static string Buff_B_EnsureShield = "B_EnsureShield";
 
     }
 

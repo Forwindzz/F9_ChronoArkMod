@@ -19,7 +19,7 @@
         "Fatal": false,
         "EnemyPreview": false,
         "UnknownTarget": false,
-        "Name": "回路整流\n",
+        "Name": "回路整流",
         "Description": "可以将梅朗柯莉指向单体队友的专属技能更改为对“全体友军”释放。\n将1张<color=#FF6767>湮裂的燐焰晶</color>放入手中。\n<color=#BAC8FF>冷静：抽取1个技能</color>",
         "UseAp": 0,
         "User": "C_Merankori",

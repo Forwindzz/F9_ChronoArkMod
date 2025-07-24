@@ -4,7 +4,7 @@ Buff/B_Backflow_Description,Text,,,,,"<color=#FF6767>湮裂的燐焰晶</color>�
 Buff/B_Backflow_Name,Text,,,,,逆流的燐焰晶,
 Buff/B_Backup_Description,Text,,,,,回合开始时，生成1张<color=#FF6767>湮裂的燐焰晶</color>并放入手牌中。,
 Buff/B_Backup_Name,Text,,,,,后备的燐焰晶,
-Buff/B_CalmDown_Description,Text,,,,,阻止进入慌张状态，每次阻止会减少1层。,
+Buff/B_CalmDown_Description,Text,,,,,阻止进入慌张状态，每次阻止会减少1层。,
 Buff/B_CalmDown_Name,Text,,,,,镇定,
 Buff/B_Calm_Description,Text,,,,,"<color=#BAC8FF>照料可能因自己受伤的队友...</color>
 回合开始时梅朗柯莉会<color=#BAC8FF><b>冷静</b></color>下来。
@@ -24,7 +24,7 @@ Buff/B_FreqShift_Description,Text,,,,,受到<color=#FF6767>湮裂的燐焰晶</c
 Buff/B_FreqShift_Name,Text,,,,,频移微调,
 Buff/B_GenCrystal_Description,Text,,,,,每当队友脱离濒死状态时，将<color=#FF6767>湮裂的燐焰晶</color>放入手中。,
 Buff/B_GenCrystal_Name,Text,,,,,焰晶生成,
-Buff/B_H_FreqShift_Lucy_Description,Text,,,,,引导燐焰晶,
+Buff/B_H_FreqShift_Lucy_Description,Text,,,,,引导燐焰晶,
 Buff/B_H_FreqShift_Lucy_Name,Text,,,,,频移微调-露西,
 Buff/B_NotDeadlyAtk_Description,Text,,,,,燐焰晶的伤害不会致命,
 Buff/B_NotDeadlyAtk_Name,Text,,,,,烈燐焰晶,
@@ -44,7 +44,7 @@ Buff/B_Shield_Description,Text,,,,,"每层能抵抗1次无法战斗效果。
 每20%全队的无法战斗抗性<color=#5061A4>（&b%）</color>增加1层燐色存护层数上限。",
 Buff/B_Shield_Name,Text,,,,,燐色存护,
 Buff/B_Shock_Description,Text,,,,,"无法使用攻击技能，若是敌人则停止行动一回合。
-持有此效果的角色可以通过丢弃自己的技能来移除此效果。",
+持有此效果的角色可以通过丢弃自己的技能来移除此效果。",
 Buff/B_Shock_Name,Text,,,,,震荡冲击,
 Buff/B_WarmFire_Description,Text,,,,,"每当受到<color=#5061A4>&a</color>点及以上的治疗量时，赋予1层燐色存护。
 叠加2层暖焰会减少一半治疗量的阈值。",
@@ -54,12 +54,13 @@ Character/C_Merankori_PassiveDes,Text,,,,,"任何攻击会让梅朗柯莉<color=
 
 固定技能始终为<color=#FF6767>湮裂的燐焰晶</color>，会攻击除自己以外所有人，战斗会摧毁周边障碍。
 
-升级获得物品“燐晶核”2个，进入营地会获得1个，可以摧毁地形并概率发现遗失的物品。",
+升级获得物品“燐晶核”2个，进入营地会获得1个，可以摧毁地形并概率发现遗失的物品。
+",
 Character/C_Merankori_PassiveName,Text,,,,,"燐焰晶
 ",
 Character/C_Merankori_SelectInfo,Text,,,,,"来自梅弗特哈涅，性格内向，喜欢空想的少女。5个兄弟姐妹中最小的一个，经常帮哥哥做家务。情绪高涨之后，周围的结晶体就会变形，因为会伤害到周围的人，不太接近家族外面的人。
 然而，在一次晶石校调的过程中，梅朗柯莉的意识坠入了一个与电之国截然不同的世界。据说抵达钟塔便能返回繁华的电之国，但是方舟调查团并没有人愿意和她组队...
-「……」",
+「……」",
 Character/C_Merankori_Text_Battle_AllyND_0,Text,,,,,抱...抱歉,
 Character/C_Merankori_Text_Battle_AllyND_1,Text,,,,,唉？...唉！,
 Character/C_Merankori_Text_Battle_Healed_0,Text,,,,,...谢谢,
@@ -98,8 +99,7 @@ Item_Equip/E_FireProtect_Description,Text,,,,,"回合开始时，若没有燐色
 Item_Equip/E_FireProtect_name,Text,,,,,火之守护,
 Skill/S_Attack_All_Description,Text,,,,,"对所有人造成伤害，除了梅朗柯莉自身。此伤害不会导致队友无法战斗。
 在手中时，附加放逐。
-<color=#FFC5BA><b>慌张</b>：技能附加迅速</color>
-",
+<color=#FFC5BA><b>慌张</b>：技能附加迅速</color>",
 Skill/S_Attack_All_Name,Text,,,,,<color=#FF6767>湮裂的燐焰晶</color>,
 Skill/S_Backup_Description,Text,,,,,"抽取1个技能，
 将<color=#FF6767>湮裂的燐焰晶</color>放入手中，直到填满手牌。",
@@ -130,16 +130,14 @@ Skill/S_Manifold_Description,Text,,,,,"<color=#BAC8FF><b>冷静</b>：手中每�
 <color=#5061A4>（预计提供&a层）</color>",
 Skill/S_Manifold_Name,Text,,,,,晶体流形,
 Skill/S_OverClocking_Description,Text,,,,,<color=#BAC8FF><b>冷静</b>：延长“折射”1回合</color>,
-Skill/S_OverClocking_Name,Text,,,,,"越频晶石
-",
+Skill/S_OverClocking_Name,Text,,,,,"越频晶石",
 Skill/S_P_Shock_Description,Text,,,,,预览效果,
 Skill/S_P_Shock_Name,Text,,,,,震荡冲击,
 Skill/S_Reconstruct_Name,Text,,,,,碎晶重构,
 Skill/S_Rectification_Description,Text,,,,,"可以将梅朗柯莉指向单体队友的专属技能更改为对“全体友军”释放。
 将1张<color=#FF6767>湮裂的燐焰晶</color>放入手中。
 <color=#BAC8FF>冷静：抽取1个技能</color>",
-Skill/S_Rectification_Name,Text,,,,,"回路整流
-",
+Skill/S_Rectification_Name,Text,,,,,"回路整流",
 Skill/S_Retreat_Description,Text,,,,,"抽取2个技能。
 若指向的队友拥有至少5个正面效果，额外抽取1个技能。",
 Skill/S_Retreat_Name,Text,,,,,后撤！,
@@ -160,7 +158,7 @@ SkillExtended/SE_OverClocking_Des,Text,,,,,下一次<color=#FF6767>湮裂的燐�
 SkillExtended/SE_OverClocking_Name,Text,,,,,越频晶石,
 SkillExtended/SE_Panic_Des,Text,,,,,可以触发慌张效果,
 SkillExtended/SE_Panic_Name,Text,,,,,慌张,
-SkillExtended/SE_Rectification_Des,Text,,,,,除了已指向的队友，技能也会应用给其他全体队友,
+SkillExtended/SE_Rectification_Des,Text,,,,,除了已指向的队友，技能也会应用给其他全体队友,
 SkillExtended/SE_Rectification_EnforceString,Text,,,,,,
 SkillExtended/SE_Rectification_Name,Text,,,,,整流,
 SkillExtended/SE_U_Refraction_Des,Text,,,,,赋予1回合折射,
