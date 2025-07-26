@@ -7,6 +7,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using static RHA_Merankori.BlowUpAttr;
 
 namespace RHA_Merankori
 {
@@ -286,6 +287,16 @@ namespace RHA_Merankori
             return buff.BuffData.Key == keyID;
         }
 
+        public static bool IsCharacterKey(this BattleChar bChar, string key)
+        {
+            return bChar?.Info?.GetData?.Key == key;
+        }
+
+        public static bool IsCharacterKey(this Character ch, string key)
+        {
+            return ch?.GetData?.Key == key;
+        }
+
         public static void Shuffle<T>(this List<T> list)
         {
             if (list == null || list.Count <= 1)
@@ -301,6 +312,85 @@ namespace RHA_Merankori
                 list[n] = list[k];
                 list[k] = temp;
             }
+        }
+
+        public static void AllyTeamEquipRunIfType<T>(Action<T> callback)
+        {
+            foreach (var info in PlayData.TSavedata.Party)
+            {
+                if (info == null || info?.Equip == null)
+                {
+                    continue;
+                }
+                foreach (var equip in info.Equip)
+                {
+                    if (equip == null)
+                    {
+                        continue;
+                    }
+                    Item_Equip equip_item = equip as Item_Equip;
+                    if (equip_item == null)
+                    {
+                        continue;
+                    }
+                    EquipBase equipBase = equip_item.ItemScript;
+                    if (equipBase == null)
+                    {
+                        equipBase = equip_item.ItemScript_Snapshot;
+                        if (equipBase == null)
+                        {
+                            continue;
+                        }
+                    }
+                    if (equipBase is T modifier)
+                    {
+                        if (modifier != null)
+                        {
+                            callback(modifier);
+                        }
+                    }
+                }
+            }
+        }
+
+        public static bool AllyTeamEquipFindType<T>()
+        {
+            foreach (var info in PlayData.TSavedata.Party)
+            {
+                if (info == null || info?.Equip == null)
+                {
+                    continue;
+                }
+                foreach (var equip in info.Equip)
+                {
+                    if (equip == null)
+                    {
+                        continue;
+                    }
+                    Item_Equip equip_item = equip as Item_Equip;
+                    if (equip_item == null)
+                    {
+                        continue;
+                    }
+                    EquipBase equipBase = equip_item.ItemScript;
+                    if (equipBase == null)
+                    {
+                        equipBase = equip_item.ItemScript_Snapshot;
+                        if (equipBase == null)
+                        {
+                            continue;
+                        }
+                    }
+                    if (equipBase is T modifier)
+                    {
+                        if (modifier != null)
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
+            return false;
         }
 
     }

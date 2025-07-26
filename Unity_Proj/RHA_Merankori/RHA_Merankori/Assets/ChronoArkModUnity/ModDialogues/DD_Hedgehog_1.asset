@@ -1,0 +1,285 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b06c1d1917f9e5c4b9cd9b7da319c29e, type: 3}
+  m_Name: DD_Hedgehog_1
+  m_EditorClassIdentifier: 
+  m_Value: {fileID: 11400000, guid: 61846aabe965d6f40a72988f76b5d2b9, type: 2}
+  ModEvent: {fileID: 114882650782276216, guid: 61846aabe965d6f40a72988f76b5d2b9, type: 2}
+  nodes:
+  - {fileID: 114155039603302210}
+  - {fileID: 114617766629182872}
+  - {fileID: 114603603379297042}
+  - {fileID: 114197318187241082}
+--- !u!114 &114048178142366210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8df50f41da6e00c46ab3430b490ea9e4, type: 3}
+  m_Name: 002_Option0
+  m_EditorClassIdentifier: 
+  m_Value: {fileID: 114539437780831186, guid: 61846aabe965d6f40a72988f76b5d2b9, type: 2}
+  Parent: {fileID: 114603603379297042}
+  target: {fileID: 114197318187241082}
+  Index: 0
+  rect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!114 &114115876372367394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8df50f41da6e00c46ab3430b490ea9e4, type: 3}
+  m_Name: 003_Option0
+  m_EditorClassIdentifier: 
+  m_Value: {fileID: 114779159327976764, guid: 61846aabe965d6f40a72988f76b5d2b9, type: 2}
+  Parent: {fileID: 114197318187241082}
+  target: {fileID: 0}
+  Index: 0
+  rect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!114 &114155039603302210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 986b6808acc31f44187f6300c1884e4b, type: 3}
+  m_Name: Start
+  m_EditorClassIdentifier: 
+  m_Value: {fileID: 114199616174569834, guid: 61846aabe965d6f40a72988f76b5d2b9, type: 2}
+  ParentTree: {fileID: 11400000}
+  m_inputPoint:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 10
+    height: 20
+  m_outputPoints:
+  - serializedVersion: 2
+    x: 11.6666565
+    y: 214
+    width: 10
+    height: 20
+  nodeRect:
+    serializedVersion: 2
+    x: -38.333344
+    y: 199
+    width: 50
+    height: 50
+  options:
+  - {fileID: 114266094335032020}
+--- !u!114 &114197318187241082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 130d4caafbfb3a245b254a242ab66912, type: 3}
+  m_Name: 003
+  m_EditorClassIdentifier: 
+  m_Value: {fileID: 114082210005389064, guid: 61846aabe965d6f40a72988f76b5d2b9, type: 2}
+  ParentTree: {fileID: 11400000}
+  m_inputPoint:
+    serializedVersion: 2
+    x: 601
+    y: 272
+    width: 10
+    height: 20
+  m_outputPoints:
+  - serializedVersion: 2
+    x: 781
+    y: 272
+    width: 10
+    height: 20
+  nodeRect:
+    serializedVersion: 2
+    x: 611
+    y: 202
+    width: 170
+    height: 160
+  options:
+  - {fileID: 114115876372367394}
+  m_CharacterName: C_Merankori
+  m_Text: "\u6D4B\u8BD52"
+  m_UseChronoArkFace: 0
+  m_UseChronoArkImage: 0
+--- !u!114 &114266094335032020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 298e594e0d672b04e950b82cc64d27b5, type: 3}
+  m_Name: Start_Option0
+  m_EditorClassIdentifier: 
+  m_Value: {fileID: 114440193631447750, guid: 61846aabe965d6f40a72988f76b5d2b9, type: 2}
+  Parent: {fileID: 114155039603302210}
+  target: {fileID: 114617766629182872}
+  Index: 0
+  rect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+--- !u!114 &114603603379297042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 130d4caafbfb3a245b254a242ab66912, type: 3}
+  m_Name: 002
+  m_EditorClassIdentifier: 
+  m_Value: {fileID: 114330384803838716, guid: 61846aabe965d6f40a72988f76b5d2b9, type: 2}
+  ParentTree: {fileID: 11400000}
+  m_inputPoint:
+    serializedVersion: 2
+    x: 318
+    y: 309
+    width: 10
+    height: 20
+  m_outputPoints:
+  - serializedVersion: 2
+    x: 498
+    y: 339
+    width: 10
+    height: 20
+  - serializedVersion: 2
+    x: 498
+    y: 369
+    width: 10
+    height: 20
+  nodeRect:
+    serializedVersion: 2
+    x: 328
+    y: 224
+    width: 170
+    height: 190
+  options:
+  - {fileID: 114048178142366210}
+  - {fileID: 114725257324045780}
+  m_CharacterName: C_Merankori
+  m_Text: "\u6D4B\u8BD5\u6587\u672CTest"
+  m_UseChronoArkFace: 0
+  m_UseChronoArkImage: 0
+--- !u!114 &114617766629182872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 341abbe0ff5c7ae429a33ee7b887308e, type: 3}
+  m_Name: ModStart
+  m_EditorClassIdentifier: 
+  m_Value: {fileID: 114795405989752884, guid: 61846aabe965d6f40a72988f76b5d2b9, type: 2}
+  ParentTree: {fileID: 11400000}
+  m_inputPoint:
+    serializedVersion: 2
+    x: 51.666656
+    y: 242.5
+    width: 10
+    height: 20
+  m_outputPoints:
+  - serializedVersion: 2
+    x: 231.66666
+    y: 242.5
+    width: 10
+    height: 20
+  nodeRect:
+    serializedVersion: 2
+    x: 61.666656
+    y: 199
+    width: 170
+    height: 107
+  options:
+  - {fileID: 114687882206091902}
+  m_CharacterName: 
+  m_Text: 
+  m_UseChronoArkFace: 0
+  m_UseChronoArkImage: 0
+--- !u!114 &114687882206091902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8df50f41da6e00c46ab3430b490ea9e4, type: 3}
+  m_Name: ModStart_Option0
+  m_EditorClassIdentifier: 
+  m_Value: {fileID: 114968424648626594, guid: 61846aabe965d6f40a72988f76b5d2b9, type: 2}
+  Parent: {fileID: 114617766629182872}
+  target: {fileID: 114603603379297042}
+  Index: 0
+  rect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+--- !u!114 &114725257324045780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8df50f41da6e00c46ab3430b490ea9e4, type: 3}
+  m_Name: 002_Option1
+  m_EditorClassIdentifier: 
+  m_Value: {fileID: 114525874804688576, guid: 61846aabe965d6f40a72988f76b5d2b9, type: 2}
+  Parent: {fileID: 114603603379297042}
+  target: {fileID: 114197318187241082}
+  Index: 1
+  rect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1

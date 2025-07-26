@@ -246,5 +246,22 @@ namespace RHA_Merankori
             }
             return total;
         }
+
+        public override void BuffOneAwake()
+        {
+            base.BuffOneAwake();
+            // 彩蛋：凤凰获得不死效果时，会表示不屑，除非它的被动失效了...
+            if(this.BChar.IsCharacterKey(GDEItemKeys.Character_Phoenix))
+            {
+                if(this.BChar.Info.Passive!=null)
+                {
+                    this.BChar.ShowAllyBattleTextRandom(ModLocalization.TSB_Phoenix_FirstShield);
+                }
+                else
+                {
+                    this.BChar.ShowAllyBattleTextRandom(ModLocalization.TSB_Phoenix_NoPassive_Shield);
+                }
+            }
+        }
     }
 }

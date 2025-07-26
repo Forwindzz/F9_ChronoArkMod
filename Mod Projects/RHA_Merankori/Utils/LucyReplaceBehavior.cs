@@ -146,12 +146,12 @@ namespace RHA_Merankori
         }
 
         // lucy Rotation和camera的rotation在相差多少度的时候，强制同步两者的rotation
-        public static float ForceCalibrateDegreeThres = 9;
+        public static float ForceCalibrateDegreeThres = 14;
 
         public void Update()
         {
             UpdateAnimation();
-            if(ss6AnimControl!=null && lucyMeshRender!=null)
+            if (ss6AnimControl!=null && lucyMeshRender!=null)
             {
                 Vector3 lucyRot = lucyMeshRender.transform.rotation.eulerAngles;
                 Vector3 camRot = Camera.main.transform.rotation.eulerAngles;
@@ -162,7 +162,7 @@ namespace RHA_Merankori
                     ss6AnimControl.SpriteRoot.transform.rotation = Camera.main.transform.rotation;
                     Debug.Log($"Force Rot player: delta={delta} | Lucy={lucyRot}, Camera={camRot}");
                 }
-                
+                //Debug.Log($"Delta Time: {Time.deltaTime} -> {1.0f / Time.deltaTime} Ticks/s");
             }
         }
 

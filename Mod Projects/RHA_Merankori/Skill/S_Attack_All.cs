@@ -41,6 +41,7 @@ namespace RHA_Merankori
 
             // 效果：反射，将伤害转移给敌方，只有队友可以转移，敌人也可以转移的话，会死循环！
             List<BattleChar> refractionOwner = new List<BattleChar>();
+            List<BattleChar> nonRefractionOwner = new List<BattleChar>();
             if(!IsRefractAttack())
             {
                 //Debug.Log($"Check Refract!");
@@ -50,12 +51,13 @@ namespace RHA_Merankori
                     {
                         refractionOwner.Add(target);
                     }
+                    else
+                    {
+                        nonRefractionOwner.Add(target);
+                    }
                 }
             }
-            else
-            {
-                //Debug.Log($"Check non - Refract!");
-            }
+
 
 
             // TODO: add other effect
@@ -81,6 +83,14 @@ namespace RHA_Merankori
             {
                 BattleSystem.DelayInputAfter(Co_AfterAttackAll());
             }
+
+            BattleSystem.DelayInputAfter(Co_CheckChat(nonRefractionOwner));
+        }
+
+        private IEnumerator Co_CheckChat(List<BattleChar> nonRefractionOwner)
+        {
+            CheckChatOnAttack(nonRefractionOwner);
+            yield break;
         }
 
         public override void HandInit()
@@ -177,6 +187,38 @@ namespace RHA_Merankori
             {
                 BChar.MyTeam.Add(skill.CloneSkill(), true);
             }
+        }
+        //对话彩蛋==========
+
+        public static void CheckChatOnAttack(List<BattleChar> beAttackedChar)
+        {
+            foreach(BattleChar bChar in beAttackedChar)
+            {
+                // 凤凰
+                if (bChar.IsCharacterKey(GDEItemKeys.Character_Phoenix))
+                {
+                    int hp = bChar.HP;
+                    if(hp<=-2000)
+                    {
+                        bChar.ShowAllyBattleTextRandom(
+                            ModLocalization.TSB_Phoenix_LowHP_2000_Shield,
+                            Mathf.Max(0.9f,(-2000 - hp) / 5000.0f + 0.5f));
+                    }
+                    else if(hp <= -500)
+                    {
+                        bChar.ShowAllyBattleTextRandom(
+                            ModLocalization.TSB_Phoenix_LowHP_500_Shield,0.5f);
+                    }
+                    else if (hp <= 0)
+                    {
+                        bChar.ShowAllyBattleTextRandom(
+                            ModLocalization.TSB_Phoenix_LowHP_0_Shield, 
+                            Mathf.Max(0.5f, 0.25f + (-hp) / 500.0f * 0.25f));
+                    }
+
+                }
+            }
+            
         }
     }
 }

@@ -2,6 +2,7 @@
 using RHA_Merankori;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
@@ -9,11 +10,18 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace Utils.Patches
+namespace RHA_Merankori
 {
+    
+    public interface IRemoveDeadImmuneLimitForTeam
+    {
+
+    }
+
     [HarmonyPatch]
     static class StatPatch
     {
+
         [HarmonyPatch(typeof(Character), "get_stat", MethodType.Getter)]
         public static class Patch_Character_get_stat
         {
@@ -76,20 +84,36 @@ namespace Utils.Patches
             public static void MyPostfix(Character __instance)
             {
                 // 插入 StatC 调用后的逻辑
-                BattleChar bChar = __instance.GetBattleChar;
-                if (bChar!=null)
+                if(BattleSystem.instance==null)
                 {
-                    if(bChar.BuffFind(ModItemKeys.Buff_B_DeadImmuneNoLimit)&& tempDeadImmune>80)
+                    if(Utils.AllyTeamEquipFindType<IRemoveDeadImmuneLimitForTeam>())
                     {
-                        Stat newStat = __instance.G_get_stat;
-                        //Debug.Log($"Try to modify Dead immune limit {__instance.Name}: {newStat.DeadImmune} -> {tempDeadImmune}");
-                        newStat.DeadImmune = tempDeadImmune;
-                        __instance.G_get_stat = newStat;
+                        RecoverDeadImmune(__instance);
                     }
                 }
+                else
+                {
+                    BattleChar bChar = __instance.GetBattleChar; // 不要在非战斗时调用，每次调用要20ms...
+                    if (bChar != null)
+                    {
+                        bool find = bChar.BuffFind(ModItemKeys.Buff_B_DeadImmuneNoLimit);
+                        if (find && tempDeadImmune > 80)
+                        {
+                            RecoverDeadImmune(__instance);
+                        }
+                    }
+                }
+            }
+
+            private static void RecoverDeadImmune(Character __instance)
+            {
+                ref Stat newStatRef = ref __instance.G_get_stat;
+                newStatRef.DeadImmune = tempDeadImmune;
+                //Debug.Log($"Try to modify Dead immune limit {__instance.Name}: {newStat.DeadImmune} -> {tempDeadImmune}");
             }
         }
 
 
     }
+    
 }

@@ -21,6 +21,17 @@ namespace RHA_Merankori
     {
         private const float BASE_ITEM_CHANCE = 0.3f;
 
+
+        public class BlowUpResult
+        {
+            public int totalTilesInrange = 0;
+            public List<MapTile> hiddenTiles = new List<MapTile>();
+            public List<MapTile> rewardTiles = new List<MapTile>();
+            public List<MapTile> emptyTiles = new List<MapTile>();
+
+            public bool CanBlowUP => rewardTiles.Count > 0 || emptyTiles.Count > 0;
+        }
+
         /// <summary>
         /// 
         /// </summary>
@@ -72,7 +83,7 @@ namespace RHA_Merankori
         /// <param name="tilePos">HexTile的坐标，也是数组下标</param>
         /// <param name="range">范围格子数</param>
         /// <returns></returns>
-        public static bool BlowUpTiles(Vector3 tilePos, int range)
+        public static BlowUpResult BlowUpTiles(Vector3 tilePos, int range)
         {
             if (
                 StageSystem.instance == null ||
@@ -81,26 +92,30 @@ namespace RHA_Merankori
                 )
             {
                 //Debug.Log($"BlowUpTile: Null StageSystem.instance or .Map, Skip");
-                return false;
+                return null;
             }
+            BlowUpResult result = new BlowUpResult();
+
+
             Vector3 cubePlayerPos = MapTile.VecToCube(tilePos);
             List<Vector2> candidatesHexPos = MapTile.MapRange(cubePlayerPos, range, StageSystem.instance.Map.Size);
+            result.totalTilesInrange = candidatesHexPos.Count;
             //Debug.Log($"Get {candidatesHexPos.Count} pos, start to modify map");
 
             if (candidatesHexPos.Count == 0)
             {
                 //Debug.Log($"BlowUpTile: No suitable map tile found, skip");
-                return false;
+                return result;
             }
 
-            bool result = false;
+            //bool result = false;
             try
             {
                 //对附近1格范围内的HexTile进行检查
                 foreach (Vector2 cHexPos in candidatesHexPos)
                 {
                     MapTile mapTile = StageSystem.instance.Map.MapObject[(int)cHexPos.x, (int)cHexPos.y];
-                    result |= BlowUpTile(mapTile);
+                    BlowUpTile(mapTile, result);
                 }
                 Transform tileTransform = StageSystem.instance.Map.MapObject[(int)tilePos.x, (int)tilePos.y].TileObject.transform;
                 MasterAudio.PlaySound("SE_FireEffect", 1f, null, 0f, null, null, false, false);
@@ -111,14 +126,24 @@ namespace RHA_Merankori
                 Debug.LogError(e.Message);
                 Debug.LogError(e.StackTrace);
             }
-            if (result)
+            return result;
+        }
+
+
+        public static void DarkenMapTileColor(MapTile cMapTile)
+        {
+            DarkenMapTileColor(cMapTile, new Vector3(0.8f, 0.78f, 0.78f));
+        }
+        public static void DarkenMapTileColor(MapTile cMapTile, Vector3 factor)
+        {
+            List<SpriteRenderer> sprites = cMapTile.HexTileComponent.Sprites;
+            foreach (var sr in sprites)
             {
-                if (LucyReplaceBehavior.Instance != null)
+                if (sr != null)
                 {
-                    LucyReplaceBehavior.Instance.PlayOnceAnimation(LucyReplaceBehavior.ANIM_DAMAGE, false);
+                    sr.color = DarkenColor(sr.color, factor);
                 }
             }
-            return result;
         }
 
         /// <summary>
@@ -126,7 +151,7 @@ namespace RHA_Merankori
         /// </summary>
         /// <param name="cMapTile"></param>
         /// <returns></returns>
-        public static bool BlowUpTile(MapTile cMapTile)
+        public static bool BlowUpTile(MapTile cMapTile, BlowUpResult result)
         {
             if (
                 StageSystem.instance == null ||
@@ -163,14 +188,7 @@ namespace RHA_Merankori
                 //TODO:需要确认摧毁墙壁后才执行这个
                 if (cMapTile.Info.Type is TileTypes.HiddenWall)
                 {
-                    List<SpriteRenderer> sprites = cMapTile.HexTileComponent.Sprites;
-                    foreach (var sr in sprites)
-                    {
-                        if (sr != null)
-                        {
-                            sr.color = DarkenColor(sr.color, new Vector3(0.8f, 0.78f, 0.78f));
-                        }
-                    }
+                    result.hiddenTiles.Add(cMapTile);
                 }
                 
                 return false;
@@ -187,11 +205,13 @@ namespace RHA_Merankori
                 //Debug.Log($"Block tile @{cHexPos}: Decide set up as item");
                 GenerateRandomChestReward(cMapTile, out TileTypes.Event newEvent, out string rewardObjectKey);
                 ReplaceTileWithEvent(cMapTile, rewardObjectKey, newEvent);
+                result.rewardTiles.Add(cMapTile);
             }
             else
             {
                 //Debug.Log($"Block tile @{cHexPos}: Decide set up as road");
                 cMapTile.Info.Type = new TileTypes.Road();
+                result.emptyTiles.Add(cMapTile);
             }
 
             //最后根据设定的内容，更新小地图

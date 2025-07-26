@@ -18,7 +18,11 @@ namespace RHA_Merankori
     /// 解除队伍无法战斗抵抗的上限，
     /// 使用燐晶核时，摧毁地图的半径增加1格。
     /// </summary>
-    public class E_AdjustCrystal : EquipBase, IP_BattleStart_Ones, BlowUpAttr.IModifyBlowUpAttr
+    public class E_AdjustCrystal : 
+        EquipBase, 
+        IP_BattleStart_Ones, 
+        BlowUpAttr.IModifyBlowUpAttr,
+        IRemoveDeadImmuneLimitForTeam
     {
         public void BattleStart(BattleSystem Ins)
         {

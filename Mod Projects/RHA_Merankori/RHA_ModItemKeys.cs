@@ -322,6 +322,130 @@ namespace RHA_Merankori
 
     public static class ModLocalization
     {
+		/// <summary>
+		/// Korean:
+		/// English:
+		/// Japanese:
+		/// Chinese:
+		/// 我可不需要这些小伎俩，这种伪造的力量！
+		/// ---
+		/// 这种有什么用啊...啊！
+		/// ---
+		/// 你是t还是我是t？
+		/// ---
+		/// 你这不够火爆啊
+		/// Chinese-TW:
+		/// </summary>
+        public static string TSB_Phoenix_FirstShield => ModManager.getModInfo("RHA_Merankori").localizationInfo.SystemLocalizationUpdate("TSB_Phoenix_FirstShield");
+		/// <summary>
+		/// Korean:
+		/// English:
+		/// Japanese:
+		/// Chinese:
+		/// 我饿了，盾填不了我的肚子！
+		/// ---
+		/// ..凤凰是铁，面包是钢！
+		/// Chinese-TW:
+		/// </summary>
+        public static string TSB_Phoenix_LowHP_0_Shield => ModManager.getModInfo("RHA_Merankori").localizationInfo.SystemLocalizationUpdate("TSB_Phoenix_LowHP_0_Shield");
+		/// <summary>
+		/// Korean:
+		/// English:
+		/// Japanese:
+		/// Chinese:
+		/// 你是要榨干我吗？？
+		/// ---
+		/// 我要饿死...死不了但是饿啊！
+		/// Chinese-TW:
+		/// </summary>
+        public static string TSB_Phoenix_LowHP_100_Shield => ModManager.getModInfo("RHA_Merankori").localizationInfo.SystemLocalizationUpdate("TSB_Phoenix_LowHP_100_Shield");
+		/// <summary>
+		/// Korean:
+		/// English:
+		/// Japanese:
+		/// Chinese:
+		/// 面...是包！
+		/// ---
+		/// 我可...不...饿不死的凤...
+		/// ---
+		/// 我...我想回去画画...
+		/// Chinese-TW:
+		/// </summary>
+        public static string TSB_Phoenix_LowHP_2000_Shield => ModManager.getModInfo("RHA_Merankori").localizationInfo.SystemLocalizationUpdate("TSB_Phoenix_LowHP_2000_Shield");
+		/// <summary>
+		/// Korean:
+		/// English:
+		/// Japanese:
+		/// Chinese:
+		/// 你..你不能这么对我！
+		/// ---
+		/// 露西！快阻止她！我受不了了！
+		/// ---
+		/// 我是无敌的凤凰，别拿我做炸鸡！
+		/// Chinese-TW:
+		/// </summary>
+        public static string TSB_Phoenix_LowHP_500_Shield => ModManager.getModInfo("RHA_Merankori").localizationInfo.SystemLocalizationUpdate("TSB_Phoenix_LowHP_500_Shield");
+		/// <summary>
+		/// Korean:
+		/// English:
+		/// Japanese:
+		/// Chinese:
+		/// 这不是有点用嘛。
+		/// ---
+		/// 我..我可是不死的凤凰！
+		/// Chinese-TW:
+		/// </summary>
+        public static string TSB_Phoenix_NoPassive_Shield => ModManager.getModInfo("RHA_Merankori").localizationInfo.SystemLocalizationUpdate("TSB_Phoenix_NoPassive_Shield");
+		/// <summary>
+		/// Korean:
+		/// English:
+		/// Japanese:
+		/// Chinese:
+		/// ...（摇头）
+		/// ---
+		/// 周围已经是空地而且我...我...
+		/// ---
+		/// 不...不可以吧...
+		/// Chinese-TW:
+		/// </summary>
+        public static string TS_Merankori_RHA_CannotUse => ModManager.getModInfo("RHA_Merankori").localizationInfo.SystemLocalizationUpdate("TS_Merankori_RHA_CannotUse");
+		/// <summary>
+		/// Korean:
+		/// English:
+		/// Japanese:
+		/// Chinese:
+		/// 我...我真的做不到...
+		/// ---
+		/// 我也有点困惑...我不明白为什么...
+		/// ---
+		/// 露..露西我想我应该拆不了那边的区域而且...而且我已经尽力去弄了但是它丝毫不动我..我也不知道为什么！
+		/// Chinese-TW:
+		/// </summary>
+        public static string TS_Merankori_RHA_CannotUseHidden => ModManager.getModInfo("RHA_Merankori").localizationInfo.SystemLocalizationUpdate("TS_Merankori_RHA_CannotUseHidden");
+		/// <summary>
+		/// Korean:
+		/// English:
+		/// Japanese:
+		/// Chinese:
+		/// ...（困惑地看向焦黑的树木）
+		/// ---
+		/// 再...再试一次？
+		/// ---
+		/// 这...这是怎么回事?
+		/// Chinese-TW:
+		/// </summary>
+        public static string TS_Merankori_RHA_FindHidden => ModManager.getModInfo("RHA_Merankori").localizationInfo.SystemLocalizationUpdate("TS_Merankori_RHA_FindHidden");
+		/// <summary>
+		/// Korean:
+		/// English:
+		/// Japanese:
+		/// Chinese:
+		/// 你把我给炸成刺猬了，快给我梳毛！
+		/// ---
+		/// 我刚梳的毛！
+		/// Chinese-TW:
+		/// </summary>
+        public static string TS_Phoenix_UseRHA => ModManager.getModInfo("RHA_Merankori").localizationInfo.SystemLocalizationUpdate("TS_Phoenix_UseRHA");
 
     }
 }
