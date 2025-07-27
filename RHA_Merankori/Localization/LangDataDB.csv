@@ -6,7 +6,8 @@ Buff/B_Backup_Description,Text,,,,,回合开始时，生成1张<color=#FF6767>�
 Buff/B_Backup_Name,Text,,,,,后备的燐焰晶,
 Buff/B_CalmDown_Description,Text,,,,,阻止进入慌张状态，每次阻止会减少1层。,
 Buff/B_CalmDown_Name,Text,,,,,镇定,
-Buff/B_Calm_Description,Text,,,,,"<color=#BAC8FF>照料可能因自己受伤的队友...</color>
+Buff/B_Calm_Description,Text,,,,,"回合结束时，赋予体力值最低的队友1层燐色存护。
+<color=#BAC8FF>照料可能因自己受伤的队友...</color>
 回合开始时梅朗柯莉会<color=#BAC8FF><b>冷静</b></color>下来。
 当有人攻击时，进入<color=#FFC5BA><b>慌张</b></color>状态。",
 Buff/B_Calm_Name,Text,,,,,冷静,
@@ -54,18 +55,21 @@ Character/C_Merankori_PassiveDes,Text,,,,,"任何攻击会让梅朗柯莉<color=
 
 固定技能始终为<color=#FF6767>湮裂的燐焰晶</color>，会攻击除自己以外所有人，战斗会摧毁周边障碍。
 
-升级获得物品“燐晶核”2个，进入营地会获得1个，可以摧毁地形并概率发现遗失的物品。
+升级获得物品“燐晶核”2个，进入营地会获得1个，可以摧毁地形并概率发现少量遗失的物品。
 ",
 Character/C_Merankori_PassiveName,Text,,,,,"燐焰晶
 ",
-Character/C_Merankori_SelectInfo,Text,,,,,"来自梅弗特哈涅，性格内向，喜欢空想的少女。5个兄弟姐妹中最小的一个，经常帮哥哥做家务。情绪高涨之后，周围的结晶体就会变形，因为会伤害到周围的人，不太接近家族外面的人。
-然而，在一次晶石校调的过程中，梅朗柯莉的意识坠入了一个与电之国截然不同的世界。据说抵达钟塔便能返回繁华的电之国，但是方舟调查团并没有人愿意和她组队...
-「……」",
+Character/C_Merankori_SelectInfo,Text,,,,,"依赖晶石调节的技术来维系生存的少女。梅朗柯莉周围的结晶体极易受情绪影响，因为会伤害到周围的人，不太敢接近人，也十分内向。
+
+「……这真的是外面的世界吗？」
+…
+「…好困惑呀」",
 Character/C_Merankori_Text_Battle_AllyND_0,Text,,,,,抱...抱歉,
 Character/C_Merankori_Text_Battle_AllyND_1,Text,,,,,唉？...唉！,
 Character/C_Merankori_Text_Battle_Healed_0,Text,,,,,...谢谢,
 Character/C_Merankori_Text_Battle_Idle_0,Text,,,,,...,
 Character/C_Merankori_Text_Battle_Idle_1,Text,,,,,（困惑ing）,
+Character/C_Merankori_Text_Battle_Kill_0,Text,,,,,...,
 Character/C_Merankori_Text_Battle_ND_0,Text,,,,,等...等一下！,
 Character/C_Merankori_Text_Battle_ND_1,Text,,,,,回...回路要断了！,
 Character/C_Merankori_Text_Battle_Start_0,Text,,,,,要打吗...,
@@ -82,20 +86,20 @@ Character/C_Merankori_Text_MasterTarget,Text,,,,,（困惑的眼神）,
 Character/C_Merankori_Text_PharosLeader_0,Text,,,,,为...为什么无法使...唔！,
 Character/C_Merankori_Text_PharosLeader_1,Text,,,,,发生了什么...?,
 Character/C_Merankori_Text_PharosLeader_2,Text,,,,,,
-Character/C_Merankori_Text_Witch_0,Text,,,,,...,
-Character/C_Merankori_Text_Witch_1,Text,,,,,等...等等！,
+Character/C_Merankori_Text_Witch_0,Text,,,,,...可...可以吧...,
+Character/C_Merankori_Text_Witch_1,Text,,,,,不...不可以！,
 Character/C_Merankori_name,Text,,,,,梅朗柯莉,
 Item_Consume/I_RHA_Description,Text,,,,,"右击可以让梅朗柯莉摧毁周边的墙体，可能发现小型物资。
-<color=#5061A4>  --- 赤红的晶石上透射着淡淡的回路，有些不稳定...</color>",
+<color=#5061A4>  --- 赤红的晶石上透射着碎裂的回路...</color>",
 Item_Consume/I_RHA_name,Text,,,,,燐晶核,
 Item_Equip/E_AdjustCrystal_Description,Text,,,,,"解除队伍无法战斗抵抗的上限，
 使用燐晶核时，摧毁地图的半径增加1格。
 
-<color=#5061A4>—— 晶石调起来更顺了，比起依赖症，更加粗放的使用不是更好吗？梅朗柯莉酱你怎么不说话了...唔！...</color>",
+<color=#5061A4>—— 晶石调起来更顺了，比起依赖症，更加粗放的使用不是更好吗？梅朗柯莉酱你怎么不说话了...</color>",
 Item_Equip/E_AdjustCrystal_name,Text,,,,,精密调石台,
 Item_Equip/E_FireProtect_Description,Text,,,,,"回合开始时，若没有燐色存护增益，则赋予1层燐色存护（抵抗无法战斗1次）。
 
-<color=#5061A4>——这是从可爱的草刺猬上掉落的，没有1只草刺猬牺牲，刚刚那只是遭受了主的....？...梅朗柯莉酱，愈术是什么，这里应该只有主的圣术。</color>",
+<color=#5061A4>——这的确是从草刺猬上掉落的，这里没被黑雾浸染的草刺猬都受到了主的关照，只是刚刚那只被主....？...愈术是什么，这里应该只有主的圣术。</color>",
 Item_Equip/E_FireProtect_name,Text,,,,,火之守护,
 Skill/S_Attack_All_Description,Text,,,,,"对所有人造成伤害，除了梅朗柯莉自身。此伤害不会导致队友无法战斗。
 在手中时，附加放逐。
@@ -130,14 +134,14 @@ Skill/S_Manifold_Description,Text,,,,,"<color=#BAC8FF><b>冷静</b>：手中每�
 <color=#5061A4>（预计提供&a层）</color>",
 Skill/S_Manifold_Name,Text,,,,,晶体流形,
 Skill/S_OverClocking_Description,Text,,,,,<color=#BAC8FF><b>冷静</b>：延长“折射”1回合</color>,
-Skill/S_OverClocking_Name,Text,,,,,"越频晶石",
+Skill/S_OverClocking_Name,Text,,,,,越频晶石,
 Skill/S_P_Shock_Description,Text,,,,,预览效果,
 Skill/S_P_Shock_Name,Text,,,,,震荡冲击,
 Skill/S_Reconstruct_Name,Text,,,,,碎晶重构,
 Skill/S_Rectification_Description,Text,,,,,"可以将梅朗柯莉指向单体队友的专属技能更改为对“全体友军”释放。
-将1张<color=#FF6767>湮裂的燐焰晶</color>放入手中。
+丢弃此技能时，优先抽取2个梅朗柯莉的技能。
 <color=#BAC8FF>冷静：抽取1个技能</color>",
-Skill/S_Rectification_Name,Text,,,,,"回路整流",
+Skill/S_Rectification_Name,Text,,,,,回路整流,
 Skill/S_Retreat_Description,Text,,,,,"抽取2个技能。
 若指向的队友拥有至少5个正面效果，额外抽取1个技能。",
 Skill/S_Retreat_Name,Text,,,,,后撤！,

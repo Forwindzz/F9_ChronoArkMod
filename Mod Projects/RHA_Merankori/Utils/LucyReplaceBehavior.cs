@@ -140,13 +140,24 @@ namespace RHA_Merankori
         }
 
 
-        private float DegreeDelta(float a, float b)
+        private float DegreeDeltaAbs(float a, float b)
         {
-            return Mathf.Min(Mathf.Abs(a - b), Mathf.Abs(a - b - 360.0f), Mathf.Abs(a - b + 360.0f));
+            return Mathf.Abs((b - a + 180) % 360 - 180);
+        }
+
+        private float DegreeMoveToTarget(float cur, float target, float delta)
+        {
+            float diff = (target - cur + 180) % 360 - 180;
+
+            if (Mathf.Abs(diff) <= delta)
+                return target;
+
+            return (cur + Mathf.Sign(diff) * delta + 360f) % 360f;
         }
 
         // lucy Rotation和camera的rotation在相差多少度的时候，强制同步两者的rotation
-        public static float ForceCalibrateDegreeThres = 14;
+        public static float ForceCalibrateDegreeThres = 7;
+        public static float carlibrateRotSpeed = 0.1f;
 
         public void Update()
         {
@@ -155,11 +166,13 @@ namespace RHA_Merankori
             {
                 Vector3 lucyRot = lucyMeshRender.transform.rotation.eulerAngles;
                 Vector3 camRot = Camera.main.transform.rotation.eulerAngles;
-                float delta = DegreeDelta(lucyRot.x, camRot.x);
+                float delta = DegreeDeltaAbs(lucyRot.x, camRot.x);
                 if(delta>=ForceCalibrateDegreeThres)
                 {
-                    lucyMeshRender.transform.rotation = Camera.main.transform.rotation;
+                    lucyRot.x = DegreeMoveToTarget(lucyRot.x, camRot.x, delta * Time.deltaTime * carlibrateRotSpeed);
+                    lucyMeshRender.transform.rotation = Quaternion.Euler(lucyRot);
                     ss6AnimControl.SpriteRoot.transform.rotation = Camera.main.transform.rotation;
+
                     Debug.Log($"Force Rot player: delta={delta} | Lucy={lucyRot}, Camera={camRot}");
                 }
                 //Debug.Log($"Delta Time: {Time.deltaTime} -> {1.0f / Time.deltaTime} Ticks/s");

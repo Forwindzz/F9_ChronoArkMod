@@ -29,5 +29,24 @@ namespace RHA_Merankori
                 && info.CanApplyCalm
                 && x.BChar==this.BChar);
         }
+
+        public override void TurnUpdate()
+        {
+            base.TurnUpdate();
+            BattleChar finalCandidate = null;
+            int minHP = int.MaxValue;
+            foreach(var candidate in BChar.MyTeam.AliveChars_Vanish)
+            {
+                if(candidate.HP<minHP)
+                {
+                    minHP = candidate.HP;
+                    finalCandidate = candidate;
+                }
+            }
+            if(finalCandidate!=null)
+            {
+                finalCandidate.BuffAdd(ModItemKeys.Buff_B_Shield, this.BChar);
+            }
+        }
     }
 }

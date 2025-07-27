@@ -118,7 +118,7 @@ namespace RHA_Merankori
                 if(shieldBuff is B_Shield bShield)
                 {
                     bShield.canJudgeReduceStack = true;
-                    Debug.Log(">> Set B_Shield canJudgeReduceStack True!");
+                    //Debug.Log(">> Set B_Shield canJudgeReduceStack True!");
                     return true;
                 }
                 else
@@ -126,7 +126,7 @@ namespace RHA_Merankori
                     Debug.LogWarning($">> Try to convert {shieldBuff.GetType().FullName} to B_Shield failed!");
                 }
             }
-            Debug.Log(">> Cannot find B_Shield, Skip!");
+            //Debug.Log(">> Cannot find B_Shield, Skip!");
             return true;
         }
 

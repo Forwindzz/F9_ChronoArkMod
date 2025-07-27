@@ -22,7 +22,7 @@ namespace RHA_Merankori
     /// <summary>
     /// 整流
     /// 可以将梅朗柯莉指向单体队友的专属技能更改为对“全体友军”释放。
-    /// 并将1张“湮裂的燐焰晶”放入手中。
+    /// 弃牌时，抽取2个梅朗柯莉的专属技能。
     /// 冷静：抽1张卡
     /// </summary>
     public class S_Rectification : Merankori_BaseSkill,
@@ -45,35 +45,9 @@ namespace RHA_Merankori
                 if(skill!=null)
                 {
                     skill.EnsureExtendSkill(ModItemKeys.SkillExtended_SE_Rectification);
-                    /*
-                    bool isMerankoriSkill = skill.Master.Info.KeyData == ModItemKeys.Character_C_Merankori;
-                    if(!isMerankoriSkill)
-                    {
-                        //S_Attack_All.GenCardToHand(this.BChar);
-                        continue;
-                    }
-
-                    bool isAllyTarget =
-                        skill.MySkill.Target.Key == GDEItemKeys.s_targettype_ally ||
-                        skill.MySkill.Target.Key == GDEItemKeys.s_targettype_otherally;
-                    if(!isAllyTarget)
-                    {
-                        //S_Attack_All.GenCardToHand(this.BChar);
-                        continue;
-                    }
-
-                    bool isMerankoriSpecificSkill = skill.AllExtendeds.Any(x => x is ICanMerankoriRectification);
-                    if (isMerankoriSpecificSkill) 
-                    {
-                        skill.EnsureExtendSkill(ModItemKeys.SkillExtended_SE_Rectification);
-                    }
-                    else
-                    {
-                        //S_Attack_All.GenCardToHand(this.BChar);
-                    }*/
                 }
             }
-            S_Attack_All.GenCardToHand(this.BChar);
+            //S_Attack_All.GenCardToHand(this.BChar);
             if(this.IsCalm())
             {
                 this.BChar.MyTeam.Draw();
@@ -105,6 +79,29 @@ namespace RHA_Merankori
                 }
             }
             return base.SkillTargetSelectExcept(skill);
+        }
+
+        public override void DiscardSingle(bool Click)
+        {
+            base.DiscardSingle(Click);
+            for (int i = 0; i < 2; i++)
+            {
+                BattleSystem.DelayInputAfter(this.Draw());
+            }
+        }
+
+        private IEnumerator Draw()
+        {
+            Skill skill2 = BattleSystem.instance.AllyTeam.Skills_Deck.Find((Skill skill) => skill.Master.IsCharacterKey(ModItemKeys.Character_C_Merankori));
+            if (skill2 == null)
+            {
+                BattleSystem.instance.AllyTeam.Draw();
+            }
+            else
+            {
+                yield return BattleSystem.instance.StartCoroutine(BattleSystem.instance.AllyTeam._ForceDraw(skill2, null));
+            }
+            yield break;
         }
     }
 }

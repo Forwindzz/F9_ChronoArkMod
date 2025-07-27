@@ -45,9 +45,15 @@ namespace RHA_Merankori
             base.BuffOneAwake();
             if (EmotionBuffSwitch.IsPanic(this.BChar))
             {
-                EmotionBuffSwitch.SwitchToCalm(this.BChar);
-                this.SelfStackDestroy();
+                BattleSystem.DelayInputAfter(AwakeRemove());
             }
+        }
+
+        private IEnumerator AwakeRemove()
+        {
+            EmotionBuffSwitch.SwitchToCalm(this.BChar);
+            this.SelfStackDestroy();
+            yield break;
         }
 
         private IEnumerator Co_ResetFlag()

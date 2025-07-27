@@ -183,9 +183,8 @@ namespace RHA_Merankori
             //不是Block/Border的话就不移除
             if (!(cMapTile.Info.Type is TileTypes.Block || cMapTile.Info.Type is TileTypes.Border))
             {
-                Debug.Log($"{cMapTile.Info.Type.GetType().Name} tile @{cHexPos}, Skip");
+                //Debug.Log($"{cMapTile.Info.Type.GetType().Name} tile @{cHexPos}, Skip");
                 //如果是隐藏，那么变黑一点
-                //TODO:需要确认摧毁墙壁后才执行这个
                 if (cMapTile.Info.Type is TileTypes.HiddenWall)
                 {
                     result.hiddenTiles.Add(cMapTile);

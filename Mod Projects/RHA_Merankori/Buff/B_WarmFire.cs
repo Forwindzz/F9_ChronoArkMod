@@ -24,7 +24,7 @@ namespace RHA_Merankori
     {
 
         //private int totalHeal = 0;
-        private const int BASE_HEAL_THRESHOLD = 15;
+        private const int BASE_HEAL_THRESHOLD = 10;
 
         private int GetBaseThreshold()
         {

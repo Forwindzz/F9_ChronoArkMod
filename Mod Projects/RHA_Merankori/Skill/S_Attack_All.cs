@@ -161,7 +161,7 @@ namespace RHA_Merankori
                 newSkill.PlusHit = true;
                 newSkill.Disposable = true;
                 Debug.Log($"Emit refract attack!");
-                battleChar.UseSkill(newSkill, targetEnemy);
+                this.BChar.UseSkill(newSkill, targetEnemy);
                 yield return new WaitForSeconds(1.0f);
             }
             Debug.Log($"Emit refract attack finished!");

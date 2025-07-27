@@ -41,6 +41,10 @@ namespace RHA_Merankori
             {
                 return;
             }
+            if(SkillD!=this.MySkill)
+            {
+                return;
+            }
             List<BattleChar> candidateChars = BattleSystem.instance.AllyTeam.AliveChars_Vanish;
             foreach (BattleChar candidateChar in candidateChars)
             {
