@@ -1,177 +1,263 @@
-Key,Type,Desc,Korean,English,Japanese,Chinese,Chinese-TW [zh-tw]
-Buff/B_Backflow_Description,Text,,,,,"<color=#FF6767>湮裂的燐焰晶</color>会根据队友已损失的体力值增加伤害，每&a点增加&b%伤害。
-<color=#5061A4>（预期增加&c）</color>",
-Buff/B_Backflow_Name,Text,,,,,逆流的燐焰晶,
-Buff/B_Backup_Description,Text,,,,,回合开始时，生成1张<color=#FF6767>湮裂的燐焰晶</color>并放入手牌中。,
-Buff/B_Backup_Name,Text,,,,,后备的燐焰晶,
-Buff/B_CalmDown_Description,Text,,,,,阻止进入慌张状态，每次阻止会减少1层。,
-Buff/B_CalmDown_Name,Text,,,,,镇定,
-Buff/B_Calm_Description,Text,,,,,"回合结束时，赋予体力值最低的队友1层燐色存护。
+﻿Key,Type,Desc,Korean,English,Japanese,Chinese,Chinese-TW [zh-tw]
+Buff/B_Backflow_Description,Text,,,"<color=#FF6767>Obliterated Phosflame Crystal</color> increases damage based on the health lost by allies, by &b% for every &a points.
+<color=#5061A4>(Expected increase: &c)</color>",,"<color=#FF6767>湮裂的燐焰晶</color>会根据队友已损失的体力值增加伤害，每&a点增加&b%伤害。
+<color=#5061A4>（预期增加&c）</color>","""<color=#FF6767>湮裂的燐焰晶</color>會根據隊友已損失的體力值增加傷害，每&a點增加&b%傷害。
+<color=#5061A4>（預期增加&c）</color>"""
+Buff/B_Backflow_Name,Text,,,Countercurrent Phosflame Crystal,,逆流的燐焰晶,逆流的燐焰晶
+Buff/B_Backup_Description,Text,,,"At the start of the turn, add 1 <color=#FF6767>Obliterated Phosflame Crystal</color> to your hand.",,回合开始时，生成1张<color=#FF6767>湮裂的燐焰晶</color>并放入手牌中。,回合開始時，生成1張<color=#FF6767>湮裂的燐焰晶</color>並放入手牌中。
+Buff/B_Backup_Name,Text,,,Backup Phosflame Crystal,,后备的燐焰晶,後備的燐焰晶
+Buff/B_CalmDown_Description,Text,,,Prevents entering Panic state. Each prevention reduces 1 stack.,,阻止进入慌张状态，每次阻止会减少1层。,阻止進入慌張狀態，每次阻止都會減少1層。
+Buff/B_CalmDown_Name,Text,,,Composed Down,,镇定,鎮定
+Buff/B_Calm_Description,Text,,,"At the end of the turn, grant 1 stack of Phosguard to the ally with the lowest Health.
+<color=#BAC8FF>Tending to allies who may be hurt...</color>
+At the start of the turn, Melancholy will <color=#BAC8FF><b>Calm</b></color> down.
+When someone attacks, enter the <color=#FFC5BA><b>Panic</b></color> state.",,"回合结束时，赋予体力值最低的队友1层燐色存护。
 <color=#BAC8FF>照料可能因自己受伤的队友...</color>
 回合开始时梅朗柯莉会<color=#BAC8FF><b>冷静</b></color>下来。
-当有人攻击时，进入<color=#FFC5BA><b>慌张</b></color>状态。",
-Buff/B_Calm_Name,Text,,,,,冷静,
-Buff/B_Charge_Description,Text,,,,,释放<color=#FF6767>湮裂的燐焰晶</color>时，每层增加其10%的伤害，然后移除此效果。,
-Buff/B_Charge_Name,Text,,,,,蓄能,
-Buff/B_DLoop_Description,Text,,,,,释放<color=#FF6767>湮裂的燐焰晶</color>时，获得1点法力值。,
-Buff/B_DLoop_Name,Text,,,,,导流回路,
-Buff/B_DeadImmuneNoLimit_Description,Text,,,,,目前的无法战斗抵抗：&a%,
-Buff/B_DeadImmuneNoLimit_Name,Text,,,,,解除无法战斗抵抗上限,
+当有人攻击时，进入<color=#FFC5BA><b>慌张</b></color>状态。","回合結束時，賦予體力值最低的隊友1層燐色存護。
+<color=#BAC8FF>照顧可能因自己受傷的隊友...</color>
+回合開始時梅朗柯莉會<color=#BAC8FF><b>冷靜</b></color>下來。
+當有人攻擊時，進入<color=#FFC5BA><b>慌張</b></color>狀態。"
+Buff/B_Calm_Name,Text,,,Calm,,冷静,冷靜
+Buff/B_Charge_Description,Text,,,"When casting <color=#FF6767>Obliterated Phosflame Crystal</color>, each stack increases its damage by 10%, then remove this effect.",,释放<color=#FF6767>湮裂的燐焰晶</color>时，每层增加其10%的伤害，然后移除此效果。,釋放<color=#FF6767>湮裂的燐焰晶</color>時，每層增加其10%的傷害，然後移除此效果。
+Buff/B_Charge_Name,Text,,,Charging,,蓄能,蓄能
+Buff/B_DLoop_Description,Text,,,"When casting <color=#FF6767>Obliterated Phosflame Crystal</color>, gain 1 Mana.",,释放<color=#FF6767>湮裂的燐焰晶</color>时，获得1点法力值。,釋放<color=#FF6767>湮裂的燐焰晶</color>時，獲得1點法力值。
+Buff/B_DLoop_Name,Text,,,Diversion Circuit,,导流回路,導流迴路
+Buff/B_DeadImmuneNoLimit_Description,Text,,,Current Faint Resist: &a%,,目前的无法战斗抵抗：&a%,目前的無法戰鬥抵抗：&a%
+Buff/B_DeadImmuneNoLimit_Name,Text,,,Remove the limit of Faint Resist,,解除无法战斗抵抗上限,解除無法戰鬥抵抗上限
 Buff/B_DeathResist_Description,Text,,,,,,
-Buff/B_DeathResist_Name,Text,,,,,无法战斗抵抗,
-Buff/B_EnsureShield_Description,Text,,,,,若回合开始时没有燐色存护，则施加1层燐色存护。,
-Buff/B_EnsureShield_Name,Text,,,,,火之存护,
-Buff/B_FreqShift_Description,Text,,,,,受到<color=#FF6767>湮裂的燐焰晶</color>的攻击时，将受到的伤害转化为等量的治疗，然后移除1层。,
-Buff/B_FreqShift_Name,Text,,,,,频移微调,
-Buff/B_GenCrystal_Description,Text,,,,,每当队友脱离濒死状态时，将<color=#FF6767>湮裂的燐焰晶</color>放入手中。,
-Buff/B_GenCrystal_Name,Text,,,,,焰晶生成,
+Buff/B_DeathResist_Name,Text,,,Faint Resist,,无法战斗抵抗,無法戰鬥抵抗
+Buff/B_EnsureShield_Description,Text,,,"If there is no Phosguard at the start of the turn, apply 1 stack of Phosguard.",,若回合开始时没有燐色存护，则施加1层燐色存护。,
+Buff/B_EnsureShield_Name,Text,,,Guardian of Fire,,火之存护,火之存護
+Buff/B_FreqShift_Description,Text,,,"When attacked by <color=#FF6767>Obliterated Phosflame Crystal</color>, convert the damage received into an equal amount of healing, then remove 1 stack.",,受到<color=#FF6767>湮裂的燐焰晶</color>的攻击时，将受到的伤害转化为等量的治疗，然后移除1层。,受到<color=#FF6767>湮裂的燐焰晶</color>的攻擊時，將受到的傷害轉化為等量的治療，然後移除1層。
+Buff/B_FreqShift_Name,Text,,,Frequency Shift Fine-Tuning,,频移微调,頻移微調
+Buff/B_GenCrystal_Description,Text,,,"Whenever an ally leaves Death's Door, add <color=#FF6767>Obliterated Phosflame Crystal</color> to your hand.",,每当队友脱离濒死状态时，将<color=#FF6767>湮裂的燐焰晶</color>放入手中。,每當隊友脫離瀕死狀態時，將<color=#FF6767>湮裂的燐焰晶</color>放入手中。
+Buff/B_GenCrystal_Name,Text,,,Phosflame Crystal Generation,,焰晶生成,焰晶生成
 Buff/B_H_FreqShift_Lucy_Description,Text,,,,,引导燐焰晶,
 Buff/B_H_FreqShift_Lucy_Name,Text,,,,,频移微调-露西,
 Buff/B_NotDeadlyAtk_Description,Text,,,,,燐焰晶的伤害不会致命,
 Buff/B_NotDeadlyAtk_Name,Text,,,,,烈燐焰晶,
-Buff/B_OverClocking_Description,Text,,,,,下一次<color=#FF6767>湮裂的燐焰晶</color>会附带“震荡冲击”干扰减益,
-Buff/B_OverClocking_Name,Text,,,,,越频晶石,
-Buff/B_Panic_Description,Text,,,,,"<color=#FFC5BA>燐焰晶逐渐炽烈...</color>
+Buff/B_OverClocking_Description,Text,,,"The next <color=#FF6767>Obliterated Phosflame Crystal</color> will carry the ""Shock Impact"" debuff.",,下一次<color=#FF6767>湮裂的燐焰晶</color>会附带“震荡冲击”干扰减益,下次<color=#FF6767>湮裂的燐焰晶</color>會附帶「震盪衝擊」幹擾減益
+Buff/B_OverClocking_Name,Text,,,Overfrequency Crystal,,越频晶石,越頻晶石
+Buff/B_Panic_Description,Text,,,"<color=#FFC5BA>The Phosflame Crystal burns ever fiercer...</color>
+At the start of the turn, Melancholy will <color=#BAC8FF><b>Calm</b></color> down.
+When someone attacks, enter the <color=#FFC5BA><b>Panic</b></color> state.",,"<color=#FFC5BA>燐焰晶逐渐炽烈...</color>
 回合开始时，梅朗柯莉会<color=#BAC8FF><b>冷静</b></color>下来。
-当有人攻击时，进入<color=#FFC5BA><b>慌张</b></color>状态。",
-Buff/B_Panic_Name,Text,,,,,慌张,
-Buff/B_Reflow_Description,Text,,,,,"回合开始时，每层会赋予1层燐色存护。
-溢出的燐色存护会转化为5%无法战斗抵抗增益。",
-Buff/B_Reflow_Name,Text,,,,,燐焰晶回流,
-Buff/B_Refraction_Description,Text,,,,,将<color=#FF6767>湮裂的燐焰晶</color>的伤害和附加效果，折射给生命值最低的敌人。,
-Buff/B_Refraction_Name,Text,,,,,折射,
-Buff/B_Shield_Description,Text,,,,,"每层能抵抗1次无法战斗效果。
+当有人攻击时，进入<color=#FFC5BA><b>慌张</b></color>状态。","<color=#FFC5BA>燐焰晶逐漸熾熱...</color>
+回合開始時，梅朗柯莉會<color=#BAC8FF><b>冷靜</b></color>下來。
+當有人攻擊時，進入<color=#FFC5BA><b>慌張</b></color>狀態。"
+Buff/B_Panic_Name,Text,,,Panic,,慌张,慌張
+Buff/B_Reflow_Description,Text,,,"At the start of the turn, each stack grants 1 stack of Phosguard.
+Excess Phosguard will be converted into a 5% Faint Resist buff.",,"回合开始时，每层会赋予1层燐色存护。
+溢出的燐色存护会转化为5%无法战斗抵抗增益。","回合開始時，每層會賦予1層燐色存護。
+溢出的燐色存護會轉化為5%無法戰鬥抵抗增益。 "
+Buff/B_Reflow_Name,Text,,,Phosflame Crystal Reflux,,燐焰晶回流,燐焰晶回流
+Buff/B_Refraction_Description,Text,,,Refract the damage and additional effects of <color=#FF6767>Obliterated Phosflame Crystal</color> to the enemy with the lowest Health.,,将<color=#FF6767>湮裂的燐焰晶</color>的伤害和附加效果，折射给生命值最低的敌人。,將<color=#FF6767>湮裂的燐焰晶</color>的傷害和附加效果，折射給生命值最低的敵人。
+Buff/B_Refraction_Name,Text,,,Refraction,,折射,折射
+Buff/B_Shield_Description,Text,,,"Each stack can resist once Faint.
+Faint Resist <color=#5061A4>(&a%)</color> increases the received healing while at Death's Door.
+For every 20% of the party’s total Faint Resist <color=#5061A4>(&b%)</color>, increase the maximum stack limit of Phosguard by 1.",,"每层能抵抗1次无法战斗效果。
 无法战斗抵抗<color=#5061A4>（&a%）</color>会增加濒死时受到的治疗量。
-每20%全队的无法战斗抗性<color=#5061A4>（&b%）</color>增加1层燐色存护层数上限。",
-Buff/B_Shield_Name,Text,,,,,燐色存护,
-Buff/B_Shock_Description,Text,,,,,"无法使用攻击技能，若是敌人则停止行动一回合。
-持有此效果的角色可以通过丢弃自己的技能来移除此效果。",
-Buff/B_Shock_Name,Text,,,,,震荡冲击,
-Buff/B_WarmFire_Description,Text,,,,,"每当受到<color=#5061A4>&a</color>点及以上的治疗量时，赋予1层燐色存护。
-叠加2层暖焰会减少一半治疗量的阈值。",
-Buff/B_WarmFire_Name,Text,,,,,暖焰,
-Character/C_Merankori_CampSelectWord,Text,,,,,...,
-Character/C_Merankori_PassiveDes,Text,,,,,"任何攻击会让梅朗柯莉<color=#FFC5BA><b>慌张</b></color>。但在回合开始时，梅朗柯莉会<color=#BAC8FF><b>冷静</b></color>下来。
+每20%全队的无法战斗抗性<color=#5061A4>（&b%）</color>增加1层燐色存护层数上限。","每層能抵抗1次無法戰鬥效果。
+無法戰鬥抵抗<color=#5061A4>（&a%）</color>會增加瀕死時所受到的治療量。
+每20%全隊的無法戰鬥抗性<color=#5061A4>（&b%）</color>增加1層燐色存護層上限。"
+Buff/B_Shield_Name,Text,,,Phosguard,,燐色存护,磷光存護
+Buff/B_Shock_Description,Text,,,"Cannot use attack skills. If owned by enemy, skip action for one turn.
+Allies with this effect can remove it by discarding their own skill.",,"无法使用攻击技能，若是敌人则停止行动一回合。
+持有此效果的角色可以通过丢弃自己的技能来移除此效果。","無法使用攻擊技能，若是敵人則停止行動一回合。
+持有此效果的角色可以透過丟棄自己的技能來移除此效果。"
+Buff/B_Shock_Name,Text,,,Shock Impact,,震荡冲击,震盪衝擊
+Buff/B_WarmFire_Description,Text,,,"Whenever receiving <color=#5061A4>&a</color> or more healing, grant 1 stack of Phosguard.
+Stacking 2 layers of Warmflame halves the healing threshold.",,"每当受到<color=#5061A4>&a</color>点及以上的治疗量时，赋予1层燐色存护。
+叠加2层暖焰会减少一半治疗量的阈值。","每當受到<color=#5061A4>&a</color>點及以上的治療量時，賦予1層燐色存護。
+疊加2層暖焰會減少一半治療量的閾值。"
+Buff/B_WarmFire_Name,Text,,,Warmflame,,暖焰,暖焰
+Character/C_Merankori_CampSelectWord,Text,,,…,,...,
+Character/C_Merankori_PassiveDes,Text,,,"Any attack will cause Melancholy to enter <color=#FFC5BA><b>Panic</b></color>. However, at the start of the turn, Melancholy will <color=#BAC8FF><b>Calm</b></color> down.
+
+The innate skill is always <color=#FF6767>Obliterated Phosflame Crystal</color>, which attacks everyone except herself, and the battle will destroy adjacent tiles.
+
+Upon leveling up, obtain 2 items “Phoscrystal Core.” Entering a camp grants 1, which can blow up tiles and has a chance to uncover a small number of lost treasure.",,"任何攻击会让梅朗柯莉<color=#FFC5BA><b>慌张</b></color>。但在回合开始时，梅朗柯莉会<color=#BAC8FF><b>冷静</b></color>下来。
 
 固定技能始终为<color=#FF6767>湮裂的燐焰晶</color>，会攻击除自己以外所有人，战斗会摧毁周边障碍。
 
 升级获得物品“燐晶核”2个，进入营地会获得1个，可以摧毁地形并概率发现少量遗失的物品。
-",
-Character/C_Merankori_PassiveName,Text,,,,,"燐焰晶
-",
-Character/C_Merankori_SelectInfo,Text,,,,,"依赖晶石调节的技术来维系生存的少女。梅朗柯莉周围的结晶体极易受情绪影响，因为会伤害到周围的人，不太敢接近人，也十分内向。
+","任何攻擊會讓梅朗柯莉<color=#FFC5BA><b>慌張</b></color>。但在回合開始時，梅朗柯莉會<color=#BAC8FF><b>冷靜</b></color>下來。
+
+固定技能總是<color=#FF6767>湮裂的燐焰晶</color>，會攻擊除自己以外所有人，戰鬥會摧毀週邊障礙。
+
+升級獲得物品「燐晶核」2個，進入營地會獲得1個，可以摧毀地形並機率發現少量遺失的物品。"
+Character/C_Merankori_PassiveName,Text,,,Phosflame Crystal,,燐焰晶,燐焰晶
+Character/C_Merankori_SelectInfo,Text,,,"A girl who relies on crystal-regulating technology to sustain her life.  
+The crystalline formations around Melancholy are easily influenced by her emotions. Because crystals may harm those nearby, she is reluctant to approach others and remains very introverted.
+
+“...Is this… really the world outside…?”  
+...  
+“...I… I feel so lost…”",,"依赖晶石调节的技术来维系生存的少女。梅朗柯莉周围的结晶体极易受情绪影响，因为会伤害到周围的人，不太敢接近人，也十分内向。
 
 「……这真的是外面的世界吗？」
 …
-「…好困惑呀」",
-Character/C_Merankori_Text_Battle_AllyND_0,Text,,,,,抱...抱歉,
-Character/C_Merankori_Text_Battle_AllyND_1,Text,,,,,唉？...唉！,
-Character/C_Merankori_Text_Battle_Healed_0,Text,,,,,...谢谢,
-Character/C_Merankori_Text_Battle_Idle_0,Text,,,,,...,
-Character/C_Merankori_Text_Battle_Idle_1,Text,,,,,（困惑ing）,
-Character/C_Merankori_Text_Battle_Kill_0,Text,,,,,...,
-Character/C_Merankori_Text_Battle_ND_0,Text,,,,,等...等一下！,
-Character/C_Merankori_Text_Battle_ND_1,Text,,,,,回...回路要断了！,
-Character/C_Merankori_Text_Battle_Start_0,Text,,,,,要打吗...,
-Character/C_Merankori_Text_Battle_Start_1,Text,,,,,...我...我还没准备好,
-Character/C_Merankori_Text_Field_GetItem_0,Text,,,,,...!,
-Character/C_Merankori_Text_Field_GetItem_1,Text,,,,,想要调节的机械回路...,
-Character/C_Merankori_Text_Field_GetItem_2,Text,,,,,这里有能治好元素依存症的...没有唉...,
-Character/C_Merankori_Text_Field_Idle_0,Text,,,,,...,
-Character/C_Merankori_Text_Field_Idle_1,Text,,,,,（调节晶石回路）,
-Character/C_Merankori_Text_Field_Idle_2,Text,,,,,（四处张望）,
-Character/C_Merankori_Text_Field_Potion_P_0,Text,,,,,这里的药水似乎也能缓解依存症...,
-Character/C_Merankori_Text_Field_Potion_P_1,Text,,,,,（燐焰晶的颜色透亮了起来）,
-Character/C_Merankori_Text_MasterTarget,Text,,,,,（困惑的眼神）,
-Character/C_Merankori_Text_PharosLeader_0,Text,,,,,为...为什么无法使...唔！,
-Character/C_Merankori_Text_PharosLeader_1,Text,,,,,发生了什么...?,
+「…好困惑呀」","依賴晶石調節的技術來維繫生存的少女。梅朗柯莉周圍的結晶體極易受情緒影響，因為會傷害周遭的人，不太敢接近人，也十分內向。
+
+「……這真的是外面的世界嗎？」
+…
+「…好困惑呀」"
+Character/C_Merankori_Text_Battle_AllyND_0,Text,,,S... sorry…,,抱...抱歉,擁抱...抱歉
+Character/C_Merankori_Text_Battle_AllyND_1,Text,,,Huh...? ...Ah!,,唉？...唉！,唉？ ....唉！
+Character/C_Merankori_Text_Battle_Healed_0,Text,,,...th-thanks…,,...谢谢,....謝謝
+Character/C_Merankori_Text_Battle_Idle_0,Text,,,...,,...,…
+Character/C_Merankori_Text_Battle_Idle_1,Text,,,(...confused...),,（困惑ing）,（困惑ing）
+Character/C_Merankori_Text_Battle_Kill_0,Text,,,...,,...,…
+Character/C_Merankori_Text_Battle_ND_0,Text,,,w-wait...! j-just wait...!,,等...等一下！,等等...等一下！
+Character/C_Merankori_Text_Battle_ND_1,Text,,,ci-circuit... about to break...!,,回...回路要断了！,回...迴路要斷了！
+Character/C_Merankori_Text_Battle_Start_0,Text,,,d-do we... have to fight...?,,要打吗...,要打嗎...
+Character/C_Merankori_Text_Battle_Start_1,Text,,,...I... I’m not ready yet…,,...我...我还没准备好,....我...我還沒準備好
+Character/C_Merankori_Text_Field_GetItem_0,Text,,,...!,,...!,...!
+Character/C_Merankori_Text_Field_GetItem_1,Text,,,a circuit I could tune…,,想要调节的机械回路...,想要調節的機械迴路...
+Character/C_Merankori_Text_Field_GetItem_2,Text,,,maybe cure the elemental dependence... ...no... nothing…,,这里有能治好元素依存症的...没有唉...,這裡有能治好元素依存症的...沒有唉...
+Character/C_Merankori_Text_Field_Idle_0,Text,,,...,,...,...
+Character/C_Merankori_Text_Field_Idle_1,Text,,,(adjusting the crystal circuits) ,,（调节晶石回路）,（調節晶石迴路）
+Character/C_Merankori_Text_Field_Idle_2,Text,,,(glancing around nervously),,（四处张望）,（四處張望）
+Character/C_Merankori_Text_Field_Potion_P_0,Text,,,f...feeling better now...  ,,好...好多了…,好...好多了…
+Character/C_Merankori_Text_Field_Potion_P_1,Text,,,(the Phosflame Crystal’s glow turns clearer),,（燐焰晶的颜色透亮了起来）,（燐焰晶的顏色透亮了起來）
+Character/C_Merankori_Text_MasterTarget,Text,,,(a confused gaze),,（困惑的眼神）,（困惑的眼神）
+Character/C_Merankori_Text_PharosLeader_0,Text,,,w-why... can’t I... u-ugh!,,为...为什么无法使...唔！,為...為什麼無法使...唔！
+Character/C_Merankori_Text_PharosLeader_1,Text,,,wh-what just... happened...?,,发生了什么...?,發生了什麼事...?
 Character/C_Merankori_Text_PharosLeader_2,Text,,,,,,
-Character/C_Merankori_Text_Witch_0,Text,,,,,...可...可以吧...,
-Character/C_Merankori_Text_Witch_1,Text,,,,,不...不可以！,
-Character/C_Merankori_name,Text,,,,,梅朗柯莉,
-Item_Consume/I_RHA_Description,Text,,,,,"右击可以让梅朗柯莉摧毁周边的墙体，可能发现小型物资。
-<color=#5061A4>  --- 赤红的晶石上透射着碎裂的回路...</color>",
-Item_Consume/I_RHA_name,Text,,,,,燐晶核,
-Item_Equip/E_AdjustCrystal_Description,Text,,,,,"解除队伍无法战斗抵抗的上限，
+Character/C_Merankori_Text_Witch_0,Text,,,m-maybe... it’s okay…,,...可...可以吧...,....可...可以吧...
+Character/C_Merankori_Text_Witch_1,Text,,,n-no...! I... I can’t!,,不...不可以！,不...不可以！
+Character/C_Merankori_name,Text,,,Melancholy,,梅朗柯莉,梅朗柯莉
+Item_Consume/I_RHA_Description,Text,,,"Right-click to let Melancholy blow up adjacent walls, possibly discovering buried items.  
+<color=#5061A4> --- Crimson crystals glimmer with fractured circuits...</color>",,"右击可以让梅朗柯莉摧毁周边的墙体，可能发现小型物资。
+<color=#5061A4>  --- 赤红的晶石上透射着碎裂的回路...</color>","右擊可以讓梅朗柯莉摧毀週邊的牆體，可能發現小型物資。
+<color=#5061A4> --- 赤紅的晶石上透射著碎裂的迴路...</color>"
+Item_Consume/I_RHA_name,Text,,,Phoscrystal Core,,燐晶核,燐晶核
+Item_Equip/E_AdjustCrystal_Description,Text,,,"Removes the limit of Faint Resist for the whole party.  
+When using a Phoscrystal Core, increases the destruction radius on the map by 1 tile.
+
+<color=#5061A4>—— The crystals tune more smoothly now. Instead of dependence, isn’t it better to use them more freely?  
+Melancholy-chan... why aren’t you saying anything...</color>",,"解除队伍无法战斗抵抗的上限，
 使用燐晶核时，摧毁地图的半径增加1格。
 
-<color=#5061A4>—— 晶石调起来更顺了，比起依赖症，更加粗放的使用不是更好吗？梅朗柯莉酱你怎么不说话了...</color>",
-Item_Equip/E_AdjustCrystal_name,Text,,,,,精密调石台,
-Item_Equip/E_FireProtect_Description,Text,,,,,"回合开始时，若没有燐色存护增益，则赋予1层燐色存护（抵抗无法战斗1次）。
+<color=#5061A4>—— 晶石调起来更顺了，比起依赖症，更加粗放的使用不是更好吗？梅朗柯莉酱你怎么不说话了...</color>","解除隊伍無法戰鬥抵抗的上限，
+使用燐晶核時，摧毀地圖的半徑增加1格。
 
-<color=#5061A4>——这的确是从草刺猬上掉落的，这里没被黑雾浸染的草刺猬都受到了主的关照，只是刚刚那只被主....？...愈术是什么，这里应该只有主的圣术。</color>",
-Item_Equip/E_FireProtect_name,Text,,,,,火之守护,
-Skill/S_Attack_All_Description,Text,,,,,"对所有人造成伤害，除了梅朗柯莉自身。此伤害不会导致队友无法战斗。
+<color=#5061A4>—— 晶石調起來更順了，比起依賴症，更粗放的使用不是更好嗎？梅朗柯莉醬你怎麼不說話了...</color>"
+Item_Equip/E_AdjustCrystal_name,Text,,,Precision Attunement Station,,精密调石台,精密調石台
+Item_Equip/E_FireProtect_Description,Text,,,"At the start of the turn, if the equipper does not have Phosguard buff, grant 1 stack of it (resists Faint once).
+
+<color=#5061A4>—— This truly did drop from a Grass Hedgehog. The ones here, untouched by the Black Mist, are all under the Lord’s protection. But that one just now... was it not by the Lord’s hand...? ...Cure arts, you say? There should only be the Lord’s sacred rites here.</color>",,"回合开始时，若没有燐色存护增益，则赋予1层燐色存护（抵抗无法战斗1次）。
+
+<color=#5061A4>——这的确是从草刺猬上掉落的，这里没被黑雾浸染的草刺猬都受到了主的关照，只是刚刚那只被主....？...愈术是什么，这里应该只有主的圣术。</color>","回合開始時，若沒有燐色存護增益，則賦予1層燐色存護（抵抗無法戰鬥1次）。
+
+<color=#5061A4>——這的確是從草刺猬上掉落的，這裡沒被黑霧浸染的草刺猬都受到了主的關照，只是剛剛那隻被主....？ ...愈術是什麼，這裡應該只有主的聖術。 </color>"
+Item_Equip/E_FireProtect_name,Text,,,Fire’s Guard,,火之守护,火之守護
+Skill/S_Attack_All_Description,Text,,,"Attack everyone except Melancholy herself. This damage will not cause allies to Faint.  
+While in hand, applies Exclude.  
+<color=#FFC5BA><b>Panic</b></color>: The skill gains Swiftness.",,"对所有人造成伤害，除了梅朗柯莉自身。此伤害不会导致队友无法战斗。
 在手中时，附加放逐。
-<color=#FFC5BA><b>慌张</b>：技能附加迅速</color>",
-Skill/S_Attack_All_Name,Text,,,,,<color=#FF6767>湮裂的燐焰晶</color>,
-Skill/S_Backup_Description,Text,,,,,"抽取1个技能，
-将<color=#FF6767>湮裂的燐焰晶</color>放入手中，直到填满手牌。",
-Skill/S_Backup_Name,Text,,,,,后备的燐焰晶,
-Skill/S_Care_Description,Text,,,,,<color=#BAC8FF><b>冷静</b>：目标若持有梅朗柯莉专属技能相关的正面效果，此效果则会额外增加1层</color>,
-Skill/S_Care_Name,Text,,,,,悉心照料,
-Skill/S_Charge_Description,Text,,,,,"在按下回合结束前，每行进1点倒计时，获得2层蓄能。
+<color=#FFC5BA><b>慌张</b>：技能附加迅速</color>","對所有人造成傷害，除了梅朗柯莉本身。此傷害不會導致隊友無法戰鬥。
+在手中時，附加放逐。
+<color=#FFC5BA><b>慌張</b>：技能附加迅速</color>"
+Skill/S_Attack_All_Name,Text,,,<color=#FF6767>Obliterated Phosflame Crystal</color>,,<color=#FF6767>湮裂的燐焰晶</color>,<color=#FF6767>湮裂的燐焰晶</color>
+Skill/S_Backup_Description,Text,,,"Draw 1 skill.  
+Add <color=#FF6767>Obliterated Phosflame Crystal</color> to your hand until it is full.",,"抽取1个技能，
+将<color=#FF6767>湮裂的燐焰晶</color>放入手中，直到填满手牌。","抽取1個技能，
+將<color=#FF6767>湮裂的燐焰晶</color>放入手中，直到填入手牌。"
+Skill/S_Backup_Name,Text,,,Backup Phosflame Crystal,,后备的燐焰晶,後備的燐焰晶
+Skill/S_Care_Description,Text,,,"<color=#BAC8FF><b>Calm</b></color>: If the target has a positive effect related to Melancholy’s exclusive skills, this effect gains 1 additional stack.",,<color=#BAC8FF><b>冷静</b>：目标若持有梅朗柯莉专属技能相关的正面效果，此效果则会额外增加1层</color>,<color=#BAC8FF><b>冷靜</b>：目標若持有梅朗柯莉專屬技能相關的正面效果，此效果則會額外增加1層</color>
+Skill/S_Care_Name,Text,,,Attentive Care,,悉心照料,悉心照料
+Skill/S_Charge_Description,Text,,,"Before pressing End Turn, for each point the countdown progresses, gain 2 stacks of Charging.  
+While in Panic, stop Charging.  
+If Charging is complete and Melancholy stays Calm, add 2 <color=#FF6767>Obliterated Phosflame Crystals</color> to your hand.  
+<color=#FFC5BA><b>Panic</b></color>: Calm down, and if Charging is complete, draw 1 additional skill.",,"在按下回合结束前，每行进1点倒计时，获得2层蓄能。
 慌张时，停止蓄能。
 冷静时完成蓄能，将2张<color=#FF6767>湮裂的燐焰晶</color>放入手中
-<color=#FFC5BA>慌张：冷静下来，若完成蓄能，再抽取1个技能</color>",
-Skill/S_Charge_Name,Text,,,,,蓄能,
-Skill/S_ConvertCard_Description,Text,,,,,"丢弃选择的技能，抽取1个技能。
+<color=#FFC5BA><b>慌张</b>：冷静下来，若完成蓄能，再抽取1个技能</color>","在按下回合結束前，每行進1點倒數計時，獲得2層蓄能。
+慌張時，停止蓄能。
+冷靜時完成蓄能，將2張<color=#FF6767>湮裂的燐焰晶</color>放入手中
+<color=#FFC5BA><b>慌張</b>：冷靜下來，若完成蓄能，再抽取1個技能</color>"
+Skill/S_Charge_Name,Text,,,Charging,,蓄能,蓄能
+Skill/S_ConvertCard_Description,Text,,,"Discard the chosen skill and draw 1 skill.  
+Add 1 <color=#FF6767>Obliterated Phosflame Crystal</color> to your hand.  
+The owner of the discarded skill gains 1 stack of Refraction and 1 stack of Frequency Shift Fine-Tuning",,"丢弃选择的技能，抽取1个技能。
 将1张<color=#FF6767>湮裂的燐焰晶</color>放入手中。
-丢弃技能的拥有者获得1层折射和1层频移微调。",
-Skill/S_ConvertCard_Name,Text,,,,,焰晶转化,
-Skill/S_D_BuffInfo_Description,Text,,,,,仅供常见效果预览，按下shift可以查看技能<color=#FF6767>湮裂的燐焰晶</color>,
-Skill/S_D_BuffInfo_Name,Text,,,,,常见效果,
-Skill/S_D_RefractionAtk_Description,Text,,,,,折射来自“湮裂的燐焰晶”的伤害,
-Skill/S_D_RefractionAtk_Name,Text,,,,,折射,
-Skill/S_ElementHeal_Description,Text,,,,,"恢复全部体力极限。
+丢弃技能的拥有者获得1层折射和1层频移微调。","丟棄選擇的技能，抽取1個技能。
+將1張<color=#FF6767>湮裂的燐焰晶</color>放入手中。
+丟棄技能的擁有者獲得1層折射和1層頻移微調。"
+Skill/S_ConvertCard_Name,Text,,,Crystal Conversion,,焰晶转化,焰晶轉化
+Skill/S_D_BuffInfo_Description,Text,,,"For preview of common effects only. Hold Shift to view the skill <color=#FF6767>Obliterated Phosflame Crystal</color>.
+",,仅供常见效果预览，按下shift可以查看技能<color=#FF6767>湮裂的燐焰晶</color>,僅供常見效果預覽，按下shift可以查看技能<color=#FF6767>湮裂的燐焰晶</color>
+Skill/S_D_BuffInfo_Name,Text,,,Effects Preview,,常见效果预览,常見效果預覽
+Skill/S_D_RefractionAtk_Description,Text,,,"Refract damage from ""Obliterated Phosflame Crystal""",,折射来自“湮裂的燐焰晶”的伤害,折射來自「湮裂的燐焰晶」的傷害
+Skill/S_D_RefractionAtk_Name,Text,,,Refraction,,折射,折射
+Skill/S_ElementHeal_Description,Text,,,"Restore full Healing Gauge.  
+For every &a Healing Gauge restored, gain 1 stack of Charging.  
+<color=#5061A4>(Expected to provide &b stacks)</color>",,"恢复全部体力极限。
 每恢复&a体力极限，赋予自身1层“蓄能”。
-<color=#5061A4>（预计提供&b层）</color>",
-Skill/S_ElementHeal_Name,Text,,,,,元素调石,
-Skill/S_ItemRHA_Description,Text,,,,,"抽取1个技能。
-获得燐晶核1个，可以用于摧毁地图上的墙体，发现埋藏的物品。",
-Skill/S_ItemRHA_Name,Text,,,,,晶石生成,
-Skill/S_Manifold_Description,Text,,,,,"<color=#BAC8FF><b>冷静</b>：手中每个<color=#FF6767>湮裂的燐焰晶</color>会额外提供3层“蓄能”</color>
-<color=#5061A4>（预计提供&a层）</color>",
-Skill/S_Manifold_Name,Text,,,,,晶体流形,
-Skill/S_OverClocking_Description,Text,,,,,<color=#BAC8FF><b>冷静</b>：延长“折射”1回合</color>,
-Skill/S_OverClocking_Name,Text,,,,,越频晶石,
-Skill/S_P_Shock_Description,Text,,,,,预览效果,
-Skill/S_P_Shock_Name,Text,,,,,震荡冲击,
-Skill/S_Reconstruct_Name,Text,,,,,碎晶重构,
-Skill/S_Rectification_Description,Text,,,,,"可以将梅朗柯莉指向单体队友的专属技能更改为对“全体友军”释放。
+<color=#5061A4>（预计提供&b层）</color>","恢復全部體力極限。
+每恢復&a體力極限，賦予自身1層「蓄能」。
+<color=#5061A4>（預計提供&b層）</color>"
+Skill/S_ElementHeal_Name,Text,,,Elemental Attunement,,元素调石,元素調石
+Skill/S_ItemRHA_Description,Text,,,"Draw 1 skill.  
+Gain 1 Phoscrystal Core, which can be used to break tile walls on the map and discover buried items.",,"抽取1个技能。
+获得燐晶核1个，可以用于摧毁地图上的墙体，发现埋藏的物品。","抽取1個技能。
+取得燐晶核1個，可以用來摧毀地圖上的牆體，發現埋藏的物品。"
+Skill/S_ItemRHA_Name,Text,,,Core Generation,,晶核生成,晶核生成
+Skill/S_Manifold_Description,Text,,,"<color=#BAC8FF><b>Calm</b></color>: For each <color=#FF6767>Obliterated Phosflame Crystal</color> in hand, gain 3 additional stacks of Charging.  
+<color=#5061A4>(Expected to provide &a stacks)</color>",,"<color=#BAC8FF><b>冷静</b>：手中每个<color=#FF6767>湮裂的燐焰晶</color>会额外提供3层“蓄能”</color>
+<color=#5061A4>（预计提供&a层）</color>","<color=#BAC8FF><b>冷靜</b>：手中每個<color=#FF6767>湮裂的燐焰晶</color>會額外提供3層「蓄能」</color>
+<color=#5061A4>（預計提供&a層）</color>"
+Skill/S_Manifold_Name,Text,,,Crystal Manifold,,晶体流形,晶體流形
+Skill/S_OverClocking_Description,Text,,,"<color=#BAC8FF><b>Calm</b></color>: Extend ""Refraction"" by 1 turn.",,<color=#BAC8FF><b>冷静</b>：延长“折射”1回合</color>,<color=#BAC8FF><b>冷靜</b>：延長「折射」1回合</color>
+Skill/S_OverClocking_Name,Text,,,Overfrequency Crystal,,越频晶石,越頻晶石
+Skill/S_P_Shock_Description,Text,,,Preview Effect,,预览效果,預覽效果
+Skill/S_P_Shock_Name,Text,,,Shock Impact,,震荡冲击,震盪衝擊
+Skill/S_Reconstruct_Name,Text,,,Fractured Shard Reconstruction,,碎晶重构,碎晶重構
+Skill/S_Rectification_Description,Text,,,"Allows Melancholy’s exclusive single-target skills to be changed to target all allies.  
+When discarding this skill, prioritize drawing &a of Melancholy’s skills.  
+<color=#BAC8FF><b>Calm</b></color>: Draw 1 skill.",,"可以将梅朗柯莉指向单体队友的专属技能更改为对“全体友军”释放。
 丢弃此技能时，优先抽取&a个梅朗柯莉的技能。
-<color=#BAC8FF>冷静：抽取1个技能</color>",
-Skill/S_Rectification_Name,Text,,,,,回路整流,
-Skill/S_Retreat_Description,Text,,,,,"抽取2个技能。
-若指向的队友拥有至少5个正面效果，额外抽取1个技能。",
-Skill/S_Retreat_Name,Text,,,,,后撤！,
-Skill/S_Shield_Description,Text,,,,,<color=#BAC8FF><b>冷静</b>：处于濒死状态的队友额外获得2层“燐色存护”</color>,
-Skill/S_Shield_Name,Text,,,,,燐晶电场,
+<color=#BAC8FF><b>冷静</b>：抽取1个技能</color>","梅朗柯莉可以指向單體隊友的專屬技能改為對「全體友軍」釋放。
+丟棄此技能時，優先抽取&a個梅朗柯莉的技能。
+<color=#BAC8FF><b>冷靜</b>：抽取1個技能</color>"
+Skill/S_Rectification_Name,Text,,,Circuit Rectifier,,回路整流,迴路整流
+Skill/S_Retreat_Description,Text,,,"Draw 2 skills.  
+If the targeted ally has at least 5 buffs, draw 1 additional skill.",,"抽取2个技能。
+若指向的队友拥有至少5个正面效果，额外抽取1个技能。","抽取2個技能。
+若指向的隊友擁有至少5個正面效果，額外抽取1個技能。"
+Skill/S_Retreat_Name,Text,,,Fallback!,,后撤！,後撤！
+Skill/S_Shield_Description,Text,,,<color=#BAC8FF><b>Calm</b></color>: Allies at Death's Door gain 2 additional stacks of Phosguard.,,<color=#BAC8FF><b>冷静</b>：处于濒死状态的队友额外获得2层“燐色存护”</color>,<color=#BAC8FF><b>冷靜</b>：處於瀕死狀態的隊友額外獲得2層「燐色存護」</color>
+Skill/S_Shield_Name,Text,,,Phoscrystal Field,,燐晶电场,燐晶電場
 Skill/S_WarmFire_Description,Text,,,,,,
-Skill/S_WarmFire_Name,Text,,,,,暖焰,
-SkillExtended/SE_Backflow_Des,Text,,,,,"根据所有队友已损失的体力值增加伤害，每&a点增加&b%伤害。
-<color=#5061A4>（预期增加&c）</color>",
+Skill/S_WarmFire_Name,Text,,,Warmflame,,暖焰,暖焰
+SkillExtended/SE_Backflow_Des,Text,,,"Increase damage based on the total Health lost by all allies, gaining &b% damage for every &a points.  
+<color=#5061A4>(Expected increase: &c)</color>",,"根据所有队友已损失的体力值增加伤害，每&a点增加&b%伤害。
+<color=#5061A4>（预期增加&c）</color>","根據所有隊友已損失的體力值增加傷害，每&a點增加&b%傷害。
+<color=#5061A4>（預期增加&c）</color>"
 SkillExtended/SE_Backflow_EnforceString,Text,,,,,,
-SkillExtended/SE_Backflow_Name,Text,,,,,逆流的燐焰晶,
-SkillExtended/SE_Calm_Des,Text,,,,,可以触发冷静效果,
-SkillExtended/SE_Calm_Name,Text,,,,,冷静,
-SkillExtended/SE_Charge_Des,Text,,,,,"根据蓄能效果层数，每层增加10%的伤害。
-<color=#5061A4>（预期增加&a）</color>",
-SkillExtended/SE_Charge_Name,Text,,,,,蓄能,
-SkillExtended/SE_OverClocking_Des,Text,,,,,下一次<color=#FF6767>湮裂的燐焰晶</color>会附带“震荡冲击”效果。,
-SkillExtended/SE_OverClocking_Name,Text,,,,,越频晶石,
-SkillExtended/SE_Panic_Des,Text,,,,,可以触发慌张效果,
-SkillExtended/SE_Panic_Name,Text,,,,,慌张,
-SkillExtended/SE_Rectification_Des,Text,,,,,除了已指向的队友，技能也会应用给其他全体队友,
+SkillExtended/SE_Backflow_Name,Text,,,Countercurrent Phosflame Crystal,,逆流的燐焰晶,逆流的燐焰晶
+SkillExtended/SE_Calm_Des,Text,,,Can trigger the Calm effect,,可以触发冷静效果,可以觸發冷靜效果
+SkillExtended/SE_Calm_Name,Text,,,Calm,,冷静,冷靜
+SkillExtended/SE_Charge_Des,Text,,,"Increase damage by 10% for each stack of Charging.  
+<color=#5061A4>(Expected increase: &a)</color>",,"根据蓄能效果层数，每层增加10%的伤害。
+<color=#5061A4>（预期增加&a）</color>","根據蓄能效果層數，每層增加10%的傷害。
+<color=#5061A4>（預期增加&a）</color>"
+SkillExtended/SE_Charge_Name,Text,,,Charging,,蓄能,蓄能
+SkillExtended/SE_OverClocking_Des,Text,,,"The next <color=#FF6767>Obliterated Phosflame Crystal</color> will carry the ""Shock Impact"" effect.  ",,下一次<color=#FF6767>湮裂的燐焰晶</color>会附带“震荡冲击”效果。,下次<color=#FF6767>湮裂的燐焰晶</color>會附帶「震盪衝擊」效果。
+SkillExtended/SE_OverClocking_Name,Text,,,Overfrequency Crystal,,越频晶石,越頻晶石
+SkillExtended/SE_Panic_Des,Text,,,Can trigger the Panic effect  ,,可以触发慌张效果,可以觸發慌張效果
+SkillExtended/SE_Panic_Name,Text,,,Panic,,慌张,慌張
+SkillExtended/SE_Rectification_Des,Text,,,"In addition to the targeted ally, the skill will also apply to all other allies ",,除了已指向的队友，技能也会应用给其他全体队友,除了已指向的隊友，技能也會應用給其他全體隊友
 SkillExtended/SE_Rectification_EnforceString,Text,,,,,,
-SkillExtended/SE_Rectification_Name,Text,,,,,整流,
-SkillExtended/SE_U_Refraction_Des,Text,,,,,赋予1回合折射,
-SkillExtended/SE_U_Refraction_EnforceString,Text,,,,,过载，指向单体队友的技能,
-SkillExtended/SE_U_Refraction_Name,Text,,,,,赋予折射,
-SkillExtended/SE_U_Shield_Des,Text,,,,,赋予1层燐色存护,
-SkillExtended/SE_U_Shield_EnforceString,Text,,,,,1费及以上的技能,
-SkillExtended/SE_U_Shield_Name,Text,,,,,赋予燐色存护,
-SkillKeyword/SK_Calm_Desc,Text,,,,,梅朗柯莉处于“<color=#BAC8FF><b>冷静</b></color>”状态时触发。,
-SkillKeyword/SK_Calm_Name,Text,,,,,冷静,
-SkillKeyword/SK_Panic_Desc,Text,,,,,处于“<color=#FFC5BA><b>慌张</b></color>”状态时触发,
-SkillKeyword/SK_Panic_Name,Text,,,,,慌张,
+SkillExtended/SE_Rectification_Name,Text,,,Rectification,,整流,整流
+SkillExtended/SE_U_Refraction_Des,Text,,,Grant Refraction for 1 turn,,赋予1回合折射,賦予1回合折射
+SkillExtended/SE_U_Refraction_EnforceString,Text,,,"Overload, single-target skills",,过载，指向单体队友的技能,過載，指向單體隊友的技能
+SkillExtended/SE_U_Refraction_Name,Text,,,Grant Refraction,,赋予折射,賦予折射
+SkillExtended/SE_U_Shield_Des,Text,,,Grant 1 stack of Phosguard ,,赋予1层燐色存护,賦予1層燐色存護
+SkillExtended/SE_U_Shield_EnforceString,Text,,,Skills costing 1 or more,,1费及以上的技能,1費及以上的技能
+SkillExtended/SE_U_Shield_Name,Text,,,Grant Phosguard ,,赋予燐色存护,賦予燐色存護
+SkillKeyword/SK_Calm_Desc,Text,,,Triggers when Melancholy is in the <color=#BAC8FF><b>Calm</b></color> state.,,梅朗柯莉处于“<color=#BAC8FF><b>冷静</b></color>”状态时触发。,梅朗柯莉處於「<color=#BAC8FF><b>冷靜</b></color>」狀態時觸發。
+SkillKeyword/SK_Calm_Name,Text,,,Calm,,冷静,冷靜
+SkillKeyword/SK_Panic_Desc,Text,,,Triggers when in the <color=#FFC5BA><b>Panic</b></color> state,,处于“<color=#FFC5BA><b>慌张</b></color>”状态时触发,處於「<color=#FFC5BA><b>慌張</b></color>」狀態時觸發
+SkillKeyword/SK_Panic_Name,Text,,,Panic,,慌张,慌張

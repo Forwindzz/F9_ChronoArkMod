@@ -20,8 +20,8 @@
         "EnemyPreview": false,
         "UnknownTarget": false,
         "User": "C_Merankori",
-        "Name": "后备的燐焰晶",
-        "Description": "抽取1个技能，\n将<color=#FF6767>湮裂的燐焰晶</color>放入手中，直到填满手牌。",
+        "Name": "Backup Phosflame Crystal",
+        "Description": "Draw 1 skill.  \nAdd <color=#FF6767>Obliterated Phosflame Crystal</color> to your hand until it is full.",
         "Effect_Target": "SE_T_S_Backup",
         "SkillExtended": [
             "RHA_Merankori.S_Backup"

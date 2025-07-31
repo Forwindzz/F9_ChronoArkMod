@@ -20,8 +20,8 @@
         "EnemyPreview": false,
         "UnknownTarget": false,
         "User": "C_Merankori",
-        "Name": "越频晶石",
-        "Description": "<color=#BAC8FF><b>冷静</b>：延长“折射”1回合</color>",
+        "Name": "Overfrequency Crystal",
+        "Description": "<color=#BAC8FF><b>Calm</b></color>: Extend \"Refraction\" by 1 turn.",
         "UseAp": 1,
         "Effect_Target": "SE_T_S_OverClocking",
         "PlusKeyWords": [

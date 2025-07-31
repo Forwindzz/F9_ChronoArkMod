@@ -1,45 +1,113 @@
 Key,Type,Desc,Korean,English,Japanese,Chinese,Chinese-TW [zh-tw]
-TSB_Phoenix_FirstShield,Text,,,,,"我可不需要这些小伎俩，这种伪造的力量！
+TSB_Phoenix_FirstShield,Text,,,"I don’t need these cheap tricks—such fake power means nothing to me!  
+---
+What’s the point of that... huh!  
+---
+So tell me—are you the tank, or am I?  
+---
+That’s not fiery enough for me.",,"我可不需要这些小伎俩，这种伪造的力量！
 ---
 这种有什么用啊...啊！
 ---
 你是t还是我是t？
 ---
-你这不够火爆啊",
-TSB_Phoenix_LowHP_0_Shield,Text,,,,,"我饿了，盾填不了我的肚子！
+你这不够火爆啊","""我可不需要這些小伎倆，這種偽造的力量！
 ---
-..凤凰是铁，面包是钢！",
-TSB_Phoenix_LowHP_100_Shield,Text,,,,,"你是要榨干我吗？？
+這種有什麼用啊...啊！
 ---
-我要饿死...死不了但是饿啊！",
-TSB_Phoenix_LowHP_2000_Shield,Text,,,,,"面...是包！
+你是t還是我是t？
+---
+你這不夠火爆啊"""
+TSB_Phoenix_LowHP_0_Shield,Text,,,"I’m starving—shields can’t fill my stomach!  
+---
+...A phoenix is iron, but bread is steel!",,"我饿了，盾填不了我的肚子！
+---
+..凤凰是铁，面包是钢！","""我餓了，盾填不了我的肚子！
+---
+..鳳凰是鐵，麵包是鋼！ """
+TSB_Phoenix_LowHP_100_Shield,Text,,,"Are you trying to squeeze me dry??  
+---
+I’m starving to death... well, can’t die, but still starving!",,"你是要榨干我吗？？
+---
+我要饿死...死不了但是饿啊！","""你是要榨乾我嗎？？
+---
+我要餓死...死不了但是餓啊！ """
+TSB_Phoenix_LowHP_2000_Shield,Text,,,"N...nood... bread!  
+---
+I... I’m a ph...phoenix that... can’t starve to death...  
+---
+I... I just wanna go back... and paint…",,"面...是包！
 ---
 我可...不...饿不死的凤...
 ---
-我...我想回去画画...",
-TSB_Phoenix_LowHP_500_Shield,Text,,,,,"你..你不能这么对我！
+我...我想回去画画...","""面...是包！
+---
+我可...不...餓不死的鳳...
+---
+我...我想回去畫畫..."""
+TSB_Phoenix_LowHP_500_Shield,Text,,,"Y-you... you can’t do this to me!  
+---
+Lucy! Stop her! I can’t take it anymore!  
+---
+I’m the invincible Phoenix—don’t you dare turn me into fried chicken!",,"你..你不能这么对我！
 ---
 露西！快阻止她！我受不了了！
 ---
-我是无敌的凤凰，别拿我做炸鸡！",
-TSB_Phoenix_NoPassive_Shield,Text,,,,,"这不是有点用嘛。
+我是无敌的凤凰，别拿我做炸鸡！","""你..你不能這麼對我！
 ---
-我..我可是不死的凤凰！",
-TS_Merankori_RHA_CannotUse,Text,,,,,"...（摇头）
+露西！快阻止她！我受不了了！
+---
+我是無敵的鳳凰，別拿我當炸雞！ """
+TSB_Phoenix_NoPassive_Shield,Text,,,"Guess it’s not totally useless after all.  
+---
+I... I’m the immortal Phoenix, you know!",,"这不是有点用嘛。
+---
+我..我可是不死的凤凰！","""這不是有點用嘛。
+---
+我..我可是不死的鳳凰！ """
+TS_Merankori_RHA_CannotUse,Text,,,"...(shakes head)  
+---
+It’s... it’s already clear around here, and I... I...  
+---
+n-no... I... I don’t think so…",,"...（摇头）
 ---
 周围已经是空地而且我...我...
 ---
-不...不可以吧...",
-TS_Merankori_RHA_CannotUseHidden,Text,,,,,"我...我真的做不到...
+不...不可以吧...","""...（搖頭）
+---
+周圍已經是空地而且我...我...
+---
+不...不可以吧..."""
+TS_Merankori_RHA_CannotUseHidden,Text,,,"I... I really can’t do it...  
+---
+I’m a little confused too... I don’t understand why...  
+---
+L...Lucy, I... I think I can’t break that area... and... and I already tried my best, but it didn’t budge at all, I... I don’t know why!",,"我...我真的做不到...
 ---
 我也有点困惑...我不明白为什么...
 ---
-露..露西我想我应该拆不了那边的区域而且...而且我已经尽力去弄了但是它丝毫不动我..我也不知道为什么！",
-TS_Merankori_RHA_FindHidden,Text,,,,,"...（困惑地看向焦黑的树木）
+露..露西我想我应该拆不了那边的区域而且...而且我已经尽力去弄了但是它丝毫不动我..我也不知道为什么！","「我...我真的做不到...
+---
+我也有點困惑...我不明白為什麼...
+---
+露..露西我想我應該拆不了那邊的區域而且...而且我已經盡力去弄了但是它絲毫不動我..我也不知道為什麼！ """
+TS_Merankori_RHA_FindHidden,Text,,,"...(looks confusedly at the charred tree)  
+---
+m...maybe try... one more time...?  
+---
+so... so confused…",,"...（困惑地看向焦黑的树木）
 ---
 再...再试一次？
 ---
-好困惑呀...",
-TS_Phoenix_UseRHA,Text,,,,,"你把我给炸成刺猬了，快给我梳毛！
+好困惑呀...","""...（困惑地看向焦黑的樹木）
 ---
-我刚梳的毛！",
+再...再試一次？
+---
+好困惑呀..."""
+TS_Phoenix_UseRHA,Text,,,"You blew me up into a hedgehog—now hurry up and fix my feathers!  
+---
+I just groomed those feathers!",,"你把我给炸成刺猬了，快给我梳毛！
+---
+我刚梳的毛！","""你把我給炸成刺蝟了，快給我梳毛！
+---
+我剛梳的毛！ """

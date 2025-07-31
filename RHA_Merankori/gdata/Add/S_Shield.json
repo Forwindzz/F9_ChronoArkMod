@@ -5,8 +5,8 @@
         "Particle": "Particle/flare_lv1",
         "Target": "all_ally",
         "NotCount": true,
-        "Name": "燐晶电场",
-        "Description": "<color=#BAC8FF><b>冷静</b>：处于濒死状态的队友额外获得2层“燐色存护”</color>",
+        "Name": "Phoscrystal Field",
+        "Description": "<color=#BAC8FF><b>Calm</b></color>: Allies at Death's Door gain 2 additional stacks of Phosguard.",
         "User": "C_Merankori",
         "UseAp": 3,
         "PlusKeyWords": [

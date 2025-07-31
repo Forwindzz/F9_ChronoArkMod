@@ -1,8 +1,8 @@
 {
     "SE_OverClocking": {
         "_gdeSchema": "SkillExtended",
-        "Name": "越频晶石",
-        "Des": "下一次<color=#FF6767>湮裂的燐焰晶</color>会附带“震荡冲击”效果。",
+        "Name": "Overfrequency Crystal",
+        "Des": "The next <color=#FF6767>Obliterated Phosflame Crystal</color> will carry the \"Shock Impact\" effect.  ",
         "ClassName": "RHA_Merankori.SE_OverClocking",
         "IsIcon": "Image/Buff/Skill_Icon_Pack/emerald/emerald_02",
         "AlwaysParticle": false,

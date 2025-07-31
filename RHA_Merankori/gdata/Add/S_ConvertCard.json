@@ -19,8 +19,8 @@
         "Fatal": false,
         "EnemyPreview": false,
         "UnknownTarget": false,
-        "Description": "丢弃选择的技能，抽取1个技能。\n将1张<color=#FF6767>湮裂的燐焰晶</color>放入手中。\n丢弃技能的拥有者获得1层折射和1层频移微调。",
-        "Name": "焰晶转化",
+        "Description": "Discard the chosen skill and draw 1 skill.  \nAdd 1 <color=#FF6767>Obliterated Phosflame Crystal</color> to your hand.  \nThe owner of the discarded skill gains 1 stack of Refraction and 1 stack of Frequency Shift Fine-Tuning",
+        "Name": "Crystal Conversion",
         "User": "C_Merankori",
         "SkillExtended": [
             "RHA_Merankori.S_ConvertCard"

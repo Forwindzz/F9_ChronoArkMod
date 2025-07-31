@@ -20,11 +20,11 @@
         "EnemyPreview": false,
         "UnknownTarget": false,
         "User": "C_Merankori",
-        "Description": "恢复全部体力极限。\n每恢复&a体力极限，赋予自身1层“蓄能”。\n<color=#5061A4>（预计提供&b层）</color>",
+        "Description": "Restore full Healing Gauge.  \nFor every &a Healing Gauge restored, gain 1 stack of Charging.  \n<color=#5061A4>(Expected to provide &b stacks)</color>",
         "UseAp": 2,
         "Effect_Target": "SE_T_S_ElementHeal",
         "Effect_Self": "SE_S_S_ElementHeal",
-        "Name": "元素调石",
+        "Name": "Elemental Attunement",
         "SkillExtended": [
             "RHA_Merankori.S_ElementHeal"
         ],

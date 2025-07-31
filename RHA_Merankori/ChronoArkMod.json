@@ -2,14 +2,14 @@
     "id": "RHA_Merankori",
     "Uploader": "雾之湖の冰精",
     "Visibility": "Public",
-    "Title": "【CN】「茫哀的燐焰晶」梅朗柯莉",
+    "Title": "【CN/EN】「茫哀的燐焰晶」梅朗柯莉",
     "Author": "f⑨",
-    "Version": "0.2.0",
+    "Version": "0.3.0",
     "Description": "添加了梅露可物语中的角色\n「茫哀的燐焰晶」梅朗柯莉\n\n是个可以拆地图的角色！\n_(:з」∠)_\n\n未来也许会更新点彩蛋，对话，还有草刺猬，以及替换掉大部分ai生成的图...\n\nEnglish might be supported in the future.",
     "Cover": "RHA_MerankoriCover.png",
     "DefaultAssetBundlePath": "rha_merankoriunityassetbundle",
     "NeedRestartWhenEnabled": false,
-    "ChangeNote": "",
+    "ChangeNote": "Language:\n- Support English.\n- 支持繁体中文。\n\n平衡性调整(虽然已经很op了！)\n- 逆流的燐焰晶：效果提升，2点损失体力值1%伤害 -> 5点3%\n- 元素调石变成迅速\n- 整流回路：3回合才会丢弃",
     "WorkShopId": "3535523424",
     "TagList": [
         "Characters"

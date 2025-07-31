@@ -3,7 +3,7 @@
         "_gdeSchema": "Buff",
         "ClassName": "RHA_Merankori.B_Shock",
         "BuffTag": "CrowdControl",
-        "Description": "无法使用攻击技能，若是敌人则停止行动一回合。\n持有此效果的角色可以通过丢弃自己的技能来移除此效果。",
+        "Description": "Cannot use attack skills. If owned by enemy, skip action for one turn.\nAllies with this effect can remove it by discarding their own skill.",
         "Debuff": true,
         "TagPer": 75,
         "Hide": false,
@@ -12,7 +12,7 @@
         "UseSkillDebuff": true,
         "Caution": true,
         "MaxStack": 1,
-        "Name": "震荡冲击",
+        "Name": "Shock Impact",
         "LifeTime": 1,
         "Icon": "Image/Buff/Skill_Icon_Pack/1_5icon/1_5 (13)"
     }

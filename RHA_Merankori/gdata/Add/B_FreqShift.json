@@ -8,8 +8,8 @@
         "BuffTag": "null",
         "UseSkillDebuff": false,
         "Caution": false,
-        "Description": "受到<color=#FF6767>湮裂的燐焰晶</color>的攻击时，将受到的伤害转化为等量的治疗，然后移除1层。",
-        "Name": "频移微调",
+        "Description": "When attacked by <color=#FF6767>Obliterated Phosflame Crystal</color>, convert the damage received into an equal amount of healing, then remove 1 stack.",
+        "Name": "Frequency Shift Fine-Tuning",
         "MaxStack": 3,
         "Tick": "null",
         "Icon": "Image/Buff/Skill_Icon_Pack/green/green_20"
