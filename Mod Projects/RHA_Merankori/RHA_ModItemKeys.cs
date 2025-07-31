@@ -5,8 +5,8 @@ namespace RHA_Merankori
     {
 		/// <summary>
 		/// 逆流的燐焰晶
-		/// <color=#FF6767>湮裂的燐焰晶</color>会根据队友已损失的体力值增加伤害，每2点增加1%伤害。
-		/// <color=#5061A4>（预期增加&a）</color>
+		/// <color=#FF6767>湮裂的燐焰晶</color>会根据队友已损失的体力值增加伤害，每&a点增加&b%伤害。
+		/// <color=#5061A4>（预期增加&c）</color>
 		/// </summary>
         public static string Buff_B_Backflow = "B_Backflow";
 		/// <summary>
@@ -118,32 +118,32 @@ namespace RHA_Merankori
 		/// Passive:
 		/// 任何攻击会让梅朗柯莉<color=#FFC5BA><b>慌张</b></color>。但在回合开始时，梅朗柯莉会<color=#BAC8FF><b>冷静</b></color>下来。
 		/// 固定技能始终为<color=#FF6767>湮裂的燐焰晶</color>，会攻击除自己以外所有人，战斗会摧毁周边障碍。
-		/// 升级获得物品“燐晶核”2个，进入营地会获得1个，可以摧毁地形并概率发现遗失的物品。
+		/// 升级获得物品“燐晶核”2个，进入营地会获得1个，可以摧毁地形并概率发现少量遗失的物品。
 		/// </summary>
         public static string Character_C_Merankori = "C_Merankori";
 		/// <summary>
 		/// 精密调石台
 		/// 解除队伍无法战斗抵抗的上限，
 		/// 使用燐晶核时，摧毁地图的半径增加1格。
-		/// <color=#5061A4>—— 晶石调起来更顺了，比起依赖症，更加粗放的使用不是更好吗？梅朗柯莉酱你怎么不说话了...唔！...</color>
+		/// <color=#5061A4>—— 晶石调起来更顺了，比起依赖症，更加粗放的使用不是更好吗？梅朗柯莉酱你怎么不说话了...</color>
 		/// </summary>
         public static string Item_Equip_E_AdjustCrystal = "E_AdjustCrystal";
 		/// <summary>
 		/// 火之守护
 		/// 回合开始时，若没有燐色存护增益，则赋予1层燐色存护（抵抗无法战斗1次）。
-		/// <color=#5061A4>——这是从可爱的草刺猬上掉落的，没有1只草刺猬牺牲，刚刚那只是遭受了主的....？...梅朗柯莉酱，愈术是什么，这里应该只有主的圣术。</color>
+		/// <color=#5061A4>——这的确是从草刺猬上掉落的，这里没被黑雾浸染的草刺猬都受到了主的关照，只是刚刚那只被主....？...愈术是什么，这里应该只有主的圣术。</color>
 		/// </summary>
         public static string Item_Equip_E_FireProtect = "E_FireProtect";
 		/// <summary>
 		/// 燐晶核
 		/// 右击可以让梅朗柯莉摧毁周边的墙体，可能发现小型物资。
-		/// <color=#5061A4>  --- 赤红的晶石上透射着淡淡的回路，有些不稳定...</color>
+		/// <color=#5061A4>  --- 赤红的晶石上透射着碎裂的回路...</color>
 		/// </summary>
         public static string Item_Consume_I_RHA = "I_RHA";
 		/// <summary>
 		/// 逆流的燐焰晶
-		/// 根据所有队友已损失的体力值增加伤害，每2点增加1%伤害。
-		/// <color=#5061A4>（预期增加&a）</color>
+		/// 根据所有队友已损失的体力值增加伤害，每&a点增加&b%伤害。
+		/// <color=#5061A4>（预期增加&c）</color>
 		/// </summary>
         public static string SkillExtended_SE_Backflow = "SE_Backflow";
 		/// <summary>
@@ -299,7 +299,7 @@ namespace RHA_Merankori
 		/// <summary>
 		/// 回路整流
 		/// 可以将梅朗柯莉指向单体队友的专属技能更改为对“全体友军”释放。
-		/// 丢弃此技能时，优先抽取2个梅朗柯莉的技能。
+		/// 丢弃此技能时，优先抽取&a个梅朗柯莉的技能。
 		/// <color=#BAC8FF>冷静：抽取1个技能</color>
 		/// </summary>
         public static string Skill_S_Rectification = "S_Rectification";
@@ -432,7 +432,7 @@ namespace RHA_Merankori
 		/// ---
 		/// 再...再试一次？
 		/// ---
-		/// 这...这是怎么回事?
+		/// 好困惑呀...
 		/// Chinese-TW:
 		/// </summary>
         public static string TS_Merankori_RHA_FindHidden => ModManager.getModInfo("RHA_Merankori").localizationInfo.SystemLocalizationUpdate("TS_Merankori_RHA_FindHidden");

@@ -39,6 +39,7 @@ namespace RHA_Merankori
 
         public static Buff GetBuffByID(this BattleChar bc, string keyID)
         {
+            /*
             foreach(var buff in bc.Buffs)
             {
                 if(buff.BuffData.Key == keyID)
@@ -46,7 +47,8 @@ namespace RHA_Merankori
                     return buff;
                 }
             }
-            return null;
+            return null;*/
+            return bc.BuffReturn(keyID);
         }
 
         public static void BuffAddWithStacks(this BattleChar target, string buffKey, BattleChar source, int stack)

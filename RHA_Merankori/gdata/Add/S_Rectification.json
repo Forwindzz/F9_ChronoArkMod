@@ -20,7 +20,7 @@
         "EnemyPreview": false,
         "UnknownTarget": false,
         "Name": "回路整流",
-        "Description": "可以将梅朗柯莉指向单体队友的专属技能更改为对“全体友军”释放。\n丢弃此技能时，优先抽取2个梅朗柯莉的技能。\n<color=#BAC8FF>冷静：抽取1个技能</color>",
+        "Description": "可以将梅朗柯莉指向单体队友的专属技能更改为对“全体友军”释放。\n丢弃此技能时，优先抽取&a个梅朗柯莉的技能。\n<color=#BAC8FF>冷静：抽取1个技能</color>",
         "UseAp": 0,
         "User": "C_Merankori",
         "Effect_Self": "SE_S_S_Rectification",
@@ -35,6 +35,6 @@
         "PlusKeyWords": [
             "SK_Calm"
         ],
-        "AutoDelete": 2
+        "AutoDelete": 3
     }
 }

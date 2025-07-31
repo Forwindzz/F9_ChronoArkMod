@@ -1,6 +1,6 @@
 Key,Type,Desc,Korean,English,Japanese,Chinese,Chinese-TW [zh-tw]
-Buff/B_Backflow_Description,Text,,,,,"<color=#FF6767>湮裂的燐焰晶</color>会根据队友已损失的体力值增加伤害，每2点增加1%伤害。
-<color=#5061A4>（预期增加&a）</color>",
+Buff/B_Backflow_Description,Text,,,,,"<color=#FF6767>湮裂的燐焰晶</color>会根据队友已损失的体力值增加伤害，每&a点增加&b%伤害。
+<color=#5061A4>（预期增加&c）</color>",
 Buff/B_Backflow_Name,Text,,,,,逆流的燐焰晶,
 Buff/B_Backup_Description,Text,,,,,回合开始时，生成1张<color=#FF6767>湮裂的燐焰晶</color>并放入手牌中。,
 Buff/B_Backup_Name,Text,,,,,后备的燐焰晶,
@@ -139,7 +139,7 @@ Skill/S_P_Shock_Description,Text,,,,,预览效果,
 Skill/S_P_Shock_Name,Text,,,,,震荡冲击,
 Skill/S_Reconstruct_Name,Text,,,,,碎晶重构,
 Skill/S_Rectification_Description,Text,,,,,"可以将梅朗柯莉指向单体队友的专属技能更改为对“全体友军”释放。
-丢弃此技能时，优先抽取2个梅朗柯莉的技能。
+丢弃此技能时，优先抽取&a个梅朗柯莉的技能。
 <color=#BAC8FF>冷静：抽取1个技能</color>",
 Skill/S_Rectification_Name,Text,,,,,回路整流,
 Skill/S_Retreat_Description,Text,,,,,"抽取2个技能。
@@ -149,8 +149,8 @@ Skill/S_Shield_Description,Text,,,,,<color=#BAC8FF><b>冷静</b>：处于濒死�
 Skill/S_Shield_Name,Text,,,,,燐晶电场,
 Skill/S_WarmFire_Description,Text,,,,,,
 Skill/S_WarmFire_Name,Text,,,,,暖焰,
-SkillExtended/SE_Backflow_Des,Text,,,,,"根据所有队友已损失的体力值增加伤害，每2点增加1%伤害。
-<color=#5061A4>（预期增加&a）</color>",
+SkillExtended/SE_Backflow_Des,Text,,,,,"根据所有队友已损失的体力值增加伤害，每&a点增加&b%伤害。
+<color=#5061A4>（预期增加&c）</color>",
 SkillExtended/SE_Backflow_EnforceString,Text,,,,,,
 SkillExtended/SE_Backflow_Name,Text,,,,,逆流的燐焰晶,
 SkillExtended/SE_Calm_Des,Text,,,,,可以触发冷静效果,

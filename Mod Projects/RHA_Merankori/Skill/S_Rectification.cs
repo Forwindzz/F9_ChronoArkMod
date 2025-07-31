@@ -31,6 +31,8 @@ namespace RHA_Merankori
         public override bool CanApplyCalm => true;
         public override bool CanApplyPanic => false;
 
+        public const int DISCARD_DRAW_COUNT = 2;
+
         public override void Init()
         {
             base.Init();
@@ -84,7 +86,7 @@ namespace RHA_Merankori
         public override void DiscardSingle(bool Click)
         {
             base.DiscardSingle(Click);
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < DISCARD_DRAW_COUNT; i++)
             {
                 BattleSystem.DelayInputAfter(this.Draw());
             }
@@ -102,6 +104,11 @@ namespace RHA_Merankori
                 yield return BattleSystem.instance.StartCoroutine(BattleSystem.instance.AllyTeam._ForceDraw(skill2, null));
             }
             yield break;
+        }
+
+        public override string DescInit()
+        {
+            return base.DescInit().Replace("&a", DISCARD_DRAW_COUNT.ToString());
         }
     }
 }

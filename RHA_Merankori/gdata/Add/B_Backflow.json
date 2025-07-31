@@ -4,7 +4,7 @@
         "ClassName": "RHA_Merankori.B_Backflow",
         "BuffTag": "null",
         "Name": "逆流的燐焰晶",
-        "Description": "<color=#FF6767>湮裂的燐焰晶</color>会根据队友已损失的体力值增加伤害，每2点增加1%伤害。\n<color=#5061A4>（预期增加&a）</color>",
+        "Description": "<color=#FF6767>湮裂的燐焰晶</color>会根据队友已损失的体力值增加伤害，每&a点增加&b%伤害。\n<color=#5061A4>（预期增加&c）</color>",
         "MaxStack": 0,
         "Caution": true,
         "UseSkillDebuff": false,
