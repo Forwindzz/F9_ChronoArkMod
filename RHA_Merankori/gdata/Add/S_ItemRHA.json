@@ -19,14 +19,14 @@
         "Fatal": false,
         "EnemyPreview": false,
         "UnknownTarget": false,
-        "Description": "Draw 1 skill.  \nGain 1 Phoscrystal Core, which can be used to break tile walls on the map and discover buried items.",
+        "Description": "抽取1个技能。\n获得燐晶核1个，可以用于摧毁地图上的墙体，发现埋藏的物品。",
         "User": "C_Merankori",
         "SkillExtended": [
             "RHA_Merankori.S_ItemRHA"
         ],
         "Effect_Self": "null",
         "Effect_Target": "SE_T_S_ItemRHA",
-        "Name": "Core Generation",
+        "Name": "晶核生成",
         "Image_0": "S_ItemRHA\\S_ItemRHA_Image_0.png",
         "Image_1": "S_ItemRHA\\S_ItemRHA_Image_1.png",
         "Image_2": "S_ItemRHA\\S_ItemRHA_Image_2.png"

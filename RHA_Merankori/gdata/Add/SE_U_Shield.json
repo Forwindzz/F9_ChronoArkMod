@@ -1,10 +1,10 @@
 {
     "SE_U_Shield": {
         "_gdeSchema": "SkillExtended",
-        "Des": "Grant 1 stack of Phosguard ",
-        "Name": "Grant Phosguard ",
+        "Des": "赋予1层燐色存护",
+        "Name": "赋予燐色存护",
         "Drop": true,
-        "EnforceString": "Skills costing 1 or more",
+        "EnforceString": "1费及以上的技能",
         "NeedCharacter": "C_Merankori",
         "ClassName": "RHA_Merankori.SE_U_Shield"
     }

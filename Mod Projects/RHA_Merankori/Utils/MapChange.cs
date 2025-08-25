@@ -435,7 +435,7 @@ namespace RHA_Merankori
             string eventKey,
             TileTypes.Event newEvent = null)
         {
-            Debug.Log($"Replace HexTile {cMapTile.Info.Pos} with {eventKey}");
+            //Debug.Log($"Replace HexTile {cMapTile.Info.Pos} with {eventKey}");
 
             if (newEvent == null)
             {
@@ -726,7 +726,7 @@ namespace RHA_Merankori
                 newEvent.PlusReward = overrideReward;
             }
 
-            Debug.Log($"Gen Reward @{cMapTile.Info.Pos}: roll {rollPoint}={rewardObjectKey} & {reduceRewardRollPoint} => OverrideRwardCount {newEvent.PlusReward?.Count}");
+            //Debug.Log($"Gen Reward @{cMapTile.Info.Pos}: roll {rollPoint}={rewardObjectKey} & {reduceRewardRollPoint} => OverrideRwardCount {newEvent.PlusReward?.Count}");
 
         }
 
@@ -873,7 +873,7 @@ namespace RHA_Merankori
                         break;
                 }
             }
-            Debug.Log($"Extra pool rand={randomInt}, gen {result.Count} candidates");
+            //Debug.Log($"Extra pool rand={randomInt}, gen {result.Count} candidates");
             return result;
         }
 

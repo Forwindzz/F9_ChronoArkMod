@@ -1,7 +1,7 @@
 {
     "SK_Calm": {
         "_gdeSchema": "SkillKeyword",
-        "Desc": "Triggers when Melancholy is in the <color=#BAC8FF><b>Calm</b></color> state.",
-        "Name": "Calm"
+        "Desc": "梅朗柯莉处于“<color=#BAC8FF><b>冷静</b></color>”状态时触发。",
+        "Name": "冷静"
     }
 }

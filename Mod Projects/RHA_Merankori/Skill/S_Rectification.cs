@@ -110,5 +110,10 @@ namespace RHA_Merankori
         {
             return base.DescInit().Replace("&a", DISCARD_DRAW_COUNT.ToString());
         }
+
+        public override string DescExtended(string desc)
+        {
+            return base.DescExtended(desc).Replace("&a", DISCARD_DRAW_COUNT.ToString());
+        }
     }
 }

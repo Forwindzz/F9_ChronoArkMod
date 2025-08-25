@@ -18,14 +18,14 @@ namespace RHA_Merankori
         {
             ModInfo info = ModManager.getModInfo(IDs.ID_Mod);
             string path = info.assetInfo.ObjectFromAsset<GameObject>(ASSET_BUNDLE_NAME, assetPath);
-            Debug.Log($"Try to load asset from {path}");
+            //Debug.Log($"Try to load asset from {path}");
             return AddressableLoadManager.Instantiate(path, AddressableLoadManager.ManageType.None);
         }
 
         public static T LoadModAsset<T>(string assetPath) where T : UnityEngine.Object
         {
             ModInfo info = ModManager.getModInfo(IDs.ID_Mod);
-            Debug.Log($"Try to load asset from {assetPath}");
+            //Debug.Log($"Try to load asset from {assetPath}");
             return info.assetInfo.LoadFromAsset<T>(ASSET_BUNDLE_NAME, assetPath);
         }
     }

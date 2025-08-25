@@ -58,7 +58,7 @@ namespace RHA_Merankori
             bool notdeadeffect,
             bool NoTimeSlow)
         {
-            Debug.Log($"Judge BattleChar.Dead {__instance.Info.KeyData}");
+            //Debug.Log($"Judge BattleChar.Dead {__instance.Info.KeyData}");
             bool result = B_Shield.Judge(__instance);
             return result;
         }
@@ -70,7 +70,7 @@ namespace RHA_Merankori
             bool notdeadeffect,
             bool NoTimeSlow)
         {
-            Debug.Log($"Judge BattleChar.Dead {__instance.Info.KeyData}");
+            //Debug.Log($"Judge BattleChar.Dead {__instance.Info.KeyData}");
             bool result = B_Shield.Judge(__instance);
             return B_Shield.Judge(__instance);
         }
@@ -84,7 +84,7 @@ namespace RHA_Merankori
             bool notdeadeffect,
             bool NoTimeSlow)
         {
-            Debug.Log($"JudgeEnd BattleAlly.Dead {__instance.Info.KeyData}");
+            //Debug.Log($"JudgeEnd BattleAlly.Dead {__instance.Info.KeyData}");
             B_Shield.JudgeEnd(__instance);
         }
 
@@ -95,7 +95,7 @@ namespace RHA_Merankori
             bool notdeadeffect,
             bool NoTimeSlow)
         {
-            Debug.Log($"JudgeEnd BattleAlly.Dead {__instance.Info.KeyData}");
+            //Debug.Log($"JudgeEnd BattleAlly.Dead {__instance.Info.KeyData}");
             B_Shield.JudgeEnd(__instance);
         }
 

@@ -3,8 +3,8 @@
         "_gdeSchema": "SkillExtended",
         "AlwaysParticle": false,
         "IsOnesInit": false,
-        "Name": "Calm",
-        "Des": "Can trigger the Calm effect",
+        "Name": "冷静",
+        "Des": "可以触发冷静效果",
         "IsIcon": "Icons/icon_calm.png",
         "ClassName": "RHA_Merankori.SE_Calm"
     }

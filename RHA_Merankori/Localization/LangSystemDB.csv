@@ -1,4 +1,6 @@
 Key,Type,Desc,Korean,English,Japanese,Chinese,Chinese-TW [zh-tw]
+Setting_CustomSpine_Desc,Text,,,"When disabled, Lucy's Spine model will no longer be replaced with Melancholy's.",,关闭后，不再使用梅朗柯莉替换露西Spine模型。,關閉後，不再使用梅朗柯莉替換露西Spine模型。
+Setting_CustomSpine_Title,Text,,,Never replace Lucy,,不替换Spine人物模型,不替換Spine人物模型
 TSB_Phoenix_FirstShield,Text,,,"I don’t need these cheap tricks—such fake power means nothing to me!  
 ---
 What’s the point of that... huh!  

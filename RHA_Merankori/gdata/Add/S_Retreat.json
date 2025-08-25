@@ -7,12 +7,12 @@
         "Target": "ally",
         "User": "LucyDraw",
         "LucyPartyDraw": "C_Merankori",
-        "Description": "Draw 2 skills.  \nIf the targeted ally has at least 5 buffs, draw 1 additional skill.",
+        "Description": "抽取2个技能。\n若指向的队友拥有至少5个正面效果，额外抽取1个技能。",
         "Effect_Target": "SE_T_S_Retreat",
         "SkillExtended": [
             "RHA_Merankori.S_Retreat"
         ],
-        "Name": "Fallback!",
+        "Name": "后撤！",
         "NotCount": false,
         "Image_0": "S_Retreat\\S_Retreat_Image_0.png",
         "Image_1": "S_Retreat\\S_Retreat_Image_1.png",

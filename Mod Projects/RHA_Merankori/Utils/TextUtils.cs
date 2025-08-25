@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
-using static Library_SpriteStudio6.Utility;
 using Random = System.Random;
 
 namespace RHA_Merankori
@@ -67,19 +66,6 @@ namespace RHA_Merankori
             return random.NextDouble() > chance;
         }
 
-        /*
-        public static void ShowAllyBattleTextKey(this BattleChar bChar, string key)
-        {
-            //Debug.Log($"Try to show {key} for {bChar?.Info?.Name}");
-            string s = GetRandomTextByKey(key);
-            if(s == null)
-            {
-                Debug.LogError($"String key [{key}] is null!");
-                return;
-            }
-            BattleSystem.DelayInput(BattleText.InstBattleText_Co(bChar, GetRandomTextByKey(key), true));
-        }*/
-
         public static void ShowEnemyBattleText(this BattleEnemy bChar, string text)
         {
             if(bChar?.MyUIObject?.custom?.Head == null)
@@ -88,16 +74,6 @@ namespace RHA_Merankori
             }
             BattleSystem.instance.StartCoroutine(BattleText.InstBattleText_Co(bChar.MyUIObject.custom.Head.transform.position, text));
         }
-
-        /*
-        public static void ShowEnemyBattleTextKey(this BattleEnemy bChar, string key)
-        {
-            if (bChar?.MyUIObject?.custom?.Head == null)
-            {
-                return;
-            }
-            BattleSystem.instance.StartCoroutine(BattleText.InstBattleText_Co(bChar.MyUIObject.custom.Head.transform.position, GetRandomTextByKey(key)));
-        }*/
 
         public static void ShowBattleText(this BattleChar bChar, string text)
         {
@@ -113,46 +89,5 @@ namespace RHA_Merankori
             }
             Debug.LogWarning($"Unclear how to display text for {bChar.Info.Name} -> {text}");
         }
-
-        /*
-        public static void ShowBattleTextKey(this BattleChar bChar, string key)
-        {
-            if (bChar.Info.Ally)
-            {
-                bChar.ShowAllyBattleTextKey(key);
-                return;
-            }
-            else if (bChar is BattleEnemy battleEnemy)
-            {
-                battleEnemy.ShowEnemyBattleTextKey(key);
-                return;
-            }
-            Debug.LogWarning($"Unclear how to display text key for {bChar.Info.Name} -> {key}");
-        }*/
-
-        /*
-        public static string GetTextByKey(string key)
-        {
-            return LocalizationManager.GetTranslation(key);
-        }
-        public static string[] GetTextsByKey(string key)
-        {
-            return GetTextByKey(key)?.Split(SPLIT_ARRAY, StringSplitOptions.RemoveEmptyEntries);
-        }
-
-        private static Random random = new Random();
-
-        public static string GetRandomTextByKey(string key)
-        {
-            string[] strings = GetTextsByKey(key);
-            if(strings==null || strings.Length==0)
-            {
-                Debug.Log($"key {key} is {null} or 0!");
-                return null;
-            }
-            return strings[random.Next(strings.Length)];
-        }*/
-
-
     }
 }

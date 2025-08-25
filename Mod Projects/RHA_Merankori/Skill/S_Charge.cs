@@ -129,7 +129,7 @@ namespace RHA_Merankori
                 return;
             }
             int deltaCount = Mathf.Max(currentCastingSkill.CastSpeed, initCountingDown);
-            Debug.Log($"Charge: finish temp! {deltaCount}");
+            //Debug.Log($"Charge: finish temp! {deltaCount}");
             if (deltaCount == 0)
             {
                 ResetTempInfo();
@@ -137,7 +137,7 @@ namespace RHA_Merankori
             }
             else if (deltaCount < 0)
             {
-                Debug.Log("S_Charge count is negative, counting is <0 ???");
+                //Debug.Log("S_Charge count is negative, counting is <0 ???");
                 ResetTempInfo();
                 return;
             }

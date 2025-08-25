@@ -243,7 +243,7 @@ namespace RHA_Merankori
 		/// 在按下回合结束前，每行进1点倒计时，获得2层蓄能。
 		/// 慌张时，停止蓄能。
 		/// 冷静时完成蓄能，将2张<color=#FF6767>湮裂的燐焰晶</color>放入手中
-		/// <color=#FFC5BA>慌张：冷静下来，若完成蓄能，再抽取1个技能</color>
+		/// <color=#FFC5BA><b>慌张</b>：冷静下来，若完成蓄能，再抽取1个技能</color>
 		/// </summary>
         public static string Skill_S_Charge = "S_Charge";
 		/// <summary>
@@ -254,7 +254,7 @@ namespace RHA_Merankori
 		/// </summary>
         public static string Skill_S_ConvertCard = "S_ConvertCard";
 		/// <summary>
-		/// 常见效果
+		/// 常见效果预览
 		/// 仅供常见效果预览，按下shift可以查看技能<color=#FF6767>湮裂的燐焰晶</color>
 		/// </summary>
         public static string Skill_S_D_BuffInfo = "S_D_BuffInfo";
@@ -271,7 +271,7 @@ namespace RHA_Merankori
 		/// </summary>
         public static string Skill_S_ElementHeal = "S_ElementHeal";
 		/// <summary>
-		/// 晶石生成
+		/// 晶核生成
 		/// 抽取1个技能。
 		/// 获得燐晶核1个，可以用于摧毁地图上的墙体，发现埋藏的物品。
 		/// </summary>
@@ -300,7 +300,7 @@ namespace RHA_Merankori
 		/// 回路整流
 		/// 可以将梅朗柯莉指向单体队友的专属技能更改为对“全体友军”释放。
 		/// 丢弃此技能时，优先抽取&a个梅朗柯莉的技能。
-		/// <color=#BAC8FF>冷静：抽取1个技能</color>
+		/// <color=#BAC8FF><b>冷静</b>：抽取1个技能</color>
 		/// </summary>
         public static string Skill_S_Rectification = "S_Rectification";
 		/// <summary>
@@ -326,6 +326,35 @@ namespace RHA_Merankori
 		/// <summary>
 		/// Korean:
 		/// English:
+		/// When disabled, Lucy's Spine model will no longer be replaced with Melancholy's.
+		/// Japanese:
+		/// Chinese:
+		/// 关闭后，不再使用梅朗柯莉替换露西Spine模型。
+		/// Chinese-TW:
+		/// 關閉後，不再使用梅朗柯莉替換露西Spine模型。
+		/// </summary>
+        public static string Setting_CustomSpine_Desc => ModManager.getModInfo("RHA_Merankori").localizationInfo.SystemLocalizationUpdate("Setting_CustomSpine_Desc");
+		/// <summary>
+		/// Korean:
+		/// English:
+		/// Never replace Lucy
+		/// Japanese:
+		/// Chinese:
+		/// 不替换Spine人物模型
+		/// Chinese-TW:
+		/// 不替換Spine人物模型
+		/// </summary>
+        public static string Setting_CustomSpine_Title => ModManager.getModInfo("RHA_Merankori").localizationInfo.SystemLocalizationUpdate("Setting_CustomSpine_Title");
+		/// <summary>
+		/// Korean:
+		/// English:
+		/// I don’t need these cheap tricks—such fake power means nothing to me!  
+		/// ---
+		/// What’s the point of that... huh!  
+		/// ---
+		/// So tell me—are you the tank, or am I?  
+		/// ---
+		/// That’s not fiery enough for me.
 		/// Japanese:
 		/// Chinese:
 		/// 我可不需要这些小伎俩，这种伪造的力量！
@@ -336,33 +365,57 @@ namespace RHA_Merankori
 		/// ---
 		/// 你这不够火爆啊
 		/// Chinese-TW:
+		/// "我可不需要這些小伎倆，這種偽造的力量！
+		/// ---
+		/// 這種有什麼用啊...啊！
+		/// ---
+		/// 你是t還是我是t？
+		/// ---
+		/// 你這不夠火爆啊"
 		/// </summary>
         public static string TSB_Phoenix_FirstShield => ModManager.getModInfo("RHA_Merankori").localizationInfo.SystemLocalizationUpdate("TSB_Phoenix_FirstShield");
 		/// <summary>
 		/// Korean:
 		/// English:
+		/// I’m starving—shields can’t fill my stomach!  
+		/// ---
+		/// ...A phoenix is iron, but bread is steel!
 		/// Japanese:
 		/// Chinese:
 		/// 我饿了，盾填不了我的肚子！
 		/// ---
 		/// ..凤凰是铁，面包是钢！
 		/// Chinese-TW:
+		/// "我餓了，盾填不了我的肚子！
+		/// ---
+		/// ..鳳凰是鐵，麵包是鋼！ "
 		/// </summary>
         public static string TSB_Phoenix_LowHP_0_Shield => ModManager.getModInfo("RHA_Merankori").localizationInfo.SystemLocalizationUpdate("TSB_Phoenix_LowHP_0_Shield");
 		/// <summary>
 		/// Korean:
 		/// English:
+		/// Are you trying to squeeze me dry??  
+		/// ---
+		/// I’m starving to death... well, can’t die, but still starving!
 		/// Japanese:
 		/// Chinese:
 		/// 你是要榨干我吗？？
 		/// ---
 		/// 我要饿死...死不了但是饿啊！
 		/// Chinese-TW:
+		/// "你是要榨乾我嗎？？
+		/// ---
+		/// 我要餓死...死不了但是餓啊！ "
 		/// </summary>
         public static string TSB_Phoenix_LowHP_100_Shield => ModManager.getModInfo("RHA_Merankori").localizationInfo.SystemLocalizationUpdate("TSB_Phoenix_LowHP_100_Shield");
 		/// <summary>
 		/// Korean:
 		/// English:
+		/// N...nood... bread!  
+		/// ---
+		/// I... I’m a ph...phoenix that... can’t starve to death...  
+		/// ---
+		/// I... I just wanna go back... and paint…
 		/// Japanese:
 		/// Chinese:
 		/// 面...是包！
@@ -371,11 +424,21 @@ namespace RHA_Merankori
 		/// ---
 		/// 我...我想回去画画...
 		/// Chinese-TW:
+		/// "面...是包！
+		/// ---
+		/// 我可...不...餓不死的鳳...
+		/// ---
+		/// 我...我想回去畫畫..."
 		/// </summary>
         public static string TSB_Phoenix_LowHP_2000_Shield => ModManager.getModInfo("RHA_Merankori").localizationInfo.SystemLocalizationUpdate("TSB_Phoenix_LowHP_2000_Shield");
 		/// <summary>
 		/// Korean:
 		/// English:
+		/// Y-you... you can’t do this to me!  
+		/// ---
+		/// Lucy! Stop her! I can’t take it anymore!  
+		/// ---
+		/// I’m the invincible Phoenix—don’t you dare turn me into fried chicken!
 		/// Japanese:
 		/// Chinese:
 		/// 你..你不能这么对我！
@@ -384,22 +447,38 @@ namespace RHA_Merankori
 		/// ---
 		/// 我是无敌的凤凰，别拿我做炸鸡！
 		/// Chinese-TW:
+		/// "你..你不能這麼對我！
+		/// ---
+		/// 露西！快阻止她！我受不了了！
+		/// ---
+		/// 我是無敵的鳳凰，別拿我當炸雞！ "
 		/// </summary>
         public static string TSB_Phoenix_LowHP_500_Shield => ModManager.getModInfo("RHA_Merankori").localizationInfo.SystemLocalizationUpdate("TSB_Phoenix_LowHP_500_Shield");
 		/// <summary>
 		/// Korean:
 		/// English:
+		/// Guess it’s not totally useless after all.  
+		/// ---
+		/// I... I’m the immortal Phoenix, you know!
 		/// Japanese:
 		/// Chinese:
 		/// 这不是有点用嘛。
 		/// ---
 		/// 我..我可是不死的凤凰！
 		/// Chinese-TW:
+		/// "這不是有點用嘛。
+		/// ---
+		/// 我..我可是不死的鳳凰！ "
 		/// </summary>
         public static string TSB_Phoenix_NoPassive_Shield => ModManager.getModInfo("RHA_Merankori").localizationInfo.SystemLocalizationUpdate("TSB_Phoenix_NoPassive_Shield");
 		/// <summary>
 		/// Korean:
 		/// English:
+		/// ...(shakes head)  
+		/// ---
+		/// It’s... it’s already clear around here, and I... I...  
+		/// ---
+		/// n-no... I... I don’t think so…
 		/// Japanese:
 		/// Chinese:
 		/// ...（摇头）
@@ -408,11 +487,21 @@ namespace RHA_Merankori
 		/// ---
 		/// 不...不可以吧...
 		/// Chinese-TW:
+		/// "...（搖頭）
+		/// ---
+		/// 周圍已經是空地而且我...我...
+		/// ---
+		/// 不...不可以吧..."
 		/// </summary>
         public static string TS_Merankori_RHA_CannotUse => ModManager.getModInfo("RHA_Merankori").localizationInfo.SystemLocalizationUpdate("TS_Merankori_RHA_CannotUse");
 		/// <summary>
 		/// Korean:
 		/// English:
+		/// I... I really can’t do it...  
+		/// ---
+		/// I’m a little confused too... I don’t understand why...  
+		/// ---
+		/// L...Lucy, I... I think I can’t break that area... and... and I already tried my best, but it didn’t budge at all, I... I don’t know why!
 		/// Japanese:
 		/// Chinese:
 		/// 我...我真的做不到...
@@ -421,11 +510,21 @@ namespace RHA_Merankori
 		/// ---
 		/// 露..露西我想我应该拆不了那边的区域而且...而且我已经尽力去弄了但是它丝毫不动我..我也不知道为什么！
 		/// Chinese-TW:
+		/// 「我...我真的做不到...
+		/// ---
+		/// 我也有點困惑...我不明白為什麼...
+		/// ---
+		/// 露..露西我想我應該拆不了那邊的區域而且...而且我已經盡力去弄了但是它絲毫不動我..我也不知道為什麼！ "
 		/// </summary>
         public static string TS_Merankori_RHA_CannotUseHidden => ModManager.getModInfo("RHA_Merankori").localizationInfo.SystemLocalizationUpdate("TS_Merankori_RHA_CannotUseHidden");
 		/// <summary>
 		/// Korean:
 		/// English:
+		/// ...(looks confusedly at the charred tree)  
+		/// ---
+		/// m...maybe try... one more time...?  
+		/// ---
+		/// so... so confused…
 		/// Japanese:
 		/// Chinese:
 		/// ...（困惑地看向焦黑的树木）
@@ -434,17 +533,28 @@ namespace RHA_Merankori
 		/// ---
 		/// 好困惑呀...
 		/// Chinese-TW:
+		/// "...（困惑地看向焦黑的樹木）
+		/// ---
+		/// 再...再試一次？
+		/// ---
+		/// 好困惑呀..."
 		/// </summary>
         public static string TS_Merankori_RHA_FindHidden => ModManager.getModInfo("RHA_Merankori").localizationInfo.SystemLocalizationUpdate("TS_Merankori_RHA_FindHidden");
 		/// <summary>
 		/// Korean:
 		/// English:
+		/// You blew me up into a hedgehog—now hurry up and fix my feathers!  
+		/// ---
+		/// I just groomed those feathers!
 		/// Japanese:
 		/// Chinese:
 		/// 你把我给炸成刺猬了，快给我梳毛！
 		/// ---
 		/// 我刚梳的毛！
 		/// Chinese-TW:
+		/// "你把我給炸成刺蝟了，快給我梳毛！
+		/// ---
+		/// 我剛梳的毛！ "
 		/// </summary>
         public static string TS_Phoenix_UseRHA => ModManager.getModInfo("RHA_Merankori").localizationInfo.SystemLocalizationUpdate("TS_Phoenix_UseRHA");
 

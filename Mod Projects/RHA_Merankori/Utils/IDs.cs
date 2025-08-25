@@ -10,5 +10,7 @@ namespace RHA_Merankori
     {
         public const string ID_Harmony_Name = "com.RHA_Merankori.patch";
         public const string ID_Mod = "RHA_Merankori";
+
+        public const string Setting_UseCustomSpine = "Setting_UseCustomSpine";
     }
 }

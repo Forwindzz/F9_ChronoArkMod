@@ -1,7 +1,7 @@
 {
     "SK_Panic": {
         "_gdeSchema": "SkillKeyword",
-        "Name": "Panic",
-        "Desc": "Triggers when in the <color=#FFC5BA><b>Panic</b></color> state"
+        "Name": "慌张",
+        "Desc": "处于“<color=#FFC5BA><b>慌张</b></color>”状态时触发"
     }
 }

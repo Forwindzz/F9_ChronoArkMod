@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Networking;
 using System.Collections;
+using ChronoArkMod.ModData.Settings;
 
 namespace RHA_Merankori
 {
@@ -85,6 +86,10 @@ namespace RHA_Merankori
         //条件是小队里有梅朗柯莉
         public static bool CheckIfShowSprite()
         {
+            if(IsDisabledGlobal()) //或者全局禁用
+            {
+                return false;
+            }
             if (PlayData.TSavedata != null)
             {
                 System.Collections.Generic.List<Character> party = PlayData.TSavedata.Party;
@@ -173,10 +178,25 @@ namespace RHA_Merankori
                     lucyMeshRender.transform.rotation = Quaternion.Euler(lucyRot);
                     ss6AnimControl.SpriteRoot.transform.rotation = Camera.main.transform.rotation;
 
-                    Debug.Log($"Force Rot player: delta={delta} | Lucy={lucyRot}, Camera={camRot}");
+                    //Debug.Log($"Force Rot player: delta={delta} | Lucy={lucyRot}, Camera={camRot}");
                 }
                 //Debug.Log($"Delta Time: {Time.deltaTime} -> {1.0f / Time.deltaTime} Ticks/s");
             }
+        }
+
+        private static bool IsDisabledGlobal()
+        {
+            ModInfo modInfo = ModManager.getModInfo(IDs.ID_Mod);
+            if(modInfo==null)
+            {
+                return false;
+            }
+            ToggleSetting toggleSetting = modInfo.GetSetting<ToggleSetting>(IDs.Setting_UseCustomSpine);
+            if(toggleSetting==null)
+            {
+                return false;
+            }
+            return toggleSetting.Value;
         }
 
         public void SetDisplayCustomSprite(bool flag)
@@ -185,6 +205,10 @@ namespace RHA_Merankori
             {
                 Debug.LogWarning("Try to set custom lucy sprite without inited!");
                 return;
+            }
+            if(IsDisabledGlobal())
+            {
+                flag = false;
             }
             if (flag == IsDisplayingSprite)
             {
@@ -227,9 +251,18 @@ namespace RHA_Merankori
             yield break;
         }
 
+        public bool IsShowingCustomSpine
+        {
+            get => merankoriCharGO.activeSelf && isInited;
+        }
+
         public void PlayOnceAnimation(int animationIndex, bool enableTransition=true)
         {
-            Debug.Log($"Play once {animationIndex} {enableTransition}");
+            //Debug.Log($"Play once {animationIndex} {enableTransition}");
+            if(!IsShowingCustomSpine)
+            {
+                return;
+            }
             isPlayingOnce = true;
             ss6AnimControl.SwitchToAnimation(
                 animationIndex,
@@ -248,7 +281,7 @@ namespace RHA_Merankori
         //如果比较复杂的话，考虑包装成状态机模型
         public void UpdateAnimation()
         {
-            if (merankoriCharGO.activeSelf && isInited)
+            if (IsShowingCustomSpine)
             {
                 PlayerController playerController = FieldSystem.instance.Playercontrol;
                 mkRender.sortingOrder = lucyMeshRender.sortingOrder; //绘制顺序，保证遮挡关系正确
@@ -323,7 +356,7 @@ namespace RHA_Merankori
             MeshRenderer lucyRender = lucyMeshRender.GetComponentInChildren<MeshRenderer>();
             if (mkRender != null && lucyRender != null)
             {
-                Debug.Log($"Render Get: {mkRender.gameObject.name} {lucyRender.gameObject.name}");
+                //Debug.Log($"Render Get: {mkRender.gameObject.name} {lucyRender.gameObject.name}");
 
                 mkRender.sortingLayerID = lucyMeshRender.sortingLayerID;
                 mkRender.sortingOrder = lucyMeshRender.sortingOrder;

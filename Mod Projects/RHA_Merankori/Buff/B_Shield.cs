@@ -82,7 +82,7 @@ namespace RHA_Merankori
                         {
                             canJudgeReduceStack = false;
                             isJudging = false;
-                            Debug.Log($">>>> DeadResist {this.BChar.Info.KeyData}: other IP_DeadResist <{ip_DeadResist.GetType().FullName}> return true, skip judging.");
+                            //Debug.Log($">>>> DeadResist {this.BChar.Info.KeyData}: other IP_DeadResist <{ip_DeadResist.GetType().FullName}> return true, skip judging.");
                             return true;
                         }
                     }
@@ -92,13 +92,13 @@ namespace RHA_Merankori
                 }
                 isJudging = false;
 
-                Debug.Log($">>>> DeadResist {this.BChar.Info.KeyData}: reduce B_Shield!");
+                //Debug.Log($">>>> DeadResist {this.BChar.Info.KeyData}: reduce B_Shield!");
                 canJudgeReduceStack = false;
                 this.SelfStackDestroy();
             }
             else
             {
-                Debug.Log($">>>> DeadResist {this.BChar.Info.KeyData}: just check");
+                //Debug.Log($">>>> DeadResist {this.BChar.Info.KeyData}: just check");
             }
             return true;
         }
@@ -138,7 +138,7 @@ namespace RHA_Merankori
                 if (shieldBuff is B_Shield bShield)
                 {
                     bShield.canJudgeReduceStack = false;
-                    Debug.Log(">> Set B_Shield canJudgeReduceStack False!");
+                    //Debug.Log(">> Set B_Shield canJudgeReduceStack False!");
                     return;
                 }
                 else
@@ -146,7 +146,7 @@ namespace RHA_Merankori
                     Debug.LogWarning($">> Try to convert {shieldBuff.GetType().FullName} to B_Shield failed!");
                 }
             }
-            Debug.Log(">> Cannot find B_Shield, Skip!");
+            //Debug.Log(">> Cannot find B_Shield, Skip!");
         }
 
         public void Turn()

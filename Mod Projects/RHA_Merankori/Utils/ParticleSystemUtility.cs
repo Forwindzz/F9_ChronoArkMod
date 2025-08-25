@@ -29,7 +29,7 @@ namespace RHA_Merankori
                     if (psMaterial != null)
                     {
                         psMaterial.renderQueue = renderQueue; 
-                        Debug.Log($"Updated RenderQueue for {ps.gameObject.name} to {renderQueue}");
+                        //Debug.Log($"Updated RenderQueue for {ps.gameObject.name} to {renderQueue}");
                     }
                 }
             }
@@ -51,7 +51,7 @@ namespace RHA_Merankori
             foreach (ParticleSystem ps in particleSystems)
             {
                 ParticleSystemRenderer psRenderer = ps.GetComponent<ParticleSystemRenderer>();
-                Debug.Log($"Set up sorting for {psRenderer.gameObject.name}");
+                //Debug.Log($"Set up sorting for {psRenderer.gameObject.name}");
                 if (psRenderer != null)
                 {
                     Material psMaterial = psRenderer.material;
@@ -72,7 +72,7 @@ namespace RHA_Merankori
             foreach (ParticleSystem ps in particleSystems)
             {
                 ParticleSystemRenderer psRenderer = ps.GetComponent<ParticleSystemRenderer>();
-                Debug.Log($"Set up sorting for {psRenderer.gameObject.name}");
+                //Debug.Log($"Set up sorting for {psRenderer.gameObject.name}");
                 if (psRenderer != null)
                 {
                     Material psMaterial = psRenderer.material;

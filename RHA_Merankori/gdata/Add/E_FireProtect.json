@@ -2,8 +2,8 @@
     "E_FireProtect": {
         "_gdeSchema": "Item_Equip",
         "Itemclass": "Unique",
-        "name": "Fire’s Guard",
-        "Description": "At the start of the turn, if the equipper does not have Phosguard buff, grant 1 stack of it (resists Faint once).\n\n<color=#5061A4>—— This truly did drop from a Grass Hedgehog. The ones here, untouched by the Black Mist, are all under the Lord’s protection. But that one just now... was it not by the Lord’s hand...? ...Cure arts, you say? There should only be the Lord’s sacred rites here.</color>",
+        "name": "火之守护",
+        "Description": "回合开始时，若没有燐色存护增益，则赋予1层燐色存护（抵抗无法战斗1次）。\n\n<color=#5061A4>——这的确是从草刺猬上掉落的，这里没被黑雾浸染的草刺猬都受到了主的关照，只是刚刚那只被主....？...愈术是什么，这里应该只有主的圣术。</color>",
         "image": "Item\\E_FireProtect_image.png",
         "Equip_Script": "RHA_Merankori.E_FireProtect"
     }

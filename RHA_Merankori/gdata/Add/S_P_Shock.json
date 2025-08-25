@@ -5,8 +5,8 @@
         "Particle": "Particle/impact",
         "Target": "Misc",
         "NotCount": false,
-        "Name": "Shock Impact",
-        "Description": "Preview Effect",
+        "Name": "震荡冲击",
+        "Description": "预览效果",
         "NoDrop": true,
         "Effect_Target": "SE_T_S_P_Shock"
     }

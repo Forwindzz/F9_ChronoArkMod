@@ -3,8 +3,8 @@
         "_gdeSchema": "Buff",
         "ClassName": "RHA_Merankori.B_DeadImmuneNoLimit",
         "BuffTag": "null",
-        "Name": "Remove the limit of Faint Resist",
-        "Description": "Current Faint Resist: &a%",
+        "Name": "解除无法战斗抵抗上限",
+        "Description": "目前的无法战斗抵抗：&a%",
         "Cantdisable": true,
         "Icon": "Image/Buff/Skill_Icon_Pack/blue/blue_20"
     }

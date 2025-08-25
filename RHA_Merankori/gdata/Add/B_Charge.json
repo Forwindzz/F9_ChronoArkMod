@@ -8,8 +8,8 @@
         "BuffTag": "null",
         "UseSkillDebuff": false,
         "Caution": true,
-        "Name": "Charging",
-        "Description": "When casting <color=#FF6767>Obliterated Phosflame Crystal</color>, each stack increases its damage by 10%, then remove this effect.",
+        "Name": "蓄能",
+        "Description": "释放<color=#FF6767>湮裂的燐焰晶</color>时，每层增加其10%的伤害，然后移除此效果。",
         "Tick": "null",
         "MaxStack": 20,
         "Icon": "B_Charge\\B_Charge_Icon.png"

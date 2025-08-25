@@ -28,17 +28,17 @@ namespace RHA_Merankori
         {
             BlowUpAttributes attr = new BlowUpAttributes();
             attr.range = 1;
-            Debug.Log("try to compute blow up attr");
+            //Debug.Log("try to compute blow up attr");
 
             if(PlayData.TSavedata==null)
             {
-                Debug.Log("Null save data!");
+                Debug.Log("BlowUpAttributes: Null save data!");
                 return attr;
             }
 
             if (PlayData.TSavedata.Party == null)
             {
-                Debug.Log("Null party save data!");
+                Debug.Log("BlowUpAttributes: Null party save data!");
                 return attr;
             }
 

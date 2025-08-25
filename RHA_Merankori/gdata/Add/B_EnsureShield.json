@@ -8,8 +8,8 @@
         "BuffTag": "null",
         "UseSkillDebuff": false,
         "Caution": false,
-        "Name": "Guardian of Fire",
-        "Description": "If there is no Phosguard at the start of the turn, apply 1 stack of Phosguard.",
+        "Name": "火之存护",
+        "Description": "若回合开始时没有燐色存护，则施加1层燐色存护。",
         "Icon": "B_EnsureShield\\B_EnsureShield_Icon.png"
     }
 }

@@ -8,8 +8,8 @@
         "BuffTag": "null",
         "UseSkillDebuff": false,
         "Caution": false,
-        "Name": "Refraction",
-        "Description": "Refract the damage and additional effects of <color=#FF6767>Obliterated Phosflame Crystal</color> to the enemy with the lowest Health.",
+        "Name": "折射",
+        "Description": "将<color=#FF6767>湮裂的燐焰晶</color>的伤害和附加效果，折射给生命值最低的敌人。",
         "LifeTime": 1,
         "Icon": "Image/Buff/Skill_Icon_Pack/1_82/12"
     }

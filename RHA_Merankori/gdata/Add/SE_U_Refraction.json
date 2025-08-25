@@ -1,10 +1,10 @@
 {
     "SE_U_Refraction": {
         "_gdeSchema": "SkillExtended",
-        "Des": "Grant Refraction for 1 turn",
-        "Name": "Grant Refraction",
+        "Des": "赋予1回合折射",
+        "Name": "赋予折射",
         "Drop": true,
-        "EnforceString": "Overload, single-target skills",
+        "EnforceString": "过载，指向单体队友的技能",
         "NeedCharacter": "C_Merankori",
         "ClassName": "RHA_Merankori.SE_U_Refraction",
         "AlwaysParticle": false,

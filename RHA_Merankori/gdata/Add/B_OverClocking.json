@@ -8,8 +8,8 @@
         "BuffTag": "null",
         "UseSkillDebuff": false,
         "Caution": false,
-        "Name": "Overfrequency Crystal",
-        "Description": "The next <color=#FF6767>Obliterated Phosflame Crystal</color> will carry the \"Shock Impact\" debuff.",
+        "Name": "越频晶石",
+        "Description": "下一次<color=#FF6767>湮裂的燐焰晶</color>会附带“震荡冲击”干扰减益",
         "Icon": "Image/Buff/Skill_Icon_Pack/1_7icon/1_7 (54)"
     }
 }
