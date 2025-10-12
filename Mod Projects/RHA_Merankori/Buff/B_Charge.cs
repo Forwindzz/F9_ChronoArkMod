@@ -32,13 +32,6 @@ namespace RHA_Merankori
         protected override void OnTriggerMerankoriBuffAttackAll(S_Attack_All skill_Extended)
         {
             this.SelfDestroy();
-            /*
-            int removeCount = this.StackNum / 2 + 1;
-            for(int i=0;i<removeCount;i++)
-            {
-                this.SelfStackDestroy();
-            }
-            */
         }
     }
 }

@@ -78,13 +78,13 @@ namespace RHA_Merankori
         public override string DescInit()
         {
             return base.DescInit()
-                .Replace("&c", GetChargeStackCount().ToString());
+                .Replace("&a", GetChargeStackCount().ToString());
         }
 
         public override string DescExtended(string desc)
         {
             return base.DescExtended(desc)
-                .Replace("&c", GetChargeStackCount().ToString());
+                .Replace("&a", GetChargeStackCount().ToString());
         }
 
         public int GetChargeStackCount()

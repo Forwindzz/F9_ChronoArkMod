@@ -1,0 +1,13 @@
+{
+    "CD_Mk_Priest": {
+        "_gdeSchema": "SimpleCampDialogue",
+        "CharA": "ShadowPriest",
+        "CharB": "C_Merankori",
+        "Dialogues": [
+            "[A]要不来试一试很酷的黑魔法？",
+            "[A]我们合作起来可以更加高效萃取生命！",
+            "[B]...",
+            "[B]这..这样似乎不好吧...?"
+        ]
+    }
+}

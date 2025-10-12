@@ -1,0 +1,13 @@
+{
+    "CD_Mk_Joey": {
+        "_gdeSchema": "SimpleCampDialogue",
+        "CharA": "Joey",
+        "CharB": "C_Merankori",
+        "Dialogues": [
+            "[B]乔...乔伊会调节晶石吗？",
+            "[A]我修过电路板，但晶石回路我第一次见",
+            "[A]有样品的话我也可以试一试",
+            "[B]我只有这一个..."
+        ]
+    }
+}

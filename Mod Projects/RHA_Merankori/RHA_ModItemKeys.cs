@@ -18,7 +18,7 @@ namespace RHA_Merankori
 		/// 冷静
 		/// 回合结束时，赋予体力值最低的队友1层燐色存护。
 		/// <color=#BAC8FF>照料可能因自己受伤的队友...</color>
-		/// 回合开始时梅朗柯莉会<color=#BAC8FF><b>冷静</b></color>下来。
+		/// 有人受到治疗时， 梅朗柯莉会<color=#BAC8FF><b>冷静</b></color>下来。
 		/// 当有人攻击时，进入<color=#FFC5BA><b>慌张</b></color>状态。
 		/// </summary>
         public static string Buff_B_Calm = "B_Calm";
@@ -79,7 +79,7 @@ namespace RHA_Merankori
 		/// <summary>
 		/// 慌张
 		/// <color=#FFC5BA>燐焰晶逐渐炽烈...</color>
-		/// 回合开始时，梅朗柯莉会<color=#BAC8FF><b>冷静</b></color>下来。
+		/// 有人受到治疗时， 梅朗柯莉会<color=#BAC8FF><b>冷静</b></color>下来。
 		/// 当有人攻击时，进入<color=#FFC5BA><b>慌张</b></color>状态。
 		/// </summary>
         public static string Buff_B_Panic = "B_Panic";
@@ -114,12 +114,18 @@ namespace RHA_Merankori
 		/// 叠加2层暖焰会减少一半治疗量的阈值。
 		/// </summary>
         public static string Buff_B_WarmFire = "B_WarmFire";
+        public static string SimpleCampDialogue_CD_Mk_Joey = "CD_Mk_Joey";
+        public static string SimpleCampDialogue_CD_Mk_Mm = "CD_Mk_Mm";
+        public static string SimpleCampDialogue_CD_Mk_Narhan = "CD_Mk_Narhan";
+        public static string SimpleCampDialogue_CD_Mk_Phoenix = "CD_Mk_Phoenix";
+        public static string SimpleCampDialogue_CD_Mk_Priest = "CD_Mk_Priest";
+        public static string SimpleCampDialogue_CD_Mk_SteelH = "CD_Mk_SteelH";
 		/// <summary>
 		/// 梅朗柯莉
 		/// Passive:
-		/// 任何攻击会让梅朗柯莉<color=#FFC5BA><b>慌张</b></color>。但在回合开始时，梅朗柯莉会<color=#BAC8FF><b>冷静</b></color>下来。
+		/// 任何攻击行为会让梅朗柯莉<color=#FFC5BA><b>慌张</b></color>，但任何治疗行为都会让梅朗柯莉<color=#BAC8FF><b>冷静</b></color>下来。
 		/// 固定技能始终为<color=#FF6767>湮裂的燐焰晶</color>，会攻击除自己以外所有人，战斗会摧毁周边障碍。
-		/// 升级获得物品“燐晶核”2个，进入营地会获得1个，可以摧毁地形并概率发现少量遗失的物品。
+		/// 升级获得物品<color=#FF6767>燐晶核</color>2个，进入营地会获得1个，可以摧毁地形并概率发现少量遗失的物品。
 		/// </summary>
         public static string Character_C_Merankori = "C_Merankori";
 		/// <summary>

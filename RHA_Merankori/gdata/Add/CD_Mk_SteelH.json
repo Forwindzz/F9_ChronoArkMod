@@ -1,0 +1,13 @@
+{
+    "CD_Mk_SteelH": {
+        "_gdeSchema": "SimpleCampDialogue",
+        "CharB": "C_Merankori",
+        "CharA": "Prime",
+        "Dialogues": [
+            "[A]你们那也有佣兵吗？",
+            "[B]...也...也许",
+            "[B]有...",
+            "[B]但...只能呆在那里，没法离开那条街道..."
+        ]
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "CD_Mk_Narhan": {
+        "_gdeSchema": "SimpleCampDialogue",
+        "CharA": "Control",
+        "CharB": "C_Merankori",
+        "Dialogues": [
+            "[A]又在想念家人的事吗？",
+            "[B]...",
+            "[A]乔伊或许能帮你缓解一下...那个问题"
+        ]
+    }
+}

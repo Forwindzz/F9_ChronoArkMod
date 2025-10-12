@@ -1,0 +1,12 @@
+{
+    "CD_Mk_Mm": {
+        "_gdeSchema": "SimpleCampDialogue",
+        "CharA": "Momori",
+        "CharB": "C_Merankori",
+        "Dialogues": [
+            "[A]梅朗柯莉酱很让人按捺不住欲望呀~",
+            "[B]...",
+            "[A]梅朗柯莉酱没有反应也太冷淡了！"
+        ]
+    }
+}

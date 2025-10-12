@@ -6,7 +6,7 @@
         "BuffTag": "null",
         "Tick": "SE_Tick_B_Panic",
         "Name": "慌张",
-        "Description": "<color=#FFC5BA>燐焰晶逐渐炽烈...</color>\n回合开始时，梅朗柯莉会<color=#BAC8FF><b>冷静</b></color>下来。\n当有人攻击时，进入<color=#FFC5BA><b>慌张</b></color>状态。",
+        "Description": "<color=#FFC5BA>燐焰晶逐渐炽烈...</color>\n有人受到治疗时， 梅朗柯莉会<color=#BAC8FF><b>冷静</b></color>下来。\n当有人攻击时，进入<color=#FFC5BA><b>慌张</b></color>状态。",
         "Caution": true,
         "UseSkillDebuff": false,
         "Hide": false,

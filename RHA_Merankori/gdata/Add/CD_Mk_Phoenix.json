@@ -1,0 +1,14 @@
+{
+    "CD_Mk_Phoenix": {
+        "_gdeSchema": "SimpleCampDialogue",
+        "CharA": "Phoenix",
+        "CharB": "C_Merankori",
+        "Dialogues": [
+            "[A]我想把这家伙踢出队伍！  ",
+            "[A]我不想再炸毛了！ ",
+            "[B]...",
+            "[A]...",
+            "[A]不过找到的炸面包...真香！"
+        ]
+    }
+}
