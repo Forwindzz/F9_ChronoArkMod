@@ -1,0 +1,14 @@
+{
+    "B_SCharge": {
+        "_gdeSchema": "Buff",
+        "ClassName": "RHA_Merankori.B_SCharge",
+        "BuffTag": "null",
+        "Caution": false,
+        "Cantdisable": true,
+        "Hide": false,
+        "MaxStack": 1,
+        "LifeTime": 0,
+        "IsFieldBuff": false,
+        "UseSkillDebuff": false
+    }
+}

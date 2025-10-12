@@ -94,6 +94,7 @@ namespace RHA_Merankori
 		/// 将<color=#FF6767>湮裂的燐焰晶</color>的伤害和附加效果，折射给生命值最低的敌人。
 		/// </summary>
         public static string Buff_B_Refraction = "B_Refraction";
+        public static string Buff_B_SCharge = "B_SCharge";
 		/// <summary>
 		/// 燐色存护
 		/// 每层能抵抗1次无法战斗效果。
@@ -240,10 +241,8 @@ namespace RHA_Merankori
         public static string Skill_S_Care = "S_Care";
 		/// <summary>
 		/// 蓄能
-		/// 在按下回合结束前，每行进1点倒计时，获得2层蓄能。
-		/// 慌张时，停止蓄能。
-		/// 冷静时完成蓄能，将2张<color=#FF6767>湮裂的燐焰晶</color>放入手中
-		/// <color=#FFC5BA><b>慌张</b>：冷静下来，若完成蓄能，再抽取1个技能</color>
+		/// 在此技能倒计时期间，梅朗柯莉每次进入<color=#BAC8FF>冷静</color>状态时，获得4层蓄能。
+		/// 若以<color=#BAC8FF>冷静</color>状态完成蓄能，将2张<color=#FF6767>湮裂的燐焰晶</color>放入手中。
 		/// </summary>
         public static string Skill_S_Charge = "S_Charge";
 		/// <summary>

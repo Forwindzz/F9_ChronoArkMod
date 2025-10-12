@@ -20,7 +20,7 @@
         "EnemyPreview": false,
         "UnknownTarget": false,
         "Name": "蓄能",
-        "Description": "在按下回合结束前，每行进1点倒计时，获得2层蓄能。\n慌张时，停止蓄能。\n冷静时完成蓄能，将2张<color=#FF6767>湮裂的燐焰晶</color>放入手中\n<color=#FFC5BA><b>慌张</b>：冷静下来，若完成蓄能，再抽取1个技能</color>",
+        "Description": "在此技能倒计时期间，梅朗柯莉每次进入<color=#BAC8FF>冷静</color>状态时，获得4层蓄能。\n若以<color=#BAC8FF>冷静</color>状态完成蓄能，将2张<color=#FF6767>湮裂的燐焰晶</color>放入手中。",
         "UseAp": 0,
         "User": "C_Merankori",
         "Counting": 4,

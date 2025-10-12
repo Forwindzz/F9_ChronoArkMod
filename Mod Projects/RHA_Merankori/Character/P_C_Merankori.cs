@@ -18,7 +18,7 @@ namespace RHA_Merankori
     /// Passive:
     /// 情绪高涨的梅朗柯莉会激化身边的红色结晶，会对周围不分敌我地产生毁灭性的伤害，甚至摧毁地形。
     /// 但冷静下来的梅朗柯莉又会悉心照料因自己而受伤的队友。
-    /// 任何攻击都会让她变得情绪慌张，但在回合开始时，梅朗柯莉会冷静下来。
+    /// 任何攻击都会让她变得情绪慌张，任何治疗则会让梅朗柯莉会冷静下来。
     /// 固定技能始终为“湮裂的燐焰晶”
     /// 获得物品“活化燐焰晶”
     /// </summary>
@@ -28,15 +28,10 @@ namespace RHA_Merankori
         IP_LevelUp,
         IP_CampFire,
         IP_BattleEnd,
-        IP_BattleEndOutBattle
+        IP_BattleEndOutBattle,
+        IP_BattleStart_Ones,
+        IP_Healed
     {
-
-        public override void TurnUpdate()
-        {
-            base.TurnUpdate();
-            //在回合开始时，梅朗柯莉会冷静下来。
-            EmotionBuffSwitch.SwitchToCalm(this.BChar);
-        }
 
         public override void Init()
         {
@@ -79,14 +74,25 @@ namespace RHA_Merankori
             MapChange.BlowUpTiles(StageSystem.instance.PlayerPos, range);
             yield break;
         }
+
         public void BattleEnd()
         {
-            //FieldSystem.DelayInput(BlowUpTiles());
         }
 
         public void BattleEndOutBattle()
         {
             FieldSystem.DelayInput(BlowUpTiles());
         }
+
+        public void Healed(BattleChar Healer, BattleChar HealedChar, int HealNum, bool Cri, int OverHeal)
+        {
+            EmotionBuffSwitch.SwitchToCalm(this.BChar);
+        }
+
+        public void BattleStart(BattleSystem Ins)
+        {
+            EmotionBuffSwitch.SwitchToCalm(this.BChar);
+        }
+        //TODO：修改文本，另外进行游玩测试...
     }
 }
