@@ -85,7 +85,7 @@ namespace RHA_Merankori
         public static string Buff_B_Panic = "B_Panic";
 		/// <summary>
 		/// 燐焰晶回流
-		/// 回合开始时，每层会赋予1层燐色存护。
+		/// 回合开始时，赋予1层燐色存护。
 		/// 溢出的燐色存护会转化为5%无法战斗抵抗增益。
 		/// </summary>
         public static string Buff_B_Reflow = "B_Reflow";
@@ -178,8 +178,6 @@ namespace RHA_Merankori
         public static string SkillEffect_SE_S_S_ElementHeal = "SE_S_S_ElementHeal";
         public static string SkillEffect_SE_S_S_Manifold = "SE_S_S_Manifold";
         public static string SkillEffect_SE_S_S_OverClocking = "SE_S_S_OverClocking";
-        public static string SkillEffect_SE_S_S_Rectification = "SE_S_S_Rectification";
-        public static string SkillEffect_SE_S_S_Shield = "SE_S_S_Shield";
         public static string SkillEffect_SE_S_S_WarmFire = "SE_S_S_WarmFire";
         public static string SkillEffect_SE_Tick_B_Backflow = "SE_Tick_B_Backflow";
         public static string SkillEffect_SE_Tick_B_Calm = "SE_Tick_B_Calm";
@@ -248,8 +246,9 @@ namespace RHA_Merankori
 		/// <summary>
 		/// 焰晶转化
 		/// 丢弃选择的技能，抽取1个技能。
-		/// 将1张<color=#FF6767>湮裂的燐焰晶</color>放入手中。
-		/// 丢弃技能的拥有者获得1层折射和1层频移微调。
+		/// 丢弃技能的拥有者获得2层频移微调。
+		/// <color=#FFC5BA><b>慌张</b>：将1张<color=#FF6767>湮裂的燐焰晶</color>放入手中。</color>
+		/// <color=#BAC8FF><b>冷静</b>：赋予此技能迅速</color>
 		/// </summary>
         public static string Skill_S_ConvertCard = "S_ConvertCard";
 		/// <summary>
@@ -310,6 +309,7 @@ namespace RHA_Merankori
         public static string Skill_S_Retreat = "S_Retreat";
 		/// <summary>
 		/// 燐晶电场
+		/// 队友每损失5点体力值，获得1层蓄能。<color=#5061A4>（预期&a层）</color>
 		/// <color=#BAC8FF><b>冷静</b>：处于濒死状态的队友额外获得2层“燐色存护”</color>
 		/// </summary>
         public static string Skill_S_Shield = "S_Shield";

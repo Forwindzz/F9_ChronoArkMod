@@ -16,12 +16,17 @@ namespace RHA_Merankori
     /// <summary>
     /// 焰晶转化
     /// 丢弃选择的技能，抽取1个技能。
-    /// 将1张<color=#FF6767>湮裂的燐焰晶</color>放入手中。
-    /// 丢弃技能的拥有者获得1层折射和1层频移微调
+    /// 丢弃技能的拥有者获得2层频移微调。
+    /// <color=#FFC5BA><b>慌张</b>：将1张<color=#FF6767>湮裂的燐焰晶</color>放入手中。</color>
+    /// <color=#BAC8FF><b>冷静</b>：赋予此技能迅速</color>
     /// </summary>
-    public class S_ConvertCard : Skill_Extended,
+    public class S_ConvertCard : Merankori_BaseSkill,
         ICanMerankoriRectification
     {
+        public override bool CanApplyCalm => false;
+
+        public override bool CanApplyPanic => false;
+
         public override void Init()
         {
             base.Init();
@@ -49,13 +54,28 @@ namespace RHA_Merankori
                 if (targetSkill.Master!=null)
                 {
                     BattleChar master = targetSkill.Master;
-                    master.BuffAdd(ModItemKeys.Buff_B_Refraction, this.BChar);
+                    master.BuffAdd(ModItemKeys.Buff_B_FreqShift, this.BChar);
                     master.BuffAdd(ModItemKeys.Buff_B_FreqShift, this.BChar);
                 }
                 targetSkill.Delete(false);
                 this.BChar.MyTeam.Draw(1);
-                S_Attack_All.GenCardToHand(this.BChar, 1);
+                if(EmotionBuffSwitch.IsPanic(this.BChar))
+                {
+                    S_Attack_All.GenCardToHand(this.BChar, 1);
+                }
             }
+        }
+
+        protected override void OnEmotionCalm()
+        {
+            base.OnEmotionCalm();
+            this.NotCount = true;
+        }
+
+        protected override void OnEmotionPanic()
+        {
+            base.OnEmotionPanic();
+            this.NotCount = false;
         }
     }
 }

@@ -58,11 +58,6 @@ namespace RHA_Merankori
                 }
             }
 
-
-
-            // TODO: add other effect
-
-
             // remove targets, since they are refracted!
             foreach (BattleChar target in refractionOwner)
             {
@@ -74,8 +69,6 @@ namespace RHA_Merankori
             {
                 battleChar.BuffAdd(ModItemKeys.Buff_B_NotDeadlyAtk, this.BChar);
             }
-
-
             
             BattleSystem.DelayInput(Co_RefractDamage(refractionOwner));
 

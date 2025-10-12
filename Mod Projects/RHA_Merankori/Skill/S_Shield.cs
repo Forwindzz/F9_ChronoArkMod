@@ -17,7 +17,7 @@ namespace RHA_Merankori
     /// 燐晶电场 S_Shield
     /// 3费，全体队友
     /// 赋予2层“燐色存护”
-    /// 下1次“湮裂的燐焰晶”会根据队友已损失的体力值增加，每5点增加4%伤害。
+    /// 队友每损失5点体力值，获得1层蓄能。<color=#5061A4>（预期&a层）</color>
     /// 冷静：处于濒死状态的队友额外获得2层“燐色存护”。
     /// </summary>
     public class S_Shield: 
@@ -54,6 +54,7 @@ namespace RHA_Merankori
                     b.BuffAddWithStacks(ModItemKeys.Buff_B_Shield, this.BChar, 2);
                 }
             }
+            this.BChar.BuffAddWithStacks(ModItemKeys.Buff_B_Charge, this.BChar, GetChargeStackCount());
         }
 
         protected override void OnEmotionCalm()
@@ -72,6 +73,23 @@ namespace RHA_Merankori
             {
                 base.SkillParticleOff();
             }
+        }
+
+        public override string DescInit()
+        {
+            return base.DescInit()
+                .Replace("&c", GetChargeStackCount().ToString());
+        }
+
+        public override string DescExtended(string desc)
+        {
+            return base.DescExtended(desc)
+                .Replace("&c", GetChargeStackCount().ToString());
+        }
+
+        public int GetChargeStackCount()
+        {
+            return Utils.GetAliveAlliesTotalLoseHP() / 5;
         }
     }
 }

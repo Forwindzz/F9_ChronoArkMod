@@ -11,7 +11,7 @@
         "Name": "蓄能",
         "Description": "释放<color=#FF6767>湮裂的燐焰晶</color>时，每层增加其10%的伤害，然后移除此效果。",
         "Tick": "null",
-        "MaxStack": 20,
+        "MaxStack": 100,
         "Icon": "B_Charge\\B_Charge_Icon.png"
     }
 }

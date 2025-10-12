@@ -6,14 +6,14 @@
         "Target": "all_ally",
         "NotCount": true,
         "Name": "燐晶电场",
-        "Description": "<color=#BAC8FF><b>冷静</b>：处于濒死状态的队友额外获得2层“燐色存护”</color>",
+        "Description": "队友每损失5点体力值，获得1层蓄能。<color=#5061A4>（预期&a层）</color>\n<color=#BAC8FF><b>冷静</b>：处于濒死状态的队友额外获得2层“燐色存护”</color>",
         "User": "C_Merankori",
         "UseAp": 3,
         "PlusKeyWords": [
             "SK_Calm"
         ],
         "Effect_Target": "SE_T_S_Shield",
-        "Effect_Self": "SE_S_S_Shield",
+        "Effect_Self": "null",
         "Rare": false,
         "NODOD": false,
         "NotChuck": false,

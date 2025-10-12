@@ -19,7 +19,7 @@
         "Fatal": false,
         "EnemyPreview": false,
         "UnknownTarget": false,
-        "Description": "丢弃选择的技能，抽取1个技能。\n将1张<color=#FF6767>湮裂的燐焰晶</color>放入手中。\n丢弃技能的拥有者获得1层折射和1层频移微调。",
+        "Description": "丢弃选择的技能，抽取1个技能。\n丢弃技能的拥有者获得2层频移微调。\n<color=#FFC5BA><b>慌张</b>：将1张<color=#FF6767>湮裂的燐焰晶</color>放入手中。</color>\n<color=#BAC8FF><b>冷静</b>：赋予此技能迅速</color>",
         "Name": "焰晶转化",
         "User": "C_Merankori",
         "SkillExtended": [
