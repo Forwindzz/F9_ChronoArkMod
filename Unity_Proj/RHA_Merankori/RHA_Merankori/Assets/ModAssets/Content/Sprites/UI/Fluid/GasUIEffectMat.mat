@@ -1,0 +1,247 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: GasUIEffectMat
+  m_Shader: {fileID: 4800000, guid: 0d9e3268b0d260b428538e3167ea8d4b, type: 3}
+  m_ShaderKeywords: _UV_MODE_MESH_UV
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FlowTex:
+        m_Texture: {fileID: 2800000, guid: aab0485bfb8b0904781a0723a8a57c53, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GradientTex:
+        m_Texture: {fileID: 2800000, guid: ef76433df338a0f4ba2114491e263b71, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseTex:
+        m_Texture: {fileID: 2800000, guid: 169fa1cc08a920946aa81026e2912e29, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AnisoX: 1
+    - _AnisoY: 1.5
+    - _BandSmooth: 0.0244
+    - _BaseOpacity: 0.9
+    - _BaseWidth: 0.101
+    - _BumpScale: 1
+    - _CenterNoiseAmp: 0.026
+    - _CenterNoiseFreq: 2.99
+    - _CenterSwayAmp: 0
+    - _CenterSwayFreq: 2.14
+    - _CenterSwaySpeed: 0.4
+    - _ColCount: 6
+    - _ColorMask: 15
+    - _ColumnVar: 0.35
+    - _Columns: 10
+    - _Contrast: 0.37
+    - _CurlMix: 0.25
+    - _CurlOscAmp: 0
+    - _CurlOscFreq: 1.72
+    - _CurlStrength: 0.0176
+    - _Cutoff: 0.5
+    - _Density: 0.8
+    - _DensityFalloffY: 2
+    - _DetailNormalMapScale: 1
+    - _DistortAmount: 0.03
+    - _DitherAmp: 0.033
+    - _DitherFreq: 120
+    - _DstBlend: 0
+    - _EdgeBoost: 0.168
+    - _EdgeSoftness: 0.03
+    - _EdgeWidth: 0.0082
+    - _EnableScattering: 1
+    - _Exposure: 1.2
+    - _FBMScale: 0.8
+    - _FBMSpeed: 0.3
+    - _FadeExp: 1.46
+    - _FadePower: 1.5
+    - _FadeTopSoft: 0.25
+    - _Fill: 0.449
+    - _FlickerAmp: 0.15
+    - _FlickerFreq: 1.5
+    - _Flow: 1
+    - _FlowAmp1: 0.07
+    - _FlowAmp2: 0.01
+    - _FlowScale1: 1.11
+    - _FlowScale2: 0.47
+    - _FlowSpeed: 0.25
+    - _GLUTHorizontal: 1
+    - _Gain: 0.45
+    - _GlobalGain: 1
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _GradStepUV: 0.002
+    - _HeightAtten: 0
+    - _HighlightOffset: 0
+    - _HighlightStrength: 0.6
+    - _HighlightWidth: 0.03
+    - _Intensity: 1
+    - _KeepIsotropy: 1
+    - _LUTBlend: 1
+    - _LUTGamma: 2.09
+    - _LUTOffset: 0
+    - _LUTScale: 1
+    - _Lacunarity: 1.66
+    - _Levels: 4.08
+    - _MaxFadeDistance: 40
+    - _Metallic: 0
+    - _Mode: 0
+    - _NarrowEndY: 1
+    - _NarrowStartY: 0.319
+    - _NoiseMipBias: 0
+    - _NoiseScale: 0.2
+    - _OcclusionStrength: 1
+    - _Octaves: 2
+    - _Opacity: 1
+    - _OpacityGain: 1.03
+    - _OpticalDepthScale: 2
+    - _Origin: 0.1
+    - _Parallax: 0.02
+    - _PhaseSharpness: 4
+    - _RadialFalloff: 1.2
+    - _RadialSpread: 0.35
+    - _RiseDrift: 0.2
+    - _RisePhase: 0.179
+    - _RiseSpeed: 0.64
+    - _SatHigh: 0.862
+    - _SatMid: 0.663
+    - _SatShadow: 1.174
+    - _Scale: 2.33
+    - _ScatterStrength: 0.8
+    - _Sharpness: 2.2
+    - _Shoulder: 0.85
+    - _SideExp: 2
+    - _SideFalloff: 3
+    - _SideSoft: 0.05
+    - _SideSoftness: 3.2
+    - _SmoothnessTextureChannel: 0
+    - _Softness: 0.05
+    - _SpecularHighlights: 1
+    - _Speed: 0.02
+    - _SrcBlend: 1
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _SwayAmp: 0.06
+    - _SwayFreq: 6
+    - _SwaySpeed: 0.8
+    - _Swirl: 1.37
+    - _SwirlAmp: 0.24
+    - _SwirlFalloff: 1.7
+    - _ToeLift: 0.06
+    - _TopFadeEnd: 0.4
+    - _TopFadeEndY: 0.935
+    - _TopFadeStart: 0.19
+    - _TopFadeStartY: 0
+    - _TopSoft: 0.7
+    - _Turbulence: 0.08
+    - _TwirlAmount: 0.15
+    - _TwirlFreq: 3
+    - _TwistFlow: 0.15
+    - _TwistFreq: 3
+    - _TwistNoise: 0.9
+    - _UVSec: 0
+    - _UV_MODE: 0
+    - _UseA: 1
+    - _UseRGB: 1
+    - _UseRadialFade: 0
+    - _UseTexAlpha: 0.48
+    - _UseUIAlphaClip: 0
+    - _WarpAmp: 0.7
+    - _WarpAmp1: 1.55
+    - _WarpAmp2: 0.4
+    - _WarpFlow1: 0.36
+    - _WarpFlow2: 0.26
+    - _WarpFreq: 0.1
+    - _WarpFreq1: 1.21
+    - _WarpFreq2: 3.61
+    - _WaveAmp: 0.02
+    - _WaveFreq: 12
+    - _WaveSpeed: 1.2
+    - _WidthBase: 0.22
+    - _WidthFalloffY: 0
+    - _WidthJitFreq: 1.42
+    - _WidthJitSpeed: 1.06
+    - _WidthJitter: 0.379
+    - _WidthMinMul: 0.632
+    - _YNoiseAmp: 0.25
+    - _YNoiseFreq: 3
+    - _ZWrite: 1
+    m_Colors:
+    - _AmbientColor: {r: 0.1, g: 0.11, b: 0.12, a: 1}
+    - _BaseColor: {r: 0.9, g: 0.3, b: 0.3, a: 1}
+    - _BottomColor: {r: 0.7, g: 0, b: 0, a: 1}
+    - _CHighlight: {r: 1.06, g: 0.98, b: 0.92, a: 1}
+    - _CMid: {r: 0.85, g: 0.9, b: 1, a: 1}
+    - _CShadow: {r: 0.2, g: 0.24, b: 0.36, a: 1}
+    - _Center: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _CenterUV: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _CenterWS: {r: 0, g: 0, b: 0, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _CoolShadow: {r: 1, g: 0.4481132, b: 0.89849573, a: 1}
+    - _Emission: {r: 2.5, g: 0.5, b: 0.5, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FlowScroll1: {r: 0.01, g: 0, b: 0, a: 0}
+    - _FlowScroll2: {r: 0, g: 0.01, b: 0, a: 0}
+    - _LightColor: {r: 0.9528302, g: 0.66072357, b: 0.5977661, a: 1}
+    - _LightDirUV: {r: 0.7, g: -0.4, b: 0, a: 0}
+    - _NoiseScroll: {r: 0, g: 0.03, b: 0, a: 0}
+    - _RectSize: {r: 0, g: 0, b: 0, a: 0}
+    - _SigmaA: {r: 1, g: 1, b: 1, a: 1}
+    - _SmokeAlbedo: {r: 0.82, g: 0.85, b: 0.9, a: 1}
+    - _Tint: {r: 1, g: 1, b: 1, a: 1}
+    - _TopColor: {r: 1, g: 0.3, b: 0.3, a: 1}
+    - _WarmHighlight: {r: 1.4151832, g: 1.1864015, b: 0.63416225, a: 1}
