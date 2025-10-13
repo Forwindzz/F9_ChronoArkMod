@@ -33,5 +33,13 @@ namespace RHA_Merankori
         {
             this.SelfDestroy();
         }
+
+        public static float GetChargePercent(BattleChar battleChar)
+        {
+            Buff buff = battleChar.GetBuffByID(ModItemKeys.Buff_B_Charge);
+            int stackCount = buff?.StackNum ?? 0;
+            int maxStack = buff?.BuffData?.MaxStack ?? 1;
+            return ((float)stackCount) / maxStack;
+        }
     }
 }

@@ -41,7 +41,7 @@ namespace RHA_Merankori
             SkillButton skillButton = skill.MyButton;
             if (skillButton == null)
             {
-                Debug.LogWarning($"skill {skill?.MySkill?.Name} does not has any ui, cannot create gas effect obj");
+                //Debug.LogWarning($"skill {skill?.MySkill?.Name} does not has any ui, cannot create gas effect obj");
                 return null;
             }
             GameObject template = GetSkillGasEffectObj();
@@ -49,19 +49,19 @@ namespace RHA_Merankori
             {
                 return null;
             }
-            SkillGasVisualEffectInfo skillGasVisualInfo;
-            UIGasController controller = skillButton.GetComponentInChildren<UIGasController>();
-            if (controller != null)
+            SkillGasVisualEffectInfo skillGasVisualInfo = new SkillGasVisualEffectInfo();
+            skillGasVisualInfo.controller = skillButton.GetComponentInChildren<UIGasController>();
+            skillGasVisualInfo.animator = skillButton.GetComponentInChildren<UIGasAnimator>();
+            if (skillGasVisualInfo.controller != null &&
+                skillGasVisualInfo.animator != null && !skillGasVisualInfo.animator.IsDestorying)
             {
-                skillGasVisualInfo = new SkillGasVisualEffectInfo();
-                skillGasVisualInfo.skillGasEffect = controller.gameObject;
-                skillGasVisualInfo.controller = controller;
+                skillGasVisualInfo.skillGasEffect = skillGasVisualInfo.controller.gameObject;
                 skillGasVisualInfo.refCounter = skillGasVisualInfo.skillGasEffect.GetComponent<RefCounter>();
+                skillGasVisualInfo.animator = skillGasVisualInfo.skillGasEffect.GetComponent<UIGasAnimator>();
             }
             else
             {
                 // create !
-                skillGasVisualInfo = new SkillGasVisualEffectInfo();
                 skillGasVisualInfo.skillGasEffect = UnityEngine.GameObject.Instantiate(template, skillButton.transform);
                 GameObject skillGasEffect = skillGasVisualInfo.skillGasEffect;
                 skillGasVisualInfo.controller = skillGasEffect.GetComponent<UIGasController>();
@@ -74,24 +74,29 @@ namespace RHA_Merankori
                 {
                     skillGasVisualInfo.refCounter = skillGasEffect.AddComponent<RefCounter>();
                 }
+
+                skillGasVisualInfo.animator = skillGasVisualInfo.skillGasEffect.GetComponent<UIGasAnimator>();
+                if (skillGasVisualInfo.animator == null)
+                {
+                    skillGasVisualInfo.animator = skillGasVisualInfo.skillGasEffect.AddComponent<UIGasAnimator>();
+                }
             }
 
             skillGasVisualInfo.skillGasEffect.SetActive(true);
             skillGasVisualInfo.refCounter.counter++;
-            skillGasVisualInfo.skill = skill;
             return skillGasVisualInfo;
         }
 
-        public Skill skill;
         public GameObject skillGasEffect;
         public UIGasController controller;
+        public UIGasAnimator animator;
         private RefCounter refCounter; // counter how many info use this effect, avoid to create repeatly
 
         private SkillGasVisualEffectInfo() { }
 
         public void SetFactor(float factor)
         {
-            controller.SetFactor(factor);
+            animator.SetFactorSmooth(factor);
         }
 
         public static void Destroy(ref SkillGasVisualEffectInfo info)
@@ -103,8 +108,9 @@ namespace RHA_Merankori
             info.refCounter.counter--;
             if (info.refCounter.counter <= 0)
             {
-                GameObject.Destroy(info.skillGasEffect);
+                info.animator.DestroySmooth();
             }
+
             info = null;
         }
     }

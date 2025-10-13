@@ -38,17 +38,24 @@ namespace RHA_Merankori
             Buff buff = this.MySkill?.Master?.GetBuffByID(ModItemKeys.Buff_B_Charge);
             int stackCount = buff?.StackNum ?? 0;
             this.PlusPerStat.Damage = stackCount * 10;
-            if (gasEffectInfo == null)
-            {
-                return;
-            }
+
+            // effect
+            
             if (stackCount == 0)
             {
-                gasEffectInfo.SetFactor(0);
+                SkillGasVisualEffectInfo.Destroy(ref gasEffectInfo);
             }
             else
             {
-                int maxStack = buff?.BuffData?.MaxStack ?? 0;
+                if (gasEffectInfo == null)
+                {
+                    InitGasEffect();
+                    if (gasEffectInfo == null)
+                    {
+                        return;
+                    }
+                }
+                int maxStack = buff?.BuffData?.MaxStack ?? 1;
                 if (maxStack == 0)
                 {
                     gasEffectInfo.SetFactor(0);
@@ -63,8 +70,18 @@ namespace RHA_Merankori
         public override void Init()
         {
             base.Init();
+            InitGasEffect();
+            UpdateData();
+        }
+
+        private void InitGasEffect()
+        {
+            if (gasEffectInfo!=null)
+            {
+                return;
+            }
             gasEffectInfo = SkillGasVisualEffectInfo.CloneSKillGasEffectObj(this.MySkill);
-            if(gasEffectInfo!=null)
+            if (gasEffectInfo != null)
             {
                 Transform gasTransform = gasEffectInfo.skillGasEffect.transform;
 
@@ -72,16 +89,15 @@ namespace RHA_Merankori
                 {
                     gasTransform.localPosition = new Vector3(-134.3f, 0, 0);
                 }
-                
+
                 /*
                 // 这个是作为卡牌延伸的效果
                 {
                     gasTransform.localPosition = new Vector3(260, 0, 0);
                 }
                 */
-                
+
             }
-            UpdateData();
         }
 
         public override string DescExtended(string desc)
