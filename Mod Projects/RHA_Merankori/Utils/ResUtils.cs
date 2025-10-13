@@ -19,14 +19,24 @@ namespace RHA_Merankori
             ModInfo info = ModManager.getModInfo(IDs.ID_Mod);
             string path = info.assetInfo.ObjectFromAsset<GameObject>(ASSET_BUNDLE_NAME, assetPath);
             //Debug.Log($"Try to load asset from {path}");
-            return AddressableLoadManager.Instantiate(path, AddressableLoadManager.ManageType.None);
+            GameObject result = AddressableLoadManager.Instantiate(path, AddressableLoadManager.ManageType.None);
+            if (result == null)
+            {
+                Debug.LogError($"[RHA_Merankori] Cannot Load Prefab {assetPath}");
+            }
+            return result;
         }
 
         public static T LoadModAsset<T>(string assetPath) where T : UnityEngine.Object
         {
             ModInfo info = ModManager.getModInfo(IDs.ID_Mod);
             //Debug.Log($"Try to load asset from {assetPath}");
-            return info.assetInfo.LoadFromAsset<T>(ASSET_BUNDLE_NAME, assetPath);
+            T result = info.assetInfo.LoadFromAsset<T>(ASSET_BUNDLE_NAME, assetPath);
+            if (result == null)
+            {
+                Debug.LogError($"[RHA_Merankori] Cannot Load Asset {assetPath}");
+            }
+            return result;
         }
     }
 }

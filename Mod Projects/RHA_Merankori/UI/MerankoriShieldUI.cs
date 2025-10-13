@@ -27,19 +27,25 @@ namespace RHA_Merankori
         }
 
         //这个会通过patch在ui初始化的时候自动调用。
-        public static void CreateUIForAlly(UIComponent uiComp)
+        public static void CreateUIForAlly(BattleChar bChar)
         {
-            //Debug.Log("Try to create shield UI for " + uiComp?.name);
-            CheckInitRes();
-            if(shieldUITemplate==null)
+            if(bChar==null)
             {
                 return;
             }
+            UIComponent uiComp = bChar.UI;
             if (uiComp == null)
             {
                 Debug.LogWarning($"Try to use null ally UI!");
                 return;
             }
+
+            CheckInitRes();
+            if (shieldUITemplate == null)
+            {
+                return;
+            }
+
             MerankoriShieldUI shieldUI = uiComp.GetComponent<MerankoriShieldUI>();
             if(shieldUI==null)
             {
@@ -51,9 +57,15 @@ namespace RHA_Merankori
                     Debug.LogError("Failed to get shield UI component!");
                 }
             }
+            else
+            {
+                Debug.LogWarning($"Duplicate Shield UI @{bChar?.Info?.KeyData}");
+                return;
+            }
             if (shieldUI != null)
             {
                 shieldUI.allyUI = uiComp;
+                shieldUI.bchar = bChar;
                 //Debug.Log("Succeed in creating shield UI");
                 return;
             }
@@ -68,7 +80,6 @@ namespace RHA_Merankori
                 //Debug.LogError($"Cannot find shield ui: {bChar?.name}");
                 return;
             }
-            shieldUI.bchar = bChar;
             shieldUI.UpdateUI();
         }
 
@@ -132,9 +143,6 @@ namespace RHA_Merankori
                     shieldUI.SetAlphaMult(0.25f);
                 }
             }
-            int count = bchar.CountBuffStack(ModItemKeys.Buff_B_Shield);
-            //Debug.Log($"Set shield icons {bchar.name} > {count}");
-            
         }
     }
 }
