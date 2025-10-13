@@ -5,7 +5,7 @@
         "BuffTag": "null",
         "Caution": false,
         "Cantdisable": true,
-        "Hide": false,
+        "Hide": true,
         "MaxStack": 1,
         "LifeTime": 0,
         "IsFieldBuff": false,

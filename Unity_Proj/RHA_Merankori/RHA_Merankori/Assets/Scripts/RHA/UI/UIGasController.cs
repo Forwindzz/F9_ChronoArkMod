@@ -54,16 +54,22 @@ public class UIGasController : MonoBehaviour
         }
     }
 
+#if UNITY_EDITOR
     void Update()
     {
         if (!Application.isPlaying || runtimeMat == null) return;
         Apply();
     }
+#endif
 
     public void SetFactor(float v)
     {
-        factor = Mathf.Clamp01(v);
-        Apply();
+        v = Mathf.Clamp01(v);
+        if (v != factor)
+        {
+            factor = v;
+            Apply();
+        }
     }
 
     private void Apply()

@@ -30,7 +30,8 @@ namespace RHA_Merankori
         IP_BattleEnd,
         IP_BattleEndOutBattle,
         IP_BattleStart_Ones,
-        IP_Healed
+        IP_Healed,
+        IP_Heal_User
     {
 
         public override void Init()
@@ -93,6 +94,12 @@ namespace RHA_Merankori
         {
             EmotionBuffSwitch.SwitchToCalm(this.BChar);
         }
-        //TODO：修改文本，另外进行游玩测试...
+
+        public int Heal_User(BattleChar Target, int HealNum)
+        {
+            EmotionBuffSwitch.SwitchToCalm(this.BChar);
+            return HealNum;
+        }
+        //TODO：calm敌人不会触发，已修改，需要测试
     }
 }

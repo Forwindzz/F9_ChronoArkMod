@@ -3,7 +3,7 @@
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <AssemblyName>RHA_Merankori2025101283151</AssemblyName>
+    <AssemblyName>RHA_Merankori2025101351127</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
@@ -430,7 +430,7 @@
     </Reference>
 <!-- Extra Reference End-->
   </ItemGroup>
-                                                                              <!-- Compile ItemGroup Start-->
+                                                                                                    <!-- Compile ItemGroup Start-->
   <ItemGroup>
     <Compile Include="RHA_Merankori_ModDefinition.cs" />
     <Compile Include="RHA_Merankori_Plugin.cs" />
@@ -492,9 +492,8 @@
     <Compile Include="Utils\BlowupAttr.cs" />
     <Compile Include="Utils\EmotionBuffSwitch.cs" />
     <Compile Include="Utils\IDs.cs" />
-    <Compile Include="Utils\LucyReplaceBehavior.cs" />
     <Compile Include="Utils\MapChange.cs" />
-    <Compile Include="Utils\ParticleSystemUtility.cs" />
+    <Compile Include="Utils\RefCounter.cs" />
     <Compile Include="Utils\ResUtils.cs" />
     <Compile Include="Utils\TextUtils.cs" />
     <Compile Include="Utils\Utils.cs" />
@@ -510,6 +509,9 @@
     <Compile Include="Utils\Patches\FieldSystemPatch.cs" />
     <Compile Include="Utils\Patches\StatPatch.cs" />
     <Compile Include="Utils\Patches\UIPatch.cs" />
+    <Compile Include="Utils\Render\LucyReplaceBehavior.cs" />
+    <Compile Include="Utils\Render\ParticleSystemUtility.cs" />
+    <Compile Include="Utils\Render\SkillGasVisualEffectInfo.cs" />
   </ItemGroup>
   <!-- Compile ItemGroup End-->
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
