@@ -15,7 +15,7 @@ namespace RHA_Merankori
 {
     /// <summary>
     /// 频移微调
-    /// 受到“湮裂的燐焰晶”的攻击时，将伤害转化为等量的治疗，然后移除1层。
+    /// 受到<color=#FF6767>湮裂的燐焰晶</color>攻击时，将受到的伤害转化为等量的治疗，并移除1层此效果。满体力值时触发则不会移除层数。
     /// </summary>
     public class B_FreqShift : Buff,
         IMerankoriCanExtraStackBuff

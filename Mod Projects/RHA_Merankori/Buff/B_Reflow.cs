@@ -16,6 +16,7 @@ namespace RHA_Merankori
     /// <summary>
     /// 燐焰晶回流
     /// 回合开始时，赋予1层燐色存护。
+    /// 进入冷静状态时，延长效果1回合。
     /// 溢出的燐色存护转化为5%无法战斗抵抗增益。
     /// </summary>
     public class B_Reflow :
@@ -26,7 +27,13 @@ namespace RHA_Merankori
     {
         public void BeforeBuffAdd(BattleChar target, ref string key, ref BattleChar UseState, ref bool hide, ref int PlusTagPer, ref bool debuffnonuser, ref int RemainTime, ref bool StringHide, ref bool cancelbuff)
         {
-            if(target==this.BChar && key == ModItemKeys.Buff_B_Shield)
+            Debug.Log($"BeforeBuff: owner={this.BChar?.Info?.Name} | target={target?.Info?.Name} | buff_key={key} | own calm={target.BuffFind(ModItemKeys.Buff_B_Calm)}");
+            if (target.IsCharacterKey(ModItemKeys.Character_C_Merankori) && key == ModItemKeys.Buff_B_Calm && !target.BuffFind(ModItemKeys.Buff_B_Calm))
+            {
+                Debug.Log("Prolonged!");
+                this.ProlongBuff(1);
+            }
+            if (target==this.BChar && key == ModItemKeys.Buff_B_Shield)
             {
                 Buff buff = this.BChar.GetBuffByID(ModItemKeys.Buff_B_Shield);
                 if(buff==null)

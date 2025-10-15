@@ -6,7 +6,7 @@
         "Rare": false,
         "Target": "ally",
         "NODOD": false,
-        "NotCount": true,
+        "NotCount": false,
         "NotChuck": false,
         "HealSkill": false,
         "Disposable": false,
@@ -21,7 +21,7 @@
         "UnknownTarget": false,
         "Name": "碎晶重构",
         "User": "C_Merankori",
-        "UseAp": 2,
+        "UseAp": 1,
         "Effect_Target": "SE_T_S_Reconstruct",
         "SkillExtended": [
             "RHA_Merankori.S_Reconstruct"

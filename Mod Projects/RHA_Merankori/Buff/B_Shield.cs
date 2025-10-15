@@ -19,7 +19,6 @@ namespace RHA_Merankori
     /// 燐色存护
     /// 每层能抵抗1次不能战斗效果。
     /// 濒死状态时，无法战斗抗性（&a%）会增加受到的治疗量。
-    /// 每20%全队的无法战斗抗性<color=#5061A4>（&b%）</color>增加1层上限。
     /// 
     /// 关于实现方式：
     /// Patch BattleChar.Dead
@@ -225,7 +224,7 @@ namespace RHA_Merankori
         {
             base.FixedUpdate();
             CheckRecover(); //暴力解决各种边边角角的奇怪的死亡判定
-            this.BuffData.MaxStack = GetAllDeathImmune() / 20 + 4;
+            //this.BuffData.MaxStack = GetAllDeathImmune() / 20 + 4;
         }
 
 

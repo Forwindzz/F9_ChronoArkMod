@@ -16,6 +16,7 @@ namespace RHA_Merankori
     /// <summary>
     /// 频移微调-露西
     /// 露西会引导燐焰晶
+    /// 仅用于实现，实际是隐藏的buff
     /// </summary>
     public class B_H_FreqShift_Lucy : Buff, IP_ChangeDamageState
     {
@@ -29,7 +30,10 @@ namespace RHA_Merankori
             if (SP.SkillKey == ModItemKeys.Skill_S_Attack_All || SP.SkillData.ExtendedFind<S_Attack_All>() != null)
             {
                 ToHeal = true;
-                buff.SelfStackDestroy();
+                if(Target.HP != Target.GetStat.maxhp)
+                {
+                    buff.SelfStackDestroy();
+                }
             }
         }
     }

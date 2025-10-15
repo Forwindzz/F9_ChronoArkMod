@@ -53,7 +53,7 @@ namespace RHA_Merankori
         public static string Buff_B_EnsureShield = "B_EnsureShield";
 		/// <summary>
 		/// 频移微调
-		/// 受到<color=#FF6767>湮裂的燐焰晶</color>的攻击时，将受到的伤害转化为等量的治疗，然后移除1层。
+		/// 受到<color=#FF6767>湮裂的燐焰晶</color>攻击时，将受到的伤害转化为等量的治疗，并移除1层此效果。满体力值时触发则不会移除层数。
 		/// </summary>
         public static string Buff_B_FreqShift = "B_FreqShift";
 		/// <summary>
@@ -86,6 +86,7 @@ namespace RHA_Merankori
 		/// <summary>
 		/// 燐焰晶回流
 		/// 回合开始时，赋予1层燐色存护。
+		/// 进入<color=#BAC8FF>冷静</color>状态时，延长此效果1回合。
 		/// 溢出的燐色存护会转化为5%无法战斗抵抗增益。
 		/// </summary>
         public static string Buff_B_Reflow = "B_Reflow";

@@ -40,30 +40,20 @@ namespace RHA_Merankori
 
         private IEnumerator CO_ExtendBuffTime(List<BattleChar> Targets)
         {
+            if (Targets == null)
+            {
+                yield break;
+            }
             bool isCalm = IsCalm();
             if(!isCalm)
             {
                 yield break;
             }
             // 冷静：“折射”效果延长1回合
-            int turn = isCalm ? 1 : 0;
             foreach (BattleChar bc in Targets)
             {
                 // 指向的队友获得2回合“折射”效果
-                Buff buff = bc.GetBuffByID(ModItemKeys.Buff_B_Refraction);
-                if (buff != null)
-                {
-                    if (buff.StackInfo.Count > 0)
-                    {
-                        buff.StackInfo[0].RemainTime += turn;
-                        continue;
-                    }
-                }
-                else
-                {
-                    Debug.Log("Cannot find refraction buff to be prolonged");
-                }
-                //bc.BuffAdd(IDs.ID_Buff_Refraction, this.BChar, false, 0, false, turn + 1);
+                bc.ProlongBuff(ModItemKeys.Buff_B_Refraction);
                 //Debug.Log("Add new buff IDs.ID_Buff_Refraction");
             }
             yield break;

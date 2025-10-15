@@ -29,7 +29,7 @@ Buff/B_DeathResist_Description,Text,,,,,,
 Buff/B_DeathResist_Name,Text,,,Faint Resist,,无法战斗抵抗,無法戰鬥抵抗
 Buff/B_EnsureShield_Description,Text,,,"If there is no Phosguard at the start of the turn, apply 1 stack of Phosguard.",,若回合开始时没有燐色存护，则施加1层燐色存护。,
 Buff/B_EnsureShield_Name,Text,,,Guardian of Fire,,火之存护,火之存護
-Buff/B_FreqShift_Description,Text,,,"When attacked by <color=#FF6767>Obliterated Phosflame Crystal</color>, convert the damage received into an equal amount of healing, then remove 1 stack.",,受到<color=#FF6767>湮裂的燐焰晶</color>的攻击时，将受到的伤害转化为等量的治疗，然后移除1层。,受到<color=#FF6767>湮裂的燐焰晶</color>的攻擊時，將受到的傷害轉化為等量的治療，然後移除1層。
+Buff/B_FreqShift_Description,Text,,,"When attacked by <color=#FF6767>Obliterated Phosflame Crystal</color>, convert the damage received into an equal amount of healing, then remove 1 stack.",,受到<color=#FF6767>湮裂的燐焰晶</color>攻击时，将受到的伤害转化为等量的治疗，并移除1层此效果。满体力值时触发则不会移除层数。,受到<color=#FF6767>湮裂的燐焰晶</color>的攻擊時，將受到的傷害轉化為等量的治療，然後移除1層。
 Buff/B_FreqShift_Name,Text,,,Frequency Shift Fine-Tuning,,频移微调,頻移微調
 Buff/B_GenCrystal_Description,Text,,,"Whenever an ally leaves Death's Door, add <color=#FF6767>Obliterated Phosflame Crystal</color> to your hand.",,每当队友脱离濒死状态时，将<color=#FF6767>湮裂的燐焰晶</color>放入手中。,每當隊友脫離瀕死狀態時，將<color=#FF6767>湮裂的燐焰晶</color>放入手中。
 Buff/B_GenCrystal_Name,Text,,,Phosflame Crystal Generation,,焰晶生成,焰晶生成
@@ -49,6 +49,7 @@ When someone attacks, enter <color=#FFC5BA><b>Panic</b></color> state.",,"<color
 Buff/B_Panic_Name,Text,,,Panic,,慌张,慌張
 Buff/B_Reflow_Description,Text,,,"At the start of the turn, grant 1 stack of Phosguard.
 Excess Phosguard will be converted into a 5% Faint Resist buff.",,"回合开始时，赋予1层燐色存护。
+进入<color=#BAC8FF>冷静</color>状态时，延长此效果1回合。
 溢出的燐色存护会转化为5%无法战斗抵抗增益。","回合開始時，賦予1層燐色存護。
 溢出的燐色存護會轉化為5%無法戰鬥抵抗增益。 "
 Buff/B_Reflow_Name,Text,,,Phosflame Crystal Reflux,,燐焰晶回流,燐焰晶回流

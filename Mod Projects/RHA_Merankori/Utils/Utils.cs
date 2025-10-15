@@ -395,5 +395,22 @@ namespace RHA_Merankori
             return false;
         }
 
+        public static void ProlongBuff(this BattleChar battleChar, string buffID, int turn=1)
+        {
+            Buff buff = battleChar.GetBuffByID(buffID);
+            ProlongBuff(buff, turn);
+        }
+
+        public static void ProlongBuff(this Buff buff, int turn)
+        {
+            if (buff != null)
+            {
+                if (buff.StackInfo.Count > 0)
+                {
+                    buff.StackInfo[0].RemainTime += turn;
+                }
+            }
+        }
+
     }
 }
