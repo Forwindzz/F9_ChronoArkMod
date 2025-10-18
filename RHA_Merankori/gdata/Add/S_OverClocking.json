@@ -6,7 +6,7 @@
         "Rare": false,
         "Target": "otherally",
         "NODOD": false,
-        "NotCount": true,
+        "NotCount": false,
         "NotChuck": false,
         "HealSkill": false,
         "Disposable": false,
@@ -32,7 +32,6 @@
             "RHA_Merankori.S_OverClocking"
         ],
         "Effect_Self": "SE_S_S_OverClocking",
-        "PlusSkillView": "S_P_Shock",
         "Image_0": "S_OverClocking\\S_OverClocking_Image_0.png",
         "Image_1": "S_OverClocking\\S_OverClocking_Image_1.png",
         "Image_2": "S_OverClocking\\S_OverClocking_Image_2.png"

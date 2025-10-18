@@ -5,12 +5,13 @@
         "ClassName": "RHA_Merankori.B_DLoop",
         "BuffTag": "null",
         "Name": "导流回路",
-        "Description": "释放<color=#FF6767>湮裂的燐焰晶</color>时，获得1点法力值。",
+        "Description": "锁定当前的<color=#BAC8FF>冷静</color>或<color=#FFC5BA>慌张</color>\n状态，每次阻碍状态切换有<color=#5061A4>&a</color>概率获得1点法力值。\n<color=#5061A4>概率由自身无法战斗抵抗决定</color>。",
         "Icon": "Image/Buff/Skill_Icon_Pack/Silver_0",
         "LifeTime": 1,
         "Caution": false,
         "Hide": false,
         "Cantdisable": false,
-        "UseSkillDebuff": false
+        "UseSkillDebuff": false,
+        "MaxStack": 0
     }
 }

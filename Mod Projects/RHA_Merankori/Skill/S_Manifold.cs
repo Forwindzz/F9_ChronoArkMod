@@ -15,85 +15,11 @@ namespace RHA_Merankori
 {
     /// <summary>
     /// 晶体流形
-    /// 冷静：手中每个“湮裂的燐焰晶”会额外提供3层蓄力
     /// </summary>
     public class S_Manifold : 
-        Merankori_BaseSkill,
-        IP_Draw,
-        IP_Discard
+        Merankori_BaseSkill
     {
-        private const int STACK_COUNT = 3;
-
-        public override bool CanApplyCalm => true;
+        public override bool CanApplyCalm => false;
         public override bool CanApplyPanic => false;
-
-        public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
-        {
-            base.SkillUseSingle(SkillD, Targets);
-            List<Skill> skills = BattleSystem.instance.AllyTeam.Skills;
-            foreach (Skill skill in skills)
-            {
-                if(skill.ExtendedFind<S_Attack_All>()!= null)
-                {
-                    this.BChar.BuffAddWithStacks(ModItemKeys.Buff_B_Charge, this.BChar, STACK_COUNT);
-                }
-            }
-        }
-
-        public override string DescInit()
-        {
-            Check();
-            return base.DescInit().Replace("&a", GetBonusStacks().ToString());
-        }
-
-        public override string DescExtended(string desc)
-        {
-            return base.DescExtended(desc).Replace("&a", GetBonusStacks().ToString());
-        }
-
-        private int GetBonusStacks()
-        {
-            if(BattleSystem.instance==null || BattleSystem.instance.AllyTeam==null || BattleSystem.instance.AllyTeam.Skills==null)
-            {
-                return 0 ;
-            }
-            if(IsPanic())
-            {
-                return 0;
-            }
-            List<Skill> skills = BattleSystem.instance.AllyTeam.Skills;
-            int total = 0;
-            foreach (Skill skill in skills)
-            {
-                if (skill.ExtendedFind<S_Attack_All>() != null)
-                {
-                    total += STACK_COUNT;
-                }
-            }
-            return total;
-        }
-
-        private void Check()
-        {
-            if(GetBonusStacks()>0)
-            {
-                this.SkillParticleOn();
-            }
-            else
-            {
-                this.SkillParticleOff();
-            }
-        }
-
-        public IEnumerator Draw(Skill Drawskill, bool NotDraw)
-        {
-            Check();
-            yield break;
-        }
-
-        public void Discard(bool Click, Skill skill, bool HandFullWaste)
-        {
-            Check();
-        }
     }
 }

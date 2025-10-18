@@ -7,21 +7,6 @@ using UnityEngine;
 
 namespace RHA_Merankori
 {
-
-    public interface IP_BeforeBuffAdd
-    {
-        void BeforeBuffAdd(
-            BattleChar target,
-            ref string key, 
-            ref BattleChar UseState, 
-            ref bool hide, 
-            ref int PlusTagPer, 
-            ref bool debuffnonuser, 
-            ref int RemainTime, 
-            ref bool StringHide, 
-            ref bool cancelbuff);
-    }
-
     public class EmotionBuffSwitch
     {
         public static void SwitchToPanic(BattleChar battleChar)
@@ -29,6 +14,11 @@ namespace RHA_Merankori
             if(IsPanic(battleChar))
             {
                 return; //already panic
+            }
+            if (IsLockState(battleChar))
+            {
+                battleChar.BuffAdd(ModItemKeys.Buff_B_Panic, battleChar);
+                return;
             }
             battleChar.BuffRemove(ModItemKeys.Buff_B_Calm, true);
             battleChar.BuffAdd(ModItemKeys.Buff_B_Panic, battleChar);
@@ -41,9 +31,19 @@ namespace RHA_Merankori
             {
                 return; //already panic
             }
+            if(IsLockState(battleChar))
+            {
+                battleChar.BuffAdd(ModItemKeys.Buff_B_Calm, battleChar);
+                return;
+            }
 
             battleChar.BuffRemove(ModItemKeys.Buff_B_Panic, true);
             battleChar.BuffAdd(ModItemKeys.Buff_B_Calm, battleChar);
+        }
+
+        public static bool IsLockState(BattleChar battleChar)
+        {
+            return battleChar.BuffFind(ModItemKeys.Buff_B_DLoop);
         }
 
         public static bool IsCalm(BattleChar battleChar)

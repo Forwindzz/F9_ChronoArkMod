@@ -2,9 +2,11 @@
     "SE_S_S_OverClocking": {
         "_gdeSchema": "SkillEffect",
         "Buffs": [
-            "B_OverClocking"
+            "B_PanicFire",
+            "B_Charge"
         ],
         "BuffPlusTagPer": [
+            0,
             0
         ]
     }

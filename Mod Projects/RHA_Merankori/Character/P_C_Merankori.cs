@@ -31,7 +31,8 @@ namespace RHA_Merankori
         IP_BattleEndOutBattle,
         IP_BattleStart_Ones,
         IP_Healed,
-        IP_Heal_User
+        IP_Heal_User,
+        IP_Healed_Anyone
     {
 
         public override void Init()
@@ -100,6 +101,11 @@ namespace RHA_Merankori
             EmotionBuffSwitch.SwitchToCalm(this.BChar);
             return HealNum;
         }
-        //TODO：calm敌人不会触发，已修改，需要测试
+
+        //必须要这个才能侦测到emeny的恢复
+        public void AfterHealedAnyone(BattleChar __instance, int __result, BattleChar User, float Hel, bool Cri, bool Force, BattleChar.ChineHeal heal)
+        {
+            EmotionBuffSwitch.SwitchToCalm(this.BChar);
+        }
     }
 }

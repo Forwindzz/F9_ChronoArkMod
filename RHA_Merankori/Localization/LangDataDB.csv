@@ -21,7 +21,13 @@ When someone attacks, enter <color=#FFC5BA><b>Panic</b></color> state.",,"回合
 Buff/B_Calm_Name,Text,,,Calm,,冷静,冷靜
 Buff/B_Charge_Description,Text,,,"When casting <color=#FF6767>Obliterated Phosflame Crystal</color>, each stack increases its damage by 10%, then remove this effect.",,释放<color=#FF6767>湮裂的燐焰晶</color>时，每层增加其10%的伤害，然后移除此效果。,釋放<color=#FF6767>湮裂的燐焰晶</color>時，每層增加其10%的傷害，然後移除此效果。
 Buff/B_Charge_Name,Text,,,Charging,,蓄能,蓄能
-Buff/B_DLoop_Description,Text,,,"When casting <color=#FF6767>Obliterated Phosflame Crystal</color>, gain 1 Mana.",,释放<color=#FF6767>湮裂的燐焰晶</color>时，获得1点法力值。,釋放<color=#FF6767>湮裂的燐焰晶</color>時，獲得1點法力值。
+Buff/B_DLoop_Description,Text,,,"Lock the current <color=#BAC8FF>Calm</color> or <color=#FFC5BA>Panic</color> state.  
+Each time a state switch is blocked, there is a <color=#5061A4>&a</color> chance to gain 1 Mana.  
+<color=#5061A4>The chance is determined by the self Faint Resist.</color>",,"锁定当前的<color=#BAC8FF>冷静</color>或<color=#FFC5BA>慌张</color>
+状态，每次阻碍状态切换有<color=#5061A4>&a</color>概率获得1点法力值。
+<color=#5061A4>概率由自身无法战斗抵抗决定</color>。","鎖定目前的<color=#BAC8FF>冷靜</color>或<color=#FFC5BA>慌張</color>
+狀態，每次阻礙狀態切換有<color=#5061A4>&a</color>機率獲得1點法力值。
+<color=#5061A4>機率由自身無法戰鬥抵抗決定</color>。"
 Buff/B_DLoop_Name,Text,,,Diversion Circuit,,导流回路,導流迴路
 Buff/B_DeadImmuneNoLimit_Description,Text,,,Current Faint Resist: &a%,,目前的无法战斗抵抗：&a%,目前的無法戰鬥抵抗：&a%
 Buff/B_DeadImmuneNoLimit_Name,Text,,,Remove the limit of Faint Resist,,解除无法战斗抵抗上限,解除無法戰鬥抵抗上限
@@ -39,6 +45,9 @@ Buff/B_NotDeadlyAtk_Description,Text,,,,,燐焰晶的伤害不会致命,
 Buff/B_NotDeadlyAtk_Name,Text,,,,,烈燐焰晶,
 Buff/B_OverClocking_Description,Text,,,"The next <color=#FF6767>Obliterated Phosflame Crystal</color> will carry the ""Shock Impact"" debuff.",,下一次<color=#FF6767>湮裂的燐焰晶</color>会附带“震荡冲击”干扰减益,下次<color=#FF6767>湮裂的燐焰晶</color>會附帶「震盪衝擊」幹擾減益
 Buff/B_OverClocking_Name,Text,,,Overfrequency Crystal,,越频晶石,越頻晶石
+Buff/B_PanicFire_Description,Text,,,"This status is removed when <color=#BAC8FF>Calm</color> down.  
+Gain 1 stack of Charging each time a skill is used from hand.",,恢复<color=#BAC8FF>冷静</color>时移除这个状态效果，每次从手中使用技能时获得1层蓄能。,恢復<color=#BAC8FF>冷靜</color>時移除這個狀態效果，每次從手中使用技能時獲得1層蓄能。
+Buff/B_PanicFire_Name,Text,,,Overfrequency Crystal,,越频晶石,越頻晶石
 Buff/B_Panic_Description,Text,,,"<color=#FFC5BA>The Phosflame Crystal burns ever fiercer...</color>
 When someone is healed, Melancholy becomes <color=#BAC8FF><b>Calm</b></color>.  
 When someone attacks, enter <color=#FFC5BA><b>Panic</b></color> state.",,"<color=#FFC5BA>燐焰晶逐渐炽烈...</color>
@@ -55,13 +64,13 @@ Excess Phosguard will be converted into a 5% Faint Resist buff.",,"回合开始�
 Buff/B_Reflow_Name,Text,,,Phosflame Crystal Reflux,,燐焰晶回流,燐焰晶回流
 Buff/B_Refraction_Description,Text,,,Refract the damage and additional effects of <color=#FF6767>Obliterated Phosflame Crystal</color> to the enemy with the lowest Health.,,将<color=#FF6767>湮裂的燐焰晶</color>的伤害和附加效果，折射给生命值最低的敌人。,將<color=#FF6767>湮裂的燐焰晶</color>的傷害和附加效果，折射給生命值最低的敵人。
 Buff/B_Refraction_Name,Text,,,Refraction,,折射,折射
-Buff/B_Shield_Description,Text,,,"Each stack can resist once Faint.
-Faint Resist <color=#5061A4>(&a%)</color> increases the received healing while at Death's Door.
-For every 20% of the party’s total Faint Resist <color=#5061A4>(&b%)</color>, increase the maximum stack limit of Phosguard by 1.",,"每层能抵抗1次无法战斗效果。
-无法战斗抵抗<color=#5061A4>（&a%）</color>会增加濒死时受到的治疗量。
-每20%全队的无法战斗抗性<color=#5061A4>（&b%）</color>增加1层燐色存护层数上限。","每層能抵抗1次無法戰鬥效果。
-無法戰鬥抵抗<color=#5061A4>（&a%）</color>會增加瀕死時所受到的治療量。
-每20%全隊的無法戰鬥抗性<color=#5061A4>（&b%）</color>增加1層燐色存護層上限。"
+Buff/B_Shield_Description,Text,,,"Each stack can resist one instance of incapacitation.  
+Fatal Resist <color=#5061A4>(&a%)</color> increases the healing received while at Death's Door.  
+<color=#5061A4>—The crystalline structure that supports body and mind before the will to fight collapses.</color>",,"每层可抵抗1次无法战斗效果。  
+无法战斗抗性<color=#5061A4>（&a%）</color>会提升濒死时受到的治疗量。  
+<color=#5061A4>----在战斗意志崩溃之前，仍支撑身心的晶石结构。</color>","每層可抵抗1次無法戰鬥效果。
+無法戰鬥抗性<color=#5061A4>（&a%）</color>會提升瀕死時所受到的治療量。
+<color=#5061A4>----在戰鬥意志崩潰之前，仍支撐身心的晶石結構。 </color>"
 Buff/B_Shield_Name,Text,,,Phosguard,,燐色存护,磷光存護
 Buff/B_Shock_Description,Text,,,"Cannot use attack skills. If owned by enemy, skip action for one turn.
 Allies with this effect can remove it by discarding their own skill.",,"无法使用攻击技能，若是敌人则停止行动一回合。
@@ -226,8 +235,7 @@ Gain 1 Phoscrystal Core, which can be used to break tile walls on the map and di
 取得燐晶核1個，可以用來摧毀地圖上的牆體，發現埋藏的物品。"
 Skill/S_ItemRHA_Name,Text,,,Core Generation,,晶核生成,晶核生成
 Skill/S_Manifold_Description,Text,,,"<color=#BAC8FF><b>Calm</b></color>: For each <color=#FF6767>Obliterated Phosflame Crystal</color> in hand, gain 3 additional stacks of Charging.  
-<color=#5061A4>(Expected to provide &a stacks)</color>",,"<color=#BAC8FF><b>冷静</b>：手中每个<color=#FF6767>湮裂的燐焰晶</color>会额外提供3层“蓄能”</color>
-<color=#5061A4>（预计提供&a层）</color>","<color=#BAC8FF><b>冷靜</b>：手中每個<color=#FF6767>湮裂的燐焰晶</color>會額外提供3層「蓄能」</color>
+<color=#5061A4>(Expected to provide &a stacks)</color>",,,"<color=#BAC8FF><b>冷靜</b>：手中每個<color=#FF6767>湮裂的燐焰晶</color>會額外提供3層「蓄能」</color>
 <color=#5061A4>（預計提供&a層）</color>"
 Skill/S_Manifold_Name,Text,,,Crystal Manifold,,晶体流形,晶體流形
 Skill/S_OverClocking_Description,Text,,,"<color=#BAC8FF><b>Calm</b></color>: Extend ""Refraction"" by 1 turn.",,<color=#BAC8FF><b>冷静</b>：延长“折射”1回合</color>,<color=#BAC8FF><b>冷靜</b>：延長「折射」1回合</color>
