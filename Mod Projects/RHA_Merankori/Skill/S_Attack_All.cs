@@ -31,6 +31,7 @@ namespace RHA_Merankori
     {
         public override bool CanApplyCalm => false;
         public override bool CanApplyPanic => true;
+        public override bool UseParticleEffect => true;
 
         public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
         {
@@ -181,6 +182,78 @@ namespace RHA_Merankori
                 BChar.MyTeam.Add(skill.CloneSkill(), true);
             }
         }
+
+        // UIPatch里有额外的逻辑代码
+        public override void Special_SkillButtonPointerEnter()
+        {
+            base.Special_SkillButtonPointerEnter();
+            GameObject toolTip = ToolTipWindow.ToolTip;
+            Material shiningMaterial = ResUtils.LoadModAssetCached<Material>(IDs.Res_GlitterEffectMat);
+            if (toolTip != null)
+            {
+                ToolTipWindow toolTipWindow = toolTip.GetComponentInChildren<ToolTipWindow>();
+                SkillToolTip skillToolTip = toolTipWindow.GetComponentInChildren<SkillToolTip>();
+                if (skillToolTip != null && skillToolTip.SkillImage != null) 
+                {
+                    skillToolTip.SkillImage.material = shiningMaterial;
+                }
+            }
+            if(this.MySkill!=null)
+            {
+                SkillButton skillButton = this.MySkill.MyButton;
+                if (skillButton != null)
+                {
+                    Image skillImage = skillButton.SkillImage;
+                    if (skillImage != null)
+                    {
+                        skillImage.material = shiningMaterial;
+                    }
+                }
+                BasicSkill basicSkillButton = this.MySkill.BasicSkillButton;
+                if(basicSkillButton!=null)
+                {
+                    Image skillImage = basicSkillButton.SkillImage;
+                    if (skillImage != null)
+                    {
+                        skillImage.material = shiningMaterial;
+                    }
+                }
+            }
+            
+
+        }
+
+        public override void Special_SkillButtonPointerExit()
+        {
+            if (this.MySkill != null)
+            {
+                base.Special_SkillButtonPointerExit();
+                SkillButton skillButton = this.MySkill?.MyButton;
+                if (skillButton != null)
+                {
+                    Image skillImage = skillButton.SkillImage;
+                    if (skillImage != null)
+                    {
+                        skillImage.material = null;
+                    }
+                }
+
+                BasicSkill basicSkillButton = this.MySkill.BasicSkillButton;
+                if (basicSkillButton != null)
+                {
+                    Image skillImage = basicSkillButton.SkillImage;
+                    if (skillImage != null)
+                    {
+                        skillImage.material = null;
+                    }
+                }
+            }
+        }
+
+
+
+
+
         //对话彩蛋==========
 
         public static void CheckChatOnAttack(List<BattleChar> beAttackedChar)

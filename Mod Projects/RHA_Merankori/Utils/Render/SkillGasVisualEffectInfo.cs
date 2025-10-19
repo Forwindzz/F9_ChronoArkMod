@@ -12,26 +12,9 @@ namespace RHA_Merankori
     {
 
         public static string ASSET_SKILL_GAS_EFFECT_PATH = "Assets/ModAssets/Content/Sprites/UI/Fluid/GasSkillUIEffect Variant.prefab";
-        private static GameObject skillGasEffectObjTemplate = null;
+        private static GameObject SkillGasEffectObjTemplate => ResUtils.LoadModPrefab(ASSET_SKILL_GAS_EFFECT_PATH);
 
-
-        public static GameObject GetSkillGasEffectObj()
-        {
-            if (skillGasEffectObjTemplate == null)
-            {
-                //load
-                skillGasEffectObjTemplate = ResUtils.LoadModPrefab(ASSET_SKILL_GAS_EFFECT_PATH);
-                if (skillGasEffectObjTemplate == null)
-                {
-                    Debug.LogWarning($"Cannot load {ASSET_SKILL_GAS_EFFECT_PATH}");
-                    return null;
-                }
-                skillGasEffectObjTemplate.SetActive(false);
-            }
-            return skillGasEffectObjTemplate;
-        }
-
-        public static SkillGasVisualEffectInfo CloneSKillGasEffectObj(Skill skill)
+        public static SkillGasVisualEffectInfo CloneSkillGasEffectObj(Skill skill)
         {
             if (skill == null)
             {
@@ -44,7 +27,7 @@ namespace RHA_Merankori
                 //Debug.LogWarning($"skill {skill?.MySkill?.Name} does not has any ui, cannot create gas effect obj");
                 return null;
             }
-            GameObject template = GetSkillGasEffectObj();
+            GameObject template = SkillGasEffectObjTemplate;
             if (template == null)
             {
                 return null;

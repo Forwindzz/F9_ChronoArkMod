@@ -21,5 +21,6 @@ namespace RHA_Merankori
     {
         public override bool CanApplyCalm => false;
         public override bool CanApplyPanic => false;
+        public override bool UseParticleEffect => false;
     }
 }

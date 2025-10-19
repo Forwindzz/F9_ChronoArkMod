@@ -24,7 +24,8 @@ namespace RHA_Merankori
         IP_SkillCastingStart
     {
         public override bool CanApplyCalm => false;
-        public override bool CanApplyPanic => true;
+        public override bool CanApplyPanic => false;
+        public override bool UseParticleEffect => false;
 
         public override void Init()
         {

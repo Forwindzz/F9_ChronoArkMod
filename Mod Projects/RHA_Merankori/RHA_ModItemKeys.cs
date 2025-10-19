@@ -86,6 +86,11 @@ namespace RHA_Merankori
 		/// </summary>
         public static string Buff_B_Panic = "B_Panic";
 		/// <summary>
+		/// 越频晶石
+		/// 恢复<color=#BAC8FF>冷静</color>时移除这个状态效果，每次从手中使用技能时获得1层蓄能。
+		/// </summary>
+        public static string Buff_B_PanicFire = "B_PanicFire";
+		/// <summary>
 		/// 燐焰晶回流
 		/// 回合开始时，赋予1层燐色存护。
 		/// 进入<color=#BAC8FF>冷静</color>状态时，延长此效果1回合。
@@ -100,9 +105,9 @@ namespace RHA_Merankori
         public static string Buff_B_SCharge = "B_SCharge";
 		/// <summary>
 		/// 燐色存护
-		/// 每层能抵抗1次所有类型的无法战斗效果。
-		/// 无法战斗抗性<color=#5061A4>（&a%）</color>会增加濒死时受到的治疗量。
-		/// <color=#5061A4>--- 在动用生存意志和血雾意识前的最后保险</color>
+		/// 每层可抵抗1次无法战斗效果。  
+		/// 无法战斗抗性<color=#5061A4>（&a%）</color>会提升濒死时受到的治疗量。  
+		/// <color=#5061A4>----在战斗意志崩溃之前，仍支撑身心的晶石结构。</color>
 		/// </summary>
         public static string Buff_B_Shield = "B_Shield";
 		/// <summary>
@@ -324,11 +329,6 @@ namespace RHA_Merankori
 		/// 暖焰
 		/// </summary>
         public static string Skill_S_WarmFire = "S_WarmFire";
-		/// <summary>
-		/// 越频晶石
-		/// 恢复<color=#BAC8FF>冷静</color>时移除这个效果，每次从手中使用技能时获得1层蓄能。
-		/// </summary>
-        public static string Buff_B_PanicFire = "B_PanicFire";
 
     }
 

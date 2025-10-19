@@ -234,9 +234,7 @@ Gain 1 Phoscrystal Core, which can be used to break tile walls on the map and di
 获得燐晶核1个，可以用于摧毁地图上的墙体，发现埋藏的物品。","抽取1個技能。
 取得燐晶核1個，可以用來摧毀地圖上的牆體，發現埋藏的物品。"
 Skill/S_ItemRHA_Name,Text,,,Core Generation,,晶核生成,晶核生成
-Skill/S_Manifold_Description,Text,,,"<color=#BAC8FF><b>Calm</b></color>: For each <color=#FF6767>Obliterated Phosflame Crystal</color> in hand, gain 3 additional stacks of Charging.  
-<color=#5061A4>(Expected to provide &a stacks)</color>",,,"<color=#BAC8FF><b>冷靜</b>：手中每個<color=#FF6767>湮裂的燐焰晶</color>會額外提供3層「蓄能」</color>
-<color=#5061A4>（預計提供&a層）</color>"
+Skill/S_Manifold_Description,Text,,,,,,
 Skill/S_Manifold_Name,Text,,,Crystal Manifold,,晶体流形,晶體流形
 Skill/S_OverClocking_Description,Text,,,"<color=#BAC8FF><b>Calm</b></color>: Extend ""Refraction"" by 1 turn.",,<color=#BAC8FF><b>冷静</b>：延长“折射”1回合</color>,<color=#BAC8FF><b>冷靜</b>：延長「折射」1回合</color>
 Skill/S_OverClocking_Name,Text,,,Overfrequency Crystal,,越频晶石,越頻晶石

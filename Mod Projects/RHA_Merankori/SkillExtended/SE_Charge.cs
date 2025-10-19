@@ -1,15 +1,16 @@
-using UnityEngine;
-using UnityEngine.UI;
-using System;
-using System.Linq;
-using System.Collections;
-using System.Collections.Generic;
-using GameDataEditor;
-using I2.Loc;
-using DarkTonic.MasterAudio;
 using ChronoArkMod;
 using ChronoArkMod.Plugin;
 using ChronoArkMod.Template;
+using DarkTonic.MasterAudio;
+using GameDataEditor;
+using I2.Loc;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
 namespace RHA_Merankori
 {
@@ -22,8 +23,6 @@ namespace RHA_Merankori
         IP_BuffAddAfter,
         IP_BuffRemove
     {
-
-        private SkillGasVisualEffectInfo gasEffectInfo = null;
 
         private void UpdateData()
         {
@@ -39,65 +38,18 @@ namespace RHA_Merankori
             int stackCount = buff?.StackNum ?? 0;
             this.PlusPerStat.Damage = stackCount * 10;
 
-            // effect
-            
-            if (stackCount == 0)
+            Skill_Extended mainExtend = this.MySkill.AllExtendeds.FirstOrDefault();
+            if (mainExtend != null && mainExtend is Merankori_BaseSkill baseMerankoriSkill)
             {
-                SkillGasVisualEffectInfo.Destroy(ref gasEffectInfo);
-            }
-            else
-            {
-                if (gasEffectInfo == null)
-                {
-                    InitGasEffect();
-                    if (gasEffectInfo == null)
-                    {
-                        return;
-                    }
-                }
                 int maxStack = buff?.BuffData?.MaxStack ?? 1;
-                if (maxStack == 0)
-                {
-                    gasEffectInfo.SetFactor(0);
-                }
-                else
-                {
-                    gasEffectInfo.SetFactor(((float)stackCount) / maxStack);
-                }
+                baseMerankoriSkill.SetTinySkillViewFactor(((float)stackCount) / maxStack);
             }
         }
 
         public override void Init()
         {
             base.Init();
-            InitGasEffect();
             UpdateData();
-        }
-
-        private void InitGasEffect()
-        {
-            if (gasEffectInfo!=null)
-            {
-                return;
-            }
-            gasEffectInfo = SkillGasVisualEffectInfo.CloneSKillGasEffectObj(this.MySkill);
-            if (gasEffectInfo != null)
-            {
-                Transform gasTransform = gasEffectInfo.skillGasEffect.transform;
-
-                // 这个是作为卡牌背景的效果
-                {
-                    gasTransform.localPosition = new Vector3(-134.3f, 0, 0);
-                }
-
-                /*
-                // 这个是作为卡牌延伸的效果
-                {
-                    gasTransform.localPosition = new Vector3(260, 0, 0);
-                }
-                */
-
-            }
         }
 
         public override string DescExtended(string desc)
@@ -122,10 +74,28 @@ namespace RHA_Merankori
             UpdateData();
         }
 
-        public override void SelfDestroy()
+        //bug!
+
+        /*
+        public override void Special_SkillButtonPointerEnter()
         {
-            SkillGasVisualEffectInfo.Destroy(ref gasEffectInfo);
-            base.SelfDestroy();
-        }
+            base.Special_SkillButtonPointerEnter();
+            GameObject toolTip = ToolTipWindow.ToolTip;
+            if (toolTip != null)
+            {
+                ToolTipWindow toolTipWindow = toolTip.GetComponentInChildren<ToolTipWindow>();
+                SkillToolTip skillToolTip = toolTipWindow.GetComponentInChildren<SkillToolTip>();
+                if (skillToolTip != null)
+                {
+                    GameObject spreadEffect = ResUtils.LoadModPrefab(IDs.Res_GasSpreadUIEffect);
+                    spreadEffect = GameObject.Instantiate(spreadEffect, skillToolTip.SkillImage.gameObject.transform);
+                    UIGasAnimator uIGasAnimator = spreadEffect.GetComponent<UIGasAnimator>();
+                    if (uIGasAnimator != null)
+                    {
+                        uIGasAnimator.SetFactorSmooth(B_Charge.GetChargePercent(this.BChar));
+                    }
+                }
+            }
+        }*/
     }
 }

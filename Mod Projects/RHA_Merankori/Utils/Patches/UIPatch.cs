@@ -59,5 +59,41 @@ namespace RHA_Merankori
                 MerankoriShieldUI.CreateUIForAlly(battleChar);
             }
         }
+
+
+        [HarmonyPatch(
+            typeof(BasicSkill),
+            nameof(BasicSkill.PointerEnter)
+            )]
+        [HarmonyPostfix]
+        static void BasicSkill_PointerEnter_Postfix(
+            BasicSkill __instance
+            )
+        {
+            if (BattleSystem.instance != null && __instance.buttonData!=null)
+            {
+                S_Attack_All attack_all = __instance.buttonData.ExtendedFind<S_Attack_All>();
+                // 这个方法只会在skill view里调用，但是在固定技能中不会调用...
+                attack_all.Special_SkillButtonPointerEnter();
+            }
+        }
+
+        [HarmonyPatch(
+            typeof(BasicSkill),
+            nameof(BasicSkill.PointerExit)
+            )]
+        [HarmonyPostfix]
+        static void BasicSkill_PointerExit_Postfix(
+            BasicSkill __instance
+            )
+        {
+            if (BattleSystem.instance != null && __instance.buttonData != null)
+            {
+                S_Attack_All attack_all = __instance.buttonData.ExtendedFind<S_Attack_All>();
+                // 这个方法只会在skill view里调用，但是在固定技能中不会调用...
+                attack_all.Special_SkillButtonPointerExit();
+            }
+        }
+
     }
 }

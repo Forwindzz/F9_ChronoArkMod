@@ -27,6 +27,7 @@ namespace RHA_Merankori
     {
         public override bool CanApplyCalm => true;
         public override bool CanApplyPanic => false;
+        public override bool UseParticleEffect => true;
 
         public void HPChange1(BattleChar Char, bool Healed, int PreHPNum, int NewHPNum)
         {

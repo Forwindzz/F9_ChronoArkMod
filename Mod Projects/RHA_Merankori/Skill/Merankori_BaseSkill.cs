@@ -17,13 +17,21 @@ namespace RHA_Merankori
     }
 
     //基础类，能够检测calm和panic并做出动画效果反应，不过有时候可能不起作用（卡牌的主人不是梅朗柯莉的时候，或者某些时点并没有将卡牌加入回调）
-    public abstract class Merankori_BaseSkill : 
-        Skill_Extended, 
+    public abstract class Merankori_BaseSkill :
+        Skill_Extended,
         IP_BuffAdd,
         IP_BuffAddAfter,
         IMerankoriStateInfo,
         ICanMerankoriRectification
     {
+        private GameObject tinySkillViewEffect = null;
+        private UIGasAnimator tinySkillViewAnimator = null;
+        private const float tinyEffect_showFactor = 0.3f;
+        private const float tinyEffect_moveInFactor = 0.7f;
+        private const float tinyEffect_clickFactor = 1.0f;
+
+        public UIGasAnimator TinySkillViewAnimator => tinySkillViewAnimator;
+
 
         public void BuffaddedAfter(BattleChar BuffUser, BattleChar BuffTaker, Buff addedbuff, StackBuff stackBuff)
         {
@@ -59,7 +67,7 @@ namespace RHA_Merankori
 
         private void UpdateCalmState(bool isCalmNow)
         {
-            if(!hasChecked && BattleSystem.instance!=null)
+            if (!hasChecked && BattleSystem.instance != null)
             {
                 hasChecked = true;
                 BattleSystem.DelayInput(Co_CheckEmotion(isCalmNow));
@@ -72,16 +80,19 @@ namespace RHA_Merankori
             if (isCalmNow && effectSetting.HasFlag(StateForVisualEffect.Calm))
             {
                 //Debug.Log($"Particle on for {this.Name}");
+                SetTinySkillViewEffect(IDs.Res_TinySkillViewCalm, tinyEffect_showFactor);
                 base.SkillParticleOn();
             }
-            else if (effectSetting.HasFlag(StateForVisualEffect.Panic))
+            else if (!isCalmNow && effectSetting.HasFlag(StateForVisualEffect.Panic))
             {
                 //Debug.Log($"Particle on for {this.Name}");
+                SetTinySkillViewEffect(IDs.Res_TinySkillViewPanic, tinyEffect_showFactor);
                 base.SkillParticleOn();
             }
             else
             {
                 //Debug.Log($"Particle off for {this.Name}");
+                RemoveTinySkillViewEffect();
                 base.SkillParticleOff();
             }
             //Debug.Log($"base calm change {isCalmNow} {this.GetType().Name}");
@@ -99,14 +110,15 @@ namespace RHA_Merankori
         [Flags]
         protected enum StateForVisualEffect
         {
-            Panic=1,
-            Calm=2
+            Panic = 1,
+            Calm = 2
         }
 
         protected StateForVisualEffect effectSetting;
 
         public abstract bool CanApplyCalm { get; }
         public abstract bool CanApplyPanic { get; }
+        public abstract bool UseParticleEffect { get; }
 
         protected virtual void OnEmotionCalm()
         {
@@ -156,13 +168,109 @@ namespace RHA_Merankori
         {
             base.Init();
             hasChecked = false;
-            this.SkillParticleObject = new GDESkillExtendedData(GDEItemKeys.SkillExtended_MissChain_Ex_P).Particle_Path;
+            if (CanApplyCalm)
+            {
+                effectSetting |= StateForVisualEffect.Calm;
+            }
+            if (CanApplyPanic)
+            {
+                effectSetting |= StateForVisualEffect.Panic;
+            }
+            if (UseParticleEffect)
+            {
+                this.SkillParticleObject = new GDESkillExtendedData(GDEItemKeys.SkillExtended_MissChain_Ex_P).Particle_Path;
+            }
         }
+
+        public override void Special_SkillButtonPointerEnter()
+        {
+            base.Special_SkillButtonPointerEnter();
+            SetTinySkillViewFactor(tinyEffect_moveInFactor);
+            GameObject toolTip = ToolTipWindow.ToolTip;
+            if (toolTip != null)
+            {
+                ToolTipWindow toolTipWindow = toolTip.GetComponentInChildren<ToolTipWindow>();
+                if(toolTipWindow==null)
+                {
+                    return;
+                }
+                SkillToolTip skillToolTip = toolTipWindow.GetComponentInChildren<SkillToolTip>();
+                if (skillToolTip != null && tinySkillViewEffect != null)
+                {
+                    GameObject effect = GameObject.Instantiate(tinySkillViewEffect, skillToolTip.Name.transform);
+                    if (effect != null)
+                    {
+                        effect.transform.localPosition = new Vector3(-154.3f, 0, 0);
+                    }
+                }
+            }
+        }
+
+
 
         public override void SelfDestroy()
         {
             base.SelfDestroy();
             hasChecked = false;
+        }
+
+        public void SetTinySkillViewEffect(string effectPrefabPath, float factor = 0.5f)
+        {
+            RemoveTinySkillViewEffect();
+            if (this.MySkill?.MyButton == null)
+            {
+                return;
+            }
+            tinySkillViewEffect = ResUtils.LoadModPrefab(effectPrefabPath);
+            tinySkillViewEffect = GameObject.Instantiate(tinySkillViewEffect, this.MySkill.MyButton.transform);
+            if (tinySkillViewEffect != null)
+            {
+                tinySkillViewAnimator = tinySkillViewEffect.GetComponentInChildren<UIGasAnimator>();
+                if (tinySkillViewEffect != null)
+                {
+                    tinySkillViewAnimator.SetFactorSmooth(factor);
+                }
+                tinySkillViewEffect.transform.localPosition = new Vector3(-134.3f, 0, 0);
+            }
+        }
+
+        public void RemoveTinySkillViewEffect()
+        {
+            if (tinySkillViewAnimator != null)
+            {
+                tinySkillViewAnimator.DestroySmooth();
+                tinySkillViewAnimator = null;
+            }
+            else
+            {
+                GameObject.Destroy(tinySkillViewEffect);
+            }
+        }
+
+        public void SetTinySkillViewFactor(float newFactor)
+        {
+            if (tinySkillViewAnimator != null)
+            {
+                tinySkillViewAnimator.SetFactorSmooth(newFactor);
+            }
+        }
+
+        public override void Special_PointerExit()
+        {
+            base.Special_PointerExit();
+            SetTinySkillViewFactor(tinyEffect_showFactor);
+        }
+
+        public override void Special_SkillButtonPointerExit()
+        {
+            base.Special_SkillButtonPointerExit();
+            SetTinySkillViewFactor(tinyEffect_showFactor);
+        }
+
+        public override void Special_SkillButtonPointerClick()
+        {
+            base.Special_SkillButtonPointerClick();
+            SetTinySkillViewFactor(tinyEffect_clickFactor);
         }
     }
 }

@@ -30,6 +30,7 @@ namespace RHA_Merankori
     {
         public override bool CanApplyCalm => true;
         public override bool CanApplyPanic => false;
+        public override bool UseParticleEffect => true;
 
         public const int DISCARD_DRAW_COUNT = 2;
 

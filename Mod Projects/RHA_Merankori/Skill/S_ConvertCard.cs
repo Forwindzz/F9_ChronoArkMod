@@ -23,15 +23,9 @@ namespace RHA_Merankori
     public class S_ConvertCard : Merankori_BaseSkill,
         ICanMerankoriRectification
     {
-        public override bool CanApplyCalm => false;
-
-        public override bool CanApplyPanic => false;
-
-        public override void Init()
-        {
-            base.Init();
-            this.SkillParticleObject = new GDESkillExtendedData(GDEItemKeys.SkillExtended_MissChain_Ex_P).Particle_Path;
-        }
+        public override bool CanApplyCalm => true;
+        public override bool CanApplyPanic => true;
+        public override bool UseParticleEffect => false;
 
         public override bool SkillTargetSelectExcept(Skill ExceptSkill)
         {
