@@ -11,15 +11,15 @@ Buff/B_CalmDown_Name,Text,,,Composed Down,,镇定,鎮定
 Buff/B_Calm_Description,Text,,,"At the end of the turn, grant 1 stack of Phosguard to the ally with the lowest Health.  
 <color=#BAC8FF>Tending to allies who may be hurt because of her...</color>  
 When someone is healed, Melancholy becomes <color=#BAC8FF><b>Calm</b></color>.  
-When someone attacks, enter <color=#FFC5BA><b>Panic</b></color> state.",,"回合结束时，赋予体力值最低的队友1层燐色存护。
-<color=#BAC8FF>照料可能因自己受伤的队友...</color>
-有人受到治疗时， 梅朗柯莉会<color=#BAC8FF><b>冷静</b></color>下来。
-当有人攻击时，进入<color=#FFC5BA><b>慌张</b></color>状态。","回合結束時，賦予體力值最低的隊友1層燐色存護。
+When someone attacks, enter <color=#FFC5BA><b>Panic</b></color> state.",,"回合结束时，体力值最低的队友获得1层燐色存护。
+
+梅朗柯莉会在有人受到治疗时<color=#BAC8FF><b>冷静</b></color>下来，有人开始攻击时<color=#FFC5BA><b>慌张</b></color>起来。
+<color=#5061A4>--- 照料可能因自己受伤的队友...</color>","回合結束時，賦予體力值最低的隊友1層燐色存護。
 <color=#BAC8FF>照顧可能因自己受傷的隊友...</color>
 有人接受治療時， 梅朗柯莉會<color=#BAC8FF><b>冷靜</b></color>下來。
 當有人攻擊時，進入<color=#FFC5BA><b>慌張</b></color>狀態。 "
 Buff/B_Calm_Name,Text,,,Calm,,冷静,冷靜
-Buff/B_Charge_Description,Text,,,"When casting <color=#FF6767>Obliterated Phosflame Crystal</color>, each stack increases its damage by 10%, then remove this effect.",,释放<color=#FF6767>湮裂的燐焰晶</color>时，每层增加其10%的伤害，然后移除此效果。,釋放<color=#FF6767>湮裂的燐焰晶</color>時，每層增加其10%的傷害，然後移除此效果。
+Buff/B_Charge_Description,Text,,,"When casting <color=#FF6767>Obliterated Phosflame Crystal</color>, each stack increases its damage by 10%, then remove this effect.",,释放<color=#FF6767>湮裂的燐焰晶</color>时，每层提升10%伤害，随后移除所有蓄能效果。,釋放<color=#FF6767>湮裂的燐焰晶</color>時，每層增加其10%的傷害，然後移除此效果。
 Buff/B_Charge_Name,Text,,,Charging,,蓄能,蓄能
 Buff/B_DLoop_Description,Text,,,"Lock the current <color=#BAC8FF>Calm</color> or <color=#FFC5BA>Panic</color> state.  
 Each time a state switch is blocked, there is a <color=#5061A4>&a</color> chance to gain 1 Mana.  
@@ -50,9 +50,8 @@ Gain 1 stack of Charging each time a skill is used from hand.",,恢复<color=#BA
 Buff/B_PanicFire_Name,Text,,,Overfrequency Crystal,,越频晶石,越頻晶石
 Buff/B_Panic_Description,Text,,,"<color=#FFC5BA>The Phosflame Crystal burns ever fiercer...</color>
 When someone is healed, Melancholy becomes <color=#BAC8FF><b>Calm</b></color>.  
-When someone attacks, enter <color=#FFC5BA><b>Panic</b></color> state.",,"<color=#FFC5BA>燐焰晶逐渐炽烈...</color>
-有人受到治疗时， 梅朗柯莉会<color=#BAC8FF><b>冷静</b></color>下来。
-当有人攻击时，进入<color=#FFC5BA><b>慌张</b></color>状态。","<color=#FFC5BA>燐焰晶逐漸熾熱...</color>
+When someone attacks, enter <color=#FFC5BA><b>Panic</b></color> state.",,"梅朗柯莉会在有人受到治疗时<color=#BAC8FF><b>冷静</b></color>下来，有人开始攻击时<color=#FFC5BA><b>慌张</b></color>起来。
+<color=#5061A4>--- 燐焰晶逐渐炽烈...</color>","<color=#FFC5BA>燐焰晶逐漸熾熱...</color>
 有人接受治療時， 梅朗柯莉會<color=#BAC8FF><b>冷靜</b></color>下來。
 當有人攻擊時，進入<color=#FFC5BA><b>慌張</b></color>狀態。 "
 Buff/B_Panic_Name,Text,,,Panic,,慌张,慌張
@@ -197,7 +196,7 @@ Add <color=#FF6767>Obliterated Phosflame Crystal</color> to your hand until it i
 将<color=#FF6767>湮裂的燐焰晶</color>放入手中，直到填满手牌。","抽取1個技能，
 將<color=#FF6767>湮裂的燐焰晶</color>放入手中，直到填入手牌。"
 Skill/S_Backup_Name,Text,,,Backup Phosflame Crystal,,后备的燐焰晶,後備的燐焰晶
-Skill/S_Care_Description,Text,,,"<color=#BAC8FF><b>Calm</b></color>: If the target has a positive effect related to Melancholy’s exclusive skills, this effect gains 1 additional stack.",,<color=#BAC8FF><b>冷静</b>：目标若持有梅朗柯莉专属技能相关的正面效果，此效果则会额外增加1层</color>,<color=#BAC8FF><b>冷靜</b>：目標若持有梅朗柯莉專屬技能相關的正面效果，此效果則會額外增加1層</color>
+Skill/S_Care_Description,Text,,,"<color=#BAC8FF><b>Calm</b></color>: If the target has a positive effect related to Melancholy’s exclusive skills, this effect gains 1 additional stack.",,<color=#BAC8FF><b>冷静</b>：目标若持有梅朗柯莉专属技能相关的正面效果，此效果再额外增加1层</color>,<color=#BAC8FF><b>冷靜</b>：目標若持有梅朗柯莉專屬技能相關的正面效果，此效果則會額外增加1層</color>
 Skill/S_Care_Name,Text,,,Attentive Care,,悉心照料,悉心照料
 Skill/S_Charge_Description,Text,,,"During this skill’s countdown, each time Melancholy enters the <color=#BAC8FF>Calm</color> state, gain 4 stacks of Charging.  
 If Countdown is completed while in the <color=#BAC8FF>Calm</color> state, add 2 <color=#FF6767>Obliterated Phosflame Crystals</color> to your hand.",,"在此技能倒计时期间，梅朗柯莉每次进入<color=#BAC8FF>冷静</color>状态时，获得4层蓄能。
@@ -208,8 +207,7 @@ Skill/S_ConvertCard_Description,Text,,,"Discard the chosen skill and draw 1 skil
 The owner of the discarded skill gains 2 stacks of Frequency Shift Fine-Tuning.  
 <color=#FFC5BA><b>Panic</b></color>: Add 1 <color=#FF6767>Obliterated Phosflame Crystal</color> to your hand.  
 <color=#BAC8FF><b>Calm</b></color>: This skill gains Swiftness.
-",,"丢弃选择的技能，抽取1个技能。
-丢弃技能的拥有者获得2层频移微调。
+",,"丢弃选择的技能，并使其拥有者获得2层频移微调，然后抽取1个技能。
 <color=#FFC5BA><b>慌张</b>：将1张<color=#FF6767>湮裂的燐焰晶</color>放入手中。</color>
 <color=#BAC8FF><b>冷静</b>：赋予此技能迅速</color>","丟棄選擇的技能，抽取1個技能。
 丟棄技能的擁有者獲得2層頻移微調。
@@ -243,9 +241,9 @@ Skill/S_P_Shock_Name,Text,,,Shock Impact,,震荡冲击,震盪衝擊
 Skill/S_Reconstruct_Name,Text,,,Fractured Shard Reconstruction,,碎晶重构,碎晶重構
 Skill/S_Rectification_Description,Text,,,"Allows Melancholy’s exclusive single-target skills to be changed to target all allies.  
 When discarding this skill, prioritize drawing &a of Melancholy’s skills.  
-<color=#BAC8FF><b>Calm</b></color>: Draw 1 skill.",,"可以将梅朗柯莉指向单体队友的专属技能更改为对“全体友军”释放。
-丢弃此技能时，优先抽取&a个梅朗柯莉的技能。
-<color=#BAC8FF><b>冷静</b>：抽取1个技能</color>","梅朗柯莉可以指向單體隊友的專屬技能改為對「全體友軍」釋放。
+<color=#BAC8FF><b>Calm</b></color>: Draw 1 skill.",,"将梅朗柯莉的单体专属技能改为对全体友军生效。
+丢弃此技能时，优先抽取2个梅朗柯莉的技能。
+<color=#BAC8FF>冷静：抽取1个技能</color>","梅朗柯莉可以指向單體隊友的專屬技能改為對「全體友軍」釋放。
 丟棄此技能時，優先抽取&a個梅朗柯莉的技能。
 <color=#BAC8FF><b>冷靜</b>：抽取1個技能</color>"
 Skill/S_Rectification_Name,Text,,,Circuit Rectifier,,回路整流,迴路整流

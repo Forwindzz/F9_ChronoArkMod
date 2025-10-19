@@ -40,7 +40,7 @@ namespace RHA_Merankori
         {
             // note: do not use InputChars, it sometimes is null, and usually inited character list is not here.
             // use __instance.Chars instead
-            if(__instance==null)
+            if (__instance == null)
             {
                 return;
             }
@@ -70,11 +70,14 @@ namespace RHA_Merankori
             BasicSkill __instance
             )
         {
-            if (BattleSystem.instance != null && __instance.buttonData!=null)
+            if (BattleSystem.instance != null && __instance.buttonData != null)
             {
                 S_Attack_All attack_all = __instance.buttonData.ExtendedFind<S_Attack_All>();
                 // 这个方法只会在skill view里调用，但是在固定技能中不会调用...
-                attack_all.Special_SkillButtonPointerEnter();
+                if (attack_all != null)
+                {
+                    attack_all.Special_SkillButtonPointerEnter();
+                }
             }
         }
 
@@ -91,7 +94,10 @@ namespace RHA_Merankori
             {
                 S_Attack_All attack_all = __instance.buttonData.ExtendedFind<S_Attack_All>();
                 // 这个方法只会在skill view里调用，但是在固定技能中不会调用...
-                attack_all.Special_SkillButtonPointerExit();
+                if (attack_all != null)
+                {
+                    attack_all.Special_SkillButtonPointerExit();
+                }
             }
         }
 

@@ -16,10 +16,9 @@ namespace RHA_Merankori
         public static string Buff_B_Backup = "B_Backup";
 		/// <summary>
 		/// 冷静
-		/// 回合结束时，赋予体力值最低的队友1层燐色存护。
-		/// <color=#BAC8FF>照料可能因自己受伤的队友...</color>
-		/// 有人受到治疗时， 梅朗柯莉会<color=#BAC8FF><b>冷静</b></color>下来。
-		/// 当有人攻击时，进入<color=#FFC5BA><b>慌张</b></color>状态。
+		/// 回合结束时，体力值最低的队友获得1层燐色存护。
+		/// 梅朗柯莉会在有人受到治疗时<color=#BAC8FF><b>冷静</b></color>下来，有人开始攻击时<color=#FFC5BA><b>慌张</b></color>起来。
+		/// <color=#5061A4>--- 照料可能因自己受伤的队友...</color>
 		/// </summary>
         public static string Buff_B_Calm = "B_Calm";
 		/// <summary>
@@ -29,7 +28,7 @@ namespace RHA_Merankori
         public static string Buff_B_CalmDown = "B_CalmDown";
 		/// <summary>
 		/// 蓄能
-		/// 释放<color=#FF6767>湮裂的燐焰晶</color>时，每层增加其10%的伤害，然后移除此效果。
+		/// 释放<color=#FF6767>湮裂的燐焰晶</color>时，每层提升10%伤害，随后移除所有蓄能效果。
 		/// </summary>
         public static string Buff_B_Charge = "B_Charge";
 		/// <summary>
@@ -80,9 +79,8 @@ namespace RHA_Merankori
         public static string Buff_B_OverClocking = "B_OverClocking";
 		/// <summary>
 		/// 慌张
-		/// <color=#FFC5BA>燐焰晶逐渐炽烈...</color>
-		/// 有人受到治疗时， 梅朗柯莉会<color=#BAC8FF><b>冷静</b></color>下来。
-		/// 当有人攻击时，进入<color=#FFC5BA><b>慌张</b></color>状态。
+		/// 梅朗柯莉会在有人受到治疗时<color=#BAC8FF><b>冷静</b></color>下来，有人开始攻击时<color=#FFC5BA><b>慌张</b></color>起来。
+		/// <color=#5061A4>--- 燐焰晶逐渐炽烈...</color>
 		/// </summary>
         public static string Buff_B_Panic = "B_Panic";
 		/// <summary>
@@ -248,7 +246,7 @@ namespace RHA_Merankori
         public static string Skill_S_Backup = "S_Backup";
 		/// <summary>
 		/// 悉心照料
-		/// <color=#BAC8FF><b>冷静</b>：目标若持有梅朗柯莉专属技能相关的正面效果，此效果则会额外增加1层</color>
+		/// <color=#BAC8FF><b>冷静</b>：目标若持有梅朗柯莉专属技能相关的正面效果，此效果再额外增加1层</color>
 		/// </summary>
         public static string Skill_S_Care = "S_Care";
 		/// <summary>
@@ -259,8 +257,7 @@ namespace RHA_Merankori
         public static string Skill_S_Charge = "S_Charge";
 		/// <summary>
 		/// 焰晶转化
-		/// 丢弃选择的技能，抽取1个技能。
-		/// 丢弃技能的拥有者获得2层频移微调。
+		/// 丢弃选择的技能，并使其拥有者获得2层频移微调，然后抽取1个技能。
 		/// <color=#FFC5BA><b>慌张</b>：将1张<color=#FF6767>湮裂的燐焰晶</color>放入手中。</color>
 		/// <color=#BAC8FF><b>冷静</b>：赋予此技能迅速</color>
 		/// </summary>
@@ -308,9 +305,9 @@ namespace RHA_Merankori
         public static string Skill_S_Reconstruct = "S_Reconstruct";
 		/// <summary>
 		/// 回路整流
-		/// 可以将梅朗柯莉指向单体队友的专属技能更改为对“全体友军”释放。
-		/// 丢弃此技能时，优先抽取&a个梅朗柯莉的技能。
-		/// <color=#BAC8FF><b>冷静</b>：抽取1个技能</color>
+		/// 将梅朗柯莉的单体专属技能改为对全体友军生效。
+		/// 丢弃此技能时，优先抽取2个梅朗柯莉的技能。
+		/// <color=#BAC8FF>冷静：抽取1个技能</color>
 		/// </summary>
         public static string Skill_S_Rectification = "S_Rectification";
 		/// <summary>

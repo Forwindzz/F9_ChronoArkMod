@@ -180,6 +180,7 @@ namespace RHA_Merankori
             {
                 this.PlusStat.HEALTaken = 0;
             }
+            //Debug.Log($"[Heal Check] {this.BChar?.Info?.Name} Total={this.BChar?.GetStat.HEALTaken} This={this.PlusStat.HEALTaken}");
         }
 
         public void BuffaddedAfter(BattleChar BuffUser, BattleChar BuffTaker, Buff addedbuff, StackBuff stackBuff)
@@ -224,7 +225,6 @@ namespace RHA_Merankori
         {
             base.FixedUpdate();
             CheckRecover(); //暴力解决各种边边角角的奇怪的死亡判定
-            //this.BuffData.MaxStack = GetAllDeathImmune() / 20 + 4;
         }
 
 

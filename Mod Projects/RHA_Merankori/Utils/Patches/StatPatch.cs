@@ -12,7 +12,7 @@ using UnityEngine;
 
 namespace RHA_Merankori
 {
-    
+
     public interface IRemoveDeadImmuneLimitForTeam
     {
 
@@ -84,9 +84,9 @@ namespace RHA_Merankori
             public static void MyPostfix(Character __instance)
             {
                 // 插入 StatC 调用后的逻辑
-                if(BattleSystem.instance==null)
+                if (BattleSystem.instance == null)
                 {
-                    if(Utils.AllyTeamEquipFindType<IRemoveDeadImmuneLimitForTeam>())
+                    if (Utils.AllyTeamEquipFindType<IRemoveDeadImmuneLimitForTeam>())
                     {
                         RecoverDeadImmune(__instance);
                     }
@@ -112,8 +112,6 @@ namespace RHA_Merankori
                 //Debug.Log($"Try to modify Dead immune limit {__instance.Name}: {newStat.DeadImmune} -> {tempDeadImmune}");
             }
         }
-
-
     }
-    
+
 }

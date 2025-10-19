@@ -31,7 +31,6 @@ namespace RHA_Merankori
         IP_BattleEndOutBattle,
         IP_BattleStart_Ones,
         IP_Healed,
-        IP_Heal_User,
         IP_Healed_Anyone
     {
 
@@ -94,12 +93,6 @@ namespace RHA_Merankori
         public void BattleStart(BattleSystem Ins)
         {
             EmotionBuffSwitch.SwitchToCalm(this.BChar);
-        }
-
-        public int Heal_User(BattleChar Target, int HealNum)
-        {
-            EmotionBuffSwitch.SwitchToCalm(this.BChar);
-            return HealNum;
         }
 
         //必须要这个才能侦测到emeny的恢复

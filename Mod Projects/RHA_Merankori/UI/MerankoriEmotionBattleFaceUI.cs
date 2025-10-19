@@ -46,7 +46,7 @@ namespace RHA_Merankori
             UIComponent ui = battleChar.UI;
             if(ui==null)
             {
-                Debug.LogWarning("[MerankoriEmotionVisual] create with null UI!");
+                //Debug.LogWarning("[MerankoriEmotionVisual] create with null UI!");
                 return false;
             }
 

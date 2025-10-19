@@ -21,7 +21,7 @@
         "UnknownTarget": false,
         "UseAp": 0,
         "Name": "悉心照料",
-        "Description": "<color=#BAC8FF><b>冷静</b>：目标若持有梅朗柯莉专属技能相关的正面效果，此效果则会额外增加1层</color>",
+        "Description": "<color=#BAC8FF><b>冷静</b>：目标若持有梅朗柯莉专属技能相关的正面效果，此效果再额外增加1层</color>",
         "User": "C_Merankori",
         "PlusKeyWords": [
             "SK_Calm"

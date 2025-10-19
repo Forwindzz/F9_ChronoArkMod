@@ -23,14 +23,14 @@ namespace RHA_Merankori
         public void ChangeDamageState(SkillParticle SP, BattleChar Target, int DMG, bool Cri, ref bool ToHeal, ref bool ToPain)
         {
             Buff buff = Target.GetBuffByID(ModItemKeys.Buff_B_FreqShift);
-            if(buff==null)
+            if (buff == null || ToHeal)
             {
                 return;
             }
             if (SP.SkillKey == ModItemKeys.Skill_S_Attack_All || SP.SkillData.ExtendedFind<S_Attack_All>() != null)
             {
                 ToHeal = true;
-                if(Target.HP != Target.GetStat.maxhp)
+                if (Target.HP != Target.GetStat.maxhp)
                 {
                     buff.SelfStackDestroy();
                 }

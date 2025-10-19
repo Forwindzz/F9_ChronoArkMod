@@ -36,7 +36,7 @@ namespace RHA_Merankori
             UIComponent uiComp = bChar.UI;
             if (uiComp == null)
             {
-                Debug.LogWarning($"Try to use null ally UI!");
+                //Debug.LogWarning($"Try to use null ally UI!");
                 return;
             }
 

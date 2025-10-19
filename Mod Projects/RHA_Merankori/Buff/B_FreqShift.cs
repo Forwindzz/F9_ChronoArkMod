@@ -24,22 +24,25 @@ namespace RHA_Merankori
         public override void BuffOneAwake()
         {
             base.BuffOneAwake();
-            if (BattleSystem.instance==null)
+            if (BattleSystem.instance == null)
             {
                 return;
             }
-            if(BattleSystem.instance.AllyTeam==null)
+            if (BattleSystem.instance.AllyTeam == null)
             {
                 return;
             }
-            if(BattleSystem.instance.AllyTeam.LucyChar==null)
+            if (BattleSystem.instance.AllyTeam.LucyChar == null)
             {
                 return;
             }
-            //BattleSystem.instance.AllyTeam.LucyChar.BuffAdd(ModItemKeys.Buff_B_H_FreqShift_Lucy, this.BChar);
             List<BattleChar> chars = BattleSystem.instance.AllyTeam.AliveChars_Vanish;
             foreach (BattleChar ch in chars)
             {
+                if(ch==null)
+                {
+                    continue;
+                }
                 ch.BuffAdd(ModItemKeys.Buff_B_H_FreqShift_Lucy, this.BChar, true);
             }
         }
