@@ -19,8 +19,9 @@ namespace RHA_Merankori
     //基础类，能够检测calm和panic并做出动画效果反应，不过有时候可能不起作用（卡牌的主人不是梅朗柯莉的时候，或者某些时点并没有将卡牌加入回调）
     public abstract class Merankori_BaseSkill :
         Skill_Extended,
-        IP_BuffAdd,
+        //IP_BuffAdd,
         IP_BuffAddAfter,
+        IP_ParticleOut_After_Global,
         IMerankoriStateInfo,
         ICanMerankoriRectification
     {
@@ -31,10 +32,17 @@ namespace RHA_Merankori
         private const float tinyEffect_clickFactor = 1.0f;
 
         public UIGasAnimator TinySkillViewAnimator => tinySkillViewAnimator;
-
+        private bool previousIsCalm = false;
+        private bool previousIsPanic = false;
 
         public void BuffaddedAfter(BattleChar BuffUser, BattleChar BuffTaker, Buff addedbuff, StackBuff stackBuff)
         {
+            //Debug.Log($"[MBaseSkill] @{this?.Name} BuffaddedAfter U={BuffUser?.Info?.Name} | T={BuffTaker?.Info?.Name} | {addedbuff?.BuffData?.Name}");
+
+            if (BuffTaker != this.BChar)
+            {
+                return;
+            }
             if (addedbuff.BuffData.Key == ModItemKeys.Buff_B_Panic)
             {
                 UpdateCalmState(false);
@@ -53,11 +61,13 @@ namespace RHA_Merankori
 
         private void CheckEmotionState()
         {
-            if (EmotionBuffSwitch.IsCalm(this.BChar))
+            //Debug.Log($"[MBaseSkill] @{this?.Name} CheckEmotionState");
+
+            if (IsCalm())
             {
                 UpdateCalmState(true);
             }
-            else if (EmotionBuffSwitch.IsPanic(this.BChar))
+            else if (IsPanic())
             {
                 UpdateCalmState(false);
             }
@@ -67,7 +77,22 @@ namespace RHA_Merankori
 
         private void UpdateCalmState(bool isCalmNow)
         {
-            if (!hasChecked && BattleSystem.instance != null)
+            if(previousIsCalm && isCalmNow)
+            {
+                return;
+            }
+            if(previousIsPanic && !isCalmNow)
+            {
+                return;
+            }
+            if(BattleSystem.instance==null)
+            {
+                return;
+            }
+
+            //Debug.Log($"[MBaseSkill] @{this?.Name} UpdateCalmState Checked:{hasChecked} | Cur={isCalmNow} | C={previousIsCalm} P={previousIsPanic}");
+
+            if (!hasChecked)
             {
                 hasChecked = true;
                 BattleSystem.DelayInput(Co_CheckEmotion(isCalmNow));
@@ -99,11 +124,17 @@ namespace RHA_Merankori
             if (isCalmNow)
             {
                 OnEmotionCalm();
+                previousIsCalm = true;
+                previousIsPanic = false;
             }
             else
             {
                 OnEmotionPanic();
+                previousIsCalm = false;
+                previousIsPanic = true;
             }
+            //Debug.Log($"[MBaseSkill] @{this?.Name} After Co_CheckEmotion Checked:{hasChecked} | Cur={isCalmNow} | C={previousIsCalm} P={previousIsPanic}");
+
             yield break;
         }
 
@@ -122,12 +153,12 @@ namespace RHA_Merankori
 
         protected virtual void OnEmotionCalm()
         {
-
+            //Debug.Log("[MBaseSkill] OnCalm!");
         }
 
         protected virtual void OnEmotionPanic()
         {
-
+            //Debug.Log("[MBaseSkill] OnPanic!");
         }
 
         public override void HandInit()
@@ -152,6 +183,7 @@ namespace RHA_Merankori
             return EmotionBuffSwitch.IsPanic(this.BChar);
         }
 
+        /*
         public void Buffadded(BattleChar BuffUser, BattleChar BuffTaker, Buff addedbuff)
         {
             if (addedbuff.BuffData.Key == ModItemKeys.Buff_B_Panic)
@@ -162,12 +194,16 @@ namespace RHA_Merankori
             {
                 UpdateCalmState(true);
             }
-        }
+        }*/
 
         public override void Init()
         {
             base.Init();
+            //Debug.Log($"[MBaseSkill] @{this?.Name} Init");
             hasChecked = false;
+            previousIsCalm = false;
+            previousIsPanic = false;
+            //this.OnePassive = true;
             if (CanApplyCalm)
             {
                 effectSetting |= StateForVisualEffect.Calm;
@@ -205,8 +241,6 @@ namespace RHA_Merankori
                 }
             }
         }
-
-
 
         public override void SelfDestroy()
         {
@@ -271,6 +305,13 @@ namespace RHA_Merankori
         {
             base.Special_SkillButtonPointerClick();
             SetTinySkillViewFactor(tinyEffect_clickFactor);
+        }
+
+        public IEnumerator ParticleOut_After_Global(Skill SkillD, List<BattleChar> Targets)
+        {
+            //Debug.Log($"[MBaseSkill] @{this?.Name} ParticleOut_After_Global {SkillD?.AllExtendeds?.FirstOrDefault()?.Name}");
+            CheckEmotionState();
+            yield break;
         }
     }
 }

@@ -60,7 +60,7 @@ namespace RHA_Merankori
             }
         }
 
-
+        
         [HarmonyPatch(
             typeof(BasicSkill),
             nameof(BasicSkill.PointerEnter)

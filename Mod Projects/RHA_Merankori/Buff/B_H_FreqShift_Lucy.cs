@@ -22,6 +22,7 @@ namespace RHA_Merankori
     {
         public void ChangeDamageState(SkillParticle SP, BattleChar Target, int DMG, bool Cri, ref bool ToHeal, ref bool ToPain)
         {
+            //Debug.Log($"[B_H_FreqShift_Lucy] @{this.BChar?.Info?.Name} | S={SP?.SkillKey} | T: {Target?.Info?.Name} | D={DMG} | C={Cri} | H={ToHeal} | P={ToPain}");
             Buff buff = Target.GetBuffByID(ModItemKeys.Buff_B_FreqShift);
             if (buff == null || ToHeal)
             {
@@ -29,6 +30,7 @@ namespace RHA_Merankori
             }
             if (SP.SkillKey == ModItemKeys.Skill_S_Attack_All || SP.SkillData.ExtendedFind<S_Attack_All>() != null)
             {
+                //Debug.Log("[B_H_FreqShift_Lucy] Heal!");
                 ToHeal = true;
                 if (Target.HP != Target.GetStat.maxhp)
                 {

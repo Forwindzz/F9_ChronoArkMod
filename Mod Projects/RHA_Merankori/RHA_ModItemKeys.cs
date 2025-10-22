@@ -190,6 +190,7 @@ namespace RHA_Merankori
         public static string SkillEffect_SE_S_S_ElementHeal = "SE_S_S_ElementHeal";
         public static string SkillEffect_SE_S_S_Manifold = "SE_S_S_Manifold";
         public static string SkillEffect_SE_S_S_OverClocking = "SE_S_S_OverClocking";
+        public static string SkillEffect_SE_S_S_Shield = "SE_S_S_Shield";
         public static string SkillEffect_SE_S_S_WarmFire = "SE_S_S_WarmFire";
         public static string SkillEffect_SE_Tick_B_Backflow = "SE_Tick_B_Backflow";
         public static string SkillEffect_SE_Tick_B_Calm = "SE_Tick_B_Calm";

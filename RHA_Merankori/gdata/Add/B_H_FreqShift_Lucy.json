@@ -2,7 +2,7 @@
     "B_H_FreqShift_Lucy": {
         "_gdeSchema": "Buff",
         "Hide": true,
-        "IsFieldBuff": true,
+        "IsFieldBuff": false,
         "Cantdisable": true,
         "ClassName": "RHA_Merankori.B_H_FreqShift_Lucy",
         "BuffTag": "null",
@@ -10,6 +10,7 @@
         "Caution": false,
         "Name": "频移微调-露西",
         "Description": "引导燐焰晶",
-        "MaxStack": 1
+        "MaxStack": 1,
+        "Icon": "Image/Buff/Skill_Icon_Pack/1_2Newicons/EA_1_2newicons (7)"
     }
 }

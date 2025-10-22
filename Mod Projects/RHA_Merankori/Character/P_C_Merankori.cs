@@ -87,6 +87,10 @@ namespace RHA_Merankori
 
         public void Healed(BattleChar Healer, BattleChar HealedChar, int HealNum, bool Cri, int OverHeal)
         {
+            if(HealNum<=0)
+            {
+                return;
+            }
             EmotionBuffSwitch.SwitchToCalm(this.BChar);
         }
 

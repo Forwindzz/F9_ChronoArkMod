@@ -13,7 +13,7 @@
             "SK_Calm"
         ],
         "Effect_Target": "SE_T_S_Shield",
-        "Effect_Self": "null",
+        "Effect_Self": "SE_S_S_Shield",
         "Rare": false,
         "NODOD": false,
         "NotChuck": false,

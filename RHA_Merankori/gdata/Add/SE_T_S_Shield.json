@@ -4,11 +4,9 @@
         "HIT": 100,
         "Buffs": [
             "B_Shield",
-            "B_Shield",
-            "B_Charge"
+            "B_Shield"
         ],
         "BuffPlusTagPer": [
-            0,
             0,
             0
         ],

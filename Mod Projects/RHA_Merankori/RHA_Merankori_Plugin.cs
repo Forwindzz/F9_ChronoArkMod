@@ -24,6 +24,7 @@ namespace RHA_Merankori
             if (harmony != null)
             {
                 harmony.UnpatchSelf();
+                SkillNotCountTracer.Disable();
                 harmony = null;
             }
             else

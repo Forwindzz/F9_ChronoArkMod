@@ -1,15 +1,16 @@
-using UnityEngine;
-using UnityEngine.UI;
-using System;
-using System.Linq;
-using System.Collections;
-using System.Collections.Generic;
-using GameDataEditor;
-using I2.Loc;
-using DarkTonic.MasterAudio;
 using ChronoArkMod;
 using ChronoArkMod.Plugin;
 using ChronoArkMod.Template;
+using DarkTonic.MasterAudio;
+using GameDataEditor;
+using I2.Loc;
+using NLog.Targets;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
 namespace RHA_Merankori
 {
@@ -100,11 +101,19 @@ namespace RHA_Merankori
         public override void Init()
         {
             base.Init();
+            //Debug.Log($"[S_Attack_All] Init! {this.NotCount}");
             this.effectSetting = StateForVisualEffect.Panic;
+        }
+
+        public override void SelfDestroy()
+        {
+            //Debug.Log("[S_Attack_All] SelfDestroy!");
+            base.SelfDestroy();
         }
 
         protected override void OnEmotionCalm()
         {
+            //Debug.Log("[S_Attack_All] OnCalm!");
             base.OnEmotionCalm();
             base.SkillParticleOff();
             this.NotCount = false;
@@ -112,8 +121,10 @@ namespace RHA_Merankori
 
         protected override void OnEmotionPanic()
         {
+            //Debug.Log("[S_Attack_All] OnPanic!");
             base.OnEmotionPanic();
             base.SkillParticleOn();
+            //Debug.Log($"[S_Attack_All] OnPanic before: NotCount = {this.NotCount} | Skill: {this.MySkill?.NotCount}");
             this.NotCount = true;
         }
 
