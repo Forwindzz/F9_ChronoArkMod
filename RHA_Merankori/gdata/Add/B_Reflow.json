@@ -4,7 +4,7 @@
         "ClassName": "RHA_Merankori.B_Reflow",
         "BuffTag": "null",
         "Name": "燐焰晶回流",
-        "Description": "回合开始时，赋予1层燐色存护。\n进入<color=#BAC8FF>冷静</color>状态时，延长此效果1回合。\n溢出的燐色存护会转化为5%无法战斗抵抗增益。",
+        "Description": "回合开始时，若燐色存护少于<color=#5061A4>&a</color>层，赋予1层燐色存护。\n<color=#5061A4>（每&b%无法战斗抵抗会增加1层的阈值）</color>\n进入<color=#BAC8FF>冷静</color>状态时，延长此效果1回合。\n溢出的燐色存护会转化为5%无法战斗抵抗增益。",
         "LifeTime": 2,
         "MaxStack": 1,
         "Icon": "Image/Buff/Skill_Icon_Pack/2_0/regained power",

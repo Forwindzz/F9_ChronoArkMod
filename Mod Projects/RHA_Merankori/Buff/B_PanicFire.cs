@@ -21,6 +21,7 @@ namespace RHA_Merankori
         IP_SkillUse_User_After,
         IP_BuffAddAfter
     {
+        public const int rewardCount = 1;
         public void BuffaddedAfter(BattleChar BuffUser, BattleChar BuffTaker, Buff addedbuff, StackBuff stackBuff)
         {
             if(this.BChar == BuffTaker && addedbuff.IsKeyID(ModItemKeys.Buff_B_Calm))
@@ -31,7 +32,18 @@ namespace RHA_Merankori
 
         public void SkillUseAfter(Skill SkillD)
         {
-            this.BChar.BuffAddWithStacks(ModItemKeys.Buff_B_Charge, this.BChar, 1);
+            B_Charge.AddChargeStack(this.BChar, this.BChar, rewardCount);
+            //this.BChar.BuffAddWithStacks(ModItemKeys.Buff_B_Charge, this.BChar, rewardCount);
+        }
+
+        public override string DescExtended(string desc)
+        {
+            return base.DescExtended(desc).Replace("&a", rewardCount.ToString());
+        }
+
+        public override string DescInit()
+        {
+            return base.DescInit().Replace("&a", rewardCount.ToString());
         }
     }
 }

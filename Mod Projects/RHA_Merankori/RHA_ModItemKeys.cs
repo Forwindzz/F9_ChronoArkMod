@@ -29,6 +29,7 @@ namespace RHA_Merankori
 		/// <summary>
 		/// 蓄能
 		/// 释放<color=#FF6767>湮裂的燐焰晶</color>时，每层提升10%伤害，随后移除所有蓄能效果。
+		/// <color=#5061A4>（已累计&a层）</color>
 		/// </summary>
         public static string Buff_B_Charge = "B_Charge";
 		/// <summary>
@@ -85,12 +86,13 @@ namespace RHA_Merankori
         public static string Buff_B_Panic = "B_Panic";
 		/// <summary>
 		/// 越频晶石
-		/// 恢复<color=#BAC8FF>冷静</color>时移除这个状态效果，每次从手中使用技能时获得1层蓄能。
+		/// 恢复<color=#BAC8FF>冷静</color>时移除这个状态效果，每次从手中使用技能时获得&a层蓄能。
 		/// </summary>
         public static string Buff_B_PanicFire = "B_PanicFire";
 		/// <summary>
 		/// 燐焰晶回流
-		/// 回合开始时，赋予1层燐色存护。
+		/// 回合开始时，若燐色存护少于<color=#5061A4>&a</color>层，赋予1层燐色存护。
+		/// <color=#5061A4>（每&b%无法战斗抵抗会增加1层的阈值）</color>
 		/// 进入<color=#BAC8FF>冷静</color>状态时，延长此效果1回合。
 		/// 溢出的燐色存护会转化为5%无法战斗抵抗增益。
 		/// </summary>
@@ -319,8 +321,8 @@ namespace RHA_Merankori
         public static string Skill_S_Retreat = "S_Retreat";
 		/// <summary>
 		/// 燐晶电场
-		/// 队友每损失5点体力值，获得1层蓄能。<color=#5061A4>（预期&a层）</color>
-		/// <color=#BAC8FF><b>冷静</b>：处于濒死状态的队友额外获得2层“燐色存护”</color>
+		/// 队友每损失&b点体力值，获得1层蓄能。<color=#5061A4>（预期&a层）</color>
+		/// <color=#BAC8FF><b>冷静</b>：处于濒死状态的队友额外获得1层“燐色存护”</color>
 		/// </summary>
         public static string Skill_S_Shield = "S_Shield";
 		/// <summary>

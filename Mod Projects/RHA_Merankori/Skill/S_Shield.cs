@@ -29,6 +29,8 @@ namespace RHA_Merankori
         public override bool CanApplyPanic => false;
         public override bool UseParticleEffect => true;
 
+        public const int per_hp = 15;
+
         public void HPChange1(BattleChar Char, bool Healed, int PreHPNum, int NewHPNum)
         {
             CheckParticleEffect();
@@ -52,10 +54,10 @@ namespace RHA_Merankori
             {
                 if (b.BuffFind(GDEItemKeys.Buff_B_Neardeath))
                 {
-                    b.BuffAddWithStacks(ModItemKeys.Buff_B_Shield, this.BChar, 2);
+                    b.BuffAddWithStacks(ModItemKeys.Buff_B_Shield, this.BChar, 1);
                 }
             }
-            this.BChar.BuffAddWithStacks(ModItemKeys.Buff_B_Charge, this.BChar, GetChargeStackCount());
+            B_Charge.AddChargeStack(this.BChar, this.BChar, GetChargeStackCount());
         }
 
         protected override void OnEmotionCalm()
@@ -79,18 +81,20 @@ namespace RHA_Merankori
         public override string DescInit()
         {
             return base.DescInit()
-                .Replace("&a", GetChargeStackCount().ToString());
+                .Replace("&a", GetChargeStackCount().ToString())
+                .Replace("&b", per_hp.ToString());
         }
 
         public override string DescExtended(string desc)
         {
             return base.DescExtended(desc)
-                .Replace("&a", GetChargeStackCount().ToString());
+                .Replace("&a", GetChargeStackCount().ToString())
+                .Replace("&b", per_hp.ToString()); ;
         }
 
         public int GetChargeStackCount()
         {
-            return Utils.GetAliveAlliesTotalLoseHP() / 5;
+            return Mathf.Min(Utils.GetAliveAlliesTotalLoseHP() / per_hp, B_Charge.maxChargeStack);
         }
     }
 }

@@ -34,6 +34,8 @@ namespace RHA_Merankori
         IP_Healed_Anyone
     {
 
+        private bool isInBattle = false;
+
         public override void Init()
         {
             base.Init();
@@ -69,10 +71,8 @@ namespace RHA_Merankori
 
         private IEnumerator BlowUpTiles()
         {
-            yield return new WaitForFixedUpdate();
-            BlowUpAttr.BlowUpAttributes blowUpAttributes = BlowUpAttr.GetBlowUpAttr();
-            int range = blowUpAttributes.range;
-            MapChange.BlowUpTiles(StageSystem.instance.PlayerPos, range);
+            yield return new WaitForSeconds(1.0f);
+            I_RHA.BlowUpTilesWithEffectChat();
             yield break;
         }
 
@@ -80,9 +80,15 @@ namespace RHA_Merankori
         {
         }
 
+        //这个会被调用6遍，我也不知道为什么...
         public void BattleEndOutBattle()
         {
-            FieldSystem.DelayInput(BlowUpTiles());
+            if(isInBattle)
+            {
+                FieldSystem.DelayInput(BlowUpTiles());
+                isInBattle = false;
+            }
+            
         }
 
         public void Healed(BattleChar Healer, BattleChar HealedChar, int HealNum, bool Cri, int OverHeal)
@@ -97,6 +103,7 @@ namespace RHA_Merankori
         public void BattleStart(BattleSystem Ins)
         {
             EmotionBuffSwitch.SwitchToCalm(this.BChar);
+            isInBattle = true;
         }
 
         //必须要这个才能侦测到emeny的恢复

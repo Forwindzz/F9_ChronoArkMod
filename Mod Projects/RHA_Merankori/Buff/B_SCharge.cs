@@ -30,7 +30,8 @@ namespace RHA_Merankori
                 if(currentIsCalm && !lastIsCalm)
                 {
                     lastIsCalm = true;
-                    this.BChar.BuffAddWithStacks(ModItemKeys.Buff_B_Charge, this.BChar, 4);
+                    B_Charge.AddChargeStack(this.BChar, this.BChar, 4);
+                    //this.BChar.BuffAddWithStacks(ModItemKeys.Buff_B_Charge, this.BChar, 4);
                 }
                 lastIsCalm = currentIsCalm;
             }

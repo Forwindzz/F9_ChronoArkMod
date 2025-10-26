@@ -9,7 +9,7 @@
         "UseSkillDebuff": false,
         "Caution": false,
         "Name": "越频晶石",
-        "Description": "恢复<color=#BAC8FF>冷静</color>时移除这个状态效果，每次从手中使用技能时获得1层蓄能。",
+        "Description": "恢复<color=#BAC8FF>冷静</color>时移除这个状态效果，每次从手中使用技能时获得&a层蓄能。",
         "LifeTime": 0,
         "Icon": "B_PanicFire\\B_PanicFire_Icon.png"
     }

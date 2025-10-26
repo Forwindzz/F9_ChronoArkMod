@@ -20,7 +20,7 @@ namespace RHA_Merankori
         {
             _sw.Stop();
             long ms = _sw.ElapsedMilliseconds;
-            if(ms>1)
+            //if(ms>1)
             {
                 UnityEngine.Debug.Log($"Profile > \t{ms} ms | \t{tag}");
             }

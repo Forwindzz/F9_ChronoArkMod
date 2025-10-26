@@ -19,7 +19,10 @@ When someone attacks, enter <color=#FFC5BA><b>Panic</b></color> state.",,"回合
 有人接受治療時， 梅朗柯莉會<color=#BAC8FF><b>冷靜</b></color>下來。
 當有人攻擊時，進入<color=#FFC5BA><b>慌張</b></color>狀態。 "
 Buff/B_Calm_Name,Text,,,Calm,,冷静,冷靜
-Buff/B_Charge_Description,Text,,,"When casting <color=#FF6767>Obliterated Phosflame Crystal</color>, each stack increases its damage by 10%, then remove this effect.",,释放<color=#FF6767>湮裂的燐焰晶</color>时，每层提升10%伤害，随后移除所有蓄能效果。,釋放<color=#FF6767>湮裂的燐焰晶</color>時，每層增加其10%的傷害，然後移除此效果。
+Buff/B_Charge_Description,Text,,,"When casting <color=#FF6767>Obliterated Phosflame Crystal</color>, each stack increases its damage by 10%, then remove this effect.
+<color=#5061A4>(&a stacks accumulated)</color>",,"释放<color=#FF6767>湮裂的燐焰晶</color>时，每层提升10%伤害，随后移除所有蓄能效果。
+<color=#5061A4>（已累计&a层）</color>","釋放<color=#FF6767>湮裂的燐焰晶</color>時，每層增加其10%的傷害，然後移除此效果。
+<color=#5061A4>（已累計&a層）</color>"
 Buff/B_Charge_Name,Text,,,Charging,,蓄能,蓄能
 Buff/B_DLoop_Description,Text,,,"Lock the current <color=#BAC8FF>Calm</color> or <color=#FFC5BA>Panic</color> state.  
 Each time a state switch is blocked, there is a <color=#5061A4>&a</color> chance to gain 1 Mana.  
@@ -46,7 +49,7 @@ Buff/B_NotDeadlyAtk_Name,Text,,,,,烈燐焰晶,
 Buff/B_OverClocking_Description,Text,,,"The next <color=#FF6767>Obliterated Phosflame Crystal</color> will carry the ""Shock Impact"" debuff.",,下一次<color=#FF6767>湮裂的燐焰晶</color>会附带“震荡冲击”干扰减益,下次<color=#FF6767>湮裂的燐焰晶</color>會附帶「震盪衝擊」幹擾減益
 Buff/B_OverClocking_Name,Text,,,Overfrequency Crystal,,越频晶石,越頻晶石
 Buff/B_PanicFire_Description,Text,,,"This status is removed when <color=#BAC8FF>Calm</color> down.  
-Gain 1 stack of Charging each time a skill is used from hand.",,恢复<color=#BAC8FF>冷静</color>时移除这个状态效果，每次从手中使用技能时获得1层蓄能。,恢復<color=#BAC8FF>冷靜</color>時移除這個狀態效果，每次從手中使用技能時獲得1層蓄能。
+Gain &a stack of Charging each time a skill is used from hand.",,恢复<color=#BAC8FF>冷静</color>时移除这个状态效果，每次从手中使用技能时获得&a层蓄能。,恢復<color=#BAC8FF>冷靜</color>時移除這個狀態效果，每次從手中使用技能時獲得&a層蓄能。
 Buff/B_PanicFire_Name,Text,,,Overfrequency Crystal,,越频晶石,越頻晶石
 Buff/B_Panic_Description,Text,,,"<color=#FFC5BA>The Phosflame Crystal burns ever fiercer...</color>
 When someone is healed, Melancholy becomes <color=#BAC8FF><b>Calm</b></color>.  
@@ -55,11 +58,15 @@ When someone attacks, enter <color=#FFC5BA><b>Panic</b></color> state.",,"梅朗
 有人接受治療時， 梅朗柯莉會<color=#BAC8FF><b>冷靜</b></color>下來。
 當有人攻擊時，進入<color=#FFC5BA><b>慌張</b></color>狀態。 "
 Buff/B_Panic_Name,Text,,,Panic,,慌张,慌張
-Buff/B_Reflow_Description,Text,,,"At the start of the turn, grant 1 stack of Phosguard.
-Excess Phosguard will be converted into a 5% Faint Resist buff.",,"回合开始时，赋予1层燐色存护。
+Buff/B_Reflow_Description,Text,,,"At the start of the turn, grant 1 stack of Phosguard if it is below <color=#5061A4>&a</color> stacks.
+<color=#5061A4>(Each &b% Death Resist increases the stack threshold by 1)</color>
+Excess Phosguard will be converted into a 5% Faint Resist buff.",,"回合开始时，若燐色存护少于<color=#5061A4>&a</color>层，赋予1层燐色存护。
+<color=#5061A4>（每&b%无法战斗抵抗会增加1层的阈值）</color>
 进入<color=#BAC8FF>冷静</color>状态时，延长此效果1回合。
-溢出的燐色存护会转化为5%无法战斗抵抗增益。","回合開始時，賦予1層燐色存護。
-溢出的燐色存護會轉化為5%無法戰鬥抵抗增益。 "
+溢出的燐色存护会转化为5%无法战斗抵抗增益。","回合開始時，若燐色存護少於<color=#5061A4>&a</color>層，賦予1層燐色存護。
+<color=#5061A4>（每&b%無法戰鬥抵抗會增加1層的門檻）</color>
+進入<color=#BAC8FF>冷靜</color>狀態時，延長此效果1回合。
+溢出的燐色存護會轉化為5%無法戰鬥抵抗增益。"
 Buff/B_Reflow_Name,Text,,,Phosflame Crystal Reflux,,燐焰晶回流,燐焰晶回流
 Buff/B_Refraction_Description,Text,,,Refract the damage and additional effects of <color=#FF6767>Obliterated Phosflame Crystal</color> to the enemy with the lowest Health.,,将<color=#FF6767>湮裂的燐焰晶</color>的伤害和附加效果，折射给生命值最低的敌人。,將<color=#FF6767>湮裂的燐焰晶</color>的傷害和附加效果，折射給生命值最低的敵人。
 Buff/B_Refraction_Name,Text,,,Refraction,,折射,折射
@@ -252,10 +259,10 @@ If the targeted ally has at least 5 buffs, draw 1 additional skill.",,"抽取2�
 若指向的队友拥有至少5个正面效果，额外抽取1个技能。","抽取2個技能。
 若指向的隊友擁有至少5個正面效果，額外抽取1個技能。"
 Skill/S_Retreat_Name,Text,,,Fallback!,,后撤！,後撤！
-Skill/S_Shield_Description,Text,,,"Gain 1 stack of Charging for every 5 Health lost by allies. <color=#5061A4>(Expected: &a stacks)</color>  
-<color=#BAC8FF><b>Calm</b></color>: Allies at Death's Door gain 2 additional stacks of Phosguard.",,"队友每损失5点体力值，获得1层蓄能。<color=#5061A4>（预期&a层）</color>
-<color=#BAC8FF><b>冷静</b>：处于濒死状态的队友额外获得2层“燐色存护”</color>","隊友每損失5點體力值，獲得1層蓄能。 <color=#5061A4>（預期&a層）</color>
-<color=#BAC8FF><b>冷靜</b>：處於瀕死狀態的隊友額外獲得2層「燐色存護」</color>"
+Skill/S_Shield_Description,Text,,,"Gain 1 stack of Charging for every &b Health lost by allies. <color=#5061A4>(Expected: &a stacks)</color>  
+<color=#BAC8FF><b>Calm</b></color>: Allies at Death's Door gain 1 additional stacks of Phosguard.",,"队友每损失&b点体力值，获得1层蓄能。<color=#5061A4>（预期&a层）</color>
+<color=#BAC8FF><b>冷静</b>：处于濒死状态的队友额外获得1层“燐色存护”</color>","隊友每損失&b點體力值，獲得1層蓄能。 <color=#5061A4>（預期&a層）</color>
+<color=#BAC8FF><b>冷靜</b>：處於瀕死狀態的隊友額外獲得1層「燐色存護」</color>"
 Skill/S_Shield_Name,Text,,,Phoscrystal Field,,燐晶电场,燐晶電場
 Skill/S_WarmFire_Description,Text,,,,,,
 Skill/S_WarmFire_Name,Text,,,Warmflame,,暖焰,暖焰

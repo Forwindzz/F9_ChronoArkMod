@@ -24,18 +24,22 @@ namespace RHA_Merankori
 
         public override bool Use()
         {
-            if(StageSystem.instance==null)
+            return BlowUpTilesWithEffectChat();
+        }
+
+        public static bool BlowUpTilesWithEffectChat()
+        {
+            if (StageSystem.instance == null)
             {
                 return false;
             }
-            if (FieldSystem.instance ==null || FieldSystem.instance.MiniMap == null || !FieldSystem.instance.MiniMap.isActiveAndEnabled)
+            if (FieldSystem.instance == null || FieldSystem.instance.MiniMap == null || !FieldSystem.instance.MiniMap.isActiveAndEnabled)
             {
                 return false;
             }
 
             BlowUpAttr.BlowUpAttributes blowUpAttributes = BlowUpAttr.GetBlowUpAttr();
             int range = blowUpAttributes.range;
-            //Debug.Log("Final range=" + range);
 
             MapChange.BlowUpResult blowUpResult = MapChange.BlowUpTiles(StageSystem.instance.PlayerPos, range);
             if (blowUpResult.CanBlowUP)
@@ -53,10 +57,9 @@ namespace RHA_Merankori
                 BlowUpChat(blowUpResult);
                 return false;
             }
-            
         }
 
-        public void BlowUpChat(MapChange.BlowUpResult result)
+        public static void BlowUpChat(MapChange.BlowUpResult result)
         {
             foreach(var ch in PlayData.TSavedata.Party)
             {
@@ -108,25 +111,5 @@ namespace RHA_Merankori
                 
             }
         }
-
-        /*
-        public override void Effect(Character CharInfo)
-        {
-            base.Effect(CharInfo);
-            if (StageSystem.instance == null)
-            {
-                return;
-            }
-            if (FieldSystem.instance == null || FieldSystem.instance.MiniMap == null || !FieldSystem.instance.MiniMap.isActiveAndEnabled)
-            {
-                return;
-            }
-            int range = 6;
-            if (MapChange.BlowUpTiles(StageSystem.instance.PlayerPos, range))
-            {
-                MapChange.BlowUpParticleEffect(FieldSystem.instance.Playercontrol.transform.position, range);
-                return;
-            }
-        }*/
     }
 }

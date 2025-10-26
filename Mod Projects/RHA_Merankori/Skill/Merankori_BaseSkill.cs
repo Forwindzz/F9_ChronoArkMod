@@ -19,7 +19,6 @@ namespace RHA_Merankori
     //基础类，能够检测calm和panic并做出动画效果反应，不过有时候可能不起作用（卡牌的主人不是梅朗柯莉的时候，或者某些时点并没有将卡牌加入回调）
     public abstract class Merankori_BaseSkill :
         Skill_Extended,
-        //IP_BuffAdd,
         IP_BuffAddAfter,
         IP_ParticleOut_After_Global,
         IMerankoriStateInfo,
@@ -183,19 +182,6 @@ namespace RHA_Merankori
             return EmotionBuffSwitch.IsPanic(this.BChar);
         }
 
-        /*
-        public void Buffadded(BattleChar BuffUser, BattleChar BuffTaker, Buff addedbuff)
-        {
-            if (addedbuff.BuffData.Key == ModItemKeys.Buff_B_Panic)
-            {
-                UpdateCalmState(false);
-            }
-            else if (addedbuff.BuffData.Key == ModItemKeys.Buff_B_Calm)
-            {
-                UpdateCalmState(true);
-            }
-        }*/
-
         public override void Init()
         {
             base.Init();
@@ -203,7 +189,6 @@ namespace RHA_Merankori
             hasChecked = false;
             previousIsCalm = false;
             previousIsPanic = false;
-            //this.OnePassive = true;
             if (CanApplyCalm)
             {
                 effectSetting |= StateForVisualEffect.Calm;
@@ -216,6 +201,7 @@ namespace RHA_Merankori
             {
                 this.SkillParticleObject = new GDESkillExtendedData(GDEItemKeys.SkillExtended_MissChain_Ex_P).Particle_Path;
             }
+            CheckEmotionState();
         }
 
         public override void Special_SkillButtonPointerEnter()

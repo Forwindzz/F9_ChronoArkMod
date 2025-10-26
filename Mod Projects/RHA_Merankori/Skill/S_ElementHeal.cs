@@ -15,7 +15,7 @@ namespace RHA_Merankori
 {
     /// <summary>
     /// 恢复全部体力极限。
-    /// 每恢复200%攻击力体力极限，会赋予1层蓄力。
+    /// 每恢复&a体力极限，会赋予1层蓄力。
     /// </summary>
     public class S_ElementHeal : Skill_Extended,
         ICanMerankoriRectification
@@ -33,13 +33,13 @@ namespace RHA_Merankori
                     totalHealNum+=Target.Heal(this.BChar, (float)num, false, false, null);
                 }
             }
-            int stacks = Mathf.Min(totalHealNum / require, 100);
-            this.BChar.BuffAddWithStacks(ModItemKeys.Buff_B_Charge, this.BChar, stacks);
+            int stacks = Mathf.Min(totalHealNum / require, B_Charge.maxChargeStack);
+            B_Charge.AddChargeStack(this.BChar, this.BChar, stacks);
         }
 
         private int GetRequire()
         {
-            return Mathf.Max(1, (int)(this.BChar.GetStat.atk * 2.0f));
+            return 8;// Mathf.Max(1, (int)(this.BChar.GetStat.atk * 2.0f));
         }
 
         private int GetPredictHeal()

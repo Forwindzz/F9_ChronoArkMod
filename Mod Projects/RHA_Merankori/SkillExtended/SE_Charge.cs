@@ -24,7 +24,7 @@ namespace RHA_Merankori
         IP_BuffRemove
     {
 
-        private void UpdateData()
+        public void UpdateData()
         {
             if (this.MySkill == null)
             {
@@ -34,8 +34,13 @@ namespace RHA_Merankori
             {
                 return;
             }
-            Buff buff = this.MySkill?.Master?.GetBuffByID(ModItemKeys.Buff_B_Charge);
-            int stackCount = buff?.StackNum ?? 0;
+            B_Charge buff = this.MySkill?.Master?.GetBuffByID(ModItemKeys.Buff_B_Charge) as B_Charge;
+            if(buff==null)
+            {
+                return;
+            }
+
+            int stackCount = buff.ActualStackNum;
             this.PlusPerStat.Damage = stackCount * 10;
 
             Skill_Extended mainExtend = this.MySkill.AllExtendeds.FirstOrDefault();
@@ -74,28 +79,5 @@ namespace RHA_Merankori
             UpdateData();
         }
 
-        //bug!
-
-        /*
-        public override void Special_SkillButtonPointerEnter()
-        {
-            base.Special_SkillButtonPointerEnter();
-            GameObject toolTip = ToolTipWindow.ToolTip;
-            if (toolTip != null)
-            {
-                ToolTipWindow toolTipWindow = toolTip.GetComponentInChildren<ToolTipWindow>();
-                SkillToolTip skillToolTip = toolTipWindow.GetComponentInChildren<SkillToolTip>();
-                if (skillToolTip != null)
-                {
-                    GameObject spreadEffect = ResUtils.LoadModPrefab(IDs.Res_GasSpreadUIEffect);
-                    spreadEffect = GameObject.Instantiate(spreadEffect, skillToolTip.SkillImage.gameObject.transform);
-                    UIGasAnimator uIGasAnimator = spreadEffect.GetComponent<UIGasAnimator>();
-                    if (uIGasAnimator != null)
-                    {
-                        uIGasAnimator.SetFactorSmooth(B_Charge.GetChargePercent(this.BChar));
-                    }
-                }
-            }
-        }*/
     }
 }

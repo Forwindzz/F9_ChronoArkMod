@@ -39,25 +39,28 @@ namespace RHA_Merankori
         /// <param name="range">多少格子，会等比例放大效果</param>
         public static void BlowUpParticleEffect(Vector3 worldPos, int range)
         {
-            GameObject effectObject = AddressableLoadManager.Instantiate("Particle/Miss/MissChain_1", AddressableLoadManager.ManageType.None);
-            effectObject.SetActive(true);
-            //我们只想要特效，关掉无关的组件
-            effectObject.GetComponent<SkillParticle>().enabled = false;
-            effectObject.transform.localScale = new Vector3(1.0f, 0.3f, 1.0f) * ((range + 1) * 0.07f);
-            Vector3 up = -Camera.main.transform.forward;
-            //稍微向上一点，这样看起来有点透视
-            effectObject.transform.up = (up + new Vector3(0, 0, 2.0f)).normalized;
-            effectObject.transform.position = worldPos + new Vector3(0, 0, 1);
-            effectObject.transform.SetAsLastSibling();
-            ParticleSystem particleSystem = effectObject.GetComponent<ParticleSystem>();
-            if (particleSystem != null)
+            GameObject effectObject = ResUtils.LoadBaseGameAsset<GameObject>("Particle/Miss/MissChain_1");
+            if (effectObject != null)
             {
-                particleSystem.Play();
+                effectObject = GameObject.Instantiate(effectObject);
+                effectObject.SetActive(true);
+                //我们只想要特效，关掉无关的组件
+                effectObject.GetComponent<SkillParticle>().enabled = false;
+                effectObject.transform.localScale = new Vector3(1.0f, 0.3f, 1.0f) * ((range + 1) * 0.07f);
+                Vector3 up = -Camera.main.transform.forward;
+                //稍微向上一点，这样看起来有点透视
+                effectObject.transform.up = (up + new Vector3(0, 0, 2.0f)).normalized;
+                effectObject.transform.position = worldPos + new Vector3(0, 0, 1);
+                effectObject.transform.SetAsLastSibling();
+                ParticleSystem particleSystem = effectObject.GetComponent<ParticleSystem>();
+                if (particleSystem != null)
+                {
+                    particleSystem.Play();
+                }
+                //必须在Fog层才能正确渲染，order至少得这个数字，参考GhostEffect
+                ParticleSystemUtility.SetParticleSystemSorting(effectObject, "Fog", -1860);
+                AutoSelfDestoryComponent.AutoDestoryGameObject(effectObject, 15.0f);
             }
-            //必须在Fog层才能正确渲染，order至少得这个数字，参考GhostEffect
-            ParticleSystemUtility.SetParticleSystemSorting(effectObject, "Fog", -1860);
-            AutoSelfDestoryComponent.AutoDestoryGameObject(effectObject, 15.0f);
-
 
             GameObject dustGO = ResUtils.LoadModPrefab("Assets/ModAssets/Content/Prefabs/blast_dust.prefab");
             dustGO.transform.localScale = Vector3.one * ((range + 1) * 1.4f);
@@ -94,8 +97,8 @@ namespace RHA_Merankori
                 //Debug.Log($"BlowUpTile: Null StageSystem.instance or .Map, Skip");
                 return null;
             }
-            BlowUpResult result = new BlowUpResult();
 
+            BlowUpResult result = new BlowUpResult();
 
             Vector3 cubePlayerPos = MapTile.VecToCube(tilePos);
             List<Vector2> candidatesHexPos = MapTile.MapRange(cubePlayerPos, range, StageSystem.instance.Map.Size);
@@ -108,16 +111,16 @@ namespace RHA_Merankori
                 return result;
             }
 
-            //bool result = false;
             try
             {
                 //对附近1格范围内的HexTile进行检查
+                var mapObjects = StageSystem.instance.Map.MapObject;
                 foreach (Vector2 cHexPos in candidatesHexPos)
                 {
-                    MapTile mapTile = StageSystem.instance.Map.MapObject[(int)cHexPos.x, (int)cHexPos.y];
+                    MapTile mapTile = mapObjects[(int)cHexPos.x, (int)cHexPos.y];
                     BlowUpTile(mapTile, result);
                 }
-                Transform tileTransform = StageSystem.instance.Map.MapObject[(int)tilePos.x, (int)tilePos.y].TileObject.transform;
+                Transform tileTransform = mapObjects[(int)tilePos.x, (int)tilePos.y].TileObject.transform;
                 MasterAudio.PlaySound("SE_FireEffect", 1f, null, 0f, null, null, false, false);
             }
             catch (Exception e)
@@ -128,7 +131,6 @@ namespace RHA_Merankori
             }
             return result;
         }
-
 
         public static void DarkenMapTileColor(MapTile cMapTile)
         {
@@ -180,6 +182,7 @@ namespace RHA_Merankori
                 }
             }*/
 
+
             //不是Block/Border的话就不移除
             if (!(cMapTile.Info.Type is TileTypes.Block || cMapTile.Info.Type is TileTypes.Border))
             {
@@ -201,7 +204,7 @@ namespace RHA_Merankori
             float rollPoint = RandomManager.RandomFloat(BattleRandom.UseItem, 0.0f, 1.0f);
             if (rollPoint < BASE_ITEM_CHANCE)
             {
-                //Debug.Log($"Block tile @{cHexPos}: Decide set up as item");
+                //这里加载时间比较长，大约一个事件30ms。
                 GenerateRandomChestReward(cMapTile, out TileTypes.Event newEvent, out string rewardObjectKey);
                 ReplaceTileWithEvent(cMapTile, rewardObjectKey, newEvent);
                 result.rewardTiles.Add(cMapTile);
@@ -471,14 +474,11 @@ namespace RHA_Merankori
                 return;
             }
 
-
             //创建对象
-            GameObject newTileObject =
-                AddressableLoadManager.Instantiate(
-                gameObjectPath,
-                AddressableLoadManager.ManageType.Stage,
-                cHexTile.transform);
-            //Debug.Log($"Create new object {newTileObject?.name}");
+            GameObject templateObject =
+                ResUtils.LoadBaseGameAsset<GameObject>(gameObjectPath);
+            GameObject newTileObject = GameObject.Instantiate(templateObject, cHexTile.transform);
+
             if (newTileObject == null)
             {
                 Debug.LogError("ReplaceTileWithEvent: Create object failed! Skip!");

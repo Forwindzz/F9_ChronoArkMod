@@ -12,8 +12,8 @@
         "ChainHeal": false,
         "Buffs": [
             "B_Shield",
-            "B_Refraction",
-            "B_Reflow"
+            "B_Reflow",
+            "B_Refraction"
         ],
         "BuffPlusTagPer": [
             0,

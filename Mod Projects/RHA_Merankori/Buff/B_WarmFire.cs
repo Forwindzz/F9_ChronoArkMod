@@ -22,52 +22,22 @@ namespace RHA_Merankori
         IP_Healed,
         IMerankoriCanExtraStackBuff
     {
-
-        //private int totalHeal = 0;
-        private const int BASE_HEAL_THRESHOLD = 10;
+        private const int BASE_HEAL_THRESHOLD = 14;
 
         private int GetBaseThreshold()
         {
-            return this.StackNum ==0? BASE_HEAL_THRESHOLD: BASE_HEAL_THRESHOLD / this.StackNum;
-        }
-
-        public override void BuffOneAwake()
-        {
-            base.BuffOneAwake();
-            //totalHeal = 0;
-        }
-
-        public override void SelfdestroyPlus()
-        {
-            base.SelfdestroyPlus();
-            //totalHeal = 0;
-        }
-
-        public override void BuffStat()
-        {
-            base.BuffStat();
-            //this.PlusStat.DeadImmune = 10 * base.StackNum;
+            return this.StackNum == 0 ? BASE_HEAL_THRESHOLD : Mathf.Max(1, BASE_HEAL_THRESHOLD / this.StackNum);
         }
 
         public void Healed(BattleChar Healer, BattleChar HealedChar, int HealNum, bool Cri, int OverHeal)
         {
             if(HealedChar==this.BChar)
             {
-                /*
-                int maxhp = this.BChar.GetStat.maxhp;
-                totalHeal += HealNum;
-                int times = 0;
-                if (totalHeal >= maxhp)
-                {
-                    times = totalHeal / maxhp;
-                    totalHeal -= times * maxhp;
-                }*/
                 int threshold = GetThreshold();
                 if(HealNum>=threshold)
                 {
                     this.BChar.BuffAddWithStacks(ModItemKeys.Buff_B_Shield, this.BChar, 1);
                 }
-                //this.BChar.BuffAddWithStacks(ModItemKeys.Buff_B_Shield, this.BChar, times);
             }
         }
 

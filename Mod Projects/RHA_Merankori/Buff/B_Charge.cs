@@ -25,8 +25,7 @@ namespace RHA_Merankori
         public override void BuffStat()
         {
             base.BuffStat();
-            this.PlusStat.DeadImmune = 5 * StackNum;
-            this.PlusStat.AggroPer = 33 * StackNum;
+            this.PlusStat.DeadImmune = 5 * actualStackNum;
         }
 
         protected override void OnTriggerMerankoriBuffAttackAll(S_Attack_All skill_Extended)
@@ -41,5 +40,64 @@ namespace RHA_Merankori
             int maxStack = buff?.BuffData?.MaxStack ?? 1;
             return ((float)stackCount) / maxStack;
         }
+
+        public const int maxChargeStack = 1000000;
+
+        private int actualStackNum = 0;
+        public int ActualStackNum => actualStackNum;
+
+        
+        public static void AddChargeStack(BattleChar battleChar, BattleChar source, int num)
+        {
+            Buff buff = battleChar.GetBuffByID(ModItemKeys.Buff_B_Charge);
+            if(buff==null)
+            {
+                battleChar.BuffAdd(ModItemKeys.Buff_B_Charge, source);
+            }
+            BattleSystem.DelayInputAfter(Co_AddChargeStack(battleChar, source, num));
+        }
+
+        private static IEnumerator Co_AddChargeStack(BattleChar battleChar, BattleChar source, int num)
+        {
+            B_Charge buff = null;
+            int count = 0;
+            while (buff == null && count < 200)
+            {
+                yield return null;
+                buff = battleChar.GetBuffByID(ModItemKeys.Buff_B_Charge) as B_Charge;
+                count++;
+            }
+            if (buff != null)
+            {
+                buff.actualStackNum += num;
+                buff.BuffStatUpdate();
+                /*
+                foreach (var skill in Utils.GetAllSkillsInBattle())
+                {
+                    SE_Charge se_charge = skill.ExtendedFind<SE_Charge>();
+                    if(se_charge!=null)
+                    {
+                        se_charge.
+                    }
+                }*/
+            }
+            else
+            {
+                Debug.LogWarning("Cannot find B_Charge!");
+            }
+            yield break;
+        }
+
+        public override string DescExtended(string desc)
+        {
+            return base.DescExtended(desc).Replace("&a", actualStackNum.ToString());
+        }
+
+        public override string DescInit()
+        {
+            return base.DescInit().Replace("&a", actualStackNum.ToString());
+        }
+
+
     }
 }

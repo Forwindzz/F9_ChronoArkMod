@@ -5,7 +5,7 @@
         "BuffTag": "null",
         "UseSkillDebuff": false,
         "Caution": false,
-        "MaxStack": 15,
+        "MaxStack": 10,
         "Description": "每层可抵抗1次无法战斗效果。  \n无法战斗抗性<color=#5061A4>（&a%）</color>会提升濒死时受到的治疗量。  \n<color=#5061A4>----在战斗意志崩溃之前，仍支撑身心的晶石结构。</color>",
         "Name": "燐色存护",
         "Tick": "null",

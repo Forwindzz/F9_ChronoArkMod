@@ -53,10 +53,11 @@ namespace RHA_Merankori
 
         public static void BuffAddWithStacks(this BattleChar target, string buffKey, BattleChar source, int stack)
         {
-            for(int i=0;i<stack;i++)
+            for (int i = 0; i < stack; i++)
             {
                 target.BuffAdd(buffKey, source);
             }
+
         }
 
         public static List<T> FilterOutExtendSkillsInHand<T>()

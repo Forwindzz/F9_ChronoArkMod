@@ -174,7 +174,7 @@ namespace RHA_Merankori
             base.BuffStat();
             if(this.BChar.BuffFind(GDEItemKeys.Buff_B_Neardeath))
             {
-                this.PlusStat.HEALTaken = this.BChar.GetStat.DeadImmune;
+                this.PlusStat.HEALTaken = Mathf.Clamp(this.BChar.GetStat.DeadImmune, 0, 1000);
             }
             else
             {
