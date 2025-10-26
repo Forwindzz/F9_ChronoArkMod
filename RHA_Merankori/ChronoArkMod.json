@@ -4,12 +4,12 @@
     "Visibility": "Public",
     "Title": "【CN/EN】「茫哀的燐焰晶」梅朗柯莉",
     "Author": "f⑨",
-    "Version": "0.3.1",
-    "Description": "添加了梅露可物语中的角色\n「茫哀的燐焰晶」梅朗柯莉\n\n是个可以拆地图的角色！\n_(:з」∠)_\n\n未来也许会更新点彩蛋，对话，还有草刺猬，以及替换掉大部分ai生成的图...",
+    "Version": "0.4.0",
+    "Description": "添加了梅露可物语中的角色\n「茫哀的燐焰晶」梅朗柯莉\n\n是个可以拆地图的角色！\n_(:з」∠)_\n\n缓慢更新ing...",
     "Cover": "RHA_MerankoriCover.png",
     "DefaultAssetBundlePath": "rha_merankoriunityassetbundle",
     "NeedRestartWhenEnabled": false,
-    "ChangeNote": "\n- Fix a description text bug\n\n- 修正一个描述错误",
+    "ChangeNote": "修改\r\n●机制：回合开始时冷静 -> 当有人接受治疗时会冷静下来\r\n●修改了大部分技能，与冷静慌张机制更多联动，删掉一些冗余机制  \r\n\r\n文本\r\n●添加了6个篝火对话\r\n●调整了大部分文本描述\r\n\r\n视觉\r\n●添加冷静和慌张下的FBM特效\r\n●慌张和冷静会改变表情\r\n●战斗结束时摧毁地图时会有视觉效果\r\n\r\n以及一些性能优化和bug修复（被zhu码干碎...）\r\n\r\n----\r\n\r\nChanges\r\n● Mechanics: Calm at the start of a round -> Calm down when someone receives healing\r\n● Modified most skills to better align with the calm and panic mechanics, and removed some redundant mechanics\r\n\r\nText\r\n● Added 6 campfire dialogues\r\n● Adjusted most text descriptions\r\n\r\nVisuals\r\n● Added FBM effects for calm and panic\r\n● Change expressions when panicking and calming\r\n● Visual effects for destroying tiles at the end of combat\r\n\r\nAnd some performance improvements & bug fix",
     "WorkShopId": "3535523424",
     "TagList": [
         "Characters"
