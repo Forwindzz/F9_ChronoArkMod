@@ -64,7 +64,7 @@
         "FixedBasicSkill": "S_Attack_All",
         "PassiveDes": "任何攻击行为会让梅朗柯莉<color=#FFC5BA><b>慌张</b></color>，但任何治疗行为都会让梅朗柯莉<color=#BAC8FF><b>冷静</b></color>下来。\n\n固定技能始终为<color=#FF6767>湮裂的燐焰晶</color>，会攻击除自己以外所有人，战斗会摧毁周边障碍。\n\n升级获得物品<color=#FF6767>燐晶核</color>2个，进入营地会获得1个，可以摧毁地形并概率发现少量遗失的物品。",
         "StatView_Atk": 3,
-        "StatView_Heal": 0,
+        "StatView_Heal": 1,
         "StatView_Def": 2,
         "StatView_Sup": 2,
         "StatView_CC": 0,
