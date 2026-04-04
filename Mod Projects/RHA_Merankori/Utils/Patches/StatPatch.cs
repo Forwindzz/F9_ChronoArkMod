@@ -1,14 +1,7 @@
 ﻿using HarmonyLib;
-using RHA_Merankori;
-using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
 
 namespace RHA_Merankori
 {
@@ -18,6 +11,8 @@ namespace RHA_Merankori
 
     }
 
+    // Before 1.2.2 version
+    /*
     [HarmonyPatch]
     static class StatPatch
     {
@@ -112,6 +107,88 @@ namespace RHA_Merankori
                 //Debug.Log($"Try to modify Dead immune limit {__instance.Name}: {newStat.DeadImmune} -> {tempDeadImmune}");
             }
         }
-    }
+    }*/
 
+    //1.2.2 version:
+
+    [HarmonyPatch]
+    public static class StatPatch
+    {
+        // 当前正在进行 StatC 计算的角色上下文
+        // 单线程逻辑下这样够用了
+        private static Character currentStatCharacter;
+
+        [HarmonyPatch(typeof(Character), nameof(Character.GetStatUpdate))]
+        public static class Patch_Character_GetStatUpdate
+        {
+            [HarmonyPrefix]
+            public static void Prefix(Character __instance)
+            {
+                currentStatCharacter = __instance;
+            }
+
+            [HarmonyPostfix]
+            public static void Postfix(Character __instance)
+            {
+                if (currentStatCharacter == __instance)
+                {
+                    currentStatCharacter = null;
+                }
+            }
+        }
+
+        [HarmonyPatch(typeof(Character), nameof(Character.StatC))]
+        public static class Patch_Character_StatC
+        {
+            [HarmonyPrefix]
+            public static void Prefix(Stat inputstat, out int __state)
+            {
+                // 记录 clamp 前的 DeadImmune
+                __state = (inputstat != null) ? inputstat.DeadImmune : 0;
+            }
+
+            [HarmonyPostfix]
+            public static void Postfix(Stat __result, int __state)
+            {
+                if (__result == null)
+                {
+                    return;
+                }
+
+                Character owner = currentStatCharacter;
+                if (owner == null)
+                {
+                    return;
+                }
+
+                if (ShouldRemoveDeadImmuneLimit(owner, __state))
+                {
+                    __result.DeadImmune = __state;
+                }
+            }
+
+            private static bool ShouldRemoveDeadImmuneLimit(Character __instance, int originalDeadImmune)
+            {
+                if (originalDeadImmune <= 80)
+                {
+                    return false;
+                }
+
+                if (BattleSystem.instance == null)
+                {
+                    return Utils.AllyTeamEquipFindType<IRemoveDeadImmuneLimitForTeam>();
+                }
+                else
+                {
+                    BattleChar bChar = __instance.GetBattleChar; // 不要在非战斗时调用，每次调用要20ms...
+                    if (bChar != null)
+                    {
+                        return bChar.BuffFind(ModItemKeys.Buff_B_DeadImmuneNoLimit);
+                    }
+                }
+
+                return false;
+            }
+        }
+    }
 }

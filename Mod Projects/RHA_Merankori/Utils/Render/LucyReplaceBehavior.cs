@@ -1,12 +1,6 @@
 ﻿using ChronoArkMod.ModData;
 using ChronoArkMod;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.Networking;
 using System.Collections;
 using ChronoArkMod.ModData.Settings;
 
@@ -162,22 +156,21 @@ namespace RHA_Merankori
 
         // lucy Rotation和camera的rotation在相差多少度的时候，强制同步两者的rotation
         public static float ForceCalibrateDegreeThres = 7;
-        public static float carlibrateRotSpeed = 0.1f;
+        public static float carlibrateRotSpeed = 5.0f;
 
         public void Update()
         {
             UpdateAnimation();
             if (ss6AnimControl!=null && lucyMeshRender!=null)
             {
-                Vector3 lucyRot = lucyMeshRender.transform.rotation.eulerAngles;
+                Vector3 lucyRot = merankoriCharGO.transform.rotation.eulerAngles;
                 Vector3 camRot = Camera.main.transform.rotation.eulerAngles;
                 float delta = DegreeDeltaAbs(lucyRot.x, camRot.x);
                 if(delta>=ForceCalibrateDegreeThres)
                 {
                     lucyRot.x = DegreeMoveToTarget(lucyRot.x, camRot.x, delta * Time.deltaTime * carlibrateRotSpeed);
-                    lucyMeshRender.transform.rotation = Quaternion.Euler(lucyRot);
-                    ss6AnimControl.SpriteRoot.transform.rotation = Camera.main.transform.rotation;
-
+                    //merankoriCharGO.transform.rotation = Quaternion.Euler(lucyRot);
+                    merankoriCharGO.transform.rotation = Quaternion.Euler(camRot);
                     //Debug.Log($"Force Rot player: delta={delta} | Lucy={lucyRot}, Camera={camRot}");
                 }
                 //Debug.Log($"Delta Time: {Time.deltaTime} -> {1.0f / Time.deltaTime} Ticks/s");
@@ -364,6 +357,8 @@ namespace RHA_Merankori
 
             character.transform.parent = lucyMeshRender.transform;
             character.transform.localPosition = new Vector3(0, 1.2f, 0); // 这个offset可能会导致camera旋转时人物被看扁，因此我们需要在update中同步渲染SpriteSutdio gameobject的rotation
+            //新版1.2.2似乎修正过来了...
+            //character.transform.localPosition = new Vector3(0, 0.0f, 0); // 这个offset可能会导致camera旋转时人物被看扁，因此我们需要在update中同步渲染SpriteSutdio gameobject的rotation
             character.transform.rotation = Quaternion.identity;
             character.transform.localScale = Vector3.one * 0.00634f;
             character.layer = lucyMeshRender.gameObject.layer;

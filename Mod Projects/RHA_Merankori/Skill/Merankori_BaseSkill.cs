@@ -94,11 +94,12 @@ namespace RHA_Merankori
             if (!hasChecked)
             {
                 hasChecked = true;
-                BattleSystem.DelayInput(Co_CheckEmotion(isCalmNow));
+                //BattleSystem.DelayInput(Co_CheckEmotion(isCalmNow));
+                CheckEmotion(isCalmNow);
             }
         }
 
-        private IEnumerator Co_CheckEmotion(bool isCalmNow)
+        private void CheckEmotion(bool isCalmNow)
         {
             hasChecked = false;
             if (isCalmNow && effectSetting.HasFlag(StateForVisualEffect.Calm))
@@ -132,8 +133,11 @@ namespace RHA_Merankori
                 previousIsCalm = false;
                 previousIsPanic = true;
             }
-            //Debug.Log($"[MBaseSkill] @{this?.Name} After Co_CheckEmotion Checked:{hasChecked} | Cur={isCalmNow} | C={previousIsCalm} P={previousIsPanic}");
+        }
 
+        private IEnumerator Co_CheckEmotion(bool isCalmNow)
+        {
+            CheckEmotion(isCalmNow);
             yield break;
         }
 
@@ -207,6 +211,7 @@ namespace RHA_Merankori
         public override void Special_SkillButtonPointerEnter()
         {
             base.Special_SkillButtonPointerEnter();
+            
             SetTinySkillViewFactor(tinyEffect_moveInFactor);
             GameObject toolTip = ToolTipWindow.ToolTip;
             if (toolTip != null)
